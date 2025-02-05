@@ -312,6 +312,7 @@ fieldset {
 5. update height/width based on that
 6. prevent zooming
 7. on reload, keep to no-scaling
+8. on reload/change keep/update height/width
 * Possible use of container queries + media queries
 
 

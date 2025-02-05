@@ -230,6 +230,11 @@ window.addEventListener(
   false
 );
 
+window.addEventListener("resize", function() {
+  window.scrollTo(0, 0);
+  this.document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+})
+
 let images;
 
 let adventurerImage = 4;
