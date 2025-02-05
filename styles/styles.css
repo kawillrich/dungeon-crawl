@@ -303,6 +303,20 @@ fieldset {
  
 }
 
+/* RESPONSIVE WEB DESIGN
+
+1. get device viewport size
+2. set the container height/width accordingly
+3. set media queries based on that to fix sizes of components/grid
+4. detect orientation change
+5. update height/width based on that
+6. prevent zooming
+* Possible use of container queries + media queries
+
+
+
+
+*/
 
 
 /*** MOBILE - Extra Small ***/
