@@ -34,6 +34,7 @@
 }
 
 body {
+  overflow: hidden;
   background-color: var(--background);
   margin: 0px 0px 0px 0px;
   height: 1400px;

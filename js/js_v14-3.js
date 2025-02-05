@@ -222,7 +222,7 @@ import {
 
 //inializing character default values
 
-window.removeEventListener("scroll", scrollHandler);
+// window.removeEventListener("scroll", scrollHandler);
 
 window.addEventListener(
   "load",
