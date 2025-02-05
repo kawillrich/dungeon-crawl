@@ -368,7 +368,34 @@ fieldset {
   grid-area: 3 / 5 / span 1 / span 2;
 } */
 
+@media only screen and (max-width: 599px) {
+  #container {
+    background-color: orange;
+    width: 360px;
+    min-width: 360px;
+  }
+  #character-info {
+    margin: auto;
+    background-image: url("../images/black-dragon2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    width: 50%;
+    height: 100%;
+    /* grid-auto-columns: 50%; */
+    /* grid-auto-rows: 170px 145px 145px; */
+    gap: 5px 8px;
+    border-radius: 10px;
+  }
+}
+
 @media only screen and (min-width: 600px) {
+  #container {
+    background-color: blue;
+    width: 600px;
+    min-width: 600px;
+  }
   #character-info {
     margin: auto;
     background-image: url("../images/black-dragon2.svg");
@@ -388,6 +415,11 @@ fieldset {
 /**** DESKTOP & TABLETS ****/
 
 @media only screen and (min-width: 768px) {
+  #container {
+    background-color: green;
+    width: 920px;
+    min-width: 920px;
+  }
   #character-info {
     margin: auto;
     background-image: url("../images/black-dragon2.svg");
