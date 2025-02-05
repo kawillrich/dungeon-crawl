@@ -311,6 +311,7 @@ fieldset {
 4. detect orientation change
 5. update height/width based on that
 6. prevent zooming
+7. on reload, keep to no-scaling
 * Possible use of container queries + media queries
 
 
