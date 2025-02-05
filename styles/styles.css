@@ -374,6 +374,9 @@ fieldset {
     background-color: orange;
     width: 360px;
     min-width: 360px;
+    height: 760px;
+    min-height: 760px;
+    
   }
   #character-info {
     margin: auto;
@@ -390,6 +393,8 @@ fieldset {
     border-radius: 10px;
   }
 }
+
+/* SMALL DEVICE */
 
 @media only screen and (min-width: 600px) {
   #container {
