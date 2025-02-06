@@ -224,21 +224,13 @@ import {
 
 // window.removeEventListener("scroll", scrollHandler);
 
-screen.orientation.addEventListener("change", lockOrientation, false)
-
-function lockOrientation() {
-  screen.orientation.lock("natural");
-
-}
-
-
 let clientViewportHeight, clientViewportWidth;
 
 window.addEventListener(
   "load",
   function () {
     window.scrollTo(0, 0);
-    lockOrientation();
+    
     
   },
   false
@@ -246,7 +238,7 @@ window.addEventListener(
 
 window.addEventListener("resize", function() {
   window.scrollTo(0, 0);
-  this.document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+  // this.document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
 })
 
 let images;
@@ -508,7 +500,8 @@ let selectedSpecialty = "";
 // $mainContainer.width(SCREEN_WIDTH);
 // $mainContainer.height(SCREEN_HEIGHT); 
 
-
+const lockScreen = document.querySelector('#lock-screen');
+lockScreen.off('click')
 
 let enterGame = document.querySelector("#enter-game");
 enterGame.addEventListener("click", beginIntro, false);

@@ -42,20 +42,39 @@ body {
   color: var(--text);
   font-size: 1rem;
   cursor: url(""), auto;
+  z-index: 2;
 }
 
 #lock-screen {
+  position: fixed;
   display: none;
+  z-index: 9 !important;
+  pointer-events: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+#lock-screen-text {
+  margin: 0 50%;
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%) */
+  text-align: center;
+  
 }
 
 @media screen and (orientation: landscape){
   #lock-screen {
+    position: absolute;
     display: block;
-    background-color: rgba(0, 0, 0, 0.456);
-    margin: auto;
+    background-color: rgba(0, 0, 0, 0.713);
     height: 100%;
     width: 100%;
     pointer-events: none;
+    text-align: center;
+    margin: 0px;
+    user-select: none;
+    z-index: 9;
   }
 }
 
