@@ -224,7 +224,13 @@ import {
 
 // window.removeEventListener("scroll", scrollHandler);
 
-screen.orientation.lock("natural");
+screen.orientation.addEventListener("change", lockOrientation, false)
+
+function lockOrientation() {
+  screen.orientation.lock("natural");
+
+}
+
 
 let clientViewportHeight, clientViewportWidth;
 
@@ -232,7 +238,7 @@ window.addEventListener(
   "load",
   function () {
     window.scrollTo(0, 0);
-   
+    lockOrientation();
     
   },
   false
