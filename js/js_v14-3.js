@@ -500,8 +500,7 @@ let selectedSpecialty = "";
 // $mainContainer.width(SCREEN_WIDTH);
 // $mainContainer.height(SCREEN_HEIGHT); 
 
-const lockScreen = document.querySelector('#lock-screen');
-lockScreen.off('click')
+
 
 let enterGame = document.querySelector("#enter-game");
 enterGame.addEventListener("click", beginIntro, false);
