@@ -224,13 +224,15 @@ import {
 
 // window.removeEventListener("scroll", scrollHandler);
 
+screen.orientation.lock("natural");
+
 let clientViewportHeight, clientViewportWidth;
 
 window.addEventListener(
   "load",
   function () {
     window.scrollTo(0, 0);
-    this.screen.orientation.lock("portrait");
+   
     
   },
   false
