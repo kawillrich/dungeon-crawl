@@ -44,6 +44,22 @@ body {
   cursor: url(""), auto;
 }
 
+#lock-screen {
+  display: none;
+}
+
+@media screen and (orientation: landscape){
+  #lock-screen {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.456);
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+  }
+}
+
+
 label {
   cursor: url("../images/gui/cursor.png"), auto;
 }
