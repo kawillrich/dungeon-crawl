@@ -261,6 +261,11 @@ input[type="submit"]:active,
   font-size: 1.75rem;
   display: grid;
   justify-content: space-evenly;
+  text-align: justify;
+}
+
+#inner-dialogue-div {
+  text-align: justify;
 }
 
 #welcome-title {

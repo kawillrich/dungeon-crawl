@@ -248,6 +248,7 @@ console.log("Screen Height: " + screenHeight)
 console.log("Screen Width: " + screenWidth)
 
 
+
 window.addEventListener(
   "load",
   function () {
