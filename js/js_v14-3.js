@@ -249,11 +249,9 @@ window.addEventListener(
 
 window.addEventListener("resize", function() {
   window.scrollTo(0, 0);
-
-  if (this.window.screen.orientation.type === "landscape" || this.window.screen.orientation.type === "landscape-primary") {
-    // console.log('landscape')
-  }
-  // this.document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+  let containerElement = document.querySelector("#container");
+  containerElement.style.width = windowViewportWidth;
+  containerElement.style.height = windowViewportHeight;
 })
 
 let images;

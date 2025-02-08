@@ -437,9 +437,9 @@ fieldset {
 @media only screen and (max-width: 599px) {
   #container {
     background-color: orange;
-    width: 360px;
+    /* width: 360px; */
     min-width: 360px;
-    height: 760px;
+    /* height: 760px; */
     min-height: 760px;
     
   }
