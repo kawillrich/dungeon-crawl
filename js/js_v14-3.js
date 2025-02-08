@@ -224,18 +224,13 @@ import {
 
 // window.removeEventListener("scroll", scrollHandler);
 
-let clientViewportHeight, 
-    clientViewportWidth, 
-    windowViewportHeight, 
-    windowViewportWidth,
-    screenHeight,
-    screenWidth;
-
+let windowViewportHeight, windowViewportWidth;
+    
 windowViewportHeight = window.innerHeight;
 windowViewportWidth  = window.innerWidth;
 
-clientViewportHeight = document.documentElement.clientHeight;
-clientViewportWidth = document.documentElement.clientWidth;
+let clientViewportHeight = document.documentElement.clientHeight;
+let clientViewportWidth = document.documentElement.clientWidth;
 
 screenHeight = window.screen.height;
 screenWidth = window.screen.width;
@@ -244,25 +239,18 @@ console.log("Client Height: " + clientViewportHeight)
 console.log("Client Width: " + clientViewportWidth)
 console.log("Viewport Height: " + windowViewportHeight)
 console.log("Viewport Width: " + windowViewportWidth)
-console.log("Screen Height: " + screenHeight)
-console.log("Screen Width: " + screenWidth)
-
-
 
 window.addEventListener(
   "load",
   function () {
     window.scrollTo(0, 0);
-    
-    
   },
   false
 );
 
 window.addEventListener("resize", function() {
   window.scrollTo(0, 0);
-  // console.log('resizing');
-  // console.log(this.screen.orientation.type)
+
   if (this.window.screen.orientation.type === "landscape" || this.window.screen.orientation.type === "landscape-primary") {
     // console.log('landscape')
   }
