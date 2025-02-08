@@ -438,9 +438,9 @@ fieldset {
   #container {
     background-color: orange;
     /* width: 360px; */
-    min-width: 360px;
+    /* min-width: 360px; */
     /* height: 760px; */
-    min-height: 760px;
+    /* min-height: 760px; */
     
   }
   #character-info {
