@@ -241,8 +241,11 @@ window.addEventListener(
   "load",
   function () {
     window.scrollTo(0, 0);
-    windowViewportHeight = window.innerHeight;
-    windowViewportWidth  = window.innerWidth;
+    let containerElement = document.querySelector("#container");    
+    containerElement.style.width = windowViewportWidth - 60;
+    containerElement.style.height = windowViewportHeight;
+  console.log (containerElement.style.width); 
+
   },
   false
 );
@@ -250,8 +253,9 @@ window.addEventListener(
 window.addEventListener("resize", function() {
   window.scrollTo(0, 0);
   let containerElement = document.querySelector("#container");
-  containerElement.style.width = windowViewportWidth;
+  containerElement.style.width = windowViewportWidth - 60;
   containerElement.style.height = windowViewportHeight;
+  console.log ("container width: " + containerElement.offsetWidth); 
 })
 
 let images;

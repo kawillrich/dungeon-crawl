@@ -134,7 +134,7 @@ button {
   border: 30px solid transparent;
   border-image-source: url(../images/gui/gui-entire-border2.png);
   border-image-slice: 75 75;
-  margin: 0px auto auto auto;
+  margin: 0px 0px 0px 0px;
   background-color: var(--background);
   display: grid;  
   grid-template-rows: 150px 100px 1fr .5fr;
@@ -438,7 +438,7 @@ fieldset {
   #container {
     background-color: orange;
     /* width: 360px; */
-    /* min-width: 360px; */
+    /* min-width: 315px; */
     /* height: 760px; */
     /* min-height: 760px; */
     
