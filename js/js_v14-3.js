@@ -229,14 +229,11 @@ let windowViewportHeight, windowViewportWidth;
 windowViewportHeight = window.innerHeight;
 windowViewportWidth  = window.innerWidth;
 
-let clientViewportHeight = document.documentElement.clientHeight;
-let clientViewportWidth = document.documentElement.clientWidth;
+// let clientViewportHeight = document.documentElement.clientHeight;
+// let clientViewportWidth = document.documentElement.clientWidth;
 
-screenHeight = window.screen.height;
-screenWidth = window.screen.width;
-
-console.log("Client Height: " + clientViewportHeight)
-console.log("Client Width: " + clientViewportWidth)
+// console.log("Client Height: " + clientViewportHeight)
+// console.log("Client Width: " + clientViewportWidth)
 console.log("Viewport Height: " + windowViewportHeight)
 console.log("Viewport Width: " + windowViewportWidth)
 
@@ -244,6 +241,8 @@ window.addEventListener(
   "load",
   function () {
     window.scrollTo(0, 0);
+    windowViewportHeight = window.innerHeight;
+    windowViewportWidth  = window.innerWidth;
   },
   false
 );
