@@ -76,9 +76,10 @@ body {
   #lock-screen {
 
     position: absolute;
-    top: 0px;
+    inset: 0;
+    /* top: 0px; */
     /* bottom: 0px; */
-    left: 0px;
+    /* left: 0px; */
     /* right: 0px; */
     display: block;
     height: 100%;
