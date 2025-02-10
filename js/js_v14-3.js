@@ -224,26 +224,31 @@ import {
 
 // window.removeEventListener("scroll", scrollHandler);
 
-let windowViewportHeight, windowViewportWidth;
-    
+let windowViewportHeight, windowViewportWidth, visualViewportHeight, visualViewportWidth;
+
+visualViewportHeight = visualViewport.height;
+visualViewportWidth = visualViewport.width;
+
 windowViewportHeight = window.innerHeight;
 windowViewportWidth  = window.innerWidth;
 
 // let clientViewportHeight = document.documentElement.clientHeight;
 // let clientViewportWidth = document.documentElement.clientWidth;
 
-// console.log("Client Height: " + clientViewportHeight)
-// console.log("Client Width: " + clientViewportWidth)
+console.log("visual Height: " + visualViewportHeight)
+console.log("visual Width: " + visualViewportWidth)
 console.log("Viewport Height: " + windowViewportHeight)
 console.log("Viewport Width: " + windowViewportWidth)
+
+
 
 window.addEventListener(
   "load",
   function () {
     window.scrollTo(0, 0);
     let containerElement = document.querySelector("#container");    
-    containerElement.style.width = windowViewportWidth - 60;
-    containerElement.style.height = windowViewportHeight;
+    containerElement.style.width = visualViewportWidth;
+    containerElement.style.height = visualViewportHeight;
   console.log (containerElement.style.width); 
 
   },
@@ -253,8 +258,8 @@ window.addEventListener(
 window.addEventListener("resize", function() {
   window.scrollTo(0, 0);
   let containerElement = document.querySelector("#container");
-  containerElement.style.width = windowViewportWidth - 60;
-  containerElement.style.height = windowViewportHeight;
+  containerElement.style.width = visualViewportWidth;
+  containerElement.style.height = visualViewportHeight;
   console.log ("container width: " + containerElement.offsetWidth); 
 })
 
