@@ -149,6 +149,187 @@ button {
   border-image-slice: 75 75;
 }
 
+/* RESPONSIVE WEB DESIGN
+
+1. get device viewport size
+2. set the container height/width accordingly
+3. set media queries based on that to fix sizes of components/grid
+4. detect orientation change
+5. update height/width based on that
+6. prevent zooming
+7. on reload, keep to no-scaling
+8. on reload/change keep/update height/width
+* Possible use of container queries + media queries
+
+
+
+
+*/
+
+
+/*** MOBILE - Extra Small ***/
+
+@media only screen and (width < 360px) {
+  #container {
+    background-color: salmon;
+    /* width: 360px; */
+    /* min-width: 315px; */
+    /* height: 760px; */
+    /* min-height: 760px; */
+    
+  }
+
+  #character-info {
+    margin: auto;
+    background-image: url("../images/black-dragon2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    width: 50%;
+    height: 100%;
+    /* grid-auto-columns: 50%; */
+    /* grid-auto-rows: 170px 145px 145px; */
+    gap: 5px 8px;
+    border-radius: 10px;
+  }
+}
+/* #character-canvas {
+  grid-area: 1/1/span 1/span 1;
+}
+
+#character-hitpoints {
+  grid-area: 1/ 2 / span 1 / span 4;
+}
+
+#character-menu {
+  grid-area: 1/6/span 1/span 1;
+}
+
+#character-stats {
+  grid-area: 2 / 1 /span 1 / span 2;
+}
+
+#character-attributes {
+  grid-area: 2 / 3 / span 2 / span 2;
+}
+
+#character-statuses {
+  grid-area: 3 / 1 / span 1 / span 2;
+}
+
+#character-saving-throws {
+  grid-area: 2 / 5 / span 1 / span 2;
+}
+
+#character-afflictions {
+  grid-area: 3 / 5 / span 1 / span 2;
+} */
+
+@media only screen and (360px <= width < 599px) {
+  #container {
+    background-color: orange;
+    /* width: 360px; */
+    /* min-width: 315px; */
+    /* height: 760px; */
+    /* min-height: 760px; */
+    
+  }
+  #character-info {
+    margin: auto;
+    background-image: url("../images/black-dragon2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    width: 50%;
+    height: 100%;
+    /* grid-auto-columns: 50%; */
+    /* grid-auto-rows: 170px 145px 145px; */
+    gap: 5px 8px;
+    border-radius: 10px;
+  }
+}
+
+/* SMALL DEVICE */
+
+@media only screen and (min-width: 600px) {
+  #container {
+    background-color: blue;
+    width: 600px;
+    min-width: 600px;
+  }
+  #character-info {
+    margin: auto;
+    background-image: url("../images/black-dragon2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    width: 50%;
+    height: 100%;
+    /* grid-auto-columns: 50%; */
+    /* grid-auto-rows: 170px 145px 145px; */
+    gap: 5px 8px;
+    border-radius: 10px;
+  }
+}
+
+/**** DESKTOP & TABLETS ****/
+
+@media only screen and (min-width: 768px) {
+  #container {
+    background-color: green;
+    width: 920px;
+    min-width: 920px;
+  }
+  #character-info {
+    margin: auto;
+    background-image: url("../images/black-dragon2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* height: 480px; */
+    display: grid;
+    grid-auto-columns: 146px;
+    grid-auto-rows: 170px 145px 145px;
+    gap: 5px 8px;
+    border-radius: 10px;
+  }
+
+  #character-canvas {
+    grid-area: 1/1 / span 1 / span 1;
+  }
+
+  #character-hitpoints {
+    grid-area: 1/ 2 / span 1 / span 4;
+  }
+
+  #character-menu {
+    grid-area: 1/6 / span 1 / span 1;
+  }
+
+  #character-stats {
+    grid-area: 2 / 1 / span 1 / span 2;
+  }
+
+  #character-attributes {
+    grid-area: 2 / 3 / span 2 / span 2;
+  }
+
+  #character-statuses {
+    grid-area: 3 / 1 / span 1 / span 2;
+  }
+
+  #character-saving-throws {
+    grid-area: 2 / 5 / span 1 / span 2;
+  }
+
+  #character-afflictions {
+    grid-area: 3 / 5 / span 1 / span 2;
+  }
+}
+
 /* add a class for submit buttons and <button> to change appearance with background image*/
 
 input[name="alignment"],
@@ -367,186 +548,7 @@ fieldset {
  
 }
 
-/* RESPONSIVE WEB DESIGN
 
-1. get device viewport size
-2. set the container height/width accordingly
-3. set media queries based on that to fix sizes of components/grid
-4. detect orientation change
-5. update height/width based on that
-6. prevent zooming
-7. on reload, keep to no-scaling
-8. on reload/change keep/update height/width
-* Possible use of container queries + media queries
-
-
-
-
-*/
-
-
-/*** MOBILE - Extra Small ***/
-
-@media only screen and (width < 360px) {
-  #container {
-    background-color: salmon;
-    /* width: 360px; */
-    /* min-width: 315px; */
-    /* height: 760px; */
-    /* min-height: 760px; */
-    
-  }
-
-  #character-info {
-    margin: auto;
-    background-image: url("../images/black-dragon2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    width: 50%;
-    height: 100%;
-    /* grid-auto-columns: 50%; */
-    /* grid-auto-rows: 170px 145px 145px; */
-    gap: 5px 8px;
-    border-radius: 10px;
-  }
-}
-/* #character-canvas {
-  grid-area: 1/1/span 1/span 1;
-}
-
-#character-hitpoints {
-  grid-area: 1/ 2 / span 1 / span 4;
-}
-
-#character-menu {
-  grid-area: 1/6/span 1/span 1;
-}
-
-#character-stats {
-  grid-area: 2 / 1 /span 1 / span 2;
-}
-
-#character-attributes {
-  grid-area: 2 / 3 / span 2 / span 2;
-}
-
-#character-statuses {
-  grid-area: 3 / 1 / span 1 / span 2;
-}
-
-#character-saving-throws {
-  grid-area: 2 / 5 / span 1 / span 2;
-}
-
-#character-afflictions {
-  grid-area: 3 / 5 / span 1 / span 2;
-} */
-
-@media only screen and (360px <= width < 599px) {
-  #container {
-    background-color: orange;
-    /* width: 360px; */
-    /* min-width: 315px; */
-    /* height: 760px; */
-    /* min-height: 760px; */
-    
-  }
-  #character-info {
-    margin: auto;
-    background-image: url("../images/black-dragon2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    width: 50%;
-    height: 100%;
-    /* grid-auto-columns: 50%; */
-    /* grid-auto-rows: 170px 145px 145px; */
-    gap: 5px 8px;
-    border-radius: 10px;
-  }
-}
-
-/* SMALL DEVICE */
-
-@media only screen and (min-width: 600px) {
-  #container {
-    background-color: blue;
-    width: 600px;
-    min-width: 600px;
-  }
-  #character-info {
-    margin: auto;
-    background-image: url("../images/black-dragon2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    width: 50%;
-    height: 100%;
-    /* grid-auto-columns: 50%; */
-    /* grid-auto-rows: 170px 145px 145px; */
-    gap: 5px 8px;
-    border-radius: 10px;
-  }
-}
-
-/**** DESKTOP & TABLETS ****/
-
-@media only screen and (min-width: 768px) {
-  #container {
-    background-color: green;
-    width: 920px;
-    min-width: 920px;
-  }
-  #character-info {
-    margin: auto;
-    background-image: url("../images/black-dragon2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    /* height: 480px; */
-    display: grid;
-    grid-auto-columns: 146px;
-    grid-auto-rows: 170px 145px 145px;
-    gap: 5px 8px;
-    border-radius: 10px;
-  }
-
-  #character-canvas {
-    grid-area: 1/1 / span 1 / span 1;
-  }
-
-  #character-hitpoints {
-    grid-area: 1/ 2 / span 1 / span 4;
-  }
-
-  #character-menu {
-    grid-area: 1/6 / span 1 / span 1;
-  }
-
-  #character-stats {
-    grid-area: 2 / 1 / span 1 / span 2;
-  }
-
-  #character-attributes {
-    grid-area: 2 / 3 / span 2 / span 2;
-  }
-
-  #character-statuses {
-    grid-area: 3 / 1 / span 1 / span 2;
-  }
-
-  #character-saving-throws {
-    grid-area: 2 / 5 / span 1 / span 2;
-  }
-
-  #character-afflictions {
-    grid-area: 3 / 5 / span 1 / span 2;
-  }
-}
 
 .char-info-module {
   padding-top: 0;

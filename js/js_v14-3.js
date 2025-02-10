@@ -247,9 +247,10 @@ window.addEventListener(
   function () {
     window.scrollTo(0, 0);
     let containerElement = document.querySelector("#container");    
-    containerElement.style.width = visualViewportWidth;
+    containerElement.style.width = visualViewportWidth - 60;
     containerElement.style.height = visualViewportHeight;
-  console.log (containerElement.style.width); 
+    console.log (containerElement.style.width); 
+    console.log ("container width: " + containerElement.offsetWidth); 
 
   },
   false
@@ -258,7 +259,7 @@ window.addEventListener(
 window.addEventListener("resize", function() {
   window.scrollTo(0, 0);
   let containerElement = document.querySelector("#container");
-  containerElement.style.width = visualViewportWidth;
+  containerElement.style.width = visualViewportWidth - 60;
   containerElement.style.height = visualViewportHeight;
   console.log ("container width: " + containerElement.offsetWidth); 
 })
