@@ -252,6 +252,10 @@ window.addEventListener(
     console.log (containerElement.style.width); 
     console.log ("container width: " + containerElement.offsetWidth); 
 
+    let lockScreenContainer = this.document.querySelector("#lock-screen");
+    lockScreenContainer.style.height = visualViewportHeight;
+    lockScreenContainer.style.width = visualViewportWidth;
+
   },
   false
 );
@@ -262,6 +266,10 @@ window.addEventListener("resize", function() {
   containerElement.style.width = visualViewportWidth - 60;
   containerElement.style.height = visualViewportHeight;
   console.log ("container width: " + containerElement.offsetWidth); 
+
+  let lockScreenContainer = this.document.querySelector("#lock-screen");
+  lockScreenContainer.style.height = visualViewportHeight;
+  lockScreenContainer.style.width = visualViewportWidth;
 })
 
 let images;
