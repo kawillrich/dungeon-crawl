@@ -315,6 +315,7 @@ button {
 
     position: absolute;
     inset: 0;
+    display: block;
     /*position: fixed; */
     /* top: 0px; */
     /* bottom: 0px; */
