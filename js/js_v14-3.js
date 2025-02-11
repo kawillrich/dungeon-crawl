@@ -270,6 +270,12 @@ window.addEventListener("resize", function() {
 
   let lockScreenContainer = this.document.querySelector("#lock-screen");
   lockScreenContainer.style.height = this.document.body.style.height;
+  lockScreenContainer.style.width = this.document.body.style.width;
+})
+
+screen.orientation.addEventListener("change", function() {
+    let lockScreenContainer = this.document.querySelector("#lock-screen");
+    lockScreenContainer.style.height = this.document.body.style.height;
     lockScreenContainer.style.width = this.document.body.style.width;
 })
 
