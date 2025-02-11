@@ -252,9 +252,9 @@ window.addEventListener(
     console.log (containerElement.style.width); 
     console.log ("container width: " + containerElement.offsetWidth); 
 
-    let lockScreenContainer = this.document.querySelector("#lock-screen");
-    lockScreenContainer.style.height = this.document.body.style.height;
-    lockScreenContainer.style.width = this.document.body.style.width;
+    // let lockScreenContainer = this.document.querySelector("#lock-screen");
+    // lockScreenContainer.style.height = this.document.body.style.height;
+    // lockScreenContainer.style.width = this.document.body.style.width;
 
   },
   false
@@ -268,10 +268,10 @@ window.addEventListener("resize", function() {
   console.log("Resizing");
   console.log ("container width: " + containerElement.offsetWidth); 
 
-  let lockScreenContainer = this.document.querySelector("#lock-screen");
-  
-  lockScreenContainer.style.height = "9000px";
-  lockScreenContainer.style.width = "9000px";
+  // let lockScreenContainer = this.document.querySelector("#lock-screen");
+
+  // lockScreenContainer.style.height = "9000px";
+  // lockScreenContainer.style.width = "9000px";
 })
 
 
