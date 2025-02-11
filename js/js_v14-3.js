@@ -265,6 +265,7 @@ window.addEventListener("resize", function() {
   let containerElement = document.querySelector("#container");
   containerElement.style.width = visualViewportWidth - 60;
   containerElement.style.height = visualViewportHeight;
+  console.log("Resizing");
   console.log ("container width: " + containerElement.offsetWidth); 
 
   let lockScreenContainer = this.document.querySelector("#lock-screen");
