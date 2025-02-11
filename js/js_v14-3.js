@@ -269,15 +269,10 @@ window.addEventListener("resize", function() {
   console.log ("container width: " + containerElement.offsetWidth); 
 
   let lockScreenContainer = this.document.querySelector("#lock-screen");
-  lockScreenContainer.style.height = this.document.body.style.height;
-  lockScreenContainer.style.width = this.document.body.style.width;
+  lockScreenContainer.style.height = "9000px";
+  lockScreenContainer.style.width = "9000px";
 })
 
-screen.orientation.addEventListener("change", function() {
-    let lockScreenContainer = this.document.querySelector("#lock-screen");
-    lockScreenContainer.style.height = this.document.body.style.height;
-    lockScreenContainer.style.width = this.document.body.style.width;
-})
 
 let images;
 
