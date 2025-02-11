@@ -75,27 +75,7 @@ body {
 
 }
 
-@media screen and (orientation: landscape) {
-  #lock-screen {
 
-    /* position: absolute; */
-    /* inset: 0;
-    position: fixed; */
-    /* top: 0px; */
-    /* bottom: 0px; */
-    /* left: 0px; */
-    /* right: 0px; */
-    /* display: block; */
-    /* height: 100%;
-    width: 100%; */
-    background-color: rgb(0, 5, 50);
-    z-index: 9;
-    /* padding: 50px; */
-    cursor: none;
-    text-align: center;
-    justify-items: center; 
-  }
-}
 
 
 label {
@@ -327,6 +307,28 @@ button {
 
   #character-afflictions {
     grid-area: 3 / 5 / span 1 / span 2;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #lock-screen {
+
+    /* position: absolute; */
+    /* inset: 0;
+    position: fixed; */
+    /* top: 0px; */
+    /* bottom: 0px; */
+    /* left: 0px; */
+    /* right: 0px; */
+    /* display: block; */
+    /* height: 100%;
+    width: 100%; */
+    background-color: rgb(0, 5, 50);
+    z-index: 9;
+    /* padding: 50px; */
+    cursor: none;
+    text-align: center;
+    justify-items: center; 
   }
 }
 
