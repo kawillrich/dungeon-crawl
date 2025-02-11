@@ -206,7 +206,7 @@ button {
   grid-area: 3 / 5 / span 1 / span 2;
 } */
 
-@media only screen and (360px <= width < 599px) and (orientation: portrait) {
+@media only screen and (360px <= width < 599px) {
   #container {
     background-color: orange;
     /* width: 360px; */
