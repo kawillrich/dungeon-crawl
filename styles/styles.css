@@ -79,8 +79,8 @@ body {
   #lock-screen {
 
     /* position: absolute; */
-    inset: 0;
-    position: fixed;
+    /* inset: 0;
+    position: fixed; */
     /* top: 0px; */
     /* bottom: 0px; */
     /* left: 0px; */
@@ -94,7 +94,6 @@ body {
     cursor: none;
     text-align: center;
     justify-items: center;
-    width: 9000px;
  
 
     /* position: absolute;
