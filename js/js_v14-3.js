@@ -269,6 +269,7 @@ window.addEventListener("resize", function() {
   console.log ("container width: " + containerElement.offsetWidth); 
 
   let lockScreenContainer = this.document.querySelector("#lock-screen");
+  
   lockScreenContainer.style.height = "9000px";
   lockScreenContainer.style.width = "9000px";
 })

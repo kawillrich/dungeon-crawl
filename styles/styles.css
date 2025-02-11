@@ -85,27 +85,15 @@ body {
     /* bottom: 0px; */
     /* left: 0px; */
     /* right: 0px; */
-    display: block;
+    /* display: block; */
     /* height: 100%;
     width: 100%; */
     background-color: rgb(0, 5, 50);
     z-index: 9;
-    padding: 50px;
+    /* padding: 50px; */
     cursor: none;
     text-align: center;
-    justify-items: center;
- 
-
-    /* position: absolute;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.713);
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    text-align: center;
-    margin: 0px;
-    user-select: none;
-    z-index: 9; */
+    justify-items: center; 
   }
 }
 
@@ -238,7 +226,7 @@ button {
   grid-area: 3 / 5 / span 1 / span 2;
 } */
 
-@media only screen and (360px <= width < 599px) {
+@media only screen and (360px <= width < 599px) and (orientation: portrait) {
   #container {
     background-color: orange;
     /* width: 360px; */
