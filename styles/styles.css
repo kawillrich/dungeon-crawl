@@ -313,9 +313,9 @@ button {
 @media screen and (orientation: landscape) {
   #lock-screen {
 
-    /* position: absolute; */
-    /* inset: 0;
-    position: fixed; */
+    position: absolute;
+    inset: 0;
+    /*position: fixed; */
     /* top: 0px; */
     /* bottom: 0px; */
     /* left: 0px; */
@@ -329,6 +329,8 @@ button {
     cursor: none;
     text-align: center;
     justify-items: center; 
+    height: 9000px;
+    width: 9000px;
   }
 }
 
