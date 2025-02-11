@@ -50,7 +50,7 @@ body {
 
 #lock-screen {
   inset: 0;
-  background-image: url(../images/gui/not-supported.png);
+  background-image: url(../images/not-supported.png);
   position: fixed;
   display: none;
   z-index: 9 !important;
