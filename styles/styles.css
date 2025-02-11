@@ -130,6 +130,10 @@ button {
   margin: auto;
 }
 
+.page-version {
+  font-size: xx-large;
+}
+
 #header {
   margin: auto;
 }
