@@ -49,6 +49,8 @@ body {
 }
 
 #lock-screen {
+  inset: 0;
+
   position: fixed;
   display: none;
   z-index: 9 !important;
@@ -73,11 +75,12 @@ body {
 
 }
 
-@media screen and (orientation: landscape){
+@media screen and (orientation: landscape) {
   #lock-screen {
 
     /* position: absolute; */
     inset: 0;
+    position: fixed;
     /* top: 0px; */
     /* bottom: 0px; */
     /* left: 0px; */
@@ -86,7 +89,7 @@ body {
     /* height: 100%;
     width: 100%; */
     background-color: rgb(0, 5, 50);
-    z-index: 1;
+    z-index: 9;
     padding: 50px;
     cursor: none;
     text-align: center;
