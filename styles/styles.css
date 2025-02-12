@@ -125,6 +125,7 @@ button {
 */
 
 /*** MOBILE - Extra Small ***/
+/*** MODE NOT SUPPORTED ***/
 
 @media only screen and (width < 360px) {
   #container {
@@ -147,47 +148,17 @@ button {
   }
 }
 
-/* #character-canvas {
-  grid-area: 1/1/span 1/span 1;
-}
-
-#character-hitpoints {
-  grid-area: 1/ 2 / span 1 / span 4;
-}
-
-#character-menu {
-  grid-area: 1/6/span 1/span 1;
-}
-
-#character-stats {
-  grid-area: 2 / 1 /span 1 / span 2;
-}
-
-#character-attributes {
-  grid-area: 2 / 3 / span 2 / span 2;
-}
-
-#character-statuses {
-  grid-area: 3 / 1 / span 1 / span 2;
-}
-
-#character-saving-throws {
-  grid-area: 2 / 5 / span 1 / span 2;
-}
-
-#character-afflictions {
-  grid-area: 3 / 5 / span 1 / span 2;
-} */
-
 @media only screen and (360px <= width < 599px) {
   #container {
-    background-color: orange;
+    /* background-color: orange; */
     /* width: 360px; */
     /* min-width: 315px; */
     /* height: 760px; */
     /* min-height: 760px; */
     
   }
+
+  
   #character-info {
     margin: auto;
     background-image: url("../images/black-dragon2.svg");
@@ -195,8 +166,8 @@ button {
     background-size: cover;
     background-position: center;
     display: grid;
-    width: 50%;
-    height: 100%;
+    width: 150px;
+    height: 100px;
     /* grid-auto-columns: 50%; */
     /* grid-auto-rows: 170px 145px 145px; */
     gap: 5px 8px;
