@@ -163,7 +163,8 @@ button {
     justify-items: center; 
     height: 9000px;
     width: 9000px;
-    transform: rotate(-90deg);
+    
+    background-size: 350px;
   }
 }
 
