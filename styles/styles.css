@@ -474,10 +474,16 @@ button {
 }
 
 legend {
+  float: clear;
   border-radius: 5px;
   margin: auto;
   background-color: var(--accent-green-200);
   color: var(--primary);
+  position: relative;
+  /* left: 50%; */
+  top: 15px;
+  width: 97%;
+  text-align: center;
 }
 
 .player-dashboard,
