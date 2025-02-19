@@ -173,19 +173,21 @@ button {
   }
 
   #character-info {
-    margin: auto;
+    /* margin: auto; */
     background-image: url("../images/black-dragon2.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: grid;
-    width: 150px;
-    height: 100px;
+    width: 300px;
+    /* height: 100px; */
     grid-auto-columns: 50%;
     /* grid-auto-rows: 170px 145px 145px; */
     gap: 5px 8px;
     border-radius: 10px;
   }
+
+  
 
   #character-canvas {
     display: none;
