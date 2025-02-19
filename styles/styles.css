@@ -194,6 +194,7 @@ button {
   }
 
   #character-hitpoints {
+    left: 20px;
     grid-row: 1 / 1;
     grid-column: 1 / 3;
   }

@@ -252,9 +252,8 @@ window.addEventListener(
     console.log (containerElement.style.width); 
     console.log ("container width: " + containerElement.offsetWidth); 
 
-    let lockScreenTextContainer = this.document.querySelector("#lock-screen-text");
-
-    let lockScreenTextWidth = lockScreenTextContainer.style.width;
+   
+    
 
     let updatedLeft = (visualViewportWidth * .5) - 340;
     let updatedTop = visualViewportHeight * .5 - 40;
@@ -268,10 +267,7 @@ window.addEventListener(
     console.log(updatedLefttoString)
     console.log(updatedToptoString)
 
-    lockScreenTextContainer.style.left = updatedLefttoString;
-    lockScreenTextContainer.style.top = updatedToptoString;
-    // lockScreenTextContainer.style.height = this.document.body.style.height;
-    // lockScreenTextContainer.style.width = this.document.body.style.width;
+   
 
 
   },
