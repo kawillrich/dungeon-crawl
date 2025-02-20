@@ -625,6 +625,11 @@ legend {
   text-align: center;
 }
 
+legend.statuses-dashboard,
+legend.afflictions-dashboard {
+  width: 93%
+}
+
 .player-dashboard,
 .saves-dashboard,
 .statuses-dashboard {
