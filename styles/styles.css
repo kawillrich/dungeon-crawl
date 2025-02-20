@@ -522,7 +522,6 @@ input[type="submit"]:active,
 
 #dialogue {
   padding: 10px 0px 0px 0px;
-  display: block;
   margin: auto;
   font-size: 1.75rem;
   display: grid;
