@@ -271,7 +271,7 @@ button {
   }
 
   #character-info {
-    /* margin: auto; */
+    margin: 0px auto 0px auto;
     background-image: url("../images/black-dragon2.svg");
     background-repeat: no-repeat;
     background-size: cover;
