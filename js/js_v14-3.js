@@ -1394,7 +1394,7 @@ function startGame() {
               <div class="ac-guage-text">AC
               </div>
             
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="125" height="125">                  
+              <svg class="circle-ac-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
                 <circle class="circle-ac-background"/>
                 <circle class="circle-ac"/>
               </svg>
@@ -1423,7 +1423,7 @@ function startGame() {
               }</div>                            
 
               
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="150" height="150">                  
+              <svg  class="circle-hp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
                 <circle class="circle-hitpoints-background"/>
                 <circle class="circle-hitpoints"/>
               </svg>
@@ -1436,7 +1436,7 @@ function startGame() {
                 <div class="xp-guage-value-total">${
                   finalCharacter.specialty.characterLevel.level.maxXP
                 }</div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="125" height="125">                  
+                <svg class="circle-xp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
                   <circle class="circle-xp-background"/>
                   <circle class="circle-xp"/>
                 </svg>
