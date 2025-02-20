@@ -1383,7 +1383,7 @@ function startGame() {
         <div id="character-hitpoints">
           <fieldset class = "hitpoints-info-module-player hp-grid-container">
             <legend class="hitpoints-dashboard">Hitpoints</legend>
-            
+              </fieldset>
             <div class="ac-guage">
               <div class="ac-guage-value">${
                 finalCharacter.armorClass -
@@ -1441,7 +1441,7 @@ function startGame() {
                   <circle class="circle-xp"/>
                 </svg>
             </div>            
-          </fieldset>
+          
         </div>
 
 
