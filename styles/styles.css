@@ -169,17 +169,22 @@ button {
     /* border: 40px solid transparent; */
     /* border-image-source: url(../images/gui/gui-entire-border2.png); */
     /* border-image-slice: 75 75; */
-    margin: 0px 20px 0px 0px;
+    margin: 0px 0px 0px 0px;
     background-color: var(--background);
     display: grid;  
     grid-template-rows: 150px 100px 1fr .5fr;
     grid-template-columns: 1fr;
-    padding: 10px 20px 0px 5px;
+    /* padding: 10px 10px 0px 5px; */
     min-width: 360px;
     max-width: 599px;
 
   }
   
+  #dialogue {
+    width: 90%;
+    ;
+  }
+
   .page-title {
     width: 350px;
     height: 100px;
