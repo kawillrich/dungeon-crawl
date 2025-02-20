@@ -1084,13 +1084,13 @@ function updateAlignmentDescription() {
 
 //TEST FUNCTION TO START GAME - creates player info
 function startGame() {
-  // $("#character-info").animate({width: "100%", height: "50%"}, 300).slideDown(300);
-  $("#character-info").slideDown(300);
+  // $("#character-info").animate({width: "300px"}, 300).slideDown(300);
+  // $("#character-info").slideDown(300);
 
 
 
 
-  $("#character-info").css({margin: "0px"}).animate({width: "0px", height: "0px"}, 300).slideDown(300).next().dequeue();
+  $("#character-info").css({margin: "0px"}).animate({width: "340px", height: "0px"}, 300).slideDown(300).next().dequeue();
   window.scrollTo(0, 0);
   let strengthPlusAdjustment;
   let intelligencePlusAdjustment;

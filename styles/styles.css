@@ -163,8 +163,8 @@ button {
 @media only screen and (360px <= width < 599px) {
   #container {
     border-image: none;
-    
-    border: 5px solid transparent;
+    border: 0px solid transparent;
+    /* border: 5px solid transparent; */
     /* padding: 0px 0px 0px 0px; */
     /* border: 40px solid transparent; */
     /* border-image-source: url(../images/gui/gui-entire-border2.png); */
@@ -174,8 +174,8 @@ button {
     display: grid;  
     grid-template-rows: 150px 100px 1fr .5fr;
     grid-template-columns: 1fr;
-    /* padding: 10px 10px 0px 5px; */
-    min-width: 360px;
+    padding: 5px;
+    min-width: 350px;
     max-width: 599px;
 
   }
@@ -267,7 +267,7 @@ button {
  
   #container-2 {
     
-    min-width: 360px;
+    min-width: 355px;
   }
 
   #character-info {
