@@ -247,8 +247,8 @@ window.addEventListener(
   function () {
     window.scrollTo(0, 0);
     let containerElement = document.querySelector("#container");    
-    containerElement.style.width = visualViewportWidth - 60;
-    containerElement.style.height = visualViewportHeight - 60;
+    containerElement.style.width = String(visualViewportWidth - 60) + "px";
+    containerElement.style.height = String(visualViewportHeight - 60) + "px";
     console.log (containerElement.style.width); 
     console.log ("container width: " + containerElement.offsetWidth); 
 
@@ -277,10 +277,15 @@ window.addEventListener(
 window.addEventListener("resize", function() {
   window.scrollTo(0, 0);
   let containerElement = document.querySelector("#container");
-  containerElement.style.width = visualViewportWidth - 60;
-  containerElement.style.height = visualViewportHeight;
+  // containerElement.style.width = String(visualViewportWidth - 60) + "px";
+  // containerElement.style.height = String(visualViewportHeight) + "px";
+  containerElement.style.width = "100%";
+  containerElement.style.height = "100%";
   console.log("Resizing");
   console.log ("container width: " + containerElement.offsetWidth); 
+  console.log(containerElement.style.width);
+  console.log("visviewportheight: " + visualViewportHeight)
+  console.log("visviewportwidth: " + visualViewportWidth)
 
   // let lockScreenContainer = this.document.querySelector("#lock-screen");
 
