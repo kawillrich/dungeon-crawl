@@ -247,8 +247,10 @@ window.addEventListener(
   function () {
     window.scrollTo(0, 0);
     let containerElement = document.querySelector("#container");    
-    containerElement.style.width = String(visualViewportWidth - 60) + "px";
-    containerElement.style.height = String(visualViewportHeight - 60) + "px";
+   // containerElement.style.width = String(visualViewportWidth - 60) + "px";
+  // containerElement.style.height = String(visualViewportHeight) + "px";
+    containerElement.style.width = "100%";
+    containerElement.style.height = "100%";
     console.log (containerElement.style.width); 
     console.log ("container width: " + containerElement.offsetWidth); 
 
