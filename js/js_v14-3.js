@@ -1097,7 +1097,7 @@ function startGame() {
 
 
 
-  $("#character-info").css({margin: "0px"}).animate({width: "97%", height: "0px"}, 300).slideDown(300).next().dequeue();
+  $("#character-info").css({margin: "0px"}).animate({width: "98%", height: "0px"}, 300).slideDown(300).next().dequeue();
   window.scrollTo(0, 0);
   let strengthPlusAdjustment;
   let intelligencePlusAdjustment;
