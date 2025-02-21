@@ -98,7 +98,7 @@ button {
   margin: 0px 0px 0px 0px;
   background-color: var(--background);
   display: grid;  
-  grid-template-rows: 150px 100px 1fr .5fr;
+  grid-template-rows: 275px 100px 1fr .5fr;
   /* min-width: 360px; */
 }
 
@@ -277,7 +277,7 @@ button {
   .hitpoint-guage-value-current {
     width: auto;
   }
- 
+
   #container-2 {
     
     /* min-width: 355px; */
