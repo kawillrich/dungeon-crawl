@@ -232,69 +232,61 @@ visualViewportWidth = visualViewport.width;
 windowViewportHeight = window.innerHeight;
 windowViewportWidth  = window.innerWidth;
 
-// let clientViewportHeight = document.documentElement.clientHeight;
-// let clientViewportWidth = document.documentElement.clientWidth;
-
 console.log("visual Height: " + visualViewportHeight)
 console.log("visual Width: " + visualViewportWidth)
 console.log("Viewport Height: " + windowViewportHeight)
 console.log("Viewport Width: " + windowViewportWidth)
 
-
-
 window.addEventListener(
   "load",
   function () {
     window.scrollTo(0, 0);
-    let containerElement = document.querySelector("#container");    
-   // containerElement.style.width = String(visualViewportWidth - 60) + "px";
-  // containerElement.style.height = String(visualViewportHeight) + "px";
-    containerElement.style.width = "100%";
-    containerElement.style.height = "100%";
-    console.log (containerElement.style.width); 
-    console.log ("container width: " + containerElement.offsetWidth); 
-
-   
-    
-
-    let updatedLeft = (visualViewportWidth * .5) - 340;
-    let updatedTop = visualViewportHeight * .5 - 40;
-    console.log(updatedLeft)
-    console.log(updatedTop)
-
-    let updatedLefttoString = updatedLeft.toString() + "px";
-    let updatedToptoString = updatedTop.toString() + "px";
-
-
-    console.log(updatedLefttoString)
-    console.log(updatedToptoString)
-
-   
-
-
+    let containerElement = document.querySelector("#container");      
+    containerElement.style.width = "100dvh";
+    containerElement.style.height = "100dvh";
   },
   false
 );
 
+// window.addEventListener(
+//   "load",
+//   function () {
+//     window.scrollTo(0, 0);
+//     let containerElement = document.querySelector("#container");      
+//     containerElement.style.width = "100%";
+//     containerElement.style.height = "100%";
+//     console.log (containerElement.style.width); 
+//     console.log ("container width: " + containerElement.offsetWidth); 
+//     let updatedLeft = (visualViewportWidth * .5) - 340;
+//     let updatedTop = visualViewportHeight * .5 - 40;
+//     console.log(updatedLeft)
+//     console.log(updatedTop)
+//     let updatedLefttoString = updatedLeft.toString() + "px";
+//     let updatedToptoString = updatedTop.toString() + "px";
+//     console.log(updatedLefttoString)
+//     console.log(updatedToptoString)
+//   },
+//   false
+// );
+
+// window.addEventListener("resize", function() {
+//   window.scrollTo(0, 0);
+//   let containerElement = document.querySelector("#container");  
+//   containerElement.style.width = "100%";
+//   containerElement.style.height = "100%";
+//   console.log("Resizing");
+//   console.log ("container width: " + containerElement.offsetWidth); 
+//   console.log(containerElement.style.width);
+//   console.log("visviewportheight: " + visualViewportHeight)
+//   console.log("visviewportwidth: " + visualViewportWidth)
+// })
+
 window.addEventListener("resize", function() {
   window.scrollTo(0, 0);
-  let containerElement = document.querySelector("#container");
-  // containerElement.style.width = String(visualViewportWidth - 60) + "px";
-  // containerElement.style.height = String(visualViewportHeight) + "px";
-  containerElement.style.width = "100%";
-  containerElement.style.height = "100%";
-  console.log("Resizing");
-  console.log ("container width: " + containerElement.offsetWidth); 
-  console.log(containerElement.style.width);
-  console.log("visviewportheight: " + visualViewportHeight)
-  console.log("visviewportwidth: " + visualViewportWidth)
-
-  // let lockScreenContainer = this.document.querySelector("#lock-screen");
-
-  // lockScreenContainer.style.height = "9000px";
-  // lockScreenContainer.style.width = "9000px";
+  let containerElement = document.querySelector("#container");  
+  containerElement.style.width = "100dvh";
+  containerElement.style.height = "100dvh";  
 })
-
 
 let images;
 
