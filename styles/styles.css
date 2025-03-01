@@ -98,7 +98,8 @@ button {
   margin: 0px 0px 0px 0px;
   background-color: var(--background);
   display: grid;  
-  grid-template-rows: 275px 100px 1fr .5fr;
+  grid-template-rows: 5% 40% 20% 30% 5%;
+  /* grid-template-rows: 275px 100px 1fr .5fr; */
   /* min-width: 360px; */
 }
 
