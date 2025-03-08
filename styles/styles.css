@@ -137,7 +137,8 @@ button {
 
 */
 
-/*** MODE NOT SUPPORTED ***/
+/******************************************** MODE NOT SUPPORTED *********************************************/
+
 
 @media only screen and (width < 360px) {
   #container {
@@ -160,7 +161,7 @@ button {
   }
 }
 
-/*** MOBILE - Extra Small ***/
+/********************************************* MOBILE / PHONES ********************************************/
 
 
 @media only screen and (360px <= width < 599px) {
@@ -346,7 +347,7 @@ button {
   }
 }
 
-/* SMALL DEVICE */
+/********************************************* SMALL DEVICE & SMALL TABLET************************************/
 
 @media only screen and (min-width: 600px) {
   #container {
@@ -370,7 +371,7 @@ button {
   }
 }
 
-/**** DESKTOP & TABLETS ****/
+/******************************************* DESKTOP & LARGE TABLETS *********************************************/
 
 @media only screen and (min-width: 768px) {
   #container {
