@@ -660,6 +660,9 @@ let introContinueDialogue = `You have decided that your training and preparation
 
 
 function introContinue() {
+  let introContinueButton = document.querySelector('#intro-continue-button');
+  introContinueButton.remove();
+
   $("#welcome-title").animate({fontSize: "0px"}, 300);
   $(".welcome-title").slideUp(300).children().slideUp(300);
   setTimeoutArray = [];
