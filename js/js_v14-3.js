@@ -642,12 +642,12 @@ function addIntroContinueButton() {
   let introBreak = document.createElement("br");
   let introBreak2 = document.createElement("br");
 
+  let containerDiv = document.querySelector('#container');
 
+  // dialogue.appendChild(introBreak);
+  // dialogue.appendChild(introBreak2);
 
-  dialogue.appendChild(introBreak);
-  dialogue.appendChild(introBreak2);
-
-  dialogue.appendChild(continueButtonContainer);
+  containerDiv.appendChild(continueButtonContainer);
 }
 
 let introContinueDialogue = `You have decided that your training and preparation have readied you for the 

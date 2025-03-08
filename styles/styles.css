@@ -190,6 +190,10 @@ button {
     grid-row: 2 / span 1;
   }
 
+  #intro-button-container {
+    grid-row: 5 / span 1;
+  }
+
   .page-title {
     width: 350px;
     height: 100px;
