@@ -33,7 +33,11 @@
   cursor: url("../images/gui/cursor.png"), auto;
 }
 
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   overflow: hidden;
@@ -181,6 +185,16 @@ button {
 
   }
   
+  #enter-game {
+    grid-row: 5 / span 1;
+  }
+
+  #new-continue-button {
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 1;
+    margin: auto;
+  }
+
   #dialogue {
     width: 90%;
     ;
@@ -311,11 +325,6 @@ button {
     display: none;
   }
 
-
- 
-
-
-
   #character-menu {
     display: none;  
   }
@@ -335,7 +344,6 @@ button {
     grid-row: 3 / 3;
     grid-column: 1 / 1;
     margin: 0px 0px 0px 0px;
-
   }
 
   #character-saving-throws {
@@ -347,7 +355,6 @@ button {
     grid-column: 2 / 2;
     /* padding-left: 15px; */
     margin: 0px 0px 0px 0px;
-
   }
 }
 
@@ -501,12 +508,14 @@ input[type="submit"],
   background-color: var(--btn-bg);
   color: var(--btn-text);
   border-radius: 10px;
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-align: center;
-  padding: 15px;
-  height: 70px;
+  height: 30px;
   width: 210px;
   border: 0px solid var(--btn-bg);  
+  align-items: center;
+  justify-content: center;
+  
 }
 
 input[type="submit"]:hover,

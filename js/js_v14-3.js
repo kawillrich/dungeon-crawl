@@ -707,8 +707,13 @@ function addContinueButton() {
   addNewContinueButton.type = "button";
   addNewContinueButton.addEventListener("click", function(newButton) {
     newButton.target.remove();
-    introContinueThree(newButton)}, false);
-  dialogue.appendChild(addNewContinueButton);
+    introContinueThree(newButton)
+  }, false);
+  
+  // dialogue.appendChild(addNewContinueButton);
+  
+  let containerDiv = document.querySelector("#container");
+  containerDiv.appendChild(addNewContinueButton);
   let newButton = document.querySelector("#new-continue-button");
   return newButton;
 }
