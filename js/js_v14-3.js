@@ -738,6 +738,8 @@ function introContinueThree(newButton) {
 }
 
 function introContinueFour() {
+  let submitNameButton = document.querySelector("#submit-name-div");
+  submitNameButton.classList.remove("not-visible");
   let introContinueButton = document.querySelector("#intro-button-container");
   // introContinueButton.remove();
   introContinueButton.style.display = "none";
