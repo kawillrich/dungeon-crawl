@@ -738,6 +738,9 @@ function introContinueThree(newButton) {
 }
 
 function introContinueFour() {
+  let introContinueButton = document.querySelector("#intro-button-container");
+  // introContinueButton.remove();
+  introContinueButton.style.display = "none";
   if (dialogueIterator < introContinueDialogue2.length) {
     dialogue.innerHTML += introContinueDialogue2.charAt(dialogueIterator);
     dialogueIterator++;
