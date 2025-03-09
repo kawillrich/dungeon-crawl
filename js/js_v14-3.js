@@ -661,6 +661,7 @@ let introContinueDialogue = `You have decided that your training and preparation
 
 function introContinue() {
   let introContinueButton = document.querySelector('#intro-continue-button');
+  introContinueButton.style.display = "none";
   introContinueButton.remove();
 
   $("#welcome-title").animate({fontSize: "0px"}, 300);

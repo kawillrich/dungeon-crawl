@@ -182,19 +182,39 @@ button {
     width: 100%;
     /* min-width: 330px;
     max-width: 599px; */
-
+    grid-template-areas: "header"
+                         "charcter"
+                         "dialogue"
+                         "fight"
+                         "footer"
   }
   
   #enter-game {
-    grid-row: 5 / span 1;
+    grid-area: footer;
+    /* display: inline; */
+    /* display: none; */
   }
 
   #new-continue-button {
     grid-row: 5 / span 1;
     grid-column: 1 / span 1;
     margin: auto;
+    /* display: none; */
   }
 
+  #submit-name-div {
+    grid-area: footer;
+  }
+
+  #submit-name {
+    grid-area: footer;
+    /* grid-row: 5 / span 1;
+    grid-column: 1 / span 1; */
+    /* display: block; */
+    margin: auto; 
+    /* display: none; */
+  }
+  
   #dialogue {
     width: 90%;
     ;
