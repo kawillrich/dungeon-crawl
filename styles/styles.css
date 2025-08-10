@@ -175,7 +175,7 @@ button {
     margin: 0px 0px 0px 0px;
     background-color: var(--background);
     display: grid; 
-    grid-template-rows: 5% 40% 20% 30% 5%; 
+    grid-template-rows: 5% 10% 30% 50% 5%;
     /* grid-template-rows: 150px 100px 1fr .5fr; */
     /* grid-template-columns: 1fr; */
     padding: 5px;
@@ -183,7 +183,7 @@ button {
     /* min-width: 330px;
     max-width: 599px; */
     grid-template-areas: "header"
-                         "charcter"
+                         "player"
                          "dialogue"
                          "fight"
                          "footer"
@@ -193,6 +193,12 @@ button {
     grid-area: footer;
     /* display: inline; */
     /* display: none; */
+  }
+
+  .welcome-title {
+    grid-area: dialogue;
+    
+    margin: auto;
   }
 
   #new-continue-button {
@@ -222,7 +228,8 @@ button {
   }
 
   #header {
-    grid-row: 2 / span 1;
+    grid-area: player;
+    /* grid-row: 2 / span 1; */
   }
 
   #intro-button-container {
