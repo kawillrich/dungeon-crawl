@@ -607,7 +607,7 @@ function beginIntro() {
     fontSize: "0px"}, 300).next().animate({
     width: "0px",
     height: "0px"}, 300).slideUp(300).next().dequeue(); 
-  $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
+  // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
   enterGame.remove();
   continueAnimation();  
 }

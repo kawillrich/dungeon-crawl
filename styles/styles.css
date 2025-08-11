@@ -234,8 +234,16 @@ button {
     width: 100%;
   }
 
+ /* #confirm-start {
+   grid-area: playerInfo;
+ } */
+
   #intro-button-container {
     grid-row: 5 / span 1;
+  }
+
+  #inner-dialogue-div {
+    grid-area: dialogue;
   }
 
   .page-title {
