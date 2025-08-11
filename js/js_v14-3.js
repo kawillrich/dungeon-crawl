@@ -787,7 +787,6 @@ function charNameSubmitted() {
   submitNameButton.removeEventListener("click", checkUsername, false);
   submitNameButton.classList.add("disabled");
   submitNameButton.style.display = "none";
-  let characterName = document.querySelector("#character-name");
   window.scrollTo(0, 0);
 
   let confirmStart = document.querySelector("#confirm-start");
@@ -840,7 +839,7 @@ function rollAttributes() {
   welcomeMessage.id = "welcome-message";
   let containerDiv = document.querySelector("#container");
   containerDiv.appendChild(welcomeMessage);
-  welcomeMessage.style.display = "block";
+  // welcomeMessage.style.display = "block";
 
   
   
