@@ -762,8 +762,9 @@ function introContinueFour() {
 
 function addSubmitNameButton() {
   console.log("addSubmitNameButton");
-  let confrimStart = document.querySelector("#confirm-start");
-  confrimStart.style.display = "block";
+  let confirmStart = document.querySelector("#confirm-start");
+  confirmStart.style.display = "block";
+  confirmStart.style.gridArea = "dialogue";
 }
 
 function checkUsername() {
