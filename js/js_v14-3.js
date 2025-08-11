@@ -883,9 +883,20 @@ function rollAttributes() {
     </div>
  
     <p id="dialogue-paragraph">Choose your attributes.</p>
-    <button id="generate-attributes">Roll</button>
-    <button id="confirm-attributes">Confirm</button>
-    `;
+    
+    
+  `;
+
+  let generateNewAttributeScores = document.createElement("button");
+  generateNewAttributeScores.id = "generate-attributes";
+  generateNewAttributeScores.textContent = "Roll";
+
+  let confirmNewAttributeScores = document.createElement("button");
+  confirmNewAttributeScores.id = "confirm-attributes";
+  confirmNewAttributeScores.textContent = "Confirm";
+
+  containerDiv.appendChild(generateNewAttributeScores);
+  containerDiv.appendChild(confirmNewAttributeScores);
 
   let getCharStrength = document.querySelector("#strength-stat");
   getCharStrength.innerHTML = strength.score;
