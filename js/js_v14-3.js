@@ -783,6 +783,11 @@ function checkUsername() {
 }
 
 function charNameSubmitted() {
+  let submitNameButton = document.querySelector("#submit-name");
+  submitNameButton.removeEventListener("click", checkUsername, false);
+  submitNameButton.classList.add("disabled");
+  submitNameButton.style.display = "none";
+  let characterName = document.querySelector("#character-name");
   window.scrollTo(0, 0);
 
   let confirmStart = document.querySelector("#confirm-start");
