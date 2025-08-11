@@ -182,10 +182,10 @@ button {
     width: 100%;
     /* min-width: 330px;
     max-width: 599px; */
-    grid-template-areas: "header"
-                         "player"
+    grid-template-areas: "banner"
+                         "playerData"
+                         "playerInfo"
                          "dialogue"
-                         "fight"
                          "footer"
   }
   
@@ -228,8 +228,10 @@ button {
   }
 
   #header {
-    grid-area: player;
+    grid-area: playerData;
     /* grid-row: 2 / span 1; */
+    height: 100%;
+    width: 100%;
   }
 
   #intro-button-container {
