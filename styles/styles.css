@@ -244,6 +244,11 @@ button {
     margin: auto;
   }
 
+  #generate-attributes {
+    grid-area: footer;
+    margin: auto;
+  }
+
   #intro-button-container {
     grid-row: 5 / span 1;
   }

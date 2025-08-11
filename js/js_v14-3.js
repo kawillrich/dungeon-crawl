@@ -882,7 +882,7 @@ function rollAttributes() {
         </div>
     </div>
  
-    <p id="dialogue">Choose your attributes.</p>
+    <p id="dialogue-paragraph">Choose your attributes.</p>
     <button id="generate-attributes">Roll</button>
     <button id="confirm-attributes">Confirm</button>
     `;
