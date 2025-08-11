@@ -609,7 +609,7 @@ input[type="submit"]:active,
   padding: 10px 0px 0px 0px;
   margin: auto;
   font-size: 1.75rem;
-  display: grid;
+  display: block;
   justify-content: space-evenly;
   text-align: justify;
 }
