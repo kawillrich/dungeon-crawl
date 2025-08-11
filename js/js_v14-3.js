@@ -567,6 +567,7 @@ let setTimeoutArray = [];
 
 
 //create global fx to animate and create new dialogue, and to create and append continue button
+  //need to declare & initialize buttonIterator and dialogueIterator globally
 
 // function createButton() {
 //   let newButton = document.createElement("button");
