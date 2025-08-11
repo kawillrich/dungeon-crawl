@@ -212,6 +212,7 @@ button {
   #submit-name-div {
     grid-area: footer;
     /* display: none; */
+    margin: auto
   }
 
   #submit-name {
@@ -220,6 +221,7 @@ button {
     grid-column: 1 / span 1; */
     /* display: block; */
     margin: auto; 
+
   }
   
   #dialogue {
