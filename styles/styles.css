@@ -247,6 +247,16 @@ button {
   #generate-attributes {
     grid-area: footer;
     margin: auto;
+    width: 50px;
+    justify-content: space-evenly;
+
+  }
+
+  #confirm-attributes {
+    grid-area: footer;
+    margin: auto;
+    width: 50px;
+    justify-content: space-evenly;
   }
 
   #intro-button-container {
@@ -404,6 +414,11 @@ button {
     grid-column: 2 / 2;
     /* padding-left: 15px; */
     margin: 0px 0px 0px 0px;
+  }
+
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr / 1fr / 1fr;
   }
 }
 
@@ -631,11 +646,19 @@ input[type="submit"]:active,
 
 #intro-continue-button {
   margin: auto;
+  width: 100px;
+  grid-area: middle;
 }
 
 #intro-button-container {
-  display: flex;
-  align-items: center;
+  grid-area: footer;
+  
+  display: grid;
+  grid-template-areas: "left middleLeft middle middleRight right";
+  
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: space-evenly;
+
 }
 
 #character-name {
