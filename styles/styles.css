@@ -236,6 +236,13 @@ button {
     width: 100%;
   }
 
+  #welcome-message {
+    grid-area: playerInfo;
+    font-size: 1.75rem;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  }
 
   #intro-button-container {
     grid-row: 5 / span 1;

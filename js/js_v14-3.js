@@ -831,9 +831,20 @@ function rollAttributes() {
       quantity: 0,
     },
   };
-
+  //create new div/span to contain welcome message
+  
+  
   let getCharName = document.querySelector("#dialogue");
-  getCharName.textContent = `
+  getCharName.innerHTML = "";
+  let welcomeMessage = document.createElement("span");
+  welcomeMessage.id = "welcome-message";
+  let containerDiv = document.querySelector("#container");
+  containerDiv.appendChild(welcomeMessage);
+  welcomeMessage.style.display = "block";
+
+  
+  
+  welcomeMessage.textContent = `
     Welcome, ${submittedCharName}, please roll your Attribute Scores. The maximum score is 18 and the lowest score is 7. Select 'Confirm' when done.`;
 
   getCharName.innerHTML += `
