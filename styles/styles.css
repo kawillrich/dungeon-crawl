@@ -196,7 +196,7 @@ button {
   }
 
   .welcome-title {
-    grid-area: dialogue;
+    grid-area: playerInfo;
     
     margin: auto;
   }
