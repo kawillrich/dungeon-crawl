@@ -734,7 +734,8 @@ function introContinueThree(newButton) {
 
   dialogueIterator = 0;
   setTimeoutArray = [];
-
+  let dialogue = document.querySelector("#dialogue");
+  dialogue.removeChild(document.querySelector("#inner-dialogue-div"));
   introContinueFour();
 }
 
@@ -744,6 +745,8 @@ function introContinueFour() {
   let introContinueButton = document.querySelector("#intro-button-container");
   // introContinueButton.remove();
   introContinueButton.style.display = "none";
+  
+
   if (dialogueIterator < introContinueDialogue2.length) {
     dialogue.innerHTML += introContinueDialogue2.charAt(dialogueIterator);
     dialogueIterator++;
