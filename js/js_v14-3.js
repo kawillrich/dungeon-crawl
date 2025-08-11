@@ -670,7 +670,7 @@ function introContinue() {
   setTimeoutArray = [];
   dialogueIterator = 0;
   dialogue.innerHTML = "";
-  let innerDialogueDiv = document.createElement('div');
+  let innerDialogueDiv = document.createElement('span');
   innerDialogueDiv.id = "inner-dialogue-div";
   innerDialogueDiv.style.fontSize = "1.75rem";
 
@@ -679,7 +679,7 @@ function introContinue() {
   dialogue.appendChild(continueBreak);
 
 
-  dialogue.insertAdjacentElement("beforebegin", innerDialogueDiv);
+  dialogue.appendChild(innerDialogueDiv);
   introContinueTwo();
 }
  

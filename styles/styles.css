@@ -226,7 +226,7 @@ button {
   
   #dialogue {
     width: 90%;
-    ;
+    grid-area: dialogue;
   }
 
   #header {
