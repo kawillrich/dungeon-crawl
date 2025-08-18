@@ -555,7 +555,6 @@ function createDialogueDiv(dialogueInput) {
 
   //newDialogue is not defined
   dialogueDiv.appendChild(createButton(newDialogue));
-  continueButtonSequence++;
 }
 
 // createButton();
@@ -616,6 +615,7 @@ function createButton() {
   appDiv.appendChild(lineBreak);
   appDiv.appendChild(newButton);
   buttonIterator++;
+  continueButtonSequence++;
   return newButton; 
 }
 
