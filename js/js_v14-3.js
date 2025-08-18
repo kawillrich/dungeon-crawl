@@ -222,8 +222,6 @@ import {
 
 //inializing character default values
 
-// window.removeEventListener("scroll", scrollHandler);
-
 let windowViewportHeight, windowViewportWidth, visualViewportHeight, visualViewportWidth;
 
 visualViewportHeight = visualViewport.height;
@@ -247,39 +245,6 @@ window.addEventListener(
   },
   false
 );
-
-// window.addEventListener(
-//   "load",
-//   function () {
-//     window.scrollTo(0, 0);
-//     let containerElement = document.querySelector("#container");      
-//     containerElement.style.width = "100%";
-//     containerElement.style.height = "100%";
-//     console.log (containerElement.style.width); 
-//     console.log ("container width: " + containerElement.offsetWidth); 
-//     let updatedLeft = (visualViewportWidth * .5) - 340;
-//     let updatedTop = visualViewportHeight * .5 - 40;
-//     console.log(updatedLeft)
-//     console.log(updatedTop)
-//     let updatedLefttoString = updatedLeft.toString() + "px";
-//     let updatedToptoString = updatedTop.toString() + "px";
-//     console.log(updatedLefttoString)
-//     console.log(updatedToptoString)
-//   },
-//   false
-// );
-
-// window.addEventListener("resize", function() {
-//   window.scrollTo(0, 0);
-//   let containerElement = document.querySelector("#container");  
-//   containerElement.style.width = "100%";
-//   containerElement.style.height = "100%";
-//   console.log("Resizing");
-//   console.log ("container width: " + containerElement.offsetWidth); 
-//   console.log(containerElement.style.width);
-//   console.log("visviewportheight: " + visualViewportHeight)
-//   console.log("visviewportwidth: " + visualViewportWidth)
-// })
 
 window.addEventListener("resize", function() {
   window.scrollTo(0, 0);
@@ -534,20 +499,6 @@ export function stopAnimate() {
 //initialized and clears selectedSpecialty
 
 let selectedSpecialty = "";
-//let finalWeapon = finalCharacter.weapon;
-
-//tooltips
-
-//asks if you are ready to start game
-
-// const SCREEN_WIDTH =  document.documentElement.clientWidth;
-// const SCREEN_HEIGHT = document.documentElement.clientHeight - 100;
-
-// let $mainContainer = $("#container");
-// $mainContainer.width(SCREEN_WIDTH);
-// $mainContainer.height(SCREEN_HEIGHT); 
-
-
 
 let enterGame = document.querySelector("#enter-game");
 enterGame.addEventListener("click", beginIntro, false);
@@ -602,7 +553,6 @@ let setTimeoutArray = [];
 
 //end global fx
 
-
 function beginIntro() {
   $(".page-title").animate({
     fontSize: "0px"}, 300).next().animate({
@@ -644,9 +594,6 @@ function addIntroContinueButton() {
   let introBreak2 = document.createElement("br");
 
   let containerDiv = document.querySelector('#container');
-
-  // dialogue.appendChild(introBreak);
-  // dialogue.appendChild(introBreak2);
 
   containerDiv.appendChild(continueButtonContainer);
 }
@@ -711,9 +658,7 @@ function addContinueButton() {
     newButton.target.remove();
     introContinueThree(newButton)
   }, false);
-  
-  // dialogue.appendChild(addNewContinueButton);
-  
+    
   let containerDiv = document.querySelector("#container");
   containerDiv.appendChild(addNewContinueButton);
   let newButton = document.querySelector("#new-continue-button");
@@ -729,9 +674,6 @@ let introContinueDialogue2 = `Your father, Edwin, and your Mother, Alena, have r
 function introContinueThree(newButton) {
   $("#inner-dialogue-div").animate({fontSize: "0px"}, 300)
   
-  // console.log(newButton)
-  // newButton.target.remove();
-
   dialogueIterator = 0;
   setTimeoutArray = [];
   let dialogue = document.querySelector("#dialogue");
@@ -830,8 +772,7 @@ function rollAttributes() {
       quantity: 0,
     },
   };
-  //create new div/span to contain welcome message
-  
+  //create new div/span to contain welcome message  
   
   let getCharName = document.querySelector("#dialogue");
   getCharName.innerHTML = "";
@@ -839,10 +780,7 @@ function rollAttributes() {
   welcomeMessage.id = "welcome-message";
   let containerDiv = document.querySelector("#container");
   containerDiv.appendChild(welcomeMessage);
-  // welcomeMessage.style.display = "block";
-
-  
-  
+   
   welcomeMessage.textContent = `
     Welcome, ${submittedCharName}, please roll your Attribute Scores. The maximum score is 18 and the lowest score is 7. Select 'Confirm' when done.`;
 
@@ -882,9 +820,7 @@ function rollAttributes() {
         </div>
     </div>
  
-    <p id="dialogue-paragraph">Choose your attributes.</p>
-    
-    
+    <p id="dialogue-paragraph">Choose your attributes.</p>    
   `;
 
   let generateNewAttributeScores = document.createElement("button");
@@ -1128,12 +1064,7 @@ function updateAlignmentDescription() {
 
 //TEST FUNCTION TO START GAME - creates player info
 function startGame() {
-  // $("#character-info").animate({width: "300px"}, 300).slideDown(300);
-  // $("#character-info").slideDown(300);
-
-
-
-
+  
   $("#character-info").css({margin: "0px"}).animate({width: "98%", height: "0px"}, 300).slideDown(300).next().dequeue();
   window.scrollTo(0, 0);
   let strengthPlusAdjustment;
@@ -3019,88 +2950,6 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
     false
   );
 
-  // if (finalCharacter.specialty.spell2.name === "None") {
-  //   let attackSpellTwoMonsterOneNone = document.querySelector(
-  //     ".spell2-monster-one"
-  //   );
-  //   attackSpellTwoMonsterOneNone.className =
-  //     "no-spell attack spell2-monster-one";
-
-  //   let attackSpellTwoMonsterTwoNone = document.querySelector(
-  //     ".spell2-monster-two"
-  //   );
-  //   attackSpellTwoMonsterTwoNone.className =
-  //     "no-spell attack spell2-monster-two";
-  // } else {
-  //   let attackSpellTwoMonsterOne = document.querySelector(
-  //     ".spell2-monster-one"
-  //   );
-  //   attackSpellTwoMonsterOne.addEventListener(
-  //     "click",
-  //     function () {
-  //       animate();
-  //       finalCharacter.spell2AttackMonster1(
-  //         monsterOne,
-  //         monsterTwo,
-  //         continueNextChapter,
-  //         finalCharacter.spell2
-  //       );
-  //     },
-  //     false
-  //   );
-
-  //   let attackSpellTwoMonsterTwo = document.querySelector(
-  //     ".spell2-monster-two"
-  //   );
-  //   attackSpellTwoMonsterTwo.addEventListener(
-  //     "click",
-  //     function () {
-  //       animate();
-  //       finalCharacter.spell2AttackMonster2(
-  //         monsterOne,
-  //         monsterTwo,
-  //         continueNextChapter,
-  //         finalCharacter.spell2
-  //       );
-  //     },
-  //     false
-  //   );
-  // }
-
-  // if (finalCharacter.specialty.spell3.name === "None") {
-  //   let groupAttackSpellNone = document.querySelector(".area-attack");
-  //   groupAttackSpellNone.className = "no-spell attack area-attack";
-  // } else {
-  //   let groupAttackSpell = document.querySelector(".area-attack");
-  //   groupAttackSpell.addEventListener(
-  //     "click",
-  //     function () {
-  //       animate();
-  //       finalCharacter.areaAttackSpell(
-  //         monsterOne,
-  //         monsterTwo,
-  //         continueNextChapter,
-  //         finalCharacter.spell3
-  //       );
-  //     },
-  //     false
-  //   );
-  // }
-
-  // if (finalCharacter.specialty.spell1.name === "None") {
-  //   let healSpellSelfNone = document.querySelector(".spell1-heal");
-  //   healSpellSelfNone.className = "no-spell attack";
-  // } else {
-  //   let healSpellSelf = document.querySelector(".spell1-heal");
-  //   healSpellSelf.addEventListener(
-  //     "click",
-  //     function () {
-  //       finalCharacter.spell1Heal(finalCharacter.spell1);
-  //     },
-  //     false
-  //   );
-  // }
-
   if (
     finalCharacter.specialty.name === "High Mage" ||
     finalCharacter.specialty.name === "Elf"
@@ -3398,12 +3247,6 @@ function castSpellFromList(e, m1, m2, nextChap) {
             //removing active spell statuses so they don't run after being cancelled.
             // if (finalCharacter.activeSpellStatuses.includes())
           }
-
-          // let playerStatus = document.querySelector("#char-status");
-          // playerStatus.innerHTML = `
-          //   <h4 id="char-status" class="char-info-label">Status:
-          //   <span class="character-display-info">${finalCharacter.status}</span>
-          //   </h4>`;
         }
 
         firstLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
@@ -3428,12 +3271,6 @@ function castSpellFromList(e, m1, m2, nextChap) {
           if (!addInvisibilityStatus.classList.contains("hide-status")) {
             addInvisibilityStatus.classList.toggle("hide-status");
           }
-
-          // let playerStatus = document.querySelector("#char-status");
-          // playerStatus.innerHTML = `
-          //   <h4 id="char-status" class="char-info-label">Status:
-          //   <span class="character-display-info">${finalCharacter.status}</span>
-          //   </h4>`;
         }
 
         secondLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
@@ -3455,12 +3292,6 @@ function castSpellFromList(e, m1, m2, nextChap) {
           if (!addInvisibilityStatus.hasClass("hide-status")) {
             addInvisibilityStatus.removeClass("hide-status");
           }
-
-          // let playerStatus = document.querySelector("#char-status");
-          // playerStatus.innerHTML = `
-          //   <h4 id="char-status" class="char-info-label">Status:
-          //   <span class="character-display-info">${finalCharacter.status}</span>
-          //   </h4>`;
         }
 
         thirdLevel[i].castSpell(m1, m2, nextChap, thisNodeInnerText);
@@ -3577,16 +3408,7 @@ function regenerateHP(hp, maxHP) {
       continueChapterThreeFive();
       completeHealing();
     } else {
-      hp += 1;
-      // let regeneratedHP = document.getElementById("char-hp");
-      // regeneratedHP.innerHTML = `
-      //   Hit Points: <span class="character-display-info"></span><span id='hpBar'><progress id='hp-prog-bar' max="${
-      //     finalCharacter.specialty.maxHealthPoints
-      //     // + finalCharacter.attributes[4].adjustment
-      //   }" value="${hp}"></progress>${hp}/${
-      //   finalCharacter.specialty.maxHealthPoints
-      // }</span></span>
-      //           `;
+      hp += 1;      
 
       let updateCharacterHPGuage = document.querySelector(
         ".hitpoint-guage-value-current"
@@ -3828,11 +3650,7 @@ function continueChapterFourThreeThree() {
       //continueChapterThreeFive();
       //completeHealing();
     } else {
-      hp += 1;
-      // let regeneratedHP = document.getElementById("char-hp");
-      // regeneratedHP.innerHTML = `
-      //           Hit Points: <span class="character-display-info">${hp}</span><span id='hpBar'><progress id='hp-prog-bar' max="${finalCharacter.specialty.maxHealthPoints}" value="${hp}"></progress>${hp}/${finalCharacter.specialty.maxHealthPoints}</span></span>
-      //           `;
+      hp += 1;      
 
       let updateCharacterHPGuage = document.querySelector(
         ".hitpoint-guage-value-current"
@@ -3852,12 +3670,6 @@ function continueChapterFourThreeThree() {
       }
 
       characterHPGuageDashoffset.style.strokeDashoffset = characterHPGuageRatio;
-
-      // let regenerationDialogue = document.getElementById('dialogue');
-      // regenerationDialogue.innerHTML =
-      //     `
-      //     <p>Resting...</p>
-      //     `;
 
       setTimeout(function () {
         farmhouseResting(hp, maxHP);
@@ -4041,10 +3853,6 @@ function continueChapterFive() {
       <span class="weapon-tooltiptext">Damage: ${finalCharacter.weapon.damage}</span>
     </span>
     `;
-
-  // let updatedCharDamage = document.querySelector('#char-damage');
-  // updatedCharDamage.innerHTML = `
-  // <h4 id='char-damage' class='char-info-label'>Damage: <span class="character-display-info">${finalCharacter.weapon.damage}</span></h4>`;
 
   let chapterFiveDialogue = document.querySelector("#dialogue");
   chapterFiveDialogue.innerHTML = `
