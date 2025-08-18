@@ -576,6 +576,8 @@ function createButton(dialogueToDisplay, functionToRun) {
   return newButton; 
 }
 
+//** no need to create new div? 
+//** append button to #container vs. the dialogue div */
 function createDialogueDiv(dialogueInput) { 
   dialogue.textContent = "";
   let dialogueDiv = document.createElement("div");
