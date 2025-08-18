@@ -567,7 +567,7 @@ function continueAnimation() {
   if (dialogueIterator < dialogueText.length) {
     dialogue.innerHTML += dialogueText.charAt(dialogueIterator);
     dialogueIterator++;
-    setTimeoutArray.push(setTimeout(continueAnimation, 10));
+    setTimeoutArray.push(setTimeout(continueAnimation, typingSpeed));
   } else {
     console.log('test')
     for (let i = 0; i < setTimeoutArray.length; i ++) {
