@@ -546,17 +546,17 @@ let setTimeoutArray = [];
 //   return newButton; 
 // }
 
-// function createDialogueDiv(dialogueInput) {
-//   dialogue.innerHTML = "";
-//   let dialogueDiv = document.createElement("div");
-//   dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
-//   dialogueDiv.textContent = dialogueInput + " " + continueButtonSequence;
-//   dialogue.appendChild(dialogueDiv);
+function createDialogueDiv(dialogueInput) {
+  dialogue.innerHTML = "";
+  let dialogueDiv = document.createElement("div");
+  dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
+  dialogueDiv.textContent = dialogueInput + " " + continueButtonSequence;
+  dialogue.appendChild(dialogueDiv);
 
-//   //newDialogue is not defined
-//   dialogueDiv.appendChild(createButton(newDialogue));
-//   continueButtonSequence++;
-// }
+  //newDialogue is not defined
+  dialogueDiv.appendChild(createButton(newDialogue));
+  continueButtonSequence++;
+}
 
 // createButton();
 
@@ -569,8 +569,13 @@ function beginIntro() {
     height: "0px"}, 300).slideUp(300).next().dequeue(); 
   // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
   enterGame.remove();
+  dialogueIterator = 0;
   continueAnimation();  
 }
+
+let testDialogue = "test dialogue";
+let dialogueToDisplay = "Test dialogue to dipslay";
+let newDialogue = "Test new dialogue";
 
 function continueAnimation() {  
   if (dialogueIterator < dialogueText.length) {
@@ -583,29 +588,58 @@ function continueAnimation() {
       clearTimeout[i];
     }
     setTimeoutArray = [];
-
-    addIntroContinueButton();
+    // addIntroContinueButton();
+    createButton(testDialogue);
   }
 }
 
-function addIntroContinueButton() {
-  let continueButtonContainer = document.createElement("div");
-  continueButtonContainer.id = "intro-button-container";
-  continueButtonContainer.type = "button";
-  let continueButton = document.createElement("button");
-  continueButton.textContent = "Continue";
-  continueButton.id = "intro-continue-button";
-  continueButton.type = "button";
-  continueButton.addEventListener("click", introContinue, false);
+//** put new button creator function here */
 
-  continueButtonContainer.appendChild(continueButton);
-  let introBreak = document.createElement("br");
-  let introBreak2 = document.createElement("br");
+let continueButtonSequence = 0;
+let buttonIterator = 0;
 
-  let containerDiv = document.querySelector('#container');
-
-  containerDiv.appendChild(continueButtonContainer);
+function createButton() {
+  let newButton = document.createElement("button");
+  newButton.id = `button-${buttonIterator}`;
+  newButton.type = "button";
+  newButton.textContent = `Continue ${buttonIterator}`;
+  newButton.style.display = "block";
+  newButton.addEventListener(
+    "click",
+    function () {
+      createDialogueDiv(dialogueToDisplay);
+    },
+    false
+  );
+  let lineBreak = document.createElement('br');
+  let appDiv = document.getElementById("dialogue");
+  appDiv.appendChild(lineBreak);
+  appDiv.appendChild(newButton);
+  buttonIterator++;
+  return newButton; 
 }
+
+
+//** end new button creator function */
+
+// function addIntroContinueButton() {
+//   let continueButtonContainer = document.createElement("div");
+//   continueButtonContainer.id = "intro-button-container";
+//   continueButtonContainer.type = "button";
+//   let continueButton = document.createElement("button");
+//   continueButton.textContent = "Continue";
+//   continueButton.id = "intro-continue-button";
+//   continueButton.type = "button";
+//   continueButton.addEventListener("click", introContinue, false);
+
+//   continueButtonContainer.appendChild(continueButton);
+//   let introBreak = document.createElement("br");
+//   let introBreak2 = document.createElement("br");
+
+//   let containerDiv = document.querySelector('#container');
+
+//   containerDiv.appendChild(continueButtonContainer);
+// }
 
 let introContinueDialogue = `You have decided that your training and preparation have readied you for the 
                              challenge to venture to the ruins, in hopes of defeating the dragon and obtaining 
