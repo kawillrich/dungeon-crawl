@@ -518,7 +518,14 @@ let setTimeoutArray = [];
 
 
 //create global fx to animate and create new dialogue, and to create and append continue button
-  //need to declare & initialize buttonIterator and dialogueIterator (globally?)
+
+//**reuse continueAnimation function instead of repeating it */
+
+// let dialogueToDisplay = "lorem ipsum";
+// let newDialogue = "text 2";
+
+// let dialogueIterator = 0;
+// let buttonIterator = 0;
 
 // function createButton() {
 //   let newButton = document.createElement("button");
@@ -535,7 +542,7 @@ let setTimeoutArray = [];
 //   );
 //   let lineBreak = document.createElement('br');
 //   let appDiv = document.getElementById("dialogue");
-//   appDiv.appendChild(line)
+//   appDiv.appendChild(lineBreak);
 //   appDiv.appendChild(newButton);
 //   buttonIterator++;
 //   return newButton; 
@@ -547,9 +554,13 @@ let setTimeoutArray = [];
 //   dialogueDiv.id = `dialogue-div-${dialogueIterator}`;
 //   dialogueDiv.textContent = dialogueInput + " " + dialogueIterator;
 //   dialogue.appendChild(dialogueDiv);
+
+//   //newDialogue is not defined
 //   dialogueDiv.appendChild(createButton(newDialogue));
 //   dialogueIterator++;
 // }
+
+// createButton();
 
 //end global fx
 
