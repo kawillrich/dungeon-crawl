@@ -497,16 +497,18 @@ export function stopAnimate() {
 }
 
 //initialized and clears selectedSpecialty
-
 let selectedSpecialty = "";
 
+//select enter game button and add event listener for beginIntro()
 let enterGame = document.querySelector("#enter-game");
 enterGame.addEventListener("click", beginIntro, false);
 
+//set dialogue variable to #dialogue
 let dialogue = document.querySelector("#dialogue");
 let dialogueIterator = 0;
 let typingSpeed = 3;
 
+//set dialogue text to display
 let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure being guarded 
                     by the Nightfang Dragon, known as Soul Stealer. Soul Stealer is an ancient 
                     species of dragon with black scales, obsidian-like talons, and silver eyes 
@@ -515,51 +517,6 @@ let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure
 let setTimeoutArray = [];
 
 
-//create global fx to animate and create new dialogue, and to create and append continue button
-
-//**reuse continueAnimation function instead of repeating it */
-
-// let dialogueToDisplay = "lorem ipsum";
-// let newDialogue = "text 2";
-
-// let continueButtonSequence = 0;
-// let buttonIterator = 0;
-
-// function createButton() {
-//   let newButton = document.createElement("button");
-//   newButton.id = `button-${buttonIterator}`;
-//   newButton.type = "button";
-//   newButton.textContent = `Continue ${buttonIterator}`;
-//   newButton.style.display = "block";
-//   newButton.addEventListener(
-//     "click",
-//     function () {
-//       createDialogueDiv(dialogueToDisplay);
-//     },
-//     false
-//   );
-//   let lineBreak = document.createElement('br');
-//   let appDiv = document.getElementById("dialogue");
-//   appDiv.appendChild(lineBreak);
-//   appDiv.appendChild(newButton);
-//   buttonIterator++;
-//   return newButton; 
-// }
-
-function createDialogueDiv(dialogueInput) {
-  dialogue.innerHTML = "";
-  let dialogueDiv = document.createElement("div");
-  dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
-  dialogueDiv.textContent = dialogueInput + " " + continueButtonSequence;
-  dialogue.appendChild(dialogueDiv);
-
-  //newDialogue is not defined
-  dialogueDiv.appendChild(createButton(newDialogue));
-}
-
-// createButton();
-
-//end global fx
 
 function beginIntro() {
   $(".page-title").animate({
@@ -588,7 +545,7 @@ function continueAnimation() {
     }
     setTimeoutArray = [];
     // addIntroContinueButton();
-    createButton(testDialogue);
+    createButton(nextDialogue);
   }
 }
 
@@ -597,7 +554,7 @@ function continueAnimation() {
 let continueButtonSequence = 0;
 let buttonIterator = 0;
 
-function createButton() {
+function createButton(dialogueToDisplay, functionToRun) {
   let newButton = document.createElement("button");
   newButton.id = `button-${buttonIterator}`;
   newButton.type = "button";
@@ -619,6 +576,14 @@ function createButton() {
   return newButton; 
 }
 
+function createDialogueDiv(dialogueInput) { 
+  dialogue.textContent = "";
+  let dialogueDiv = document.createElement("div");
+  dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
+  dialogueDiv.textContent = dialogueInput + " " + continueButtonSequence;
+  dialogue.appendChild(dialogueDiv);
+  dialogueDiv.appendChild(createButton(dialogueInput));
+}
 
 //** end new button creator function */
 
@@ -641,7 +606,7 @@ function createButton() {
 //   containerDiv.appendChild(continueButtonContainer);
 // }
 
-let introContinueDialogue = `You have decided that your training and preparation have readied you for the 
+let nextDialogue = `You have decided that your training and preparation have readied you for the 
                              challenge to venture to the ruins, in hopes of defeating the dragon and obtaining 
                              his treasure. You have grown up a lot since your youth. Now, at age 26, you feel 
                              you are at your physical peak. Mentally, you have already taken the leap of faith 
