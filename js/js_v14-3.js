@@ -503,8 +503,6 @@ let selectedSpecialty = "";
 let enterGame = document.querySelector("#enter-game");
 enterGame.addEventListener("click", beginIntro, false);
 
-let buttonIterator = 1;
-
 let dialogue = document.querySelector("#dialogue");
 let dialogueIterator = 0;
 let typingSpeed = 3;
@@ -524,7 +522,7 @@ let setTimeoutArray = [];
 // let dialogueToDisplay = "lorem ipsum";
 // let newDialogue = "text 2";
 
-// let dialogueIterator = 0;
+// let continueButtonSequence = 0;
 // let buttonIterator = 0;
 
 // function createButton() {
@@ -551,13 +549,13 @@ let setTimeoutArray = [];
 // function createDialogueDiv(dialogueInput) {
 //   dialogue.innerHTML = "";
 //   let dialogueDiv = document.createElement("div");
-//   dialogueDiv.id = `dialogue-div-${dialogueIterator}`;
-//   dialogueDiv.textContent = dialogueInput + " " + dialogueIterator;
+//   dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
+//   dialogueDiv.textContent = dialogueInput + " " + continueButtonSequence;
 //   dialogue.appendChild(dialogueDiv);
 
 //   //newDialogue is not defined
 //   dialogueDiv.appendChild(createButton(newDialogue));
-//   dialogueIterator++;
+//   continueButtonSequence++;
 // }
 
 // createButton();
@@ -576,7 +574,7 @@ function beginIntro() {
 
 function continueAnimation() {  
   if (dialogueIterator < dialogueText.length) {
-    dialogue.innerHTML += dialogueText.charAt(dialogueIterator);
+    dialogue.textContent += dialogueText.charAt(dialogueIterator);
     dialogueIterator++;
     setTimeoutArray.push(setTimeout(continueAnimation, typingSpeed));
   } else {
