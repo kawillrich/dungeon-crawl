@@ -15,14 +15,14 @@ export function createContinueButton(eventToAdd) {
   newButton.addEventListener(
     "click",
     function () {
-      createDialogueDiv(dialogueToDisplay);
+      createDialogueDiv(eventToAdd);
     },
     false
   );
-  let lineBreak = document.createElement('br');
-  let appDiv = document.getElementById("dialogue");
-  appDiv.appendChild(lineBreak);
-  appDiv.appendChild(newButton);
+  // let lineBreak = document.createElement('br');
+  // let appDiv = document.getElementById("dialogue");
+  // appDiv.appendChild(lineBreak);
+  // appDiv.appendChild(newButton);
   buttonIterator++;
   continueButtonSequence++;
   return newButton; 
