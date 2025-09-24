@@ -19,10 +19,10 @@ export function createContinueButton(eventToAdd) {
     },
     false
   );
-  // let lineBreak = document.createElement('br');
-  // let appDiv = document.getElementById("dialogue");
-  // appDiv.appendChild(lineBreak);
-  // appDiv.appendChild(newButton);
+  let lineBreak = document.createElement('br');
+  let appDiv = document.getElementById("dialogue");
+  appDiv.appendChild(lineBreak);
+  appDiv.appendChild(newButton);
   buttonIterator++;
   continueButtonSequence++;
   return newButton; 
