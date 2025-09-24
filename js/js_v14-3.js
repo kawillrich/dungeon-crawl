@@ -499,12 +499,9 @@ export function stopAnimate() {
 //initialized and clears selectedSpecialty
 let selectedSpecialty = "";
 
-let introText = "In the ruins of Elsier, there are rumors of a large treasure being guarded by the Nightfang Dragon, known as Soul Stealer. Soul Stealer is an ancient species of dragon with black scales, obsidian-like talons, and silver eyes that can see in the dark as if it were daytime. It is said that Soul Stealer breathes black fire that is able to burn through *almost* anything....";
-
 //select enter game button and add event listener for beginIntro()
 let enterGame = document.querySelector("#enter-game");
-enterGame.addEventListener("click", function () 
-{beginIntro(introText)}, false);
+enterGame.addEventListener("click", beginIntro, false);
 
 //set dialogue variable to #dialogue
 let dialogue = document.querySelector("#dialogue");
@@ -512,11 +509,16 @@ let dialogueIterator = 0;
 let typingSpeed = 3;
 
 //set dialogue text to display
-
+let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure being guarded 
+                    by the Nightfang Dragon, known as Soul Stealer. Soul Stealer is an ancient 
+                    species of dragon with black scales, obsidian-like talons, and silver eyes 
+                    that can see in the dark as if it were daytime. It is said that Soul Stealer 
+                    breathes black fire that is able to burn through *almost* anything....`;
 let setTimeoutArray = [];
 
-function beginIntro(dialogueToType) {
-  //console.log(dialogueToType);
+
+
+function beginIntro() {
   $(".page-title").animate({
     fontSize: "0px"}, 300).next().animate({
     width: "0px",
@@ -524,19 +526,18 @@ function beginIntro(dialogueToType) {
   // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
   enterGame.remove();
   dialogueIterator = 0;
-
-  let dialogueToTypeArray = dialogueToType.split("");
-
-  continueAnimation(dialogueToTypeArray);  
+  continueAnimation();  
 }
 
-function continueAnimation(textToType) {
-  console.log(textToType);
- 
-  if (dialogueIterator < textToType.length) {
-    dialogue.textContent += textToType[dialogueIterator];
+let testDialogue = "test dialogue";
+let dialogueToDisplay = "Test dialogue to dipslay";
+let newDialogue = "Test new dialogue";
+
+function continueAnimation() {  
+  if (dialogueIterator < dialogueText.length) {
+    dialogue.textContent += dialogueText.charAt(dialogueIterator);
     dialogueIterator++;
-    setTimeoutArray.push(setTimeout(continueAnimation(textToType), 10000));
+    setTimeoutArray.push(setTimeout(continueAnimation, typingSpeed));
   } else {
     console.log('test')
     for (let i = 0; i < setTimeoutArray.length; i ++) {
@@ -575,8 +576,8 @@ function createButton(dialogueToDisplay, functionToRun) {
   return newButton; 
 }
 
-//need to invoke continueAnimation for dialogue typing
-
+//** no need to create new div? 
+//** append button to #container vs. the dialogue div */
 function createDialogueDiv(dialogueInput) { 
   dialogue.textContent = "";
   let dialogueDiv = document.createElement("div");
