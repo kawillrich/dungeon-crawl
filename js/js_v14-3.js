@@ -529,10 +529,6 @@ function beginIntro() {
   continueAnimation(dialogueText);  
 }
 
-let testDialogue = "test dialogue";
-let dialogueToDisplay = "Test dialogue to dipslay";
-let newDialogue = "Test new dialogue";
-
 function continueAnimation(nextChapterText) {  
   let newText = nextChapterText;
   if (dialogueIterator < newText.length) {
@@ -616,7 +612,9 @@ let nextDialogue = `You have decided that your training and preparation have rea
                              and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
                              a survival kit. `
 
+function afterBeginIntro() {
 
+}
 
 function introContinue() {
   let introContinueButton = document.querySelector('#intro-continue-button');
