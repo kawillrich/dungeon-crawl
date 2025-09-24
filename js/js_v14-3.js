@@ -516,7 +516,7 @@ let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure
                     breathes black fire that is able to burn through *almost* anything....`;
 let setTimeoutArray = [];
 
-
+let nextChapterText = "Next Chapter Text.";
 
 function beginIntro() {
   $(".page-title").animate({
@@ -526,18 +526,19 @@ function beginIntro() {
   // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
   enterGame.remove();
   dialogueIterator = 0;
-  continueAnimation();  
+  continueAnimation(dialogueText);  
 }
 
 let testDialogue = "test dialogue";
 let dialogueToDisplay = "Test dialogue to dipslay";
 let newDialogue = "Test new dialogue";
 
-function continueAnimation() {  
-  if (dialogueIterator < dialogueText.length) {
-    dialogue.textContent += dialogueText.charAt(dialogueIterator);
+function continueAnimation(nextChapterText) {  
+  let newText = nextChapterText;
+  if (dialogueIterator < newText.length) {
+    dialogue.textContent += newText.charAt(dialogueIterator);
     dialogueIterator++;
-    setTimeoutArray.push(setTimeout(continueAnimation, typingSpeed));
+    setTimeoutArray.push(setTimeout(function() {continueAnimation(newText)}, typingSpeed));
   } else {
     console.log('test')
     for (let i = 0; i < setTimeoutArray.length; i ++) {
