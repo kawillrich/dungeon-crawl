@@ -518,8 +518,6 @@ let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure
                     breathes black fire that is able to burn through *almost* anything....`;
 let setTimeoutArray = [];
 
-let nextChapterText = "Next Chapter Text.";
-
 function beginIntro() {
   $(".page-title").animate({
     fontSize: "0px"}, 300).next().animate({
