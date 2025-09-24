@@ -2,9 +2,8 @@ export function createNextDialogue(dialogueToCreate) {
   dialogue.textContent = "";
   let dialogueDiv = document.createElement("div");
   dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
-  dialogueDiv.textContent = dialogueInput + " " + continueButtonSequence;
-  dialogue.appendChild(dialogueDiv);
-  dialogueDiv.appendChild(createButton(dialogueInput));
+  dialogueDiv.textContent = dialogueToCreate;
+  dialogue.appendChild(dialogueDiv);  
 };
 
 export function createContinueButton(eventToAdd) {
