@@ -1,4 +1,4 @@
-function createNextDialogue(dialogueToCreate) {
+export function createNextDialogue(dialogueToCreate) {
   dialogue.textContent = "";
   let dialogueDiv = document.createElement("div");
   dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
@@ -7,7 +7,7 @@ function createNextDialogue(dialogueToCreate) {
   dialogueDiv.appendChild(createButton(dialogueInput));
 };
 
-function createContinueButton(eventToAdd) {
+export function createContinueButton(eventToAdd) {
   let newButton = document.createElement("button");
   newButton.id = `button-${buttonIterator}`;
   newButton.type = "button";
@@ -29,7 +29,7 @@ function createContinueButton(eventToAdd) {
   return newButton; 
 };
 
-function continueTextAnimation() {
+export function continueTextAnimation() {
   let newText = nextChapterText;
   if (dialogueIterator < newText.length) {
     dialogue.textContent += newText.charAt(dialogueIterator);
@@ -45,3 +45,5 @@ function continueTextAnimation() {
     createButton(nextDialogue);
   }  
 }
+
+export * as Utilities from "./utilityFunctions.js";

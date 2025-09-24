@@ -215,6 +215,8 @@ import {
   strikingCleric,
 } from "./cleric-spells/cleric-level-three-spells.js";
 
+import * as Utilities from "./Utilities/utilityFunctions.js";
+
 //achievement imports
 //import { noAchievements, killedFarmWolves, spokeToRaynard } from './achievements-v1.js';
 
