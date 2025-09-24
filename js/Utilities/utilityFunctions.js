@@ -1,4 +1,4 @@
-function createDialogue(dialogueToCreate) {
+function createNextDialogue(dialogueToCreate) {
   dialogue.textContent = "";
   let dialogueDiv = document.createElement("div");
   dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
@@ -29,7 +29,7 @@ function createContinueButton(eventToAdd) {
   return newButton; 
 };
 
-function continueAnimation() {
+function continueTextAnimation() {
   let newText = nextChapterText;
   if (dialogueIterator < newText.length) {
     dialogue.textContent += newText.charAt(dialogueIterator);
