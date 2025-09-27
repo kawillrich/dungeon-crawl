@@ -522,7 +522,7 @@ button {
   }
 }
 
-/** add a class for submit buttons and <button> to change appearance with background image*/
+/*** add a class for submit buttons and <button> to change appearance with background image*/
 
 input[name="alignment"],
 input[name="selected-specialty"] {
