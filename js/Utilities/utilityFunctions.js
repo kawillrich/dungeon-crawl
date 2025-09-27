@@ -30,13 +30,12 @@ export function continueTextAnimation(chapterText) {
     dialogueIterator++;
     setTimeoutArray.push(setTimeout(function() {continueAnimation(newText)}, typingSpeed));
   } else {
-    console.log('test')
     for (let i = 0; i < setTimeoutArray.length; i ++) {
       clearTimeout[i];
     }
     setTimeoutArray = [];
     // addIntroContinueButton();
-    createButton(nextDialogue);
+    //createButton(nextDialogue);
   }  
 }
 
