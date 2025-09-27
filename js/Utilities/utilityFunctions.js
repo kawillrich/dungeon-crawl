@@ -6,11 +6,11 @@ export function createNextDialogue(chapter, dialogueToCreate) {
   dialogue.appendChild(dialogueDiv);  
 };
 
-export function createContinueButton(eventToAdd) {
+export function createContinueButton(chapter, eventToAdd, buttonContent) {
   let newButton = document.createElement("button");
-  newButton.id = `button-${buttonIterator}`;
+  newButton.id = `button-${chapter}`;
   newButton.type = "button";
-  newButton.textContent = `Continue ${buttonIterator}`;
+  newButton.textContent = `${buttonContent}`;
   newButton.style.display = "block";
   newButton.addEventListener(
     "click",
@@ -22,9 +22,7 @@ export function createContinueButton(eventToAdd) {
   let lineBreak = document.createElement('br');
   let appDiv = document.getElementById("dialogue");
   appDiv.appendChild(lineBreak);
-  appDiv.appendChild(newButton);
-  buttonIterator++;
-  continueButtonSequence++;
+  appDiv.appendChild(newButton);  
   return newButton; 
 };
 
