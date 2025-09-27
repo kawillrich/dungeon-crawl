@@ -1,7 +1,7 @@
-export function createNextDialogue(dialogueToCreate) {
+export function createNextDialogue(chapter, dialogueToCreate) {
   dialogue.textContent = "";
   let dialogueDiv = document.createElement("div");
-  dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
+  dialogueDiv.id = `dialogue-div-${chapter}`;
   dialogueDiv.textContent = dialogueToCreate;
   dialogue.appendChild(dialogueDiv);  
 };
