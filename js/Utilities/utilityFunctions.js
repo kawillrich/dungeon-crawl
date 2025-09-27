@@ -12,6 +12,8 @@ export function createContinueButton(chapter, eventToAdd, buttonContent) {
   newButton.type = "button";
   newButton.textContent = `${buttonContent}`;
   newButton.style.display = "block";
+  newButton.style.gridArea = "footer";
+  newButton.style.alignItems = "center";
   newButton.addEventListener(
     "click",
     function () {
