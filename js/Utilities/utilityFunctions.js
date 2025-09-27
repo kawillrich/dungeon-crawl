@@ -21,9 +21,7 @@ export function createContinueButton(chapter, eventToAdd, buttonContent) {
     false
   );
   let lineBreak = document.createElement('br');
-  let appDiv = document.getElementById("dialogue");
-  appDiv.appendChild(lineBreak);
-  appDiv.appendChild(newButton);  
+  let appDiv = document.getElementById("dialogue");  
   return newButton; 
 };
 
