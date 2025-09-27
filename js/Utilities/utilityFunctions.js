@@ -20,8 +20,6 @@ export function createContinueButton(chapter, eventToAdd, buttonContent) {
     },
     false
   );
-  let lineBreak = document.createElement('br');
-  let appDiv = document.getElementById("dialogue");  
   return newButton; 
 };
 
