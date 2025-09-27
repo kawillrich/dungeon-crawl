@@ -10,10 +10,8 @@ export function createContinueButton(chapter, eventToAdd, buttonContent) {
   let newButton = document.createElement("button");
   newButton.id = `button-${chapter}`;
   newButton.type = "button";
-  newButton.textContent = `${buttonContent}`;
-  newButton.style.display = "block";
-  newButton.style.gridArea = "footer";
-  newButton.style.alignItems = "center";
+  newButton.textContent = `${buttonContent}`;  
+  newButton.classList.add("new-continue-button");  
   newButton.addEventListener(
     "click",
     function () {
