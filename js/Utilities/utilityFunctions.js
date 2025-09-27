@@ -23,8 +23,8 @@ export function createContinueButton(chapter, eventToAdd, buttonContent) {
   return newButton; 
 };
 
-export function continueTextAnimation() {
-  let newText = nextChapterText;
+export function continueTextAnimation(chapterText) {
+  let newText = chapterText;
   if (dialogueIterator < newText.length) {
     dialogue.textContent += newText.charAt(dialogueIterator);
     dialogueIterator++;
