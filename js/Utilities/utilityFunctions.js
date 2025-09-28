@@ -16,7 +16,7 @@ export function createContinueButton(chapter, eventToAdd, buttonContent) {
     "click",
     function () {
       newButton.remove();
-      createDialogueDiv(eventToAdd);
+      createNextDialogue(chapter, dialogueToCreate);
     },
     false
   );

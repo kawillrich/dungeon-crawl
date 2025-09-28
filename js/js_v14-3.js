@@ -559,7 +559,8 @@ function continueAnimation(nextChapterText) {
 let continueButtonSequence = 0;
 let buttonIterator = 0;
 
-function createButton(dialogueToDisplay, functionToRun) {
+/* commenting out to test util fx
+  function createButton(dialogueToDisplay, functionToRun) {
   let newButton = document.createElement("button");
   newButton.id = `button-${buttonIterator}`;
   newButton.type = "button";
@@ -580,6 +581,7 @@ function createButton(dialogueToDisplay, functionToRun) {
   continueButtonSequence++;
   return newButton; 
 }
+*/
 
 //** no need to create new div? 
 //** append button to #container vs. the dialogue div */
