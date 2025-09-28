@@ -505,15 +505,24 @@ let selectedSpecialty = "";
 let enterGame = document.querySelector("#enter-game");
 
 let setTimeoutArray = [];
-
-
-      
-enterGame.addEventListener("click", function() { beginIntro (setTimeoutArray); }, false);
-
-//set dialogue variable to #dialogue
 let dialogue = document.querySelector("#dialogue");
 let dialogueIterator = 0;
 let typingSpeed = 3;
+
+      
+enterGame.addEventListener("click", 
+  function() { 
+    beginIntro (
+      dialogueText, 
+      setTimeoutArray, 
+      dialogueIterator, 
+      typingSpeed, 
+      dialogue
+    ); 
+  }, false);
+
+//set dialogue variable to #dialogue
+
 
 //set dialogue text to display
 let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure being guarded 
@@ -522,7 +531,14 @@ let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure
                     that can see in the dark as if it were daytime. It is said that Soul Stealer 
                     breathes black fire that is able to burn through *almost* anything....`;
 
-function beginIntro(setTimeoutArray) {
+function beginIntro(
+  dialogueText,
+  setTimeoutArray,
+  dialogueIterator,
+  typingSpeed,
+  dialogue
+
+) {
   $(".page-title").animate({
     fontSize: "0px"}, 300).next().animate({
     width: "0px",
