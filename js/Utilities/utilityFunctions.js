@@ -24,11 +24,8 @@ export function createContinueButton(chapter, eventToAdd, buttonContent) {
 };
 
 export function continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogue) {
-  console.log(setTimeoutArray);
-  console.log (dialogueIterator);
-  console.log(chapterText.length);
+  
   if (dialogueIterator < chapterText.length) {
-    console.log(dialogueIterator);
     dialogue.textContent += chapterText.charAt(dialogueIterator);
     dialogueIterator++;
     setTimeoutArray.push(setTimeout(function() {continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogue)}, typingSpeed));
