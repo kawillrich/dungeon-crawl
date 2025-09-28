@@ -480,28 +480,28 @@ button {
 
 
 
-#container {
-  padding: 0px 0px 0px 0px;
-  border: 30px solid transparent;
-  border-image-source: url(../images/gui/gui-entire-border2.png);
-  border-image-slice: 75 75;
-  margin: 0px 0px 0px 0px;
-  background-color: var(--background);
-  display: grid;  
-  grid-template-rows: 5% 40% 20% 30% 5%;
-  /* grid-template-rows: 275px 100px 1fr .5fr; */
-  /* min-width: 360px; */
-}
+  #container {
+    padding: 0px 0px 0px 0px;
+    border: 30px solid transparent;
+    border-image-source: url(../images/gui/gui-entire-border2.png);
+    border-image-slice: 75 75;
+    margin: 0px 0px 0px 0px;
+    background-color: var(--background);
+    display: grid;  
+    grid-template-rows: 5% 40% 20% 30% 5%;
+    /* grid-template-rows: 275px 100px 1fr .5fr; */
+    /* min-width: 360px; */
+  }
 
-#container-2 {
-  display: none;
-  margin: 0px auto auto auto;  
-  padding: 0px 0px 0px 0px;
-  border: 30px solid transparent;
-  height: 100%;
-  border-image-source: url(../images/gui/gui-entire-border2.png);
-  border-image-slice: 75 75;
-}
+  #container-2 {
+    display: none;
+    margin: 0px auto auto auto;  
+    padding: 0px 0px 0px 0px;
+    border: 30px solid transparent;
+    height: 100%;
+    border-image-source: url(../images/gui/gui-entire-border2.png);
+    border-image-slice: 75 75;
+  }
 
 
 }
