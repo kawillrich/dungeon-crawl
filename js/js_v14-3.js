@@ -507,7 +507,8 @@ let enterGame = document.querySelector("#enter-game");
 let setTimeoutArray = [];
 
 
-enterGame.addEventListener("click", function() { beginIntro (setTimeoutArray) }, false);
+      
+enterGame.addEventListener("click", function() { beginIntro (setTimeoutArray); }, false);
 
 //set dialogue variable to #dialogue
 let dialogue = document.querySelector("#dialogue");
@@ -558,6 +559,7 @@ function continueAnimation(nextChapterText) {
 
 let continueButtonSequence = 0;
 let buttonIterator = 0;
+
 
 /* commenting out to test util fx
   function createButton(dialogueToDisplay, functionToRun) {

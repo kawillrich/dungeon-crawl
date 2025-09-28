@@ -6,7 +6,7 @@ export function createNextDialogue(chapter, dialogueToCreate) {
   dialogue.appendChild(dialogueDiv);  
 };
 
-export function createContinueButton(chapter, eventToAdd, buttonContent) {
+export function createContinueButton(chapter, eventToAdd, buttonContent, dialogue) {
   let newButton = document.createElement("button");
   newButton.id = `button-${chapter}`;
   newButton.type = "button";
@@ -16,11 +16,11 @@ export function createContinueButton(chapter, eventToAdd, buttonContent) {
     "click",
     function () {
       newButton.remove();
-      createNextDialogue(chapter, dialogueToCreate);
+      createNextDialogue(chapter, eventToAdd, dialogue);
     },
     false
   );
-  return newButton; 
+  dialogue.appendChild(newButton); 
 };
 
 export function continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogue) {
@@ -34,6 +34,7 @@ export function continueTextAnimation(chapterText, setTimeoutArray, dialogueIter
       clearTimeout[i];
     }
     setTimeoutArray = [];
+    createContinueButton(1.1, "", "Continue", dialogue);
     // addIntroContinueButton();
     //createButton(nextDialogue);
   }  
