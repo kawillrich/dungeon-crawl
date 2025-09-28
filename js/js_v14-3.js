@@ -505,7 +505,7 @@ let selectedSpecialty = "";
 let enterGame = document.querySelector("#enter-game");
 
 let setTimeoutArray = [];
-let dialogue = document.querySelector("#dialogue");
+let dialogueDiv = document.querySelector("#dialogue");
 let dialogueIterator = 0;
 let typingSpeed = 3;
 
@@ -517,7 +517,7 @@ enterGame.addEventListener("click",
       setTimeoutArray, 
       dialogueIterator, 
       typingSpeed, 
-      dialogue
+      dialogueDiv
     ); 
   }, false);
 
@@ -531,23 +531,30 @@ let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure
                     that can see in the dark as if it were daytime. It is said that Soul Stealer 
                     breathes black fire that is able to burn through *almost* anything....`;
 
+let nextDialogue = `You have decided that your training and preparation have readied you for the 
+                    challenge to venture to the ruins, in hopes of defeating the dragon and obtaining 
+                    his treasure. You have grown up a lot since your youth. Now, at age 26, you feel 
+                    you are at your physical peak. Mentally, you have already taken the leap of faith 
+                    and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
+                    a survival kit. `
+
 function beginIntro(
   dialogueText,
   setTimeoutArray,
   dialogueIterator,
   typingSpeed,
-  dialogue
-
-) {
-  $(".page-title").animate({
-    fontSize: "0px"}, 300).next().animate({
-    width: "0px",
-    height: "0px"}, 300).slideUp(300).next().dequeue(); 
-  // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
-  enterGame.remove();
-  // dialogueIterator = 0;
-  Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed, dialogue);  
-}
+  dialogueDiv,
+  nextDialogue
+  ) {
+    $(".page-title").animate({
+      fontSize: "0px"}, 300).next().animate({
+      width: "0px",
+      height: "0px"}, 300).slideUp(300).next().dequeue(); 
+    // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
+    enterGame.remove();
+    // dialogueIterator = 0;
+    Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed, dialogueDiv, nextDialogue);  
+  }
 
 // Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed);
 
@@ -633,12 +640,7 @@ function createDialogueDiv(dialogueInput) {
 //   containerDiv.appendChild(continueButtonContainer);
 // }
 
-let nextDialogue = `You have decided that your training and preparation have readied you for the 
-                             challenge to venture to the ruins, in hopes of defeating the dragon and obtaining 
-                             his treasure. You have grown up a lot since your youth. Now, at age 26, you feel 
-                             you are at your physical peak. Mentally, you have already taken the leap of faith 
-                             and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
-                             a survival kit. `
+
 
 function afterBeginIntro() {
 

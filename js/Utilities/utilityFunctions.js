@@ -1,12 +1,12 @@
-export function createNextDialogue(chapter, dialogueToCreate) {
-  dialogue.textContent = "";
-  let dialogueDiv = document.createElement("div");
-  dialogueDiv.id = `dialogue-div-${chapter}`;
-  dialogueDiv.textContent = dialogueToCreate;
-  dialogue.appendChild(dialogueDiv);  
+export function createNextDialogue(chapter, eventToAdd, dialogueDiv, nextDialogue) {
+  dialogueDiv.textContent = "";  
+  let nextDialogueDiv = document.createElement('div');
+  nextDialogueDiv.id = `dialogue-div-${chapter}`;
+  nextDialogueDiv.textContent = nextDialogue;
+  dialogueDiv.appendChild(nextDialogueDiv);  
 };
 
-export function createContinueButton(chapter, eventToAdd, buttonContent, dialogue) {
+export function createContinueButton(chapter, eventToAdd, buttonContent, dialogueDiv, nextDialogue) {
   let newButton = document.createElement("button");
   newButton.id = `button-${chapter}`;
   newButton.type = "button";
@@ -16,25 +16,25 @@ export function createContinueButton(chapter, eventToAdd, buttonContent, dialogu
     "click",
     function () {
       newButton.remove();
-      createNextDialogue(chapter, eventToAdd, dialogue);
+      createNextDialogue(chapter, eventToAdd, dialogueDiv, nextDialogue);
     },
     false
   );
   dialogue.appendChild(newButton); 
 };
 
-export function continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogue) {
+export function continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogueDiv, nextDialogue) {
   
   if (dialogueIterator < chapterText.length) {
     dialogue.textContent += chapterText.charAt(dialogueIterator);
     dialogueIterator++;
-    setTimeoutArray.push(setTimeout(function() {continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogue)}, typingSpeed));
+    setTimeoutArray.push(setTimeout(function() {continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogueDiv, nextDialogue)}, typingSpeed));
   } else {
     for (let i = 0; i < setTimeoutArray.length; i ++) {
       clearTimeout[i];
     }
     setTimeoutArray = [];
-    createContinueButton(1.1, "", "Continue", dialogue);
+    createContinueButton(1.1, "", "Continue", dialogueDiv, nextDialogue);
     // addIntroContinueButton();
     //createButton(nextDialogue);
   }  
