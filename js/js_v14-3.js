@@ -503,7 +503,11 @@ let selectedSpecialty = "";
 
 //select enter game button and add event listener for beginIntro()
 let enterGame = document.querySelector("#enter-game");
-enterGame.addEventListener("click", beginIntro, false);
+
+let setTimeoutArray = [];
+
+
+enterGame.addEventListener("click", function() { beginIntro (setTimeoutArray) }, false);
 
 //set dialogue variable to #dialogue
 let dialogue = document.querySelector("#dialogue");
@@ -516,18 +520,21 @@ let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure
                     species of dragon with black scales, obsidian-like talons, and silver eyes 
                     that can see in the dark as if it were daytime. It is said that Soul Stealer 
                     breathes black fire that is able to burn through *almost* anything....`;
-let setTimeoutArray = [];
 
-function beginIntro() {
+function beginIntro(setTimeoutArray) {
   $(".page-title").animate({
     fontSize: "0px"}, 300).next().animate({
     width: "0px",
     height: "0px"}, 300).slideUp(300).next().dequeue(); 
   // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
   enterGame.remove();
-  dialogueIterator = 0;
-  continueAnimation(dialogueText);  
+  // dialogueIterator = 0;
+  Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed, dialogue);  
 }
+
+// Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed);
+
+/*commenting out while testing util functions
 
 function continueAnimation(nextChapterText) {  
   let newText = nextChapterText;
@@ -545,6 +552,7 @@ function continueAnimation(nextChapterText) {
     createButton(nextDialogue);
   }
 }
+*/
 
 //** put new button creator function here */
 
