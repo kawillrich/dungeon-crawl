@@ -24,7 +24,7 @@ export function createContinueButton(chapter, nextChapter, buttonContent, dialog
     },
     false
   );
-  dialogue.appendChild(newButton); 
+  dialogueDiv.appendChild(newButton); 
 };
 
 export function continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogueDiv, nextDialogue, nextChapter) {
