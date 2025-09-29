@@ -517,7 +517,9 @@ enterGame.addEventListener("click",
       setTimeoutArray, 
       dialogueIterator, 
       typingSpeed, 
-      dialogueDiv
+      dialogueDiv,
+      nextDialogue,
+      afterBeginIntro
     ); 
   }, false);
 
@@ -538,13 +540,18 @@ let nextDialogue = `You have decided that your training and preparation have rea
                     and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
                     a survival kit. `
 
+let afterBeginIntro = function() {
+  console.log("hello")
+}
+
 function beginIntro(
   dialogueText,
   setTimeoutArray,
   dialogueIterator,
   typingSpeed,
   dialogueDiv,
-  nextDialogue
+  nextDialogue,
+  afterBeginIntro
   ) {
     $(".page-title").animate({
       fontSize: "0px"}, 300).next().animate({
@@ -553,7 +560,14 @@ function beginIntro(
     // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
     enterGame.remove();
     // dialogueIterator = 0;
-    Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed, dialogueDiv, nextDialogue);  
+    Utilities.continueTextAnimation(
+      dialogueText, 
+      setTimeoutArray, 
+      dialogueIterator, 
+      typingSpeed, 
+      dialogueDiv, 
+      nextDialogue,
+      afterBeginIntro);  
   }
 
 // Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed);
@@ -642,9 +656,7 @@ function createDialogueDiv(dialogueInput) {
 
 
 
-function afterBeginIntro() {
 
-}
 
 function introContinue() {
   let introContinueButton = document.querySelector('#intro-continue-button');
