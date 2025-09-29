@@ -1,5 +1,5 @@
 export function continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogueDiv, nextDialogue, nextChapter) {
-  
+  console.log(setTimeoutArray);
   if (dialogueIterator < chapterText.length) {
     dialogue.textContent += chapterText.charAt(dialogueIterator);
     dialogueIterator++;
@@ -46,7 +46,7 @@ export function createNextDialogue(chapter, nextChapter, nextDialogue, dialogueD
   nextDialogueDiv.id = `dialogue-div-${chapter}`;
   nextDialogueDiv.textContent = nextDialogue;
   dialogueDiv.appendChild(nextDialogueDiv);  
-  nextChapter;
+  nextChapter(dialogueText, [], 0, 3, nextDialogue, nextChapter);
 };
 
 export * as Utilities from "./utilityFunctions.js";

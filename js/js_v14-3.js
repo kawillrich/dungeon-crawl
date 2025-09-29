@@ -513,12 +513,12 @@ let typingSpeed = 3;
 enterGame.addEventListener("click", 
   function() { 
     beginIntro (
-      dialogueText, 
+      introText, 
       setTimeoutArray, 
       dialogueIterator, 
       typingSpeed, 
       dialogueDiv,
-      nextDialogue,
+      trainingDialogue,
       afterBeginIntro
     ); 
   }, false);
@@ -526,11 +526,12 @@ enterGame.addEventListener("click",
 //set dialogue variable to #dialogue
 
 //set dialogue text to display
-let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure being guarded 
-                    by the Nightfang Dragon, known as Soul Stealer. Soul Stealer is an ancient 
-                    species of dragon with black scales, obsidian-like talons, and silver eyes 
-                    that can see in the dark as if it were daytime. It is said that Soul Stealer 
-                    breathes black fire that is able to burn through *almost* anything....`;
+let introText = 
+  `In the ruins of Elsier, there are rumors of a large treasure being guarded 
+  by the Nightfang Dragon, known as Soul Stealer. Soul Stealer is an ancient 
+  species of dragon with black scales, obsidian-like talons, and silver eyes 
+  that can see in the dark as if it were daytime. It is said that Soul Stealer 
+  breathes black fire that is able to burn through *almost* anything....`;
 
 function beginIntro(
   dialogueText,
@@ -558,17 +559,41 @@ function beginIntro(
       nextChapter);  
 }
 
-let nextDialogue = 
+let trainingDialogue = 
 
   `You have decided that your training and preparation have readied you for the 
   challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
-  a survival kit. `
+  a survival kit. `;
                     
-let afterBeginIntro = function() {
-  console.log("hello");
+let chapterOneOneDialogue = `
+  Chapter 1.1 Dialogue
+`;
   
+let afterBeginIntro = function(
+  dialogueText,
+  setTimeoutArray,
+  dialogueIterator,
+  typingSpeed,
+  dialogueDiv,
+  nextDialogue,
+  nextChapter) {
+  $("#welcome-title").animate({
+      fontSize: "0px"}, 300).next().animate({
+      width: "0px",
+      height: "0px"}, 300).slideUp(300).next().dequeue(); 
+    Utilities.continueTextAnimation(
+      dialogueText, 
+      setTimeoutArray, 
+      dialogueIterator, 
+      typingSpeed, 
+      dialogueDiv, 
+      nextDialogue,
+      nextChapter);  
 }
 
+let chapterOneTwoDialogue = `
+  Chapter 1.2 Dialogue
+`;
 
 // Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed);
 
@@ -658,7 +683,7 @@ function createDialogueDiv(dialogueInput) {
 
 
 
-function introContinue() {
+let introContinue = function () {
   let introContinueButton = document.querySelector('#intro-continue-button');
   introContinueButton.style.display = "none";
   introContinueButton.remove();
