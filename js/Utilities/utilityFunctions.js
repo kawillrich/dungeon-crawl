@@ -10,11 +10,16 @@ export function createNextDialogue(chapter, nextChapter, nextDialogue, dialogueD
 };
 
 export function createContinueButton(chapter, nextChapter, buttonContent, dialogueDiv, nextDialogue) {
+  let containerDiv = document.querySelector('#container');
   let newButton = document.createElement("button");
   newButton.id = `button-${chapter}`;
   newButton.type = "button";
   newButton.textContent = `${buttonContent}`;  
   newButton.classList.add("new-continue-button");  
+  // newButton.style.gridArea = "footer";
+  // newButton.style.gridRow = "5 / span 1";
+  // newButton.style.gridColumn = "1 / span 1";
+  // newButton.style.margin = "auto";
   newButton.addEventListener(
     "click",
     function () {
@@ -24,7 +29,7 @@ export function createContinueButton(chapter, nextChapter, buttonContent, dialog
     },
     false
   );
-  dialogueDiv.appendChild(newButton); 
+  containerDiv.appendChild(newButton); 
 };
 
 export function continueTextAnimation(chapterText, setTimeoutArray, dialogueIterator, typingSpeed, dialogueDiv, nextDialogue, nextChapter) {

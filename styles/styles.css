@@ -178,7 +178,8 @@ button {
     margin: auto;
   }
 
-  #new-continue-button {
+  #new-continue-button,
+  .new-continue-button {
     grid-row: 5 / span 1;
     grid-column: 1 / span 1;
     margin: auto;
@@ -572,7 +573,8 @@ input[type="submit"],
 #submit-all-cleric-spells,
 #intro-continue-button,
 #enter-game,
-#new-continue-button {
+#new-continue-button,
+.new-continue-button {
   background-color: var(--btn-bg);
   color: var(--btn-text);
   border-radius: 10px;
