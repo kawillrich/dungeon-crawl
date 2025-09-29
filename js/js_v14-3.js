@@ -525,17 +525,12 @@ enterGame.addEventListener("click",
 
 //set dialogue variable to #dialogue
 
-
 //set dialogue text to display
 let dialogueText = `In the ruins of Elsier, there are rumors of a large treasure being guarded 
                     by the Nightfang Dragon, known as Soul Stealer. Soul Stealer is an ancient 
                     species of dragon with black scales, obsidian-like talons, and silver eyes 
                     that can see in the dark as if it were daytime. It is said that Soul Stealer 
                     breathes black fire that is able to burn through *almost* anything....`;
-
-
-
-
 
 function beginIntro(
   dialogueText,
