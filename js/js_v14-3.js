@@ -558,12 +558,11 @@ function beginIntro(
       nextChapter);  
 }
 
-let nextDialogue = `You have decided that your training and preparation have readied you for the 
-                    challenge to venture to the ruins, in hopes of defeating the dragon and obtaining 
-                    his treasure. You have grown up a lot since your youth. Now, at age 26, you feel 
-                    you are at your physical peak. Mentally, you have already taken the leap of faith 
-                    and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
-                    a survival kit. `
+let nextDialogue = 
+
+  `You have decided that your training and preparation have readied you for the 
+  challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
+  a survival kit. `
                     
 let afterBeginIntro = function() {
   console.log("hello");
