@@ -544,7 +544,7 @@ function beginIntro(
   typingSpeed,
   dialogueDiv,
   nextDialogue,
-  afterBeginIntro
+  nextChapter
   ) {
     $(".page-title").animate({
       fontSize: "0px"}, 300).next().animate({
@@ -560,7 +560,7 @@ function beginIntro(
       typingSpeed, 
       dialogueDiv, 
       nextDialogue,
-      afterBeginIntro);  
+      nextChapter);  
 }
 
 let nextDialogue = `You have decided that your training and preparation have readied you for the 
@@ -569,8 +569,6 @@ let nextDialogue = `You have decided that your training and preparation have rea
                     you are at your physical peak. Mentally, you have already taken the leap of faith 
                     and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
                     a survival kit. `
-
-
                     
 let afterBeginIntro = function() {
   console.log("hello");
