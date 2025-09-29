@@ -44,9 +44,9 @@ export function createNextDialogue(chapter, nextChapter, nextDialogue, dialogueD
   dialogueDiv.textContent = "";  
   let nextDialogueDiv = document.createElement('div');
   nextDialogueDiv.id = `dialogue-div-${chapter}`;
-  nextDialogueDiv.textContent = nextDialogue;
+  // nextDialogueDiv.textContent = nextDialogue;
   dialogueDiv.appendChild(nextDialogueDiv);  
-  nextChapter(dialogueText, [], 0, 3, nextDialogue, nextChapter);
+  nextChapter(nextDialogue, [], 0, 3, nextDialogue, nextChapter);
 };
 
 export * as Utilities from "./utilityFunctions.js";
