@@ -532,15 +532,10 @@ let chapterConfig = {
   nextChapterFunction: beginChapterOneOne
 }
 
-let chapterOneOneText = 
-  `Soul Stealer is an ancient species of dragon with black scales, obsidian-like talons, and silver eyes that can see in the dark as if it were daytime. It is said that Soul Stealer 
-  breathes black fire that is able to burn through *almost* anything....
-   `;
-
 function beginChapterOneZero () { 
   console.log('chapter one zero');
   chapterConfig.nextChapterFunction = beginChapterOneOne;
-  $("#welcome-title").animate({
+  $(".page-title").animate({
       fontSize: "0px"}, 300).next().animate({
       width: "0px",
       height: "0px"}, 300).slideUp(300).next().dequeue(); 
@@ -548,7 +543,10 @@ function beginChapterOneZero () {
       chapterConfig);  
 }
 
-let chapterOneTwoText = `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepare to purchase your.`;
+let chapterOneOneText = 
+  `Soul Stealer is an ancient species of dragon with black scales, obsidian-like talons, and silver eyes that can see in the dark as if it were daytime. It is said that Soul Stealer 
+  breathes black fire that is able to burn through *almost* anything....
+   `;
 
 function beginChapterOneOne() {
   console.log("chapter one one");
@@ -567,6 +565,7 @@ function beginChapterOneOne() {
       chapterConfig);  
 }
 
+let chapterOneTwoText = `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth.`;
 
 function beginChapterOneTwo() {
   console.log("chapter one two");
@@ -580,6 +579,8 @@ function beginChapterOneTwo() {
     Utilities.continueTextAnimation(
       chapterConfig);  
 }
+
+let chapterOneTwoThree = `Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepare to purchase your.`;
 
 function beginChapterOneThree() {
   console.log("1-3");
