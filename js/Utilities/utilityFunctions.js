@@ -65,6 +65,10 @@ export function createNextDialogue(
   nextChapter, 
   nextDialogue, 
   dialogueDiv) {
+    
+    let chapterIterator = 1;
+    let nextChapterFunction = "textDialogue" + chapterIterator;
+    let compiledNextChapter = functions[nextChapterFunction];    
     console.log(nextChapter);
     console.log(dialogueDiv);
     dialogueDiv.textContent = "";  
@@ -72,14 +76,15 @@ export function createNextDialogue(
     nextDialogueDiv.id = `dialogue-div-${chapter}`;
     dialogueDiv.appendChild(nextDialogueDiv);  
     nextChapter(
-      nextDialogue, 
+      nextChapterDialogue, 
       [], 
       0, 
       3, 
       dialogueDiv,
       nextDialogue, 
-      nextChapter
+      compiledNextChapter
   );
+  chapterIterator++;
 };
 
 export * as Utilities from "./utilityFunctions.js";

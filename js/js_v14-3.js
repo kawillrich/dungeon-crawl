@@ -519,7 +519,7 @@ enterGame.addEventListener("click",
       typingSpeed, 
       dialogueDiv,
       trainingDialogue,
-      afterBeginIntro
+      textDialogue1
     ); 
   }, false);
 
@@ -569,7 +569,7 @@ let chapterOneOneDialogue = `
   Chapter 1.1 Dialogue
 `;
 // need to ID what to pass into this function to pass the next function and text  
-let afterBeginIntro = function(
+export let textDialogue1 = function(
   dialogueText,
   setTimeoutArray,
   dialogueIterator,
