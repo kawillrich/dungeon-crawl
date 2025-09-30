@@ -536,11 +536,10 @@ function beginChapterOneZero () {
   console.log('chapter one zero');
   chapterConfig.nextChapterFunction = beginChapterOneOne;
   $(".page-title").animate({
-      fontSize: "0px"}, 300).next().animate({
-      width: "0px",
-      height: "0px"}, 300).slideUp(300).next().dequeue(); 
-    Utilities.continueTextAnimation(
-      chapterConfig);  
+    fontSize: "0px"}, 300).next().animate({
+    width: "0px",
+    height: "0px"}, 300).slideUp(300).next().dequeue(); 
+  Utilities.continueTextAnimation(chapterConfig);  
 }
 
 let chapterOneOneText = 
@@ -557,11 +556,10 @@ function beginChapterOneOne() {
   console.log(chapterConfig.thisChapterDialogue)
 
   $("#welcome-title").animate({
-      fontSize: "0px"}, 300).next().animate({
-      width: "0px",
-      height: "0px"}, 300).slideUp(300).next().dequeue(); 
-    Utilities.continueTextAnimation(
-      chapterConfig);  
+    fontSize: "0px"}, 300).next().animate({
+    width: "0px",
+    height: "0px"}, 300).slideUp(300).next().dequeue(); 
+  Utilities.continueTextAnimation(chapterConfig);  
 }
 
 let chapterOneTwoText = `It is said that Soul Stealer 
@@ -573,11 +571,10 @@ function beginChapterOneTwo() {
   chapterConfig.thisChapterDialogue = chapterOneTwoText,
   chapterConfig.nextChapterFunction = beginChapterOneThree;
   $("#welcome-title").animate({
-      fontSize: "0px"}, 300).next().animate({
-      width: "0px",
-      height: "0px"}, 300).slideUp(300).next().dequeue(); 
-    Utilities.continueTextAnimation(
-      chapterConfig);  
+    fontSize: "0px"}, 300).next().animate({
+    width: "0px",
+    height: "0px"}, 300).slideUp(300).next().dequeue(); 
+  Utilities.continueTextAnimation(chapterConfig);  
 }
 
 let chapterOneThreeText = `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth.`;
@@ -588,17 +585,20 @@ function beginChapterOneThree() {
   chapterConfig.thisChapterDialogue = chapterOneThreeText,
   chapterConfig.nextChapterFunction = beginChapterOneFour;
   $("#welcome-title").animate({
-      fontSize: "0px"}, 300).next().animate({
-      width: "0px",
-      height: "0px"}, 300).slideUp(300).next().dequeue(); 
-    Utilities.continueTextAnimation(
-      chapterConfig);  
+    fontSize: "0px"}, 300).next().animate({
+    width: "0px",
+    height: "0px"}, 300).slideUp(300).next().dequeue(); 
+  Utilities.continueTextAnimation(chapterConfig);  
 }
 
 let chapterOneFourText = `Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepare to purchase your supplies.`
 
 function beginChapterOneFour() {
   console.log("1-4");
+  chapterConfig.thisChapterNumber = "1-4",
+  chapterConfig.thisChapterDialogue = chapterOneFourText,
+  chapterConfig.nextChapterFunction = beginChapterOneFive;
+  Utilities.continueTextAnimation(chapterConfig);  
 }
 
 // function createDialogueDiv(dialogueInput) { 
@@ -610,77 +610,85 @@ function beginChapterOneFour() {
 //   dialogueDiv.appendChild(createButton(dialogueInput));
 // }
 
-let introContinue = function () {
-  let introContinueButton = document.querySelector('#intro-continue-button');
-  introContinueButton.style.display = "none";
-  introContinueButton.remove();
-
-  $("#welcome-title").animate({fontSize: "0px"}, 300);
-  $(".welcome-title").slideUp(300).children().slideUp(300);
-
-  //pass chapter config object here
-  setTimeoutArray = [];
-  dialogueIterator = 0;
-  dialogue.innerHTML = "";
-  let innerDialogueDiv = document.createElement('span');
-  innerDialogueDiv.id = "inner-dialogue-div";
-  innerDialogueDiv.style.fontSize = "1.75rem";
-
-  let continueBreak = document.createElement('br');
-
-  dialogue.appendChild(continueBreak);
-
-
-  dialogue.appendChild(innerDialogueDiv);
-  introContinueTwo();
-}
+// let introContinue = function () {
+//   let introContinueButton = document.querySelector('#intro-continue-button');
+//   introContinueButton.style.display = "none";
+//   introContinueButton.remove();
+//   $("#welcome-title").animate({fontSize: "0px"}, 300);
+//   $(".welcome-title").slideUp(300).children().slideUp(300);
+//   //pass chapter config object here
+//   setTimeoutArray = [];
+//   dialogueIterator = 0;
+//   dialogue.innerHTML = "";
+//   let innerDialogueDiv = document.createElement('span');
+//   innerDialogueDiv.id = "inner-dialogue-div";
+//   innerDialogueDiv.style.fontSize = "1.75rem";
+//   let continueBreak = document.createElement('br');
+//   dialogue.appendChild(continueBreak);
+//   dialogue.appendChild(innerDialogueDiv);
+//   introContinueTwo();
+// }
  
-function introContinueTwo() {
-  let innerText = document.querySelector('#inner-dialogue-div')
+let chapterOneFiveText = `Your father, Edwin, and your Mother, Alena, have raised you well. Your father taught you how to handle your skills and how to defend yourself. He spent many nights with you, hiking, camping, and living in the woods. Your mother taught you how to mend clothes, forage edible foods, and how to take care of your wounds. But did they prepare you for this?.... What's your name?`
 
-  if (dialogueIterator < introContinueDialogue.length) {
-    innerText.innerHTML += introContinueDialogue.charAt(dialogueIterator);
-    dialogueIterator++;
-    setTimeoutArray.push(setTimeout(introContinueTwo, typingSpeed));
-  }
-
-  else {
-    for (let i = 0; i < setTimeoutArray.length; i ++) {
-      clearTimeout[i];
-    }
-    setTimeoutArray = [];
-
-    addContinueButton();
-  }  
+function beginChapterOneFive() {
+  console.log("1-5");
+  chapterConfig.thisChapterNumber = "1-5",
+  chapterConfig.thisChapterDialogue = chapterOneFiveText,
+  chapterConfig.nextChapterFunction = beginChapterOneSix;
+  Utilities.continueTextAnimation(chapterConfig);  
 }
 
-function addContinueButton() {
-  let addNewContinueButton = document.createElement("button");
-  addNewContinueButton.id = "new-continue-button";
-  addNewContinueButton.textContent = "Continue";
-  addNewContinueButton.type = "button";
-  addNewContinueButton.addEventListener("click", function(newButton) {
-    newButton.target.remove();
-    introContinueThree(newButton)
-  }, false);
+// function introContinueTwo() {
+//   let innerText = document.querySelector('#inner-dialogue-div')
+
+//   if (dialogueIterator < introContinueDialogue.length) {
+//     innerText.innerHTML += introContinueDialogue.charAt(dialogueIterator);
+//     dialogueIterator++;
+//     setTimeoutArray.push(setTimeout(introContinueTwo, typingSpeed));
+//   }
+
+//   else {
+//     for (let i = 0; i < setTimeoutArray.length; i ++) {
+//       clearTimeout[i];
+//     }
+//     setTimeoutArray = [];
+
+//     addContinueButton();
+//   }  
+// }
+
+// function addContinueButton() {
+//   let addNewContinueButton = document.createElement("button");
+//   addNewContinueButton.id = "new-continue-button";
+//   addNewContinueButton.textContent = "Continue";
+//   addNewContinueButton.type = "button";
+//   addNewContinueButton.addEventListener("click", function(newButton) {
+//     newButton.target.remove();
+//     introContinueThree(newButton)
+//   }, false);
     
-  let containerDiv = document.querySelector("#container");
-  containerDiv.appendChild(addNewContinueButton);
-  let newButton = document.querySelector("#new-continue-button");
-  return newButton;
-}
+//   let containerDiv = document.querySelector("#container");
+//   containerDiv.appendChild(addNewContinueButton);
+//   let newButton = document.querySelector("#new-continue-button");
+//   return newButton;
+// }
 
 let introContinueDialogue2 = `Your father, Edwin, and your Mother, Alena, have raised you well. Your father taught you how to handle your skills and how to defend yourself. He spent many nights with you, hiking, camping, and living in the woods. Your mother taught you how to mend clothes, forage edible foods, and how to take care of your wounds. But did they prepare you for this?.... What's your name?`
 
-function introContinueThree(newButton) {
-  $("#inner-dialogue-div").animate({fontSize: "0px"}, 300)
-  
-  dialogueIterator = 0;
-  setTimeoutArray = [];
-  let dialogue = document.querySelector("#dialogue");
-  dialogue.removeChild(document.querySelector("#inner-dialogue-div"));
-  introContinueFour();
+function beginChapterOneSix() {
+  console.log("1-6");
 }
+
+// function introContinueThree(newButton) {
+//   $("#inner-dialogue-div").animate({fontSize: "0px"}, 300)
+  
+//   dialogueIterator = 0;
+//   setTimeoutArray = [];
+//   let dialogue = document.querySelector("#dialogue");
+//   dialogue.removeChild(document.querySelector("#inner-dialogue-div"));
+//   introContinueFour();
+// }
 
 function introContinueFour() {
   let submitNameButton = document.querySelector("#submit-name-div");
