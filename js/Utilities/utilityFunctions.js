@@ -2,92 +2,51 @@ import { textDialogue1, functions } from "../js_v14-3.js";
 
 
 
-export function continueTextAnimation(
-  chapterText, 
-  setTimeoutArray, 
-  dialogueIterator, 
-  typingSpeed, 
-  dialogueDiv, 
-  nextDialogue, 
-  nextChapter) {
-  if (dialogueIterator < chapterText.length) {
-    dialogue.textContent += chapterText.charAt(dialogueIterator);
-    dialogueIterator++;
-    setTimeoutArray.push(setTimeout(function() {continueTextAnimation(
-      chapterText, 
-      setTimeoutArray, 
-      dialogueIterator, 
-      typingSpeed, 
-      dialogueDiv, 
-      nextDialogue, 
-      nextChapter)}, typingSpeed));
+export function continueTextAnimation(chapterConfig) {
+  if (chapterConfig.dialogueIterator < chapterConfig.thisChapterDialogue.length) {
+    chapterConfig.dialogueDiv.textContent += chapterConfig.thisChapterDialogue.charAt(chapterConfig.dialogueIterator);
+    chapterConfig.dialogueIterator++;
+    chapterConfig.setTimeoutArray.push(setTimeout(function() {continueTextAnimation(
+      chapterConfig)}, chapterConfig.typingSpeed));
   } else {
-    for (let i = 0; i < setTimeoutArray.length; i ++) {
+    for (let i = 0; i < chapterConfig.setTimeoutArray.length; i ++) {
       clearTimeout[i];
     }
-    setTimeoutArray = [];
-    createContinueButton(
-      1.1, 
-      nextChapter, 
-      "Continue", 
-      dialogueDiv, 
-      nextDialogue);    
+    chapterConfig.setTimeoutArray = [];
+    createContinueButton(chapterConfig, buttonText);    
   }  
 }
 
 export function createContinueButton(
-  chapter, 
-  nextChapter, 
-  buttonContent, 
-  dialogueDiv, 
-  nextDialogue) {
+  chapterConfig, buttonText) {
     let containerDiv = document.querySelector('#container');
     let newButton = document.createElement("button");
     newButton.id = `button-${chapter}`;
     newButton.type = "button";
-    newButton.textContent = `${buttonContent}`;  
+    newButton.textContent = `${buttonText}`;  
     newButton.classList.add("new-continue-button"); 
     newButton.addEventListener(
       "click",
       function () {
         newButton.remove();
-        createNextDialogue(
-          chapter, 
-          nextChapter, 
-          nextDialogue, 
-          dialogueDiv
-        );      
+        createNextDialogue(chapterConfig);      
       },
       false
     );
     containerDiv.appendChild(newButton); 
-    console.log(dialogueDiv)
 };
 
-export function createNextDialogue(
-  chapter, 
-  nextChapter, 
-  nextDialogue, 
-  dialogueDiv) {
-    
-    let chapterIterator = 1;
-    let nextChapterFunction = "textDialogue" + chapterIterator;
-    let compiledNextChapter = functions[nextChapterFunction];    
-    console.log(nextChapter);
-    console.log(dialogueDiv);
-    dialogueDiv.textContent = "";  
+export function createNextDialogue(chapterConfig) {    
+    // let chapterIterator = 1;
+    // let nextChapterFunction = "textDialogue" + chapterIterator;
+    // let compiledNextChapter = functions[nextChapterFunction];    
+    // console.log(nextChapter);
+    // console.log(dialogueDiv);
+    chapterConfig.dialogueDiv.textContent = "";  
     let nextDialogueDiv = document.createElement('div');
-    nextDialogueDiv.id = `dialogue-div-${chapter}`;
-    dialogueDiv.appendChild(nextDialogueDiv);  
-    nextChapter(
-      nextChapterDialogue, 
-      [], 
-      0, 
-      3, 
-      dialogueDiv,
-      nextDialogue, 
-      compiledNextChapter
-  );
+    nextDialogueDiv.id = `dialogue-div-${chapterConfig.thisChapterNumber}`;
+    chapterConfig.dialogueDiv.appendChild(nextDialogueDiv);  
+    chapterConfig.nextChapterFunction();
   chapterIterator++;
 };
 

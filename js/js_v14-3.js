@@ -564,19 +564,18 @@ let trainingDialogue =
   challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
   a survival kit. `;
                     
-let chapterOneOneDialogue = `
-  Chapter 1.1 Dialogue
-`;
+
 // need to ID what to pass into this function to pass the next function and text
 
 let chapterConfig = {
-  thisChapterDialogue: "Text for first chapter",
+  thisChapterNumber: "1-0",
+  thisChapterDialogue: "",
   setTimeoutArray: [],
   dialogueIterator: 0,
   typingSpeed: 3,
   dialogueDiv: document.querySelector('#dialogue'),
-  nextChapterDialogue: "Text for next chapter",
-  nextChapterFunction: chapterOneTwo
+  // nextChapterDialogue: "Text for next chapter",
+  nextChapterFunction: beginChapterOneOne
 }
 
 
@@ -602,8 +601,20 @@ export let textDialogue1 = function(
       nextChapter);  
 }
 
+let chapterOneOneDialogue = `
+  Chapter 1.1 Dialogue
+`;
+
 let beginChapterOneOne = function() {
+  chapterConfig.thisChapterDialogue = chapterOneOneDialogue;
+  chapterConfig.nextChapterFunction = beginChapterOneTwo;
   console.log('chapter one one');
+  $("#welcome-title").animate({
+      fontSize: "0px"}, 300).next().animate({
+      width: "0px",
+      height: "0px"}, 300).slideUp(300).next().dequeue(); 
+    Utilities.continueTextAnimation(
+      chapterConfig);  
 }
 
 let chapterOneTwoDialogue = `
