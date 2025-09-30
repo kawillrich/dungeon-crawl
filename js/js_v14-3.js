@@ -518,88 +518,61 @@ enterGame.addEventListener("click",
 //set dialogue variable to #dialogue
 
 //set dialogue text to display
-let introText = 
+let chapterOneZeroText = 
   `In the ruins of Elsier, there are rumors of a large treasure being guarded 
   by the Nightfang Dragon, known as Soul Stealer. Soul Stealer is an ancient 
   species of dragon with black scales, obsidian-like talons, and silver eyes 
   that can see in the dark as if it were daytime. It is said that Soul Stealer 
   breathes black fire that is able to burn through *almost* anything....`;
 
-function beginIntro(
-  dialogueText,
-  setTimeoutArray,
-  dialogueIterator,
-  typingSpeed,
-  dialogueDiv,
-  nextDialogue,
-  nextChapter
-  ) {
-    $(".page-title").animate({
-      fontSize: "0px"}, 300).next().animate({
-      width: "0px",
-      height: "0px"}, 300).slideUp(300).next().dequeue(); 
-    // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
-    enterGame.remove();
-    // dialogueIterator = 0;
-    Utilities.continueTextAnimation(
-      dialogueText, 
-      setTimeoutArray, 
-      dialogueIterator, 
-      typingSpeed, 
-      dialogueDiv, 
-      nextDialogue,
-      nextChapter);  
-}
+// function beginIntro(
+//   dialogueText,
+//   setTimeoutArray,
+//   dialogueIterator,
+//   typingSpeed,
+//   dialogueDiv,
+//   nextDialogue,
+//   nextChapter
+//   ) {
+//     $(".page-title").animate({
+//       fontSize: "0px"}, 300).next().animate({
+//       width: "0px",
+//       height: "0px"}, 300).slideUp(300).next().dequeue(); 
+//     // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
+//     enterGame.remove();
+//     // dialogueIterator = 0;
+//     Utilities.continueTextAnimation(
+//       dialogueText, 
+//       setTimeoutArray, 
+//       dialogueIterator, 
+//       typingSpeed, 
+//       dialogueDiv, 
+//       nextDialogue,
+//       nextChapter);  
+// }
 
-let trainingDialogue = 
-
-  `You have decided that your training and preparation have readied you for the 
-  challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
+let chapterOneOneText = 
+  `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
   a survival kit. `;
                     
 
 // need to ID what to pass into this function to pass the next function and text
 
-let chapterOneOneDialogue = `
-  Chapter 1.1 Dialogue
-`;
+// let chapterOneOneDialogue = `
+//   Chapter 1.1 Dialogue
+// `;
 
 
 let chapterConfig = {
   thisChapterNumber: "1-0",
-  thisChapterDialogue: introText,
+  thisChapterDialogue: chapterOneZeroText,
   buttonText: "Continue",
   setTimeoutArray: [],
   dialogueIterator: 0,
   typingSpeed: 3,
   dialogueDiv: document.querySelector('#dialogue'),
-  // nextChapterDialogue: "Text for next chapter",
   nextChapterFunction: beginChapterOneOne
 }
-
-
-export let textDialogue1 = function(
-  dialogueText,
-  setTimeoutArray,
-  dialogueIterator,
-  typingSpeed,
-  dialogueDiv,
-  nextDialogue,
-  nextChapter) {
-  $("#welcome-title").animate({
-      fontSize: "0px"}, 300).next().animate({
-      width: "0px",
-      height: "0px"}, 300).slideUp(300).next().dequeue(); 
-    Utilities.continueTextAnimation(
-      dialogueText, 
-      setTimeoutArray, 
-      dialogueIterator, 
-      typingSpeed, 
-      dialogueDiv, 
-      nextDialogue,
-      nextChapter);  
-}
-
 
 function beginChapterOneOne () {
   // chapterConfig.thisChapterDialogue = chapterOneTwoDialogue;
@@ -620,7 +593,29 @@ let chapterOneTwoDialogue = `
 
 function beginChapterOneTwo() {
   console.log("chapter one two");
+  chapterConfig.thisChapterDialogue = chapterOneOneText,
+  chapterConfig.nextChapterFunction = beginChapterOneThree;
+  console.log('chapter one two');
+  $("#welcome-title").animate({
+      fontSize: "0px"}, 300).next().animate({
+      width: "0px",
+      height: "0px"}, 300).slideUp(300).next().dequeue(); 
+    Utilities.continueTextAnimation(
+      chapterConfig);  
 }
+
+
+function beginChapterOneThree () {
+  chapterConfig.nextChapterFunction = beginChapterOneTwo;
+  console.log('chapter one one');
+  $("#welcome-title").animate({
+      fontSize: "0px"}, 300).next().animate({
+      width: "0px",
+      height: "0px"}, 300).slideUp(300).next().dequeue(); 
+    Utilities.continueTextAnimation(
+      chapterConfig);  
+}
+
 // Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed);
 
 /*commenting out while testing util functions
@@ -3994,8 +3989,4 @@ function continueChapterSix() {
     </p>
             
     `;
-}
-
-export let functions = {
-  "textDialogue1" : textDialogue1
 }

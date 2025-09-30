@@ -1,7 +1,3 @@
-import { textDialogue1, functions } from "../js_v14-3.js";
-
-
-
 export function continueTextAnimation(chapterConfig) {
   if (chapterConfig.dialogueIterator < chapterConfig.thisChapterDialogue.length) {
     chapterConfig.dialogueDiv.textContent += chapterConfig.thisChapterDialogue.charAt(chapterConfig.dialogueIterator);
@@ -21,7 +17,7 @@ export function createContinueButton(
   chapterConfig) {
     let containerDiv = document.querySelector('#container');
     let newButton = document.createElement("button");
-    newButton.id = `button-${chapter}`;
+    newButton.id = `button-${chapterConfig.thisChapterNumber}`;
     newButton.type = "button";
     newButton.textContent = `${chapterConfig.buttonText}`;  
     newButton.classList.add("new-continue-button"); 
@@ -46,8 +42,7 @@ export function createNextDialogue(chapterConfig) {
     let nextDialogueDiv = document.createElement('div');
     nextDialogueDiv.id = `dialogue-div-${chapterConfig.thisChapterNumber}`;
     chapterConfig.dialogueDiv.appendChild(nextDialogueDiv);  
-    chapterConfig.nextChapterFunction();
-  chapterIterator++;
+    chapterConfig.nextChapterFunction();  
 };
 
 export * as Utilities from "./utilityFunctions.js";
