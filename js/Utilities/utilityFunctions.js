@@ -47,11 +47,17 @@ export function createContinueButton(
       "click",
       function () {
         newButton.remove();
-        createNextDialogue(chapter, nextChapter, nextDialogue, dialogueDiv);      
+        createNextDialogue(
+          chapter, 
+          nextChapter, 
+          nextDialogue, 
+          dialogueDiv
+        );      
       },
       false
     );
     containerDiv.appendChild(newButton); 
+    console.log(dialogueDiv)
 };
 
 export function createNextDialogue(
@@ -70,6 +76,7 @@ export function createNextDialogue(
       [], 
       0, 
       3, 
+      dialogueDiv,
       nextDialogue, 
       nextChapter
   );
