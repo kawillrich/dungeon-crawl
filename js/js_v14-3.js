@@ -525,42 +525,6 @@ let chapterOneZeroText =
   that can see in the dark as if it were daytime. It is said that Soul Stealer 
   breathes black fire that is able to burn through *almost* anything....`;
 
-// function beginIntro(
-//   dialogueText,
-//   setTimeoutArray,
-//   dialogueIterator,
-//   typingSpeed,
-//   dialogueDiv,
-//   nextDialogue,
-//   nextChapter
-//   ) {
-//     $(".page-title").animate({
-//       fontSize: "0px"}, 300).next().animate({
-//       width: "0px",
-//       height: "0px"}, 300).slideUp(300).next().dequeue(); 
-//     // $("#character-info").animate({width: "0px", height: "0px"}, 300).slideUp(300).next().dequeue();
-//     enterGame.remove();
-//     // dialogueIterator = 0;
-//     Utilities.continueTextAnimation(
-//       dialogueText, 
-//       setTimeoutArray, 
-//       dialogueIterator, 
-//       typingSpeed, 
-//       dialogueDiv, 
-//       nextDialogue,
-//       nextChapter);  
-// }
-
-
-                    
-
-// need to ID what to pass into this function to pass the next function and text
-
-// let chapterOneOneDialogue = `
-//   Chapter 1.1 Dialogue
-// `;
-
-
 let chapterConfig = {
   thisChapterNumber: "1-0",
   thisChapterDialogue: chapterOneZeroText,
@@ -623,60 +587,7 @@ function beginChapterOneTwo() {
 function beginChapterOneThree() {
   console.log("1-3");
 }
-// Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed);
 
-/*commenting out while testing util functions
-
-function continueAnimation(nextChapterText) {  
-  let newText = nextChapterText;
-  if (dialogueIterator < newText.length) {
-    dialogue.textContent += newText.charAt(dialogueIterator);
-    dialogueIterator++;
-    setTimeoutArray.push(setTimeout(function() {continueAnimation(newText)}, typingSpeed));
-  } else {
-    console.log('test')
-    for (let i = 0; i < setTimeoutArray.length; i ++) {
-      clearTimeout[i];
-    }
-    setTimeoutArray = [];
-    // addIntroContinueButton();
-    createButton(nextDialogue);
-  }
-}
-*/
-
-//** put new button creator function here */
-
-let continueButtonSequence = 0;
-let buttonIterator = 0;
-
-
-/* commenting out to test util fx
-  function createButton(dialogueToDisplay, functionToRun) {
-  let newButton = document.createElement("button");
-  newButton.id = `button-${buttonIterator}`;
-  newButton.type = "button";
-  newButton.textContent = `Continue ${buttonIterator}`;
-  newButton.style.display = "block";
-  newButton.addEventListener(
-    "click",
-    function () {
-      createDialogueDiv(dialogueToDisplay);
-    },
-    false
-  );
-  let lineBreak = document.createElement('br');
-  let appDiv = document.getElementById("dialogue");
-  appDiv.appendChild(lineBreak);
-  appDiv.appendChild(newButton);
-  buttonIterator++;
-  continueButtonSequence++;
-  return newButton; 
-}
-*/
-
-//** no need to create new div? 
-//** append button to #container vs. the dialogue div */
 function createDialogueDiv(dialogueInput) { 
   dialogue.textContent = "";
   let dialogueDiv = document.createElement("div");
@@ -685,31 +596,6 @@ function createDialogueDiv(dialogueInput) {
   dialogue.appendChild(dialogueDiv);
   dialogueDiv.appendChild(createButton(dialogueInput));
 }
-
-//** end new button creator function */
-
-// function addIntroContinueButton() {
-//   let continueButtonContainer = document.createElement("div");
-//   continueButtonContainer.id = "intro-button-container";
-//   continueButtonContainer.type = "button";
-//   let continueButton = document.createElement("button");
-//   continueButton.textContent = "Continue";
-//   continueButton.id = "intro-continue-button";
-//   continueButton.type = "button";
-//   continueButton.addEventListener("click", introContinue, false);
-
-//   continueButtonContainer.appendChild(continueButton);
-//   let introBreak = document.createElement("br");
-//   let introBreak2 = document.createElement("br");
-
-//   let containerDiv = document.querySelector('#container');
-
-//   containerDiv.appendChild(continueButtonContainer);
-// }
-
-
-
-
 
 let introContinue = function () {
   let introContinueButton = document.querySelector('#intro-continue-button');
