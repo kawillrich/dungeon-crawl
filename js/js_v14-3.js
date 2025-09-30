@@ -601,14 +601,14 @@ function beginChapterOneFour() {
   console.log("1-4");
 }
 
-function createDialogueDiv(dialogueInput) { 
-  dialogue.textContent = "";
-  let dialogueDiv = document.createElement("div");
-  dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
-  dialogueDiv.textContent = dialogueInput + " " + continueButtonSequence;
-  dialogue.appendChild(dialogueDiv);
-  dialogueDiv.appendChild(createButton(dialogueInput));
-}
+// function createDialogueDiv(dialogueInput) { 
+//   dialogue.textContent = "";
+//   let dialogueDiv = document.createElement("div");
+//   dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
+//   dialogueDiv.textContent = dialogueInput + " " + continueButtonSequence;
+//   dialogue.appendChild(dialogueDiv);
+//   dialogueDiv.appendChild(createButton(dialogueInput));
+// }
 
 let introContinue = function () {
   let introContinueButton = document.querySelector('#intro-continue-button');
@@ -617,6 +617,8 @@ let introContinue = function () {
 
   $("#welcome-title").animate({fontSize: "0px"}, 300);
   $(".welcome-title").slideUp(300).children().slideUp(300);
+
+  //pass chapter config object here
   setTimeoutArray = [];
   dialogueIterator = 0;
   dialogue.innerHTML = "";
@@ -668,11 +670,7 @@ function addContinueButton() {
   return newButton;
 }
 
-let introContinueDialogue2 = `Your father, Edwin, and your Mother, Alena, have raised you well. 
-                             Your father taught you how to handle your skills and how to defend yourself. 
-                             He spent many nights with you, hiking, camping, and living in the woods. Your mother
-                             taught you how to mend clothes, forage edible foods, and how to take care of your 
-                             wounds. But did they prepare you for this?.... What's your name?`
+let introContinueDialogue2 = `Your father, Edwin, and your Mother, Alena, have raised you well. Your father taught you how to handle your skills and how to defend yourself. He spent many nights with you, hiking, camping, and living in the woods. Your mother taught you how to mend clothes, forage edible foods, and how to take care of your wounds. But did they prepare you for this?.... What's your name?`
 
 function introContinueThree(newButton) {
   $("#inner-dialogue-div").animate({fontSize: "0px"}, 300)
