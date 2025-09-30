@@ -544,8 +544,7 @@ function beginChapterOneZero () {
 }
 
 let chapterOneOneText = 
-  `Soul Stealer is an ancient species of dragon with black scales, obsidian-like talons, and silver eyes that can see in the dark as if it were daytime. It is said that Soul Stealer 
-  breathes black fire that is able to burn through *almost* anything....
+  `Soul Stealer is an ancient species of dragon with black scales, obsidian talons, and silver eyes that can see in the dark as if it were daytime. 
    `;
 
 function beginChapterOneOne() {
@@ -565,7 +564,8 @@ function beginChapterOneOne() {
       chapterConfig);  
 }
 
-let chapterOneTwoText = `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth.`;
+let chapterOneTwoText = `It is said that Soul Stealer 
+  breathes black fire that is able to burn through *almost* anything....`;
 
 function beginChapterOneTwo() {
   console.log("chapter one two");
@@ -580,10 +580,25 @@ function beginChapterOneTwo() {
       chapterConfig);  
 }
 
-let chapterOneTwoThree = `Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepare to purchase your.`;
+let chapterOneThreeText = `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth.`;
 
 function beginChapterOneThree() {
   console.log("1-3");
+  chapterConfig.thisChapterNumber = "1-3",
+  chapterConfig.thisChapterDialogue = chapterOneThreeText,
+  chapterConfig.nextChapterFunction = beginChapterOneFour;
+  $("#welcome-title").animate({
+      fontSize: "0px"}, 300).next().animate({
+      width: "0px",
+      height: "0px"}, 300).slideUp(300).next().dequeue(); 
+    Utilities.continueTextAnimation(
+      chapterConfig);  
+}
+
+let chapterOneFourText = `Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepare to purchase your supplies.`
+
+function beginChapterOneFour() {
+  console.log("1-4");
 }
 
 function createDialogueDiv(dialogueInput) { 
