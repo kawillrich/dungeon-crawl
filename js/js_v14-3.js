@@ -568,7 +568,7 @@ let trainingDialogue =
 let chapterOneOneDialogue = `
   Chapter 1.1 Dialogue
 `;
-  
+// need to ID what to pass into this function to pass the next function and text  
 let afterBeginIntro = function(
   dialogueText,
   setTimeoutArray,
@@ -576,7 +576,7 @@ let afterBeginIntro = function(
   typingSpeed,
   dialogueDiv,
   nextDialogue,
-  chapterOneOneDialogue) {
+  nextChapter) {
   $("#welcome-title").animate({
       fontSize: "0px"}, 300).next().animate({
       width: "0px",
@@ -588,7 +588,7 @@ let afterBeginIntro = function(
       typingSpeed, 
       dialogueDiv, 
       nextDialogue,
-      chapterOneOneDialogue);  
+      nextChapter);  
 }
 
 let chapterOneTwoDialogue = `
