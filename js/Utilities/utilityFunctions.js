@@ -9,6 +9,7 @@ export function continueTextAnimation(chapterConfig) {
       clearTimeout[i];
     }
     chapterConfig.setTimeoutArray = [];
+    chapterConfig.dialogueIterator = 0;
     createContinueButton(chapterConfig);    
   }  
 }

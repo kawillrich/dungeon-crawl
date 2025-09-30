@@ -512,7 +512,7 @@ let typingSpeed = 3;
 enterGame.addEventListener("click", 
   function() { 
     this.remove();
-    beginChapterOneOne(); 
+    beginChapterOneZero(); 
   }, false);
 
 //set dialogue variable to #dialogue
@@ -551,9 +551,7 @@ let chapterOneZeroText =
 //       nextChapter);  
 // }
 
-let chapterOneOneText = 
-  `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
-  a survival kit. `;
+
                     
 
 // need to ID what to pass into this function to pass the next function and text
@@ -574,10 +572,13 @@ let chapterConfig = {
   nextChapterFunction: beginChapterOneOne
 }
 
-function beginChapterOneOne () {
-  // chapterConfig.thisChapterDialogue = chapterOneTwoDialogue;
-  chapterConfig.nextChapterFunction = beginChapterOneTwo;
-  console.log('chapter one one');
+let chapterOneOneText = 
+  `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
+  a survival kit. `;
+
+function beginChapterOneZero () { 
+  console.log('chapter one zero');
+  chapterConfig.nextChapterFunction = beginChapterOneOne;
   $("#welcome-title").animate({
       fontSize: "0px"}, 300).next().animate({
       width: "0px",
@@ -586,16 +587,31 @@ function beginChapterOneOne () {
       chapterConfig);  
 }
 
-let chapterOneTwoDialogue = `
-  Chapter 1.2 Dialogue
-`;
+let chapterOneTwoText = "Chapter 1-2";
+
+function beginChapterOneOne() {
+  console.log("chapter one one");
+  
+  chapterConfig.thisChapterNumber = "1-1",
+  chapterConfig.thisChapterDialogue = chapterOneOneText,
+  chapterConfig.nextChapterFunction = beginChapterOneTwo;
+
+  console.log(chapterConfig.thisChapterDialogue)
+
+  $("#welcome-title").animate({
+      fontSize: "0px"}, 300).next().animate({
+      width: "0px",
+      height: "0px"}, 300).slideUp(300).next().dequeue(); 
+    Utilities.continueTextAnimation(
+      chapterConfig);  
+}
 
 
 function beginChapterOneTwo() {
   console.log("chapter one two");
-  chapterConfig.thisChapterDialogue = chapterOneOneText,
+  chapterConfig.thisChapterNumber = "1-2",
+  chapterConfig.thisChapterDialogue = chapterOneTwoText,
   chapterConfig.nextChapterFunction = beginChapterOneThree;
-  console.log('chapter one two');
   $("#welcome-title").animate({
       fontSize: "0px"}, 300).next().animate({
       width: "0px",
@@ -604,18 +620,9 @@ function beginChapterOneTwo() {
       chapterConfig);  
 }
 
-
-function beginChapterOneThree () {
-  chapterConfig.nextChapterFunction = beginChapterOneTwo;
-  console.log('chapter one one');
-  $("#welcome-title").animate({
-      fontSize: "0px"}, 300).next().animate({
-      width: "0px",
-      height: "0px"}, 300).slideUp(300).next().dequeue(); 
-    Utilities.continueTextAnimation(
-      chapterConfig);  
+function beginChapterOneThree() {
+  console.log("1-3");
 }
-
 // Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed);
 
 /*commenting out while testing util functions
