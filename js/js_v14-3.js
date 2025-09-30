@@ -629,7 +629,7 @@ function beginChapterOneFour() {
 //   introContinueTwo();
 // }
  
-let chapterOneFiveText = `Your father, Edwin, and your Mother, Alena, have raised you well. Your father taught you how to handle your skills and how to defend yourself. He spent many nights with you, hiking, camping, and living in the woods. Your mother taught you how to mend clothes, forage edible foods, and how to take care of your wounds. But did they prepare you for this?.... What's your name?`
+let chapterOneFiveText = `Your father, Edwin, and your Mother, Alena, have raised you well. Your father taught you how to handle your skills and how to defend yourself. Your mother taught you how to mend clothes, forage edible foods, and how to take care of your wounds.`
 
 function beginChapterOneFive() {
   console.log("1-5");
@@ -674,10 +674,20 @@ function beginChapterOneFive() {
 //   return newButton;
 // }
 
-let introContinueDialogue2 = `Your father, Edwin, and your Mother, Alena, have raised you well. Your father taught you how to handle your skills and how to defend yourself. He spent many nights with you, hiking, camping, and living in the woods. Your mother taught you how to mend clothes, forage edible foods, and how to take care of your wounds. But did they prepare you for this?.... What's your name?`
+let chapterOneSixText = `But did they prepare you for this?.... What's your name?`
 
 function beginChapterOneSix() {
   console.log("1-6");
+  chapterConfig.thisChapterNumber = "1-6",
+  chapterConfig.thisChapterDialogue = chapterOneSixText,
+  chapterConfig.nextChapterFunction = beginChapterOneSeven;
+  Utilities.continueTextAnimation(chapterConfig); 
+}
+
+
+function beginChapterOneSeven() {
+  console.log("1-7");
+
 }
 
 // function introContinueThree(newButton) {
