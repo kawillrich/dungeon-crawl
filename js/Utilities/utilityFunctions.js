@@ -1,3 +1,7 @@
+import { textDialogue1, functions } from "../js_v14-3.js";
+
+
+
 export function continueTextAnimation(
   chapterText, 
   setTimeoutArray, 

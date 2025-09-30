@@ -508,7 +508,6 @@ let setTimeoutArray = [];
 let dialogueDiv = document.querySelector("#dialogue");
 let dialogueIterator = 0;
 let typingSpeed = 3;
-
       
 enterGame.addEventListener("click", 
   function() { 
@@ -568,7 +567,19 @@ let trainingDialogue =
 let chapterOneOneDialogue = `
   Chapter 1.1 Dialogue
 `;
-// need to ID what to pass into this function to pass the next function and text  
+// need to ID what to pass into this function to pass the next function and text
+
+let chapterConfig = {
+  thisChapterDialogue: "Text for first chapter",
+  setTimeoutArray: [],
+  dialogueIterator: 0,
+  typingSpeed: 3,
+  dialogueDiv: document.querySelector('#dialogue'),
+  nextChapterDialogue: "Text for next chapter",
+  nextChapterFunction: chapterOneTwo
+}
+
+
 export let textDialogue1 = function(
   dialogueText,
   setTimeoutArray,
@@ -591,10 +602,18 @@ export let textDialogue1 = function(
       nextChapter);  
 }
 
+let beginChapterOneOne = function() {
+  console.log('chapter one one');
+}
+
 let chapterOneTwoDialogue = `
   Chapter 1.2 Dialogue
 `;
 
+
+let beginChapterOneTwo = function() {
+  console.log("chapter one two");
+}
 // Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed);
 
 /*commenting out while testing util functions
@@ -3968,4 +3987,8 @@ function continueChapterSix() {
     </p>
             
     `;
+}
+
+export let functions = {
+  "textDialogue1" : textDialogue1
 }
