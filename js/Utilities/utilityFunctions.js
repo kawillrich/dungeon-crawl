@@ -10,7 +10,9 @@ export function continueTextAnimation(chapterConfig) {
     }
     chapterConfig.setTimeoutArray = [];
     chapterConfig.dialogueIterator = 0;
-    createContinueButton(chapterConfig);    
+    if (chapterConfig.buttonText !== "") {
+      createContinueButton(chapterConfig);
+    }
   }  
 }
 

@@ -674,21 +674,19 @@ function beginChapterOneFive() {
 //   return newButton;
 // }
 
-let chapterOneSixText = `But did they prepare you for this?.... What's your name?`
-
-function beginChapterOneSix() {
-  console.log("1-6");
-  chapterConfig.thisChapterNumber = "1-6",
-  chapterConfig.thisChapterDialogue = chapterOneSixText,
-  chapterConfig.nextChapterFunction = beginChapterOneSeven;
-  Utilities.continueTextAnimation(chapterConfig); 
-}
 
 
-function beginChapterOneSeven() {
-  console.log("1-7");
 
-}
+// let chapterConfig = {
+//   thisChapterNumber: "1-0",
+//   thisChapterDialogue: chapterOneZeroText,
+//   buttonText: "Continue",
+//   setTimeoutArray: [],
+//   dialogueIterator: 0,
+//   typingSpeed: 3,
+//   dialogueDiv: document.querySelector('#dialogue'),
+//   nextChapterFunction: beginChapterOneOne
+// }
 
 // function introContinueThree(newButton) {
 //   $("#inner-dialogue-div").animate({fontSize: "0px"}, 300)
@@ -700,29 +698,52 @@ function beginChapterOneSeven() {
 //   introContinueFour();
 // }
 
-function introContinueFour() {
+
+let chapterOneSixText = `But did they prepare you for this?.... What's your name?`
+
+function beginChapterOneSix() {
+  console.log("1-6");
+  chapterConfig.thisChapterNumber = "1-6",
+  chapterConfig.thisChapterDialogue = chapterOneSixText,
+  chapterConfig.nextChapterFunction = beginChapterOneSeven;
+  chapterConfig.buttonText = "";
+  Utilities.continueTextAnimation(chapterConfig); 
+ 
   let submitNameButton = document.querySelector("#submit-name-div");
   submitNameButton.classList.remove("not-visible");
-  let introContinueButton = document.querySelector("#intro-button-container");
-  // introContinueButton.remove();
-  introContinueButton.style.display = "none";
-  
-
-  if (dialogueIterator < introContinueDialogue2.length) {
-    dialogue.innerHTML += introContinueDialogue2.charAt(dialogueIterator);
-    dialogueIterator++;
-    setTimeoutArray.push(setTimeout(introContinueFour, typingSpeed));
-  }
-
-  else {
-    for (let i = 0; i < setTimeoutArray.length; i ++) {
-      clearTimeout[i];
-    }
-    setTimeoutArray = [];
-    addSubmitNameButton();
-  }  
+  addSubmitNameButton();
 
 }
+
+
+function beginChapterOneSeven() {
+  console.log("1-7");
+ 
+}
+
+// function introContinueFour() {
+  // let submitNameButton = document.querySelector("#submit-name-div");
+  // submitNameButton.classList.remove("not-visible");
+  // let introContinueButton = document.querySelector("#intro-button-container");
+  // introContinueButton.remove();
+  // introContinueButton.style.display = "none";
+  
+
+//   if (dialogueIterator < introContinueDialogue2.length) {
+//     dialogue.innerHTML += introContinueDialogue2.charAt(dialogueIterator);
+//     dialogueIterator++;
+//     setTimeoutArray.push(setTimeout(introContinueFour, typingSpeed));
+//   }
+
+//   else {
+//     for (let i = 0; i < setTimeoutArray.length; i ++) {
+//       clearTimeout[i];
+//     }
+//     setTimeoutArray = [];
+//     addSubmitNameButton();
+//   }  
+
+// }
 
 function addSubmitNameButton() {
   console.log("addSubmitNameButton");
