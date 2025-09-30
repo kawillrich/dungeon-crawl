@@ -511,15 +511,8 @@ let typingSpeed = 3;
       
 enterGame.addEventListener("click", 
   function() { 
-    beginIntro (
-      introText, 
-      setTimeoutArray, 
-      dialogueIterator, 
-      typingSpeed, 
-      dialogueDiv,
-      trainingDialogue,
-      textDialogue1
-    ); 
+    this.remove();
+    beginChapterOneOne(); 
   }, false);
 
 //set dialogue variable to #dialogue
@@ -567,9 +560,15 @@ let trainingDialogue =
 
 // need to ID what to pass into this function to pass the next function and text
 
+let chapterOneOneDialogue = `
+  Chapter 1.1 Dialogue
+`;
+
+
 let chapterConfig = {
   thisChapterNumber: "1-0",
-  thisChapterDialogue: "",
+  thisChapterDialogue: introText,
+  buttonText: "Continue",
   setTimeoutArray: [],
   dialogueIterator: 0,
   typingSpeed: 3,
@@ -601,12 +600,9 @@ export let textDialogue1 = function(
       nextChapter);  
 }
 
-let chapterOneOneDialogue = `
-  Chapter 1.1 Dialogue
-`;
 
-let beginChapterOneOne = function() {
-  chapterConfig.thisChapterDialogue = chapterOneOneDialogue;
+function beginChapterOneOne () {
+  // chapterConfig.thisChapterDialogue = chapterOneTwoDialogue;
   chapterConfig.nextChapterFunction = beginChapterOneTwo;
   console.log('chapter one one');
   $("#welcome-title").animate({
@@ -622,7 +618,7 @@ let chapterOneTwoDialogue = `
 `;
 
 
-let beginChapterOneTwo = function() {
+function beginChapterOneTwo() {
   console.log("chapter one two");
 }
 // Utilities.continueTextAnimation(dialogueText, setTimeoutArray, dialogueIterator, typingSpeed);

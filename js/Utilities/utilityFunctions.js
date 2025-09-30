@@ -13,17 +13,17 @@ export function continueTextAnimation(chapterConfig) {
       clearTimeout[i];
     }
     chapterConfig.setTimeoutArray = [];
-    createContinueButton(chapterConfig, buttonText);    
+    createContinueButton(chapterConfig);    
   }  
 }
 
 export function createContinueButton(
-  chapterConfig, buttonText) {
+  chapterConfig) {
     let containerDiv = document.querySelector('#container');
     let newButton = document.createElement("button");
     newButton.id = `button-${chapter}`;
     newButton.type = "button";
-    newButton.textContent = `${buttonText}`;  
+    newButton.textContent = `${chapterConfig.buttonText}`;  
     newButton.classList.add("new-continue-button"); 
     newButton.addEventListener(
       "click",
