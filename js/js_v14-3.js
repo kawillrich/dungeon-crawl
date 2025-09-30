@@ -519,11 +519,7 @@ enterGame.addEventListener("click",
 
 //set dialogue text to display
 let chapterOneZeroText = 
-  `In the ruins of Elsier, there are rumors of a large treasure being guarded 
-  by the Nightfang Dragon, known as Soul Stealer. Soul Stealer is an ancient 
-  species of dragon with black scales, obsidian-like talons, and silver eyes 
-  that can see in the dark as if it were daytime. It is said that Soul Stealer 
-  breathes black fire that is able to burn through *almost* anything....`;
+  `In the ruins of Elsier, there are rumors of a large treasure being guarded by the Nightfang Dragon, known as Soul Stealer.  `;
 
 let chapterConfig = {
   thisChapterNumber: "1-0",
@@ -537,8 +533,9 @@ let chapterConfig = {
 }
 
 let chapterOneOneText = 
-  `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepared your belongings - basic supplies: food, water, armor, a weapon, and 
-  a survival kit. `;
+  `Soul Stealer is an ancient species of dragon with black scales, obsidian-like talons, and silver eyes that can see in the dark as if it were daytime. It is said that Soul Stealer 
+  breathes black fire that is able to burn through *almost* anything....
+   `;
 
 function beginChapterOneZero () { 
   console.log('chapter one zero');
@@ -551,7 +548,7 @@ function beginChapterOneZero () {
       chapterConfig);  
 }
 
-let chapterOneTwoText = "Chapter 1-2";
+let chapterOneTwoText = `You have decided that your training and preparation have readied you for the challenge to venture to the ruins, in hopes of defeating the dragon and obtaining his treasure. You have grown up a lot since your youth. Now, at age 26, you feel you are at your physical peak. Mentally, you have already taken the leap of faith and prepare to purchase your.`;
 
 function beginChapterOneOne() {
   console.log("chapter one one");
