@@ -576,7 +576,7 @@ let afterBeginIntro = function(
   typingSpeed,
   dialogueDiv,
   nextDialogue,
-  nextChapter) {
+  chapterOneOneDialogue) {
   $("#welcome-title").animate({
       fontSize: "0px"}, 300).next().animate({
       width: "0px",
@@ -588,7 +588,7 @@ let afterBeginIntro = function(
       typingSpeed, 
       dialogueDiv, 
       nextDialogue,
-      nextChapter);  
+      chapterOneOneDialogue);  
 }
 
 let chapterOneTwoDialogue = `
