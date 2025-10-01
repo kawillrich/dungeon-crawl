@@ -708,11 +708,11 @@ function beginChapterOneSix() {
   chapterConfig.nextChapterFunction = beginChapterOneSeven;
   chapterConfig.buttonText = "";
   Utilities.continueTextAnimation(chapterConfig); 
+  addSubmitNameButton();
  
   let submitNameButton = document.querySelector("#submit-name-div");
   submitNameButton.classList.remove("not-visible");
-  addSubmitNameButton();
-
+  
 }
 
 
