@@ -600,34 +600,6 @@ function beginChapterOneFour() {
   chapterConfig.nextChapterFunction = beginChapterOneFive;
   Utilities.continueTextAnimation(chapterConfig);  
 }
-
-// function createDialogueDiv(dialogueInput) { 
-//   dialogue.textContent = "";
-//   let dialogueDiv = document.createElement("div");
-//   dialogueDiv.id = `dialogue-div-${continueButtonSequence}`;
-//   dialogueDiv.textContent = dialogueInput + " " + continueButtonSequence;
-//   dialogue.appendChild(dialogueDiv);
-//   dialogueDiv.appendChild(createButton(dialogueInput));
-// }
-
-// let introContinue = function () {
-//   let introContinueButton = document.querySelector('#intro-continue-button');
-//   introContinueButton.style.display = "none";
-//   introContinueButton.remove();
-//   $("#welcome-title").animate({fontSize: "0px"}, 300);
-//   $(".welcome-title").slideUp(300).children().slideUp(300);
-//   //pass chapter config object here
-//   setTimeoutArray = [];
-//   dialogueIterator = 0;
-//   dialogue.innerHTML = "";
-//   let innerDialogueDiv = document.createElement('span');
-//   innerDialogueDiv.id = "inner-dialogue-div";
-//   innerDialogueDiv.style.fontSize = "1.75rem";
-//   let continueBreak = document.createElement('br');
-//   dialogue.appendChild(continueBreak);
-//   dialogue.appendChild(innerDialogueDiv);
-//   introContinueTwo();
-// }
  
 let chapterOneFiveText = `Your father, Edwin, and your Mother, Alena, have raised you well. Your father taught you how to handle your skills and how to defend yourself. Your mother taught you how to mend clothes, forage edible foods, and how to take care of your wounds.`
 
@@ -638,43 +610,6 @@ function beginChapterOneFive() {
   chapterConfig.nextChapterFunction = beginChapterOneSix;
   Utilities.continueTextAnimation(chapterConfig);  
 }
-
-// function introContinueTwo() {
-//   let innerText = document.querySelector('#inner-dialogue-div')
-
-//   if (dialogueIterator < introContinueDialogue.length) {
-//     innerText.innerHTML += introContinueDialogue.charAt(dialogueIterator);
-//     dialogueIterator++;
-//     setTimeoutArray.push(setTimeout(introContinueTwo, typingSpeed));
-//   }
-
-//   else {
-//     for (let i = 0; i < setTimeoutArray.length; i ++) {
-//       clearTimeout[i];
-//     }
-//     setTimeoutArray = [];
-
-//     addContinueButton();
-//   }  
-// }
-
-// function addContinueButton() {
-//   let addNewContinueButton = document.createElement("button");
-//   addNewContinueButton.id = "new-continue-button";
-//   addNewContinueButton.textContent = "Continue";
-//   addNewContinueButton.type = "button";
-//   addNewContinueButton.addEventListener("click", function(newButton) {
-//     newButton.target.remove();
-//     introContinueThree(newButton)
-//   }, false);
-    
-//   let containerDiv = document.querySelector("#container");
-//   containerDiv.appendChild(addNewContinueButton);
-//   let newButton = document.querySelector("#new-continue-button");
-//   return newButton;
-// }
-
-
 
 
 // let chapterConfig = {
@@ -687,17 +622,6 @@ function beginChapterOneFive() {
 //   dialogueDiv: document.querySelector('#dialogue'),
 //   nextChapterFunction: beginChapterOneOne
 // }
-
-// function introContinueThree(newButton) {
-//   $("#inner-dialogue-div").animate({fontSize: "0px"}, 300)
-  
-//   dialogueIterator = 0;
-//   setTimeoutArray = [];
-//   let dialogue = document.querySelector("#dialogue");
-//   dialogue.removeChild(document.querySelector("#inner-dialogue-div"));
-//   introContinueFour();
-// }
-
 
 let chapterOneSixText = `But did they prepare you for this?.... What's your name?`
 
@@ -720,30 +644,6 @@ function beginChapterOneSeven() {
   console.log("1-7");
  
 }
-
-// function introContinueFour() {
-  // let submitNameButton = document.querySelector("#submit-name-div");
-  // submitNameButton.classList.remove("not-visible");
-  // let introContinueButton = document.querySelector("#intro-button-container");
-  // introContinueButton.remove();
-  // introContinueButton.style.display = "none";
-  
-
-//   if (dialogueIterator < introContinueDialogue2.length) {
-//     dialogue.innerHTML += introContinueDialogue2.charAt(dialogueIterator);
-//     dialogueIterator++;
-//     setTimeoutArray.push(setTimeout(introContinueFour, typingSpeed));
-//   }
-
-//   else {
-//     for (let i = 0; i < setTimeoutArray.length; i ++) {
-//       clearTimeout[i];
-//     }
-//     setTimeoutArray = [];
-//     addSubmitNameButton();
-//   }  
-
-// }
 
 function addSubmitNameButton() {
   console.log("addSubmitNameButton");
