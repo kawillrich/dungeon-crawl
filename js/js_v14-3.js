@@ -627,22 +627,17 @@ let chapterOneSixText = `But did they prepare you for this?.... What's your name
 
 function beginChapterOneSix() {
   console.log("1-6");
+  
   chapterConfig.thisChapterNumber = "1-6",
   chapterConfig.thisChapterDialogue = chapterOneSixText,
-  chapterConfig.nextChapterFunction = beginChapterOneSeven;
   chapterConfig.buttonText = "";
+  
   Utilities.continueTextAnimation(chapterConfig); 
   addSubmitNameButton();
  
   let submitNameButton = document.querySelector("#submit-name-div");
   submitNameButton.classList.remove("not-visible");
   
-}
-
-
-function beginChapterOneSeven() {
-  console.log("1-7");
- 
 }
 
 function addSubmitNameButton() {
