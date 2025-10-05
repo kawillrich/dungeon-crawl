@@ -900,10 +900,12 @@ function confirmingAttributes() {
   let welcomeMessage = document.querySelector('#welcome-message');
   let rollNewAttributes = document.querySelector("#generate-attributes");
   let confirmAttributes = document.querySelector("#confirm-attributes");
+  let submitNameButton = document.querySelector("#submit-name-div");
 
   welcomeMessage.remove();  
   rollNewAttributes.remove();
   confirmAttributes.remove();
+  submitNameButton.remove();
 
   finalCharacter.attributes = attributes;
 
