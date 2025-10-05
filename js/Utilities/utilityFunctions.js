@@ -40,12 +40,31 @@ export function createNextDialogue(chapterConfig) {
     // let nextChapterFunction = "textDialogue" + chapterIterator;
     // let compiledNextChapter = functions[nextChapterFunction];    
     // console.log(nextChapter);
-    // console.log(dialogueDiv);
+    console.log(chapterConfig.dialogueDiv);
     chapterConfig.dialogueDiv.textContent = "";  
     let nextDialogueDiv = document.createElement('div');
     nextDialogueDiv.id = `dialogue-div-${chapterConfig.thisChapterNumber}`;
     chapterConfig.dialogueDiv.appendChild(nextDialogueDiv);  
     chapterConfig.nextChapterFunction();  
 };
+
+export function continueTextAnimationWelcomeTitle(chapterConfig) {
+    
+  if (chapterConfig.dialogueIterator < chapterConfig.thisChapterDialogue.length) {
+    chapterConfig.dialogueDiv.textContent += chapterConfig.thisChapterDialogue.charAt(chapterConfig.dialogueIterator);
+    chapterConfig.dialogueIterator++;
+    chapterConfig.setTimeoutArray.push(setTimeout(function() {continueTextAnimationWelcomeTitle(
+      chapterConfig)}, chapterConfig.typingSpeed));
+  } else {
+    for (let i = 0; i < chapterConfig.setTimeoutArray.length; i ++) {
+      clearTimeout[i];
+    }
+    chapterConfig.setTimeoutArray = [];
+    chapterConfig.dialogueIterator = 0;
+    if (chapterConfig.buttonText !== "") {
+      createContinueButton(chapterConfig);
+    } 
+  }  
+}
 
 export * as Utilities from "./utilityFunctions.js";

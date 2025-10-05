@@ -892,7 +892,25 @@ function generateNewAttributes() {
   } else {
     getCharCharismaAdj.innerHTML = attributes[5].adjustment;
   }
+  showAlignmentSelection();
 }
+
+function showAlignmentSelection() {
+  console.log(chapterConfig);
+  chapterConfig.dialogueDiv = document.querySelector('#welcome-title');
+  chapterConfig.dialogueDiv.textContent = "";
+  chapterConfig.dialogueDiv.style.fontSize = "1.75rem";
+  chapterConfig.dialogueDiv.style.fontWeight = "normal";
+
+  chapterConfig.dialogueDiv.style.height = "";
+  chapterConfig.dialogueDiv.style.width = "";
+
+  chapterConfig.nextChapterFunction = confirmingAttributes;
+  chapterConfig.thisChapterDialogue = "You have successfully selected your attributes. Now select an Alignment.";
+  chapterConfig.thisChapterNumber = "1-7";  
+  Utilities.continueTextAnimationWelcomeTitle(chapterConfig);  
+}
+
 
 function confirmingAttributes() {
   window.scrollTo(0, 0);
