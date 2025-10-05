@@ -595,7 +595,7 @@ input[type="submit"],
   font-size: 1.75rem;
   text-align: center;
   height: 30px;
-  width: 100%;
+  width: 150px;
   border: 0px solid var(--btn-bg);  
   align-items: center;
   justify-content: center;
@@ -609,7 +609,7 @@ input[type="submit"],
   font-size: 1.75rem;
   text-align: center;
   height: 30px;
-  width: 100%;
+  width: 150px;
   border: 0px solid var(--btn-bg);  
   align-items: center;
   justify-content: center;
