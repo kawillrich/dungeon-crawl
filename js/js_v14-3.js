@@ -527,7 +527,7 @@ let chapterConfig = {
   buttonText: "Continue",
   setTimeoutArray: [],
   dialogueIterator: 0,
-  typingSpeed: 3,
+  typingSpeed: 1,
   dialogueDiv: document.querySelector('#dialogue'),
   nextChapterFunction: beginChapterOneOne
 }
@@ -896,16 +896,18 @@ function generateNewAttributes() {
 
 function showAlignmentSelection() {
   console.log(chapterConfig);
-  chapterConfig.dialogueDiv = document.querySelector('#welcome-title');
+  chapterConfig.dialogueDiv = document.querySelector('.welcome-title');
   chapterConfig.dialogueDiv.textContent = "";
   chapterConfig.dialogueDiv.style.fontSize = "1.75rem";
   chapterConfig.dialogueDiv.style.fontWeight = "normal";
+  chapterConfig.dialogueDiv.style.paddingTop = "10px";
+  chapterConfig.dialogueDiv.style.margin = "auto";
+  chapterConfig.dialogueDiv.style.textAlign = "justify";
+  chapterConfig.dialogueDiv.style.width = "90%";
 
-  chapterConfig.dialogueDiv.style.height = "";
-  chapterConfig.dialogueDiv.style.width = "";
 
   chapterConfig.nextChapterFunction = confirmingAttributes;
-  chapterConfig.thisChapterDialogue = "You have successfully selected your attributes. Now select an Alignment.";
+  chapterConfig.thisChapterDialogue = `You have successfully selected your attributes. Now select an Alignment.`;
   chapterConfig.thisChapterNumber = "1-7";  
   Utilities.continueTextAnimationWelcomeTitle(chapterConfig);  
 }
