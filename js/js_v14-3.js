@@ -896,6 +896,7 @@ function generateNewAttributes() {
 }
 
 function confirmingAttributes() {
+  let confirmStart = document.querySelector('#confirm-start');
   window.scrollTo(0, 0);
   let rollNewAttributes = document.querySelector("#generate-attributes");
 
