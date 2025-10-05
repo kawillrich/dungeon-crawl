@@ -932,8 +932,7 @@ function confirmingAttributes() {
 
 
   let changeDialogue = document.querySelector("#dialogue");
-  changeDialogue.innerHTML = `
-    
+  changeDialogue.innerHTML = `    
     <div id="alignment-container"> 
         <div class="alignment-item" id="alignment-selection-container">
             <div id="lawful-container-item" class="alignment-container-item">
@@ -966,10 +965,11 @@ function confirmingAttributes() {
             keep promises, and lying and telling the truth are both useful. To a Chaotic creature, the individual is the most important of all things. Selfishness is the normal way of 
             life, and the group is not important.
             </div>    
-        </div>
-        <button id="beginAdventure" class="alignment-description">Continue</button>
+        </div>        
     </div>
     `;
+
+
 
   let lawfulSelected = document.querySelector("#lawful");
   lawfulSelected.checked = true;
@@ -982,8 +982,32 @@ function confirmingAttributes() {
   neutralSelected.addEventListener("click", updateAlignmentDescription, false);
   chaoticSelected.addEventListener("click", updateAlignmentDescription, false);
 
-  let beginningAdventure = document.querySelector("#beginAdventure");
+  let beginningAdventure = document.createElement('button');
+  beginningAdventure.classList.add('.new-continue-button');
+  beginningAdventure.setAttribute('id', 'begginingAdventure');
+  //let beginningAdventure = document.querySelector("#beginAdventure");
   beginningAdventure.addEventListener("click", startGame, false);
+
+
+
+
+  let containerDiv = document.querySelector('#container');
+  containerDiv.appendChild(beginningAdventure);
+
+  $('#begginingAdventure').css({
+    'background-color': 'var(--btn-bg)',
+    'color': 'var(--btn-text)',
+    'border-radius': '10px',
+    'font-size': '1.75rem',
+    'text-align': 'center',
+    'height': '30px',
+    'width': '210px',
+    'border': '0px solid var(--btn-bg)',  
+    'align-items': 'center',
+    'justify-content': 'center',
+    'grid-area': 'footer1', 
+  })
+
 }
 
 function updateAlignmentDescription() {
