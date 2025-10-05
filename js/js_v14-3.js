@@ -633,10 +633,12 @@ function beginChapterOneSix() {
   chapterConfig.buttonText = "";
   
   Utilities.continueTextAnimation(chapterConfig); 
-  addSubmitNameButton();
  
   let submitNameButton = document.querySelector("#submit-name-div");
   submitNameButton.classList.remove("not-visible");
+  setTimeout(() => {
+    addSubmitNameButton();
+  }, 500)
   
 }
 
@@ -644,7 +646,10 @@ function addSubmitNameButton() {
   console.log("addSubmitNameButton");
   let confirmStart = document.querySelector("#confirm-start");
   confirmStart.style.display = "block";
-  confirmStart.style.gridArea = "dialogue";
+  let dialogueDivID = document.querySelector("#dialogue");
+  // confirmStart.style.gridArea = "dialogue";
+  dialogueDivID.appendChild(confirmStart);
+
 }
 
 function checkUsername() {
