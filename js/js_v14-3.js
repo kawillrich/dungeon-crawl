@@ -895,7 +895,6 @@ function generateNewAttributes() {
 }
 
 function confirmingAttributes() {
-  let confirmStart = document.querySelector('#confirm-start');
   window.scrollTo(0, 0);
   let rollNewAttributes = document.querySelector("#generate-attributes");
 
@@ -905,11 +904,13 @@ function confirmingAttributes() {
   rollNewAttributes.style.cursor = "not-allowed";
   rollNewAttributes.style.disabled = true;
   rollNewAttributes.style.opacity = 0.5;
+  rollNewAttributes.remove();
 
   confirmAttributes.style.pointerEvents = "none";
   confirmAttributes.style.cursor = "not-allowed";
   confirmAttributes.style.disabled = true;
   confirmAttributes.style.opacity = 0.5;
+  confirmAttributes.remove();
 
   finalCharacter.attributes = attributes;
 
