@@ -984,17 +984,16 @@ function confirmingAttributes() {
 
   let beginningAdventure = document.createElement('button');
   beginningAdventure.classList.add('.new-continue-button');
-  beginningAdventure.setAttribute('id', 'begginingAdventure');
-  //let beginningAdventure = document.querySelector("#beginAdventure");
+  beginningAdventure.setAttribute('id', 'beginingAdventure');
+  beginningAdventure.setAttribute('type', 'submit');
+  beginningAdventure.setAttribute('value', 'submit');  //
+  beginningAdventure.innerHTML = "Continue";
   beginningAdventure.addEventListener("click", startGame, false);
-
-
-
 
   let containerDiv = document.querySelector('#container');
   containerDiv.appendChild(beginningAdventure);
 
-  $('#begginingAdventure').css({
+  $('#beginingAdventure').css({
     'background-color': 'var(--btn-bg)',
     'color': 'var(--btn-text)',
     'border-radius': '10px',
@@ -1005,7 +1004,9 @@ function confirmingAttributes() {
     'border': '0px solid var(--btn-bg)',  
     'align-items': 'center',
     'justify-content': 'center',
-    'grid-area': 'footer1', 
+    'grid-area': 'footer1',
+    'margin': 'auto',
+    'display': 'block', 
   })
 
 }
