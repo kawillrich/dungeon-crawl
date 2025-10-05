@@ -159,11 +159,11 @@ button {
     width: 100%;
     /* min-width: 330px;
     max-width: 599px; */
-    grid-template-areas: "banner"
-                         "playerData"
-                         "playerInfo"
-                         "dialogue"
-                         "footer"
+    grid-template-areas: "banner banner banner"
+                         "playerData playerData playerData"
+                         "playerInfo playerInfo playerInfo"
+                         "dialogue dialogue dialogue"
+                         "footer footer1 footer2"
   }
   
   #enter-game {
@@ -223,7 +223,7 @@ button {
   }
 
   #generate-attributes {
-    grid-area: footer;
+    grid-area: footer1;
     margin: auto;
     width: 50px;
     justify-content: space-evenly;
