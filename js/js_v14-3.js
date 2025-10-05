@@ -649,7 +649,6 @@ function addSubmitNameButton() {
   let dialogueDivID = document.querySelector("#dialogue");
   // confirmStart.style.gridArea = "dialogue";
   dialogueDivID.appendChild(confirmStart);
-
 }
 
 function checkUsername() {

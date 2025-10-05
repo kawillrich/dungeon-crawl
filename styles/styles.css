@@ -167,7 +167,7 @@ button {
   }
   
   #enter-game {
-    grid-area: footer;
+    grid-area: footer1;
     /* display: inline; */
     /* display: none; */
   }
@@ -188,7 +188,7 @@ button {
   }
 
   #submit-name-div {
-    grid-area: footer;
+    grid-area: footer1;
     /* display: none; */
     margin: auto
   }
@@ -223,7 +223,7 @@ button {
   }
 
   #generate-attributes {
-    grid-area: footer1;
+    grid-area: footer2;
     margin: auto;
     width: 50px;
     justify-content: space-evenly;
@@ -567,8 +567,6 @@ input[name="selected-specialty"] {
 input[type="submit"],
 #submit-all-mage-spells,
 #buy-items,
-#generate-attributes,
-#confirm-attributes,
 #beginAdventure,
 #submit-all-cleric-spells,
 #intro-continue-button,
@@ -585,7 +583,36 @@ input[type="submit"],
   border: 0px solid var(--btn-bg);  
   align-items: center;
   justify-content: center;
-  
+  grid-area: footer1;  
+}
+
+
+#generate-attributes {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 10px;
+  font-size: 1.75rem;
+  text-align: center;
+  height: 30px;
+  width: 210px;
+  border: 0px solid var(--btn-bg);  
+  align-items: center;
+  justify-content: center;
+  grid-area: footer;  
+}
+
+#confirm-attributes {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 10px;
+  font-size: 1.75rem;
+  text-align: center;
+  height: 30px;
+  width: 210px;
+  border: 0px solid var(--btn-bg);  
+  align-items: center;
+  justify-content: center;
+  grid-area: footer2;  
 }
 
 input[type="submit"]:hover,
