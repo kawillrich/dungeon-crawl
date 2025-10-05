@@ -950,20 +950,15 @@ function confirmingAttributes() {
         </div>
         
         <div class="alignment-item" id="alignment-description-container">
-            <div id="lawful-description" class="alignment-description">Lawful characters believe that everything should follow an order, and that obeying rules is the natural way of life. 
-            Lawful creatures will try to tell the truth, obey laws, and care about all things. Lawful characters always try to keep their promises. They will try to obey laws as long as 
-            such laws are fair and just. If a choice must be made between the benefit of the group or an individual, a Lawful character will usually choose the group.
+            <div id="lawful-description" class="alignment-description">Lawful characters believe that everything should follow an order, and that obeying rules is the natural way of life.             
             </div>
 
             <div id="neutral-description" class="alignement-description hidden no-display">Neutral characters believe that the world is a balance between Law and Chaos. It is important that neither side get
-            too much power and upset this balance. The individual is important, but so it the group; the two sides must work together. A Neutral character is most interested in personal
-            survival. Such characters believe in their own wits and abilities rather than luck.
+            too much power.
             </div>
 
             <div id="chaotic-description" class="alignment-description hidden no-display">Chaotic characters are the opposite of Lawful characters. They believe that life is random, and that chance and 
-            luck rule the world. Everything happens by accident and nothing can be predicted. Laws are made to be broken, as long as a person can get away with it. It is not important to 
-            keep promises, and lying and telling the truth are both useful. To a Chaotic creature, the individual is the most important of all things. Selfishness is the normal way of 
-            life, and the group is not important.
+            luck rule the world.
             </div>    
         </div>        
     </div>
@@ -1022,25 +1017,17 @@ function updateAlignmentDescription() {
   if (selectedAlignment === "lawful") {
     finalCharacter.alignment = "Lawful";
     updateAlignmentDescElement.innerHTML = `
-      Lawful characters believe that everything should follow an order, and that obeying rules is the natural way of life. 
-      Lawful creatures will try to tell the truth, obey laws, and care about all things. Lawful characters always try to keep their promises. They will try to obey laws as long as 
-      such laws are fair and just. If a choice must be made between the benefit of the group or an individual, a Lawful character will usually choose the group.
-        `;
+      Lawful characters believe that everything should follow an order, and that obeying rules is the natural way of life.`;
   } else if (selectedAlignment === "neutral") {
     finalCharacter.alignment = "Neutral";
     updateAlignmentDescElement.innerHTML = `
       Neutral characters believe that the world is a balance between Law and Chaos. It is important that neither side get
-      too much power and upset this balance. The individual is important, but so it the group; the two sides must work together. A Neutral character is most interested in personal
-      survival. Such characters believe in their own wits and abilities rather than luck.
-        `;
+      too much power.`;
   } else if (selectedAlignment === "chaotic") {
     finalCharacter.alignment = "Chaotic";
     updateAlignmentDescElement.innerHTML = `
       Chaotic characters are the opposite of Lawful characters. They believe that life is random, and that chance and 
-      luck rule the world. Everything happens by accident and nothing can be predicted. Laws are made to be broken, as long as a person can get away with it. It is not important to 
-      keep promises, and lying and telling the truth are both useful. To a Chaotic creature, the individual is the most important of all things. Selfishness is the normal way of 
-      life, and the group is not important.
-            `;
+      luck rule the world.`;
   }
 }
 

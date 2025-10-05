@@ -205,6 +205,7 @@ button {
   
   #dialogue {
     width: 90%;
+    height: 100%;
     grid-area: dialogue;
   }
 
@@ -246,6 +247,26 @@ button {
     grid-area: dialogue;
   }
 
+  #alignment-container {
+    height: 100%;        
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 5px;
+    height: 200px;
+  }
+
+   #alignment-selection-container {
+    height: 100%; 
+    text-align: start;
+    
+  }
+
+
+   #alignment-description-container {
+    height: 100%;   
+    font-size: 1.5rem; 
+    text-align: start;
+  }
   .page-title {
     width: 350px;
     height: 100px;
@@ -1263,7 +1284,7 @@ span#dragonwarrior {
 
 #alignment-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   grid-gap: 5px;
   height: 200px;
 }
@@ -1283,7 +1304,7 @@ span#dragonwarrior {
 }
 
 #alignment-description-container {
-  grid-column: 2 / 5;
+  /* grid-column: 2 / 5; */
 }
 
 .character-display-info {
