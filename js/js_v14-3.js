@@ -892,7 +892,6 @@ function generateNewAttributes() {
   } else {
     getCharCharismaAdj.innerHTML = attributes[5].adjustment;
   }
-  showAlignmentSelection();
 }
 
 function showAlignmentSelection() {
@@ -927,9 +926,12 @@ function confirmingAttributes() {
 
   finalCharacter.attributes = attributes;
 
+  showAlignmentSelection();
+
+
   let changeDialogue = document.querySelector("#dialogue");
   changeDialogue.innerHTML = `
-    <p>You have successfully selected your attributes. Now select an Alignment.</p><br>
+    
     <div id="alignment-container"> 
         <div class="alignment-item" id="alignment-selection-container">
             <div id="lawful-container-item" class="alignment-container-item">
