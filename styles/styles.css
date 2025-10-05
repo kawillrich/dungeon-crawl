@@ -219,7 +219,7 @@ button {
     grid-area: playerInfo;
     font-size: 1.75rem;
     height: 100%;
-    width: 100%;
+    width: 90%;
     margin: auto;
   }
 

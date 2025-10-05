@@ -720,12 +720,11 @@ function rollAttributes() {
   let containerDiv = document.querySelector("#container");
   containerDiv.appendChild(welcomeMessage);
    
-  welcomeMessage.textContent = `
-    Welcome, ${submittedCharName}, please roll your Attribute Scores. The maximum score is 18 and the lowest score is 7. Select 'Confirm' when done.`;
+  welcomeMessage.innerHTML = `
+    <p>Welcome, ${submittedCharName}, please roll your Attribute Scores. The maximum score is 18 and the lowest score is 7.</p><br>    
+    <p>Select 'Confirm' when done.</p>`;
 
   getCharName.innerHTML += `
-
-    <div id="stats"><h3><b>Attributes</b></h3>
         <div class="ability-score-grid-container">            
 
             <div class="ability-score-header-grid-item ability-score-number-header-grid-item" id="header-stat"><b>Score</b></div>
@@ -758,7 +757,7 @@ function rollAttributes() {
            
         </div>
     </div>
- 
+    <br>
     <p id="dialogue-paragraph">Choose your attributes.</p>    
   `;
 
