@@ -168,13 +168,13 @@ button {
   }
   
   #enter-game {
-    grid-area: footer1;
+    grid-area: footer / footer / footer2 / footer2;
     /* display: inline; */
     /* display: none; */
   }
 
   .welcome-title {
-    grid-area: playerData / playerData1 / playerData / playerData1;
+    grid-area: playerInfo / playerInfo / playerInfo2 / playerInfo2;
     
     margin: auto;
   }
@@ -212,18 +212,18 @@ button {
     text-align: justify;
     width: 90%;
     height: 100%;
-    grid-area: dialogue1;
+    grid-area: dialogue / dialogue / dialogue2 / dialogue2;
   }
 
   #header {
-    grid-area: playerData / playerData1 / playerData / playerData1;
+    grid-area: playerData / playerData / playerData2 / playerData2;
     /* grid-row: 2 / span 1; */
     height: 100%;
     width: 100%;
   }
 
   #welcome-message {
-    grid-area: playerData / playerData1 / playerData / playerData1;
+    grid-area: playerInfo / playerInfo / playerInfo2 / playerInfo2;
     font-size: 1.75rem;
     height: 100%;
     width: 90%;
