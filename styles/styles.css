@@ -389,7 +389,6 @@ button {
     /* grid-auto-rows: 170px 145px 145px; */
     gap: 3px 8px;
     /* border-radius: 10px; */
-    grid-area: playerData / playerData / playerInfo2 / playerInfo2;
   }
 
   
