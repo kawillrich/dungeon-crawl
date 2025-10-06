@@ -301,6 +301,8 @@ button {
                           "level specialty"
                           "weapon armor";
     grid-template-columns: 50% 50%;
+    column-gap: 10px;
+    place-content: end space-between;
   }
 
   #char-name {
@@ -310,18 +312,25 @@ button {
 
   #char-armor {
     grid-area: armor;
+    padding-right: 5px;
+
   }
 
   #char-weapon {
     grid-area: weapon;
+    padding-left: 5px;
+
   }
 
   #char-level {
+    padding-left: 5px;
     grid-area: level;
   }
 
   #char-specialty {
     grid-area: specialty;
+    padding-right: 5px;
+
   }
 
   #character-hitpoints {
