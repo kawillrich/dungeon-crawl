@@ -921,7 +921,7 @@ function confirmingAttributes() {
   let confirmAttributes = document.querySelector("#confirm-attributes");
   let submitNameButton = document.querySelector("#submit-name-div");
 
-  welcomeMessage.remove();  
+  welcomeMessage.remove();
   rollNewAttributes.remove();
   confirmAttributes.remove();
   submitNameButton.remove();
@@ -1036,6 +1036,11 @@ function startGame() {
   
   $("#character-info").css({margin: "0px"}).animate({width: "98%", height: "0px"}, 300).slideDown(300).next().dequeue();
   window.scrollTo(0, 0);
+
+  let welcomeTitle = document.querySelector('.welcome-title');
+  welcomeTitle.textContent = "";  
+
+
   let strengthPlusAdjustment;
   let intelligencePlusAdjustment;
   let wisdomPlusAdjustment;
@@ -1112,43 +1117,38 @@ function startGame() {
         <div id='character-stats'>
           <fieldset class='char-info-module'>
             <legend class='player-dashboard'>Player Data</legend>
+            <br class='char-info-label'>
+            <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
 
-              <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
-
-              <h4 id='char-specialty' class='char-info-label'>Specialty: <span class="character-display-info">${
-                finalCharacter.specialty.name
-              }</span></h4>
-
-              <h4 id='char-level' class='char-info-label'>Level: <span class="character-display-info">${
-                finalCharacter.specialty.characterLevel.level.level
-              }</span></h4>
-
-
-             
+            <h4 id='char-specialty' class='char-info-label'>Specialty: <span class="character-display-info">${
+              finalCharacter.specialty.name
+            }</span></h4>
+Í
+            <h4 id='char-level' class='char-info-label'>Level: <span class="character-display-info">${
+              finalCharacter.specialty.characterLevel.level.level
+            }</span></h4>             
                 
-              <h4 id='char-armor' class='char-info-label'>Armor: 
-                <span class="armor-tooltip">
-                  <span class="character-display-info">${
-                    finalCharacter.armor.name
-                  }</span>
-                  <span class="armor-tooltiptext">Armor Class: ${
-                    finalCharacter.armor.armorClass
-                  }</span>
-                </span>
-              </h4> 
+            <h4 id='char-armor' class='char-info-label'>Armor: 
+              <span class="armor-tooltip">
+                <span class="character-display-info">${
+                  finalCharacter.armor.name
+                }</span>
+                <span class="armor-tooltiptext">Armor Class: ${
+                  finalCharacter.armor.armorClass
+                }</span>
+              </span>
+            </h4> 
 
-              <h4 id='char-weapon' class='char-info-label'>Weapon: 
-                <span class="weapon-tooltip">
-                  <span class="character-display-info">${
-                    finalCharacter.weapon.name
-                  }</span>
-                  <span class="weapon-tooltiptext">Damage: ${
-                    finalCharacter.weapon.damage
-                  }</span>
-                </span>
-              </h4>           
-
-                                        
+            <h4 id='char-weapon' class='char-info-label'>Weapon: 
+              <span class="weapon-tooltip">
+                <span class="character-display-info">${
+                  finalCharacter.weapon.name
+                }</span>
+                <span class="weapon-tooltiptext">Damage: ${
+                  finalCharacter.weapon.damage
+                }</span>
+              </span>
+            </h4>                
               
           </fieldset>
         </div>
