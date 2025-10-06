@@ -159,10 +159,10 @@ button {
     width: 100%;
     /* min-width: 330px;
     max-width: 599px; */
-    grid-template-areas: "banner banner banner"
-                         "playerData playerData playerData"
-                         "playerInfo playerInfo playerInfo"
-                         "dialogue dialogue dialogue"
+    grid-template-areas: "banner banner1 banner2"
+                         "playerData playerData1 playerData2"
+                         "playerInfo playerInfo1 playerInfo2"
+                         "dialogue dialogue1 dialogue2"
                          "footer footer1 footer2";
     
   }
@@ -174,7 +174,7 @@ button {
   }
 
   .welcome-title {
-    grid-area: playerInfo;
+    grid-area: playerData / playerData1 / playerData / playerData1;
     
     margin: auto;
   }
@@ -184,7 +184,7 @@ button {
     grid-row: 5 / span 1;
     grid-column: 1 / span 1;
     margin: auto;
-    grid-area: footer;
+    grid-area: footer1;
     /* display: none; */
   }
 
@@ -195,7 +195,7 @@ button {
   }
 
   #submit-name {
-    grid-area: footer;
+    grid-area: footer1;
     /* grid-row: 5 / span 1;
     grid-column: 1 / span 1; */
     /* display: block; */
@@ -204,20 +204,26 @@ button {
   }
   
   #dialogue {
+    padding: 10px 0px 0px 0px;
+    margin: auto;
+    font-size: 1.75rem;
+    display: block;
+    justify-content: space-evenly;
+    text-align: justify;
     width: 90%;
     height: 100%;
-    grid-area: dialogue;
+    grid-area: dialogue1;
   }
 
   #header {
-    grid-area: playerData;
+    grid-area: playerData / playerData1 / playerData / playerData1;
     /* grid-row: 2 / span 1; */
     height: 100%;
     width: 100%;
   }
 
   #welcome-message {
-    grid-area: playerInfo;
+    grid-area: playerData / playerData1 / playerData / playerData1;
     font-size: 1.75rem;
     height: 100%;
     width: 90%;
@@ -244,7 +250,7 @@ button {
   }
 
   #inner-dialogue-div {
-    grid-area: dialogue;
+    grid-area: dialogue / dialogue1 / dialogue / dialogue1;
   }
 
   #alignment-container {
@@ -356,6 +362,13 @@ button {
   .ac-guage-value,
   .hitpoint-guage-value-current {
     width: auto;
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+    font-size: 2.25rem;
+    color: white;
+    text-align: center;
+    align-self: center;
+    /* padding-bottom: 15px; */
   }
 
   #container-2 {
@@ -376,6 +389,7 @@ button {
     /* grid-auto-rows: 170px 145px 145px; */
     gap: 3px 8px;
     /* border-radius: 10px; */
+    grid-area: playerData / playerData / playerInfo2 / playerInfo2;
   }
 
   
@@ -425,7 +439,7 @@ button {
 
 /********************************************* SMALL DEVICE & SMALL TABLET************************************/
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
   #container {
     background-color: blue;
     width: 600px;
@@ -441,11 +455,10 @@ button {
     width: 89%;
     height: 100%;
     grid-auto-columns: 50%;
-    /* grid-auto-rows: 170px 145px 145px; */
     gap: 5px 10px;
     border-radius: 10px;
   }
-}
+} */
 
 /******************************************* DESKTOP & LARGE TABLETS *********************************************/
 
@@ -455,19 +468,18 @@ button {
     width: 920px;
     min-width: 920px;
   }
-  #character-info {
+  /* #character-info {
     margin: auto;
     background-image: url("../images/black-dragon2.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* height: 480px; */
     display: grid;
     grid-auto-columns: 146px;
     grid-auto-rows: 170px 145px 145px;
     gap: 5px 8px;
     border-radius: 10px;
-  }
+  } */
 
   #character-canvas {
     grid-area: 1/1 / span 1 / span 1;
@@ -513,8 +525,7 @@ button {
     background-color: var(--background);
     display: grid;  
     grid-template-rows: 5% 40% 20% 30% 5%;
-    /* grid-template-rows: 275px 100px 1fr .5fr; */
-    /* min-width: 360px; */
+ 
   }
 
   #container-2 {
@@ -546,8 +557,6 @@ button {
   }
 }
 
-/****** add a class for submit buttons and <button> to change appearance with background image*/
-
 input[name="alignment"],
 input[name="selected-specialty"] {
   display: none;
@@ -556,7 +565,6 @@ input[name="selected-specialty"] {
 
 .alignment-label,
 .class-label {
-  /* padding: 0px 0px 0px 20px; */
   display: inline-block;
 }
 
@@ -682,6 +690,7 @@ input[type="submit"]:active,
 }
 
 #dialogue {
+
   padding: 10px 0px 0px 0px;
   margin: auto;
   font-size: 1.75rem;
@@ -691,7 +700,6 @@ input[type="submit"]:active,
 }
 
 #inner-dialogue-div {
-  /* width: 93%; */
   text-align: justify;
 }
 
@@ -711,8 +719,6 @@ input[type="submit"]:active,
   
   display: grid;
   grid-template-areas: "left middleLeft middle middleRight right";
-  
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   grid-template-columns: space-evenly;
 
 }
@@ -781,7 +787,6 @@ legend {
   background-color: var(--accent-green-200);
   color: var(--primary);
   position: relative;
-  /* left: 50%; */
   top: 15px;
   width: 97%;
   text-align: center;
@@ -820,11 +825,9 @@ fieldset {
 .char-info-module {
   padding-top: 0px;
   margin: 0px 0px 0px 0px;
-  /* background-image: url('../images/gui/pixel-background-player-tag-2.png'); */
 }
 
 .char-info-label {
-  /* padding: 0px 0px 0px 10px; */
 }
 
 .char-info-module-attributes {
@@ -864,8 +867,7 @@ fieldset {
 }
 
 .status-info-module-player {
-  /* height: 146px;
-  width: 100px; */
+
   padding: auto;
   display: grid;
   grid-template-columns: 33px 33px 33px;
@@ -873,17 +875,10 @@ fieldset {
   gap: 1px;
   align-content: center;
   margin: 0px 0px 0px 0px;
-  /* border: 3px solid rgb(130, 130, 168); */
 }
 
 .container-item {
-  /* transform: scale(2); */
-  /* margin: 5px 10px 10px 0px; */
-  /* border: none;
-  height: 100%;
-  width: 100%; */
-  /* image-rendering: pixelated; */
-  /* border-radius: 10px; */
+  
 }
 
 .status-image {
@@ -895,7 +890,6 @@ fieldset {
   visibility: hidden;
 }
 
-/*Magic user spell picker list*/
 
 .saving-throws {
   padding: 0px 0px 0px 10px;
@@ -910,9 +904,7 @@ fieldset {
 #mage-first-level-spell-list,
 #mage-second-level-spell-list,
 #mage-third-level-spell-list {
-  /* display: inline-block; */
-  /* width: 350px;
-  height: 550px; */
+
 }
 
 .canvas-info-module-monster {
@@ -920,18 +912,14 @@ fieldset {
 }
 
 .canvas-info-module-player {
-  /* height: 152px;
-  width: 103px; */
+
 }
 
 .saves-info-module-player {
-  /* height: 325px;
-  width: 250px; */
+
 }
 
 .afflictions-info-module-player {
-  /* height: 325px;
-  width: 250px; */
   margin: 0px 0px 0px 0px;
 }
 
@@ -996,7 +984,6 @@ h4 {
 }
 
 .no-spell {
-  /* display: none; */
   background-color: grey;
   width: 200px;
   border-radius: 5px;
@@ -1006,7 +993,6 @@ h4 {
 }
 
 .monster1-dead {
-  /* display: none; */
   background-color: grey;
   color: darkgray;
   width: 200px;
@@ -1016,7 +1002,6 @@ h4 {
 }
 
 .spell1-heal-used {
-  /* display: none; */
   background-color: grey;
   width: 200px;
   border-radius: 5px;
@@ -1049,15 +1034,11 @@ span#dragonwarrior {
   visibility: hidden;
 }
 
-/* Style the tab */
 .tab {
   overflow: hidden;
-  /* border: 1px solid #ccc; */
   border-radius: 5px;
-  /* background-color: #f1f1f1; */
 }
 
-/* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: rgb(193, 224, 193);
   border: 1px solid black;
@@ -1065,7 +1046,6 @@ span#dragonwarrior {
   float: left;
   outline: none;
   cursor: url("../images/gui/cursor-hover.png"), auto;
-  /* cursor: url('../images/gui/cursor.png'), auto; */
   transition: 0.3s;
   margin: 0px 0px 0px 10px;
 }
@@ -1387,13 +1367,13 @@ span#dragonwarrior {
 
 .ac-guage-value,
 .xp-guage-value-current {
-  grid-column: 1 / 1;
+  /* grid-column: 1 / 1;
   grid-row: 1 / 3;
   font-size: 50px;
   color: white;
   text-align: center;
   align-self: center;
-  padding-bottom: 15px;
+  padding-bottom: 15px; */
 }
 
 .hitpoint-guage-value-current {
