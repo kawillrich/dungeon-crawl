@@ -296,6 +296,32 @@ button {
 
   .char-info-module {
     width: 100%;
+    display: grid;
+    grid-template-areas:  "empty empty"    
+                          "level specialty"
+                          "weapon armor";
+    grid-template-columns: 50% 50%;
+  }
+
+  #char-name {
+    display: none;
+    grid-area: empty;
+  }
+
+  #char-armor {
+    grid-area: armor;
+  }
+
+  #char-weapon {
+    grid-area: weapon;
+  }
+
+  #char-level {
+    grid-area: level;
+  }
+
+  #char-specialty {
+    grid-area: specialty;
   }
 
   #character-hitpoints {
