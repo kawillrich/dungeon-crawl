@@ -300,9 +300,11 @@ button {
     grid-template-areas:  "empty empty"    
                           "level specialty"
                           "weapon armor";
-    grid-template-columns: 50% 50%;
+    
     column-gap: 10px;
     place-content: end space-between;
+    
+    
   }
 
   #char-name {
@@ -413,17 +415,11 @@ button {
 
   #character-info {
     margin: 0px auto 0px auto;
-    /* background-image: url("../images/black-dragon2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     display: grid;
     width: 89%;
-    /* height: 100px; */
     grid-auto-columns: 50%;
-    /* grid-auto-rows: 170px 145px 145px; */
     gap: 3px 8px;
-    /* border-radius: 10px; */
+    grid-template-rows: auto auto 5rem;
   }
 
   
@@ -452,6 +448,7 @@ button {
     grid-row: 3 / 3;
     grid-column: 1 / 1;
     margin: 0px 0px 0px 0px;
+    /* height: 50%; */
   }
 
   #character-saving-throws {
@@ -463,6 +460,7 @@ button {
     grid-column: 2 / 2;
     /* padding-left: 15px; */
     margin: 0px 0px 0px 0px;
+    /* height: 50%; */
   }
 
   #footer {
