@@ -338,7 +338,9 @@ button {
   #character-hitpoints {
     display: grid;
     /* width: 100%; */
-    grid-row: 1 / 1;
+    grid-template-areas: "ac hp xp";
+    grid-template-columns: 33% 33% 33%;
+    /* grid-row: 1 / 1;*/
     grid-column: 1 / 3;
     /* grid-template-columns: 115px 115px 115px; */
     /* padding-right: 10px; */
@@ -351,7 +353,7 @@ button {
    /* width: 125px; */
   }
   .hitpoints-info-module-player {
-    width: 91%;
+    /* width: 91%; */
     grid-row: 1 / 3;
     grid-column: 1 / 4;
     display: grid;
