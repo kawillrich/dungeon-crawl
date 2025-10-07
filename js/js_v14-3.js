@@ -1416,24 +1416,27 @@ function startGame() {
   render();
 
   let chapterOne = document.querySelector("#dialogue");
+  
+  // As your eyes open and you look around, you observe 
+  // your small, but well kept room. You chose this inn because you know the innkeeper, Raynard Helmsforger, is a meticulous (well-organized) man 
+  // and he understands the importance of rest for someone like you. Raynard himself was an adventurer in his youth. At that time, 
+  // he was lean, agile, and had the dexterity (relfexes) of a panther. Looking at him now, you wouldn't necessarily know that, but 
+  // his reputation precedes him, and everyone from your village of Everglade Forest knows his past.</p>
+  
+  // <p>You sit up and stretch - feeling good from a full night's sleep. You close your eyes, take a deep breath in, and then 
+  // exhale. As you breath out, you remember the training your father taught you - breathe in....hold...exhale...pause. This simple
+  // act, as you know, allows you to focus your thoughts and dispel any doubt and negativity you may have wandering in your mind. You
+  // feel the fresh air coming in and the exhale of any wasted thoughts. This focus and training is part of what has allowed you to 
+  // act so effective and swiftly. During training, you noticed how the others would let the worry and doubt consume them...and ultimately
+  // prevent them from becoming focused, patient, and ready.  </p>
+  
+  // <p>As you conduct your breathing Kata, you remember your parents, your brother, Kiyan, and your sister, Avalera. You feel as though
+  // everything you've done in life has taken you up to this point. Then, with your clear and focused mind, you begin 
+  // preparing and packing your things.</p>
+  
   chapterOne.innerHTML = `
         <p>After a good night's sleep, you wake up in your room in the Blue Blade Inn. The inn is located in Gryphon's Keep, a small, 
-        run-down fortress town built in the old days before the Golden Age. As your eyes open and you look around, you observe 
-        your small, but well kept room. You chose this inn because you know the innkeeper, Raynard Helmsforger, is a meticulous (well-organized) man 
-        and he understands the importance of rest for someone like you. Raynard himself was an adventurer in his youth. At that time, 
-        he was lean, agile, and had the dexterity (relfexes) of a panther. Looking at him now, you wouldn't necessarily know that, but 
-        his reputation precedes him, and everyone from your village of Everglade Forest knows his past.</p>
-        
-        <p>You sit up and stretch - feeling good from a full night's sleep. You close your eyes, take a deep breath in, and then 
-        exhale. As you breath out, you remember the training your father taught you - breathe in....hold...exhale...pause. This simple
-        act, as you know, allows you to focus your thoughts and dispel any doubt and negativity you may have wandering in your mind. You
-        feel the fresh air coming in and the exhale of any wasted thoughts. This focus and training is part of what has allowed you to 
-        act so effective and swiftly. During training, you noticed how the others would let the worry and doubt consume them...and ultimately
-        prevent them from becoming focused, patient, and ready.  </p>
-        
-        <p>As you conduct your breathing Kata, you remember your parents, your brother, Kiyan, and your sister, Avalera. You feel as though
-        everything you've done in life has taken you up to this point. Then, with your clear and focused mind, you begin 
-        preparing and packing your things.</p>
+        run-down fortress town built in the old days before the Golden Age.</p> 
         
         <p>What is your Class?</p>
         
