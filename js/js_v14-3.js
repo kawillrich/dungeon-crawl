@@ -231,7 +231,7 @@ let versionDay = versionDate.getDate();
 let versionHours = versionDate.getHours();
 let versionMinutes = versionDate.getMinutes();
 let versionSeconds = versionDate.getSeconds();
-let completeVersionDate = `${versionMonth}/${versionDay}/${versionYear} ${versionHours}:${versionSeconds}`
+let completeVersionDate = `${versionMonth}/${versionDay}/${versionYear} ${versionHours}:${versionMinutes}:${versionSeconds}`;
 
 console.log(versionDate);
 
