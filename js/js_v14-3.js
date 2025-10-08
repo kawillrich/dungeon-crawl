@@ -638,7 +638,7 @@ function beginChapterOneSix() {
   submitNameButton.classList.remove("not-visible");
   setTimeout(() => {
     addSubmitNameButton();
-  }, 2000)
+  }, 1000)
   
 }
 
