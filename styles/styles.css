@@ -290,6 +290,8 @@ button {
    #alignment-selection-container {
     height: 100%; 
     text-align: start;    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
    #alignment-description-container {
@@ -298,7 +300,7 @@ button {
     text-align: start;
   }
   .alignment-container-item {
-  padding: 0px 10px 10px 10px;
+  padding: 20px 10px 10px 10px;
   }
 
  .alignment-item {
