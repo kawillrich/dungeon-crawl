@@ -44,12 +44,13 @@ body {
   background-color: var(--background);
   margin: 0px 0px 0px 0px;
   height: 100dvh;
-  width: 100dvw;
+  width: 100%;
   display: flex;
   color: var(--text);
   font-size: 1rem;
   cursor: url(""), auto;
   z-index: 2;
+  justify-content: center;
 }
 
 #lock-screen {
