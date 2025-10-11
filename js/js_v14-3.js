@@ -967,12 +967,10 @@ function confirmingAttributes() {
             <div id="lawful-description" class="alignment-description">Lawful characters believe that everything should follow an order, and that obeying rules is the natural way of life.             
             </div>
 
-            <div id="neutral-description" class="alignement-description hidden no-display">Neutral characters believe that the world is a balance between Law and Chaos. It is important that neither side get
-            too much power.
+            <div id="neutral-description" class="alignement-description hidden no-display">Neutral characters believe that the world is a balance between Law and Chaos. It is important that neither side get too much power.
             </div>
 
-            <div id="chaotic-description" class="alignment-description hidden no-display">Chaotic characters are the opposite of Lawful characters. They believe that life is random, and that chance and 
-            luck rule the world.
+            <div id="chaotic-description" class="alignment-description hidden no-display">Chaotic characters are the opposite of Lawful characters. They believe that life is random and that chance rule the world.
             </div>    
         </div>        
     </div>
