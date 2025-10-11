@@ -3,8 +3,8 @@
 import {
   finalCharacter,
   continueChapterThreeFour,
-  render,
-  animate,
+  // render,
+  // animate,
 } from "./js_v14-3.js";
 import Weapon from "./weapon-class-v2.js";
 import {
