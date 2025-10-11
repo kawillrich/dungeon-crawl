@@ -453,64 +453,64 @@ let gameFrame = 0;
 const staggerFrames = 8;
 let reqAnim;
 
-export function render() {
-  frameY = finalCharacter.characterImage;
-  canvas = document.getElementById("canvas2");
-  ctx = canvas.getContext("2d");
-  CANVAS_HEIGHT = 100;
-  CANVAS_WIDTH = 100;
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx.drawImage(
-    playerImage,
-    frameX * spriteWidth,
-    frameY * spriteHeight,
-    spriteWidth,
-    spriteHeight,
-    0,
-    0,
-    spriteWidth * 2,
-    spriteHeight * 2
-  );
-  requestAnimationFrame(render);
-}
+// export function render() {
+//   frameY = finalCharacter.characterImage;
+//   canvas = document.getElementById("canvas2");
+//   ctx = canvas.getContext("2d");
+//   CANVAS_HEIGHT = 100;
+//   CANVAS_WIDTH = 100;
+//   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+//   ctx.drawImage(
+//     playerImage,
+//     frameX * spriteWidth,
+//     frameY * spriteHeight,
+//     spriteWidth,
+//     spriteHeight,
+//     0,
+//     0,
+//     spriteWidth * 2,
+//     spriteHeight * 2
+//   );
+//   requestAnimationFrame(render);
+// }
 
-export function animate() {
-  frameY = finalCharacter.characterImage;
-  if (document.querySelector(".attack-monster-one")) {
-    document.querySelector(".attack-monster-one").disabled = true;
-  }
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  //ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
-  ctx.drawImage(
-    playerImage,
-    frameX * spriteWidth,
-    frameY * spriteHeight,
-    spriteWidth,
-    spriteHeight,
-    0,
-    0,
-    spriteWidth * 1.5,
-    spriteHeight * 1.5
-  );
+// export function animate() {
+//   frameY = finalCharacter.characterImage;
+//   if (document.querySelector(".attack-monster-one")) {
+//     document.querySelector(".attack-monster-one").disabled = true;
+//   }
+//   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+//   //ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
+//   ctx.drawImage(
+//     playerImage,
+//     frameX * spriteWidth,
+//     frameY * spriteHeight,
+//     spriteWidth,
+//     spriteHeight,
+//     0,
+//     0,
+//     spriteWidth * 1.5,
+//     spriteHeight * 1.5
+//   );
 
-  if (gameFrame % staggerFrames == 0) {
-    if (frameX < 6) {
-      frameX++;
-    } else if (frameX >= 6) {
-      frameX = 0;
-      if (document.querySelector(".attack-monster-one")) {
-        document.querySelector(".attack-monster-one").disabled = false;
-      }
-      return;
-    }
-  }
-  gameFrame++;
-  reqAnim = requestAnimationFrame(animate);
-}
+//   if (gameFrame % staggerFrames == 0) {
+//     if (frameX < 6) {
+//       frameX++;
+//     } else if (frameX >= 6) {
+//       frameX = 0;
+//       if (document.querySelector(".attack-monster-one")) {
+//         document.querySelector(".attack-monster-one").disabled = false;
+//       }
+//       return;
+//     }
+//   }
+//   gameFrame++;
+//   reqAnim = requestAnimationFrame(animate);
+// }
 
-export function stopAnimate() {
-  window.cancelAnimationFrame(reqAnim);
-}
+// export function stopAnimate() {
+//   window.cancelAnimationFrame(reqAnim);
+// }
 
 //initialized and clears selectedSpecialty
 let selectedSpecialty = "";
@@ -1427,7 +1427,7 @@ function startGame() {
   `;
 
   showInventory();
-  render();
+  // render();
 
   let chapterOne = document.querySelector("#dialogue");
   
