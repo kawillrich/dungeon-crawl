@@ -259,7 +259,16 @@ export default class Character {
 
     //wisdom
     let charWisdom = document.querySelector('#char-wisdom > .character-display-attributes-wis');
-    charWeapon.innerHTML = finalCharacter.weapon.name;
+    charWisdom.innerHTML = finalCharacter.attributes[2].name.slice(0,3);
+
+    let charWisdomScore = document.querySelector('#char-wisdom > .character-display-attributes-scores-wis');
+    charWisdomScore.innerHTML = finalCharacter.attributes[2].score;
+
+    let charWisdomAdjustment = document.querySelector('#char-wisdom > .character-display-attributes-scores-adj-wis');
+    charWisdomAdjustment.innerHTML = wisdomPlusAdjustment;
+
+    let charWisdomCircle = document.querySelector('cirlce.circle-wis');
+    charWisdomCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[2].dashArrayAdj());
 
     //dexterity
     let charDexterity = document.querySelector('#char-dexterity > .character-display-attributes-dex');
