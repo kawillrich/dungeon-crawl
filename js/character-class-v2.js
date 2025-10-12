@@ -241,9 +241,21 @@ export default class Character {
     let charStrengthAdjustment = document.querySelector('#char-strength > .character-display-attributes-scores-adj-str');
     charStrengthAdjustment.innerHTML = strengthPlusAdjustment;
 
+    let charStrengthCircle = document.querySelector('cirlce.circle-str');
+    charStrengthCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[0].dashArrayAdj());
+
     //intelligence
     let charIntelligence = document.querySelector('#char-intelligence > .character-display-attributes-int');
-    charWeapon.innerHTML = finalCharacter.weapon.name;
+    charIntelligence.innerHTML = finalCharacter.attributes[1].name.slice(0,3);
+
+    let charIntelligenceScore = document.querySelector('#char-intelligence > .character-display-attributes-scores-int');
+    charIntelligenceScore.innerHTML = finalCharacter.attributes[1].score;
+
+    let charIntelligenceAdjustment = document.querySelector('#char-intelligence > .character-display-attributes-scores-adj-int');
+    charIntelligenceAdjustment.innerHTML = intelligencePlusAdjustment;
+
+    let charIntelligenceCircle = document.querySelector('cirlce.circle-int');
+    charIntelligenceCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[1].dashArrayAdj());
 
     //wisdom
     let charWisdom = document.querySelector('#char-wisdom > .character-display-attributes-wis');
