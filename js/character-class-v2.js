@@ -287,6 +287,15 @@ export default class Character {
     let charConstitution = document.querySelector('#char-constitution > .character-display-attributes-con');
     charWeapon.innerHTML = finalCharacter.weapon.name;
 
+    let charConstitutionScore = document.querySelector('#char-constitution > .character-display-attributes-scores-con');
+    charConstitutionScore.innerHTML = finalCharacter.attributes[4].score;
+
+    let charConstitutionAdjustment = document.querySelector('#char-constitution > .character-display-attributes-scores-adj-con');
+    charConstitutionAdjustment.innerHTML = constitutionPlusAdjustment;
+
+    let charConstitutionCircle = document.querySelector('cirlce.circle-con');
+    charConstitutionCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[4].dashArrayAdj());
+
     //charisma
     let chaCharisma = document.querySelector('#char-charisma > .character-display-attributes-cha');
     charWeapon.innerHTML = finalCharacter.weapon.name;
