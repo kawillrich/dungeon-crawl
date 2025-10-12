@@ -298,9 +298,16 @@ export default class Character {
 
     //charisma
     let chaCharisma = document.querySelector('#char-charisma > .character-display-attributes-cha');
-    charWeapon.innerHTML = finalCharacter.weapon.name;
-
+    chaCharisma.innerHTML = finalCharacter.attributes[5].name.slice(0,3);
     
+    let charCharismaScore = document.querySelector('#char-charisma > .character-display-attributes-scores-cha');
+    charCharismaScore.innerHTML = finalCharacter.attributes[5].score;
+
+    let charCharismaAdjustment = document.querySelector('#char-charisma > .character-display-attributes-scores-adj-cha');
+    charCharismaAdjustment.innerHTML = charismaPlusAdjustment;
+
+    let charCharismaCircle = document.querySelector('cirlce.circle-cha');
+    charCharismaCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[5].dashArrayAdj());
 
     let characterInfo = document.querySelector("#character-info");
     
