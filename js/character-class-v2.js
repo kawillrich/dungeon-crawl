@@ -274,6 +274,15 @@ export default class Character {
     let charDexterity = document.querySelector('#char-dexterity > .character-display-attributes-dex');
     charWeapon.innerHTML = finalCharacter.weapon.name;
 
+    let charDexterityScore = document.querySelector('#char-dexterity > .character-display-attributes-scores-dex');
+    charDexterityScore.innerHTML = finalCharacter.attributes[3].score;
+
+    let charDexterityAdjustment = document.querySelector('#char-dexterity > .character-display-attributes-scores-adj-dex');
+    charDexterityAdjustment.innerHTML = dexterityPlusAdjustment;
+
+    let charDexterityCircle = document.querySelector('cirlce.circle-dex');
+    charDexterityCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[3].dashArrayAdj());
+    
     //constitution
     let charConstitution = document.querySelector('#char-constitution > .character-display-attributes-con');
     charWeapon.innerHTML = finalCharacter.weapon.name;
