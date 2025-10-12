@@ -309,6 +309,8 @@ export default class Character {
     let charCharismaCircle = document.querySelector('cirlce.circle-cha');
     charCharismaCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[5].dashArrayAdj());
 
+
+    //start updating here
     let characterInfo = document.querySelector("#character-info");
     
     characterInfo.innerHTML = `<div id='character-stats'>
