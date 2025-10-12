@@ -272,7 +272,7 @@ export default class Character {
 
     //dexterity
     let charDexterity = document.querySelector('#char-dexterity > .character-display-attributes-dex');
-    charWeapon.innerHTML = finalCharacter.weapon.name;
+    charDexterity.innerHTML = finalCharacter.attributes[3].name.slice(0,3);
 
     let charDexterityScore = document.querySelector('#char-dexterity > .character-display-attributes-scores-dex');
     charDexterityScore.innerHTML = finalCharacter.attributes[3].score;
@@ -285,7 +285,7 @@ export default class Character {
     
     //constitution
     let charConstitution = document.querySelector('#char-constitution > .character-display-attributes-con');
-    charWeapon.innerHTML = finalCharacter.weapon.name;
+    charConstitution.innerHTML = finalCharacter.attributes[4].name.slice(0,3);
 
     let charConstitutionScore = document.querySelector('#char-constitution > .character-display-attributes-scores-con');
     charConstitutionScore.innerHTML = finalCharacter.attributes[4].score;
