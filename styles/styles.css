@@ -327,6 +327,10 @@ button {
     font-size: large;
   }
 
+  #ready {
+    grid-area: footer1;
+  }
+
   .circle-xp-svg,
   .circle-ac-svg {
     height: 125px;

@@ -1046,7 +1046,8 @@ function updateAlignmentDescription() {
 
 //TEST FUNCTION TO START GAME - creates player info
 function startGame() {
-  
+  let beginningAdventureButton = document.querySelector('#beginingAdventure');
+  beginningAdventureButton.remove();
   $("#character-info").css({margin: "0px"}).animate({width: "89%", height: "0px"}, 300).slideDown(300).next().dequeue();
   window.scrollTo(0, 0);
 
@@ -1670,7 +1671,7 @@ submittedCharName.addEventListener("click", checkUsername, false);
 //confirms your specialty and continues the gameplay
 
 function beginJourney() {
-  var readyBeginJourney = document.querySelector("#dialogue");
+  var readyBeginJourney = document.querySelector("#container");
   let readyBeginJourneyButton = document.querySelector("#dialogue #ready");
   if (readyBeginJourneyButton === null) {
     let createReadyButton = document.createElement("input");
