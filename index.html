@@ -126,12 +126,12 @@
     <input type="button" value="Buy Items" id="buy-items">
   </div>
   <!-- END INVENTORY -->
+
   <!-- MAGE SPELL CONTAINER -->
   <div class="hide-mage-container">
     <div class="mage-spell-container">
-
-      <div id="mage-first-level-spell-list">
-        <h1>Level One Mage Spells</h1>
+      <details id="mage-first-level-spell-list" name="all-mage-spells">
+        <summary>Level One Mage Spells</summary>
         <div><span class="first-level-selected-spells">You have selected 0 spell(s)</span></div>
         <div class="number-of-first-level-mage-spells"></div>
         <div class="html-spell-tooltip">
@@ -201,10 +201,10 @@
             name="mage-check[]" class="mage-spells mage-one-spells">Ventriloquism</br>
           <span class="html-spell-tooltiptext"> Range: 60<br> Duration: 2<br> Effect: One item or location </span>
         </div>
-      </div>
+      </details>
       <!-- <input type="button" value="Submit" id="submit-spells"> -->
-      <div id="mage-second-level-spell-list">
-        <h1>Level Two Mage Spells</h1>
+      <details id="mage-second-level-spell-list" name="all-mage-spells">
+        <summary>Level Two Mage Spells</summary>
         <div><span class="second-level-selected-spells">You have selected 0 spell(s)</span></div>
         <div class="number-of-second-level-mage-spells"></div>
         <div class="html-spell-tooltip">
@@ -272,9 +272,9 @@
           <span class="html-spell-tooltiptext"> Range: 10<br> Duration: Until broken<br> Effect: One portal or lock
           </span>
         </div>
-      </div>
-      <div id="mage-third-level-spell-list">
-        <h1>Level Three Mage Spells</h1>
+      </details>
+      <details id="mage-third-level-spell-list" name="all-mage-spells">
+        <summary>Level Three Mage Spells</summary>
         <div><span class="third-level-selected-spells">You have selected 0 spell(s)</span></div>
         <div class="number-of-third-level-mage-spells"></div>
         <div class="html-spell-tooltip">
@@ -348,7 +348,7 @@
           <span class="html-spell-tooltiptext"> Range: 30<br> Duration: 24<br> Effect: One air-breathing creature
           </span>
         </div>
-      </div>
+      </details>
 
 
     </div>
