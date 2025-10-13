@@ -359,6 +359,7 @@ button {
     
     column-gap: 10px;
     place-content: end space-between;
+    padding-bottom: 5px;
     
     
   }
