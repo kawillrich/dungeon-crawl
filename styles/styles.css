@@ -1145,6 +1145,7 @@ fieldset {
 }
 
 .char-info-label {
+  font-size: 1.25rem;
 }
 
 .char-info-module-attributes {
