@@ -1404,7 +1404,7 @@ function startGame() {
   console.log(finalCharacter);
   
   let sheidStatus = document.querySelector('img.shield-status');
-  sheidStatus.setAttribute('src', 'images/gui/statuses/shield-status.png');
+  sheidStatus.setAttribute('src', 'https://github.com/kawillrich/dungeon-crawl/blob/34-update-hp-container/images/gui/statuses/shield-status.png?raw=true');
 
   
 
