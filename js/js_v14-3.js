@@ -1407,14 +1407,38 @@ function startGame() {
   sheidStatus.setAttribute('src', 'images/gui/statuses/shield-status.png');
 
   let invisibilityStatus = document.querySelector('img.invisibility-status');
+  invisibilityStatus.setAttribute('src', 'images/gui/statuses/invisibility-status.png');
+
   let mirrorImageStatus = document.querySelector('img.mirror-image-status');
+  mirrorImageStatus.setAttribute('src', 'images/gui/statuses/mirror-image-status.png');
+  
+  
   let detectInvisibilityStatus = document.querySelector('img.detect-invisibility-status');
+  detectInvisibilityStatus.setAttribute('src', '');
+
+
   let hasteStatus = document.querySelector('img.haste-status');
+  hasteStatus.setAttribute('src', 'images/gui/statuses/haste-status.png');
+  
+  
   let invisibilityTenFootStatus = document.querySelector('img.invisibility-10-status');
+  invisibilityTenFootStatus.setAttribute('src', 'images/gui/statuses/invisibility-10-status.png');
+  
+  
   let protectionFromEvil10FootStatus = document.querySelector('img.protection-from-evil-10-status');
+  protectionFromEvil10FootStatus.setAttribute('src', 'images/gui/statuses/protection-from-evil-10-status.png');
+  
+  
   let protectionFromMissiles = document.querySelector('img.protection-from-missiles-status');
+  protectionFromMissiles.setAttribute('src', 'images/gui/statuses/protection-from-normal-missiles-status.png');
+  
+  
   let protectionFromEvilStatus = document.querySelector('img.protection-from-evil-status');
+  protectionFromEvilStatus.setAttribute('src', 'images/gui/statuses/protection-from-evil-status.png');  
+  
   let flyStatus = document.querySelector('img.fly-status');              
+  flyStatus.setAttribute('src', 'images/gui/statuses/fly-status.png');
+
 
   let showInventory = () => {
     let accumulator = "";
