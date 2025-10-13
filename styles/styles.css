@@ -702,7 +702,7 @@ button {
     width: 89%;
     grid-auto-columns: 50%;
     gap: 3px 8px;
-    grid-template-rows: auto auto 8rem;
+    grid-template-rows: auto 6rem 7rem;
     grid-area: playerData1;
   }
 
