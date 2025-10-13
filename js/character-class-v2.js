@@ -241,7 +241,7 @@ export default class Character {
     let charStrengthAdjustment = document.querySelector('#char-strength > .character-display-attributes-scores-adj-str');
     charStrengthAdjustment.innerHTML = strengthPlusAdjustment;
 
-    let charStrengthCircle = document.querySelector('cirlce.circle-str');
+    let charStrengthCircle = document.querySelector('circle.circle-str');
     charStrengthCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[0].dashArrayAdj());
 
     //intelligence
@@ -254,7 +254,7 @@ export default class Character {
     let charIntelligenceAdjustment = document.querySelector('#char-intelligence > .character-display-attributes-scores-adj-int');
     charIntelligenceAdjustment.innerHTML = intelligencePlusAdjustment;
 
-    let charIntelligenceCircle = document.querySelector('cirlce.circle-int');
+    let charIntelligenceCircle = document.querySelector('circle.circle-int');
     charIntelligenceCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[1].dashArrayAdj());
 
     //wisdom
@@ -267,7 +267,7 @@ export default class Character {
     let charWisdomAdjustment = document.querySelector('#char-wisdom > .character-display-attributes-scores-adj-wis');
     charWisdomAdjustment.innerHTML = wisdomPlusAdjustment;
 
-    let charWisdomCircle = document.querySelector('cirlce.circle-wis');
+    let charWisdomCircle = document.querySelector('circle.circle-wis');
     charWisdomCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[2].dashArrayAdj());
 
     //dexterity
@@ -280,7 +280,7 @@ export default class Character {
     let charDexterityAdjustment = document.querySelector('#char-dexterity > .character-display-attributes-scores-adj-dex');
     charDexterityAdjustment.innerHTML = dexterityPlusAdjustment;
 
-    let charDexterityCircle = document.querySelector('cirlce.circle-dex');
+    let charDexterityCircle = document.querySelector('circle.circle-dex');
     charDexterityCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[3].dashArrayAdj());
     
     //constitution
@@ -293,7 +293,7 @@ export default class Character {
     let charConstitutionAdjustment = document.querySelector('#char-constitution > .character-display-attributes-scores-adj-con');
     charConstitutionAdjustment.innerHTML = constitutionPlusAdjustment;
 
-    let charConstitutionCircle = document.querySelector('cirlce.circle-con');
+    let charConstitutionCircle = document.querySelector('circle.circle-con');
     charConstitutionCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[4].dashArrayAdj());
 
     //charisma
@@ -306,7 +306,7 @@ export default class Character {
     let charCharismaAdjustment = document.querySelector('#char-charisma > .character-display-attributes-scores-adj-cha');
     charCharismaAdjustment.innerHTML = charismaPlusAdjustment;
 
-    let charCharismaCircle = document.querySelector('cirlce.circle-cha');
+    let charCharismaCircle = document.querySelector('circle.circle-cha');
     charCharismaCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[5].dashArrayAdj());
 
 
