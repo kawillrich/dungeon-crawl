@@ -1706,8 +1706,8 @@ submittedCharName.addEventListener("click", checkUsername, false);
 //confirms your specialty and continues the gameplay
 
 function beginJourney() {
-  var readyBeginJourney = document.querySelector("#container");
-  let readyBeginJourneyButton = document.querySelector("#dialogue #ready");
+  let readyBeginJourney = document.querySelector("#container");
+  let readyBeginJourneyButton = document.querySelector("#ready");
   if (readyBeginJourneyButton === null) {
     let createReadyButton = document.createElement("input");
     createReadyButton.type = "submit";
