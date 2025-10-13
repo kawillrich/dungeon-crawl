@@ -309,6 +309,37 @@ export default class Character {
     let charCharismaCircle = document.querySelector('circle.circle-cha');
     charCharismaCircle.setAttribute("stroke-dashoffset", finalCharacter.attributes[5].dashArrayAdj());
 
+/*--- update saving throws ---*/
+    //poison
+    let savingThrowPoison = document.querySelector('#saving-throw-poison > .saving-throw-score');
+
+    savingThrowPoison.innerHTML = finalCharacter.specialty.characterLevel.level.savingThrows["Poison or Death Ray"];
+
+    //magic wand
+    let savingThrowWand = document.querySelector('#saving-throw-wand > .saving-throw-score');
+
+    savingThrowWand.innerHTML = finalCharacter.specialty.characterLevel.level.savingThrows["Magic Wand"];
+
+
+
+    //paralysis
+  let savingThrowParalysis = document.querySelector('#saving-throw-paralysis > .saving-throw-score');
+
+    savingThrowParalysis.innerHTML = finalCharacter.specialty.characterLevel.level.savingThrows["Turn to Stone or Paralysis"];
+
+
+
+    //dragon breath
+  let savingThrowDragonBreath = document.querySelector('#saving-throw-dragon-breath > .saving-throw-score');
+
+    savingThrowDragonBreath.innerHTML = finalCharacter.specialty.characterLevel.level.savingThrows["Dragon Breath"];
+
+
+
+    //magic staff
+    let savingThrowStaff = document.querySelector('#saving-throw-staff > .saving-throw-score');
+
+    savingThrowStaff.innerHTML = finalCharacter.specialty.characterLevel.level.savingThrows["Spells or Magic Staff"];
 
     //start updating here
     let characterInfo = document.querySelector("#character-info");
