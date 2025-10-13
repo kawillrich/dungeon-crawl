@@ -752,6 +752,18 @@ button {
     display: grid;
     grid-template-columns: 1fr / 1fr / 1fr;
   }
+
+  div.mage-spell-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #mage-first-level-spell-list,
+  #mage-second-level-spell-list,
+  #mage-third-level-spell-list {
+
+  }
 }
 
 /********************************************* SMALL DEVICE & SMALL TABLET************************************/
