@@ -762,8 +762,277 @@ button {
   #mage-first-level-spell-list,
   #mage-second-level-spell-list,
   #mage-third-level-spell-list {
-
+    padding: 10px 0px 10px 0px;
   }
+
+  .mage-spell-summary {
+    font-size: 1.75rem;
+  }
+
+    
+  #hp-prog-bar {
+    width: 70px;
+  }
+
+  .hide-cleric-container {
+    display: none;
+  }
+
+  .hide-mage-container {
+    display: none;
+  }
+
+  .hide-inventory-container {
+    display: none;
+  }
+
+  .show-inventory-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 5, 50);
+    z-index: 1;
+    padding: 1% 30% 30%;
+  }
+
+  .show-mage-spells {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 5, 50);
+    z-index: 1;
+    padding: 10%;
+  }
+
+  .show-cleric-spells {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: block;
+    height: 2000px;
+    width: 2000px;
+    background-color: rgb(0, 5, 50);
+    z-index: 1;
+    padding: 10% 30% 30%;
+  }
+
+  .grey-out {
+    color: darkGrey;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .not-visible {
+    display: none;
+  }
+
+  #spells-level-1,
+  #spells-level-2,
+  #spells-level-3 {
+    display: grid;
+    grid-template-rows: auto auto auto;
+  }
+
+  input.mage-spells {
+    height: 20px;
+    width: 30px;
+  }
+
+  .inventory-input-container {
+    display: grid;
+    grid-template-columns: 100px 500px;
+  }
+
+  .quantity {
+    display: block;
+    height: 0.9em;
+    margin: 4px 0px 0px 0px;
+  }
+
+  .inventory-list-item {
+    display: block;
+    height: 1em;
+    margin: 10px 0px 0px 0px;
+  }
+
+  .quantity-increase {
+    width: 2em;
+    height: 1.2em;
+    text-align: center;
+    margin: auto 5px auto auto;
+  }
+
+  .quantity-decrease {
+    width: 2em;
+    height: 1.2em;
+    text-align: center;
+    margin: auto;
+  }
+
+  .current-item-qty {
+    background-color: white;
+    display: block;
+    height: 1em;
+    margin: 10px 0px 0px 0px;
+  }
+
+  .input-list {
+    list-style-type: none;
+  }
+
+  .char-treasure {
+    display: inline-block;
+    width: 75px;
+  }
+
+  #char-gp {
+  }
+
+  .spell-button-tooltip {
+  }
+
+  .spell-button-tooltip::after {
+  }
+
+  ul.dropdown-spell-list-ul {
+    position: absolute;
+    list-style: none;
+    width: 200px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    margin-top: 5px;
+  }
+
+  .hide-spell-list-dropdown {
+    display: none;
+  }
+
+  li.first-level-dropdown-list,
+  li.second-level-dropdown-list,
+  li.third-level-dropdown-list {
+    display: none;
+    height: 20px;
+  }
+
+  li.show-spell-list-dropdown {
+    display: block;
+  }
+
+  li.monster-one-spell-list,
+  li.monster-two-spell-list,
+  li.self-spell-list {
+    display: none;
+    position: relative;
+    top: -20px;
+    left: 143px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: url("../images/gui/cursor-hover.png"), auto;
+  }
+
+  ul.spell-list {
+    display: none;
+    position: relative;
+    top: -25px;
+    left: 200px;
+    background-color: white;
+    border: 1px solid black;
+    height: 50px;
+    width: 250px;
+    padding: 0px 0px 0px 5px;
+  }
+
+  ul.spell-list:hover {
+    background-color: lightblue;
+  }
+
+  li.first-level-dropdown-list b:hover,
+  li.second-level-dropdown-list b:hover,
+  li.third-level-dropdown-list b:hover {
+    background-color: lightblue;
+  }
+
+  li.first-level-dropdown-list:hover,
+  li.second-level-dropdown-list:hover,
+  li.third-level-dropdown-list:hover {
+    background-color: lightblue;
+    height: 20px;
+  }
+
+  li.first-level-dropdown-list:hover ul.spell-list,
+  li.second-level-dropdown-list:hover ul.spell-list,
+  li.third-level-dropdown-list:hover ul.spell-list {
+    display: block;
+  }
+
+  ul.spell-list:hover li.monster-one-spell-list,
+  ul.spell-list:hover li.monster-two-spell-list,
+  ul.spell-list:hover li.self-spell-list {
+    display: block;
+  }
+
+  li.monster-one-spell-list:hover,
+  li.monster-two-spell-list:hover,
+  li.self-spell-list:hover {
+    background-color: lightblue;
+  }
+
+  li.monster-one-spell-list.monster1-spell-dead:hover {
+    background-color: grey;
+    pointer-events: none;
+    /* cursor: not-allowed; */
+  }
+
+  li.monster-two-spell-list.monster2-spell-dead:hover {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+
+  li.monster-one-spell-list.monster1-spell-dead:active,
+  li.monster-two-spell-list.monster2-spell-dead:active {
+    pointer-events: none;
+  }
+
+  .show-spell-list-dropdown > b {
+    cursor: url("../images/gui/cursor-hover.png"), auto;
+  }
+
+  .spell-list > span {
+    cursor: url("../images/gui/cursor-hover.png"), auto;
+  }
+
+  #phantasmalForce.phantasmalForce-hide {
+    display: none;
+  }
+
+  #phantasmalForce {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: block;
+    height: 2000px;
+    width: 2000px;
+    background-color: rgb(0, 5, 50);
+    z-index: 1;
+    padding: 10% 30% 30%;
+  }
+
 }
 
 /********************************************* SMALL DEVICE & SMALL TABLET************************************/
@@ -1888,266 +2157,3 @@ span#dragonwarrior {
   transform: rotate(-230deg);
   transform-origin: center;
 } */
-
-#hp-prog-bar {
-  width: 70px;
-}
-
-.hide-cleric-container {
-  display: none;
-}
-
-.hide-mage-container {
-  display: none;
-}
-
-.hide-inventory-container {
-  display: none;
-}
-
-.show-inventory-container {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  display: block;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(0, 5, 50);
-  z-index: 1;
-  padding: 1% 30% 30%;
-}
-
-.show-mage-spells {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  display: block;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(0, 5, 50);
-  z-index: 1;
-  padding: 10% 30% 30%;
-}
-
-.show-cleric-spells {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  display: block;
-  height: 2000px;
-  width: 2000px;
-  background-color: rgb(0, 5, 50);
-  z-index: 1;
-  padding: 10% 30% 30%;
-}
-
-.grey-out {
-  color: darkGrey;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.not-visible {
-  display: none;
-}
-
-#spells-level-1,
-#spells-level-2,
-#spells-level-3 {
-  display: grid;
-  grid-template-rows: auto auto auto;
-}
-
-input.mage-spells {
-  height: 20px;
-  width: 30px;
-}
-
-.inventory-input-container {
-  display: grid;
-  grid-template-columns: 100px 500px;
-}
-
-.quantity {
-  display: block;
-  height: 0.9em;
-  margin: 4px 0px 0px 0px;
-}
-
-.inventory-list-item {
-  display: block;
-  height: 1em;
-  margin: 10px 0px 0px 0px;
-}
-
-.quantity-increase {
-  width: 2em;
-  height: 1.2em;
-  text-align: center;
-  margin: auto 5px auto auto;
-}
-
-.quantity-decrease {
-  width: 2em;
-  height: 1.2em;
-  text-align: center;
-  margin: auto;
-}
-
-.current-item-qty {
-  background-color: white;
-  display: block;
-  height: 1em;
-  margin: 10px 0px 0px 0px;
-}
-
-.input-list {
-  list-style-type: none;
-}
-
-.char-treasure {
-  display: inline-block;
-  width: 75px;
-}
-
-#char-gp {
-}
-
-.spell-button-tooltip {
-}
-
-.spell-button-tooltip::after {
-}
-
-ul.dropdown-spell-list-ul {
-  position: absolute;
-  list-style: none;
-  width: 200px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 10px 10px 10px 10px;
-  margin-top: 5px;
-}
-
-.hide-spell-list-dropdown {
-  display: none;
-}
-
-li.first-level-dropdown-list,
-li.second-level-dropdown-list,
-li.third-level-dropdown-list {
-  display: none;
-  height: 20px;
-}
-
-li.show-spell-list-dropdown {
-  display: block;
-}
-
-li.monster-one-spell-list,
-li.monster-two-spell-list,
-li.self-spell-list {
-  display: none;
-  position: relative;
-  top: -20px;
-  left: 143px;
-  background-color: white;
-  border: 1px solid black;
-  cursor: url("../images/gui/cursor-hover.png"), auto;
-}
-
-ul.spell-list {
-  display: none;
-  position: relative;
-  top: -25px;
-  left: 200px;
-  background-color: white;
-  border: 1px solid black;
-  height: 50px;
-  width: 250px;
-  padding: 0px 0px 0px 5px;
-}
-
-ul.spell-list:hover {
-  background-color: lightblue;
-}
-
-li.first-level-dropdown-list b:hover,
-li.second-level-dropdown-list b:hover,
-li.third-level-dropdown-list b:hover {
-  background-color: lightblue;
-}
-
-li.first-level-dropdown-list:hover,
-li.second-level-dropdown-list:hover,
-li.third-level-dropdown-list:hover {
-  background-color: lightblue;
-  height: 20px;
-}
-
-li.first-level-dropdown-list:hover ul.spell-list,
-li.second-level-dropdown-list:hover ul.spell-list,
-li.third-level-dropdown-list:hover ul.spell-list {
-  display: block;
-}
-
-ul.spell-list:hover li.monster-one-spell-list,
-ul.spell-list:hover li.monster-two-spell-list,
-ul.spell-list:hover li.self-spell-list {
-  display: block;
-}
-
-li.monster-one-spell-list:hover,
-li.monster-two-spell-list:hover,
-li.self-spell-list:hover {
-  background-color: lightblue;
-}
-
-li.monster-one-spell-list.monster1-spell-dead:hover {
-  background-color: grey;
-  pointer-events: none;
-  /* cursor: not-allowed; */
-}
-
-li.monster-two-spell-list.monster2-spell-dead:hover {
-  background-color: grey;
-  cursor: not-allowed;
-}
-
-li.monster-one-spell-list.monster1-spell-dead:active,
-li.monster-two-spell-list.monster2-spell-dead:active {
-  pointer-events: none;
-}
-
-.show-spell-list-dropdown > b {
-  cursor: url("../images/gui/cursor-hover.png"), auto;
-}
-
-.spell-list > span {
-  cursor: url("../images/gui/cursor-hover.png"), auto;
-}
-
-#phantasmalForce.phantasmalForce-hide {
-  display: none;
-}
-
-#phantasmalForce {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  display: block;
-  height: 2000px;
-  width: 2000px;
-  background-color: rgb(0, 5, 50);
-  z-index: 1;
-  padding: 10% 30% 30%;
-}
