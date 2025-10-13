@@ -1404,7 +1404,9 @@ function startGame() {
   console.log(finalCharacter);
   
   let sheidStatus = document.querySelector('img.shield-status');
-  sheidStatus.setAttribute('src', '../images/gui/statuses/shield-status.png');
+  sheidStatus.setAttribute('src', 'images/gui/statuses/shield-status.png');
+
+  
 
   let showInventory = () => {
     let accumulator = "";
