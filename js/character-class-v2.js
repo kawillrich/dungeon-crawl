@@ -231,13 +231,16 @@ export default class Character {
     let charArmor = document.querySelector('.armor-tooltip > .character-display-info');
     charArmor.innerHTML = finalCharacter.armor.name;
     
+    let charArmorClass = document.querySelector('.armor-tooltiptext');
+    charArmorClass.innerHTML = `Armor Class: ${finalCharacter.armor.armorClass}`
+
     //weapon
     let charWeapon = document.querySelector('.weapon-tooltip > .character-display-info');
 
     charWeapon.innerHTML = finalCharacter.weapon.name;
 
     let charWeaponDamage = document.querySelector('.weapon-tooltiptext');
-    charWeaponDamage.innerHTML = finalCharacter.weapon.damage;
+    charWeaponDamage.innerHTML = `Damage: ${finalCharacter.weapon.damage}`;
 
     //strength
     let charStrength = document.querySelector('#char-strength > .character-display-attributes-str');
