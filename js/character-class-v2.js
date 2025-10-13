@@ -228,7 +228,7 @@ export default class Character {
     charLevel.innerHTML = finalCharacter.specialty.characterLevel.level.level;
 
     //armor
-    let charArmor = document.querySelector('#char-armor > .character-display-info');
+    let charArmor = document.querySelector('.armor-tooltip > .character-display-info');
     charArmor.innerHTML = finalCharacter.armor.name;
     
     //strength
@@ -465,23 +465,23 @@ export default class Character {
         <div id="character-saving-throws">
           <fieldset class = "saves-info-module-player">
             <legend class="saves-dashboard">Saves</legend>
-              <h4 class="saving-throws">Poison or Death Ray: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
+              <h4 id= "saving-throw-poison" class="saving-throws">Poison or Death Ray: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
       "Poison or Death Ray"
       ]
       }</span></h4>
-              <h4 class="saving-throws">Magic Wand: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
+              <h4  id= "saving-throw-wand" class="saving-throws">Magic Wand: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
       "Magic Wand"
       ]
       }</span></h4>
-              <h4 class="saving-throws">Stone or Paralysis: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
+              <h4  id= "saving-throw-paralysis" class="saving-throws">Stone or Paralysis: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
       "Turn to Stone or Paralysis"
       ]
       }</span></h4>
-              <h4 class="saving-throws">Dragon Breath: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
+              <h4  id= "saving-throw-dragon-breath" class="saving-throws">Dragon Breath: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
       "Dragon Breath"
       ]
       }</span></h4>
-              <h4 class="saving-throws">Spells or Magic Staff: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
+              <h4  id= "saving-throw-staff" class="saving-throws">Spells or Magic Staff: <span class="saving-throw-score">${finalCharacter.specialty.characterLevel.level.savingThrows[
       "Spells or Magic Staff"
       ]
       }</span></h4>
