@@ -1406,7 +1406,15 @@ function startGame() {
   let sheidStatus = document.querySelector('img.shield-status');
   sheidStatus.setAttribute('src', 'images/gui/statuses/shield-status.png');
 
-  
+  let invisibilityStatus = document.querySelector('img.invisibility-status');
+  let mirrorImageStatus = document.querySelector('img.mirror-image-status');
+  let detectInvisibilityStatus = document.querySelector('img.detect-invisibility-status');
+  let hasteStatus = document.querySelector('img.haste-status');
+  let invisibilityTenFootStatus = document.querySelector('img.invisibility-10-status');
+  let protectionFromEvil10FootStatus = document.querySelector('img.protection-from-evil-10-status');
+  let protectionFromMissiles = document.querySelector('img.protection-from-missiles-status');
+  let protectionFromEvilStatus = document.querySelector('img.protection-from-evil-status');
+  let flyStatus = document.querySelector('img.fly-status');              
 
   let showInventory = () => {
     let accumulator = "";
