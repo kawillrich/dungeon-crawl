@@ -1453,31 +1453,31 @@ function startGame() {
         run-down fortress town built in the old days before the Golden Age.</p> 
         
         <p>What is your Class?</p>
+        <div id="class-container">
+          <input type = "radio"  class="class-radio" name="selected-specialty" value="fighter" id="fighter"/>         
+          <label for=  "fighter" class="class-label">Fighter</label>             
+          
+          <input type = "radio" class="class-radio" name="selected-specialty" value="mage" id="mage"/> 
+          <label for=  "mage" class="class-label">Magic-User</label>
+          
+          <input type = "radio" class="class-radio" name="selected-specialty" value="thief" id="thief"/> 
+          <label for=  "thief" class="class-label">Thief</label>
+          
+          <input type = "radio" class="class-radio" name="selected-specialty" value="dwarf" id="dwarf"/> 
+          <label for=  "dwarf" class="class-label">Dwarf</label>
+          
+          <input type = "radio" class="class-radio" name="selected-specialty" value="elf" id="elf"/> 
+          <label for=  "elf" class="class-label">Elf</label>
+          
+          <input type = "radio" class="class-radio" name="selected-specialty" value="halfling" id="halfling"/> 
+          <label for=  "halfling" class="class-label">Halfling</label>
         
-        <input type = "radio"  class="class-radio" name="selected-specialty" value="fighter" id="fighter"/>         
-        <label for=  "fighter" class="class-label">Fighter</label>             
-        
-        <input type = "radio" class="class-radio" name="selected-specialty" value="mage" id="mage"/> 
-        <label for=  "mage" class="class-label">Magic-User</label>
-        
-        <input type = "radio" class="class-radio" name="selected-specialty" value="thief" id="thief"/> 
-        <label for=  "thief" class="class-label">Thief</label>
-        
-        <input type = "radio" class="class-radio" name="selected-specialty" value="dwarf" id="dwarf"/> 
-        <label for=  "dwarf" class="class-label">Dwarf</label>
-        
-        <input type = "radio" class="class-radio" name="selected-specialty" value="elf" id="elf"/> 
-        <label for=  "elf" class="class-label">Elf</label>
-        
-        <input type = "radio" class="class-radio" name="selected-specialty" value="halfling" id="halfling"/> 
-        <label for=  "halfling" class="class-label">Halfling</label>
-       
-        <input type = "radio" class="class-radio" name="selected-specialty" value="cleric" id="cleric"/>
-        <label for = "cleric" class="class-label">Cleric</label>
+          <input type = "radio" class="class-radio" name="selected-specialty" value="cleric" id="cleric"/>
+          <label for = "cleric" class="class-label">Cleric</label>
 
-        <input type = "radio" class="class-radio dragonwarrior" name="selected-specialty" value="dragonwarrior" />
-        <label for = "dragonwarrior" id="dragonwarrior"></label>
-        </p>`;
+          <input type = "radio" class="class-radio dragonwarrior" name="selected-specialty" value="dragonwarrior" />
+          <label for = "dragonwarrior" id="dragonwarrior"></label>
+        </div>`;
 
   let submittingCharSpecialtyFighter = document.querySelector("#fighter");
   submittingCharSpecialtyFighter.addEventListener(

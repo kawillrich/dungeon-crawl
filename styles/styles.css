@@ -316,6 +316,13 @@ button {
   /* text-align: justify; */
   }
 
+  #class-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
   .page-title {
     width: 350px;
     height: 100px;
