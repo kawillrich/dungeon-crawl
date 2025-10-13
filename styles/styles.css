@@ -95,7 +95,7 @@ button {
   margin: auto;
 }
 
-.circle-xp-svg,
+/* .circle-xp-svg,
 .circle-ac-svg {
   height: 125px;
   width: 125px;
@@ -104,7 +104,7 @@ button {
 .circle-hp-svg {
   height: 125px;
   width: 150px;
-}
+} */
 /* RESPONSIVE WEB DESIGN
 
 1. get device viewport size
@@ -450,7 +450,6 @@ button {
 
   }
 
-
   .xp-guage-value-current,
   .ac-guage-value
   {
@@ -474,60 +473,64 @@ button {
     /* padding-bottom: 15px; */
     display: inline;
     position: absolute;
+    transform: translateY(15px);
+
   }
 
 
-.hitpoint-guage-value-total {
-  font-size: 30px;
-  color: -var(--text);
-  justify-self: center;
-  align-self: flex-end;
-  padding-bottom: 10px;
-  display: inline;
-  position: absolute;
-}
+  .hitpoint-guage-value-total {
+    font-size: 30px;
+    color: -var(--text);
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 10px;
+    display: inline;
+    position: absolute;
+    transform: translateY(15px);
+  }
 
-.circle-hitpoints {
-  cx: 50%;
-  cy: 50%;
-  r: 50px;
-  fill: none;
-  stroke: #feeb78;
-  stroke-linecap: round;
-  stroke-width: 15px;
-  position: relative;
-  stroke-dasharray: 240;
-  stroke-dashoffset: 0;
-  transform: rotate(130deg);
-  transform-origin: center;
-}
+  .circle-hitpoints {
+    cx: 50%;
+    cy: 50%;
+    r: 50px;
+    fill: none;
+    stroke: #feeb78;
+    stroke-linecap: round;
+    stroke-width: 15px;
+    position: relative;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 0;
+    transform: rotate(130deg);
+    transform-origin: center;
+  }
 
-.circle-hitpoints-background {
-  cx: 50%;
-  cy: 50%;
-  r: 50px;
-  fill: none;
-  stroke-linecap: round;
-  stroke: #bf8200;
-  stroke-width: 15px;
-  position: relative;
-  stroke-dasharray: 240;
-  stroke-dashoffset: 0;
-  transform: rotate(130deg);
-  transform-origin: center;
-}
+  .circle-hitpoints-background {
+    cx: 50%;
+    cy: 50%;
+    r: 50px;
+    fill: none;
+    stroke-linecap: round;
+    stroke: #bf8200;
+    stroke-width: 15px;
+    position: relative;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 0;
+    transform: rotate(130deg);
+    transform-origin: center;
+  }
 
-.ac-guage-text,
-.xp-guage-value-total {
-  grid-column: 1 / 1;
-  grid-row: 1 / 3;
-  font-size: 30px;
-  color: -var(--text);
-  justify-self: center;
-  align-self: flex-end;
-  padding-bottom: 20px;
-  position: absolute;
-}
+  .ac-guage-text,
+  .xp-guage-value-total {
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+    font-size: 30px;
+    color: -var(--text);
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 20px;
+    position: absolute;
+  }
+
   .circle-ac {
     cx: 50%;
     cy: 50%;
@@ -543,20 +546,20 @@ button {
     transform-origin: center;
   }
 
-.circle-xp-background {
-  cx: 50%;
-  cy: 50%;
-  r: 50px;
-  fill: none;
-  stroke-linecap: round;
-  stroke: #912f56;
-  stroke-width: 15px;
-  position: relative;
-  stroke-dasharray: 240;
-  stroke-dashoffset: 0;
-  transform: rotate(var(--imageRotate));
-  transform-origin: center;
-}
+  .circle-xp-background {
+    cx: 50%;
+    cy: 50%;
+    r: 50px;
+    fill: none;
+    stroke-linecap: round;
+    stroke: #912f56;
+    stroke-width: 15px;
+    position: relative;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 0;
+    transform: rotate(var(--imageRotate));
+    transform-origin: center;
+  }
   .ac-guage > svg,
   .xp-guage > svg {
    transform: scale(.8);
@@ -569,122 +572,124 @@ button {
   .hitpoints-guage > svg {
    transform: scale(.9);
    margin-top: 5px;
+   transform: translateY(25px);
    /* grid-column: 1 / 1;
    grid-row: 1 / 3; */
    /* width: 125px; */
   }
-#char-strength,
-#char-intelligence,
-#char-wisdom,
-#char-dexterity,
-#char-constitution,
-#char-charisma {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 20px 10px 10px 10px;
-  align-items: center;
-  justify-content: center;
-}
 
-.character-display-attributes-str,
-.character-display-attributes-int,
-.character-display-attributes-wis,
-.character-display-attributes-dex,
-.character-display-attributes-con,
-.character-display-attributes-cha {
-  /* flex: auto; */
-  grid-column: 1;
-  grid-row: 3;
-  width: 100px;
-  position: relative;
-  left: 38px;
-  top: 0px;
-  /* font-size: 20px; */
-}
+  #char-strength,
+  #char-intelligence,
+  #char-wisdom,
+  #char-dexterity,
+  #char-constitution,
+  #char-charisma {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 10px 10px 10px;
+    align-items: center;
+    justify-content: center;
+  }
 
-.character-display-attributes-scores-str,
-.character-display-attributes-scores-int,
-.character-display-attributes-scores-wis,
-.character-display-attributes-scores-dex,
-.character-display-attributes-scores-con,
-.character-display-attributes-scores-cha {
-  /* display: inline-block; */
-  /* flex: auto; */
-  grid-column: 1;
-  grid-row: 2;
-  width: 70px;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  left: 30px;
-  top: -21px;
-}
+  .character-display-attributes-str,
+  .character-display-attributes-int,
+  .character-display-attributes-wis,
+  .character-display-attributes-dex,
+  .character-display-attributes-con,
+  .character-display-attributes-cha {
+    /* flex: auto; */
+    grid-column: 1;
+    grid-row: 3;
+    width: 100px;
+    position: relative;
+    left: 38px;
+    top: 0px;
+    /* font-size: 20px; */
+  }
 
-.character-display-attributes-scores-adj-str,
-.character-display-attributes-scores-adj-int,
-.character-display-attributes-scores-adj-wis,
-.character-display-attributes-scores-adj-dex,
-.character-display-attributes-scores-adj-con,
-.character-display-attributes-scores-adj-cha {
-  /* display: inline-block; */
-  /* flex: auto; */
-  grid-column: 1;
-  grid-row: 4;
-  width: 20px;
-  text-align: center;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  left: 55px;
-  top: -35px;
-}
+  .character-display-attributes-scores-str,
+  .character-display-attributes-scores-int,
+  .character-display-attributes-scores-wis,
+  .character-display-attributes-scores-dex,
+  .character-display-attributes-scores-con,
+  .character-display-attributes-scores-cha {
+    /* display: inline-block; */
+    /* flex: auto; */
+    grid-column: 1;
+    grid-row: 2;
+    width: 70px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 30px;
+    top: -21px;
+  }
 
-.circle-str,
-.circle-int,
-.circle-wis,
-.circle-dex,
-.circle-cha,
-.circle-con {
-  stroke: var(--accent-orange);
-  stroke-linecap: round;
-}
+  .character-display-attributes-scores-adj-str,
+  .character-display-attributes-scores-adj-int,
+  .character-display-attributes-scores-adj-wis,
+  .character-display-attributes-scores-adj-dex,
+  .character-display-attributes-scores-adj-con,
+  .character-display-attributes-scores-adj-cha {
+    /* display: inline-block; */
+    /* flex: auto; */
+    grid-column: 1;
+    grid-row: 4;
+    width: 20px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 55px;
+    top: -35px;
+  }
 
-.circle-str,
-.circle-int,
-.circle-wis,
-.circle-dex,
-.circle-con,
-.circle-cha {
-  fill: none;
-  stroke-width: 10px;
-  position: relative;
-  stroke-dasharray: 150;
-  transform: rotate(-230deg);
-  transform-origin: center;
-}
+  .circle-str,
+  .circle-int,
+  .circle-wis,
+  .circle-dex,
+  .circle-cha,
+  .circle-con {
+    stroke: var(--accent-orange);
+    stroke-linecap: round;
+  }
 
-.circle-str-background,
-.circle-int-background,
-.circle-wis-background,
-.circle-dex-background,
-.circle-con-background,
-.circle-cha-background {
-  stroke: var(--accent-200);
-  stroke-linecap: round;
-  fill: none;
-  stroke-width: 10px;
-  position: absolute;
-  display: inline;
-  text-align: center;
+  .circle-str,
+  .circle-int,
+  .circle-wis,
+  .circle-dex,
+  .circle-con,
+  .circle-cha {
+    fill: none;
+    stroke-width: 10px;
+    position: relative;
+    stroke-dasharray: 150;
+    transform: rotate(-230deg);
+    transform-origin: center;
+  }
 
-  stroke-dasharray: 150;
-  stroke-dashoffset: 5;
-  transform: rotate(-230deg);
-  transform-origin: center;
-}
+  .circle-str-background,
+  .circle-int-background,
+  .circle-wis-background,
+  .circle-dex-background,
+  .circle-con-background,
+  .circle-cha-background {
+    stroke: var(--accent-200);
+    stroke-linecap: round;
+    fill: none;
+    stroke-width: 10px;
+    position: absolute;
+    display: inline;
+    text-align: center;
+
+    stroke-dasharray: 150;
+    stroke-dashoffset: 5;
+    transform: rotate(-230deg);
+    transform-origin: center;
+  }
 
   #container-2 {
     display: none;

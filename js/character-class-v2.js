@@ -358,8 +358,8 @@ export default class Character {
 
     let hpGuageTotal = document.querySelector('.hitpoint-guage-value-total');
     
-    hpGuageTotal = finalCharacter.specialty.healthPoints + finalCharacter.attributes[4].adjustment <= 0 ? 0 : finalCharacter.specialty.healthPoints +
-    finalCharacter.attributes[4].adjustment
+    hpGuageTotal.textContent = finalCharacter.specialty.healthPoints + finalCharacter.attributes[4].adjustment <= 0 ? 0 : finalCharacter.specialty.healthPoints +
+    finalCharacter.attributes[4].adjustment;
     
     //xp guage
     let xpGuageCurrent = document.querySelector('.xp-guage-value-current');
