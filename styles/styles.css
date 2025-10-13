@@ -747,7 +747,10 @@ button {
     margin: 0px 0px 0px 0px;
     /* height: 50%; */
   }
-
+  
+  #hp-prog-bar {
+    width: 70px;
+  }
   #footer {
     display: grid;
     grid-template-columns: 1fr / 1fr / 1fr;
@@ -757,6 +760,7 @@ button {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    height: 100%;
   }
 
   #mage-first-level-spell-list,
@@ -769,10 +773,76 @@ button {
     font-size: 1.75rem;
   }
 
-    
-  #hp-prog-bar {
-    width: 70px;
+  input[type="submit"],
+
+  #buy-items,
+  #beginAdventure,
+  #submit-all-cleric-spells,
+  #intro-continue-button,
+  #enter-game,
+  #new-continue-button,
+  .new-continue-button {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border-radius: 10px;
+    font-size: 1.75rem;
+    text-align: center;
+    height: 30px;
+    width: 210px;
+    border: 0px solid var(--btn-bg);  
+    align-items: center;
+    justify-content: center;
+    grid-area: footer1;  
   }
+
+  #submit-all-mage-spells {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 10px;
+  font-size: 1.75rem;
+  text-align: center;
+  height: 30px;
+  width: 210px;
+  border: 0px solid var(--btn-bg);  
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end; 
+    }
+
+    input[type="submit"]:hover,
+#submit-all-mage-spells:hover,
+#submit-all-cleric-spells:hover,
+#buy-items:hover,
+#generate-attributes:hover,
+#confirm-attributes:hover,
+#beginAdventure:hover,
+#normal-equipment-link:hover,
+#magical-equipment-link:hover,
+#spells-link:hover,
+#treasure-link:hover,
+#intro-continue-button:hover,
+#enter-game:hover,
+#new-continue-button:hover {
+  background-color: var(--btn-hover);
+}
+
+input[type="submit"]:active,
+#submit-all-mage-spells:active,
+#submit-all-cleric-spells:hover,
+#buy-items:active,
+#generate-attributes:active,
+#confirm-attributes:active,
+#beginAdventure:active,
+#normal-equipment-link.active,
+#magical-equipment-link.active,
+#spells-link.active,
+#treasure-link.active,
+#intro-continue-button:active,
+#enter-game:active,
+#new-continue-button:active {
+  background-color: var(--primary-300);
+}
+  
 
   .hide-cleric-container {
     display: none;
@@ -1244,39 +1314,7 @@ input[type="submit"],
   grid-area: footer2;  
 }
 
-input[type="submit"]:hover,
-#submit-all-mage-spells:hover,
-#submit-all-cleric-spells:hover,
-#buy-items:hover,
-#generate-attributes:hover,
-#confirm-attributes:hover,
-#beginAdventure:hover,
-#normal-equipment-link:hover,
-#magical-equipment-link:hover,
-#spells-link:hover,
-#treasure-link:hover,
-#intro-continue-button:hover,
-#enter-game:hover,
-#new-continue-button:hover {
-  background-color: var(--btn-hover);
-}
 
-input[type="submit"]:active,
-#submit-all-mage-spells:active,
-#submit-all-cleric-spells:hover,
-#buy-items:active,
-#generate-attributes:active,
-#confirm-attributes:active,
-#beginAdventure:active,
-#normal-equipment-link.active,
-#magical-equipment-link.active,
-#spells-link.active,
-#treasure-link.active,
-#intro-continue-button:active,
-#enter-game:active,
-#new-continue-button:active {
-  background-color: var(--primary-300);
-}
 
 #enter-game {
   margin: auto;
@@ -1495,11 +1533,11 @@ fieldset {
   padding: 0px 0px 0px 10px;
 }
 
-.mage-spell-container,
+/* .mage-spell-container,
 .cleric-spell-container {
   display: grid;
   grid: 575px / 350px 350px 350px;
-}
+} */
 
 #mage-first-level-spell-list,
 #mage-second-level-spell-list,
