@@ -306,7 +306,8 @@ button {
   }
 
   #ready {
-    grid-area: footer1;
+    /* grid-area: footer1; */
+    grid-area: 5 / 2 / 5 / 3;
   }
 
   .circle-xp-svg,
