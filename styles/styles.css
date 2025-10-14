@@ -209,7 +209,28 @@ button {
     height: 100%;
     width: 90%;
     margin: auto;
+    text-align: justify;
   }
+
+
+  .ability-score-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+
+  }
+
+  .ability-score-header-grid-item {
+    text-align: center;
+    /* border: 1px solid black; */
+    width:100%;
+  }
+
+  .ability-score-grid-item {
+    text-align: center;
+  }
+
 
   #generate-attributes {
     /* grid-area: footer2; */
@@ -1746,23 +1767,6 @@ span#dragonwarrior {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.5;
-}
-
-.ability-score-grid-container {
-  width: 40%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
-}
-
-.ability-score-number-grid-item {
-  text-align: center;
-  /* border: 1px solid black; */
-  width: 50%;
-}
-
-.ability-score-adjustment-grid-item {
-  text-align: center;
 }
 
 .no-display {
