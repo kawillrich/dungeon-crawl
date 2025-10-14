@@ -224,20 +224,20 @@ import * as Utilities from "./Utilities/utilityFunctions.js";
 
 //inializing character default values
 
-let versionDate = new Date();
-let versionYear = versionDate.getFullYear();
-let versionMonth = versionDate.getMonth() + 1;
-let versionDay = versionDate.getDate();
-let versionHours = versionDate.getHours();
-let versionMinutes = versionDate.getMinutes();
-let versionSeconds = versionDate.getSeconds();
-let completeVersionDate = `${versionMonth}/${versionDay}/${versionYear} ${versionHours}:${versionMinutes}:${versionSeconds}`;
+// let versionDate = new Date();
+// let versionYear = versionDate.getFullYear();
+// let versionMonth = versionDate.getMonth() + 1;
+// let versionDay = versionDate.getDate();
+// let versionHours = versionDate.getHours();
+// let versionMinutes = versionDate.getMinutes();
+// let versionSeconds = versionDate.getSeconds();
+// let completeVersionDate = `${versionMonth}/${versionDay}/${versionYear} ${versionHours}:${versionMinutes}:${versionSeconds}`;
 
-console.log(versionDate);
+// console.log(versionDate);
 
-let pageVersion = document.querySelector('.page-version');
+// let pageVersion = document.querySelector('.page-version');
 
-pageVersion.textContent = `Version 0.32 (${completeVersionDate})`;
+// pageVersion.textContent = `Version 0.32 (${completeVersionDate})`;
 
 let windowViewportHeight, windowViewportWidth, visualViewportHeight, visualViewportWidth;
 
