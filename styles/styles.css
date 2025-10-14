@@ -212,6 +212,13 @@ button {
     text-align: justify;
   }
 
+  #welcome-message > p {
+    text-align: center;
+  }
+
+  #dialogue-paragraph {
+    text-align: center;
+  }
 
   .ability-score-grid-container {
     width: 100%;
