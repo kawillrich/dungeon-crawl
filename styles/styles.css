@@ -206,19 +206,34 @@ button {
 
   #generate-attributes {
     /* grid-area: footer2; */
-    grid-area: 5 / 3 / 5 / 3;
-
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border-radius: 10px;
+    font-size: 1.75rem;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    border: 0px solid var(--btn-bg);  
+    align-items: center;
+    justify-content: center;
+    grid-area: 5 / 3 / 5 / 4;
     margin: auto;
-    width: 50px;
-    justify-content: space-evenly;
-
   }
 
   #confirm-attributes {
-    grid-area: footer;
+    /* grid-area: footer; */
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border-radius: 10px;
+    font-size: 1.75rem;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    border: 0px solid var(--btn-bg);  
+    align-items: center;
+    justify-content: center;
+    grid-area: 5 / 1 / 5 / 2;
     margin: auto;
-    width: 50px;
-    justify-content: space-evenly;
   }
 
   #intro-button-container {
@@ -1173,64 +1188,6 @@ input[name="selected-specialty"] {
 .class-radio:checked + .class-label::before {
   background-color: var(--primary-300);
 }
-
-/* input[type="submit"],
-#submit-all-mage-spells,
-#buy-items,
-#beginAdventure,
-#submit-all-cleric-spells,
-#intro-continue-button,
-#enter-game,
-#new-continue-button,
-.new-continue-button {
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
-  border-radius: 10px;
-  font-size: 1.75rem;
-  text-align: center;
-  height: 30px;
-  width: 210px;
-  border: 0px solid var(--btn-bg);  
-  align-items: center;
-  justify-content: center;
-  grid-area: footer1;  
-} */
-
-
-#generate-attributes {
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
-  border-radius: 10px;
-  font-size: 1.75rem;
-  text-align: center;
-  height: 30px;
-  width: 150px;
-  border: 0px solid var(--btn-bg);  
-  align-items: center;
-  justify-content: center;
-  grid-area: footer;  
-}
-
-#confirm-attributes {
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
-  border-radius: 10px;
-  font-size: 1.75rem;
-  text-align: center;
-  height: 30px;
-  width: 150px;
-  border: 0px solid var(--btn-bg);  
-  align-items: center;
-  justify-content: center;
-  grid-area: footer2;  
-}
-
-/* 
-
-#enter-game {
-  margin: auto;
-  display: block;
-} */
 
 #confirm-start {
   display: none;
