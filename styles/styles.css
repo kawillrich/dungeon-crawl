@@ -98,7 +98,7 @@ button {
 /******************************************** MODE NOT SUPPORTED *********************************************/
 
 
-@media only screen and (width < 360px) {
+@media only screen and (width < 376px) {
   #container {
     background-color: salmon;    
   }
@@ -113,8 +113,8 @@ button {
     cursor: none;
     text-align: center;
     justify-items: center; 
-    height: 9000px;
-    width: 9000px;    
+    height: 90000px;
+    width: 90000px;    
     background-size: 350px;
   }
 }
@@ -122,7 +122,7 @@ button {
 /********************************************* MOBILE / PHONES ********************************************/
 
 
-@media only screen and (360px <= width < 599px) {
+@media only screen and (376px <= width < 599px) {
   #container {
     border-image: none;
     border: 0px solid transparent;   
@@ -196,9 +196,10 @@ button {
 
   #header {
     /* grid-area: playerData / playerData / playerData2 / playerData2; */
-    grid-area: 1 / 1 / 1 / 4;
+    grid-area: 2 / 1 / 2 / 4;
     height: 100%;
     width: 100%;
+    margin: auto;
   }
 
   #welcome-message {
@@ -222,8 +223,9 @@ button {
     border: 0px solid var(--btn-bg);  
     align-items: center;
     justify-content: center;
-    grid-area: 5 / 3 / 5 / 4;
     margin: auto;
+    grid-area: 5 / 1 / 5 / 2;
+
   }
 
   #confirm-attributes {
@@ -238,7 +240,8 @@ button {
     border: 0px solid var(--btn-bg);  
     align-items: center;
     justify-content: center;
-    grid-area: 5 / 1 / 5 / 2;
+    grid-area: 5 / 3 / 5 / 4;
+
     margin: auto;
   }
 
