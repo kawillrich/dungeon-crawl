@@ -157,9 +157,15 @@ button {
   #new-continue-button,
   .new-continue-button {
     grid-row: 5 / span 1;
-    grid-column: 1 / span 1;
+    grid-column: 2 / span 1;
     margin: auto;
     /* grid-area: footer1; */
+  }
+
+  #beginingAdventure {
+    grid-row: 5 / span 1;
+    grid-column: 2 / span 1;
+    margin: auto;
   }
 
   #submit-name-div {
