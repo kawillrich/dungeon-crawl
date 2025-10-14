@@ -1770,6 +1770,8 @@ function beginChapterTwo() {
 
 function showInventory() {
   alert("Purchase your inventory");
+  let hideContainer = document.querySelector('#container');
+  hideContainer.style.display = "none";
   window.scrollTo(0, 0);
 
   let totalItems = [
@@ -2104,6 +2106,9 @@ function selectInventory(finalCharacter) {
     );
     getInventoryElement.classList.remove("show-inventory-container");
 
+    let showContainer = document.querySelector('#container');
+    showContainer.style.display = "grid";
+
     let updateTreasure = document.querySelector(".char-coins");
     updateTreasure.innerHTML = `
       <span id="char-gp" class="char-treasure">Gold: </span><span">${finalCharacter.treasure.gold.quantity}</span></br>
@@ -2120,6 +2125,8 @@ function selectInventory(finalCharacter) {
 //end inventory
 
 function pickMageSpells() {
+  let hideContainer = document.querySelector('#container');
+  hideContainer.style.display = "none";
   window.scrollTo(0, 0);
 
   alert("Pick Mage Spells");
@@ -2430,6 +2437,8 @@ function submitAllMageSpells() {
 
 function pickClericSpells() {
   alert("Pick Cleric Spells");
+  let hideContainer = document.querySelector('#container');
+  hideContainer.style.display = "none";
   let showClericSpellsList = document.querySelector(".hide-cleric-container");
   showClericSpellsList.classList.add("show-cleric-spells");
   selectLevelOneClericSpells();
