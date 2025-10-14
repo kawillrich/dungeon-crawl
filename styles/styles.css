@@ -163,7 +163,8 @@ button {
   }
 
   #submit-name-div {
-    grid-area: footer1;
+    /* grid-area: footer1; */
+    grid-area: 5 / 2 / 5 / 2;
     margin: auto
   }
 
