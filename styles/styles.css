@@ -810,38 +810,38 @@ button {
     }
 
     input[type="submit"]:hover,
-#submit-all-mage-spells:hover,
-#submit-all-cleric-spells:hover,
-#buy-items:hover,
-#generate-attributes:hover,
-#confirm-attributes:hover,
-#beginAdventure:hover,
-#normal-equipment-link:hover,
-#magical-equipment-link:hover,
-#spells-link:hover,
-#treasure-link:hover,
-#intro-continue-button:hover,
-#enter-game:hover,
-#new-continue-button:hover {
-  background-color: var(--btn-hover);
-}
+  #submit-all-mage-spells:hover,
+  #submit-all-cleric-spells:hover,
+  #buy-items:hover,
+  #generate-attributes:hover,
+  #confirm-attributes:hover,
+  #beginAdventure:hover,
+  #normal-equipment-link:hover,
+  #magical-equipment-link:hover,
+  #spells-link:hover,
+  #treasure-link:hover,
+  #intro-continue-button:hover,
+  #enter-game:hover,
+  #new-continue-button:hover {
+    background-color: var(--btn-hover);
+  }
 
-input[type="submit"]:active,
-#submit-all-mage-spells:active,
-#submit-all-cleric-spells:hover,
-#buy-items:active,
-#generate-attributes:active,
-#confirm-attributes:active,
-#beginAdventure:active,
-#normal-equipment-link.active,
-#magical-equipment-link.active,
-#spells-link.active,
-#treasure-link.active,
-#intro-continue-button:active,
-#enter-game:active,
-#new-continue-button:active {
-  background-color: var(--primary-300);
-}
+  input[type="submit"]:active,
+  #submit-all-mage-spells:active,
+  #submit-all-cleric-spells:hover,
+  #buy-items:active,
+  #generate-attributes:active,
+  #confirm-attributes:active,
+  #beginAdventure:active,
+  #normal-equipment-link.active,
+  #magical-equipment-link.active,
+  #spells-link.active,
+  #treasure-link.active,
+  #intro-continue-button:active,
+  #enter-game:active,
+  #new-continue-button:active {
+    background-color: var(--primary-300);
+  }
   
 
   .hide-cleric-container {
