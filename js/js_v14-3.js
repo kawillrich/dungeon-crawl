@@ -1012,7 +1012,6 @@ function confirmingAttributes() {
     'border': '0px solid var(--btn-bg)',  
     'align-items': 'center',
     'justify-content': 'center',
-    'grid-area': 'footer1',
     'margin': 'auto',
     'display': 'block', 
   })
