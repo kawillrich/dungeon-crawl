@@ -20,6 +20,11 @@
   --btn-bg: #72ff7c;
   --btn-text: #0d6e6e;
 
+  /*obsidian dragon header*/
+  --header-yellow: rgb(255, 229, 72);
+  --header-orange: rgb(255, 178, 15);
+  --header-dark-orange: rgb(126, 46, 9);;
+
   /*hit-points guage*/
   --strokeDashArray: 240;
   --strokeDashArrayBackground: 240;
@@ -218,6 +223,27 @@ button {
 
   #dialogue-paragraph {
     text-align: center;
+  }
+
+  #chapter-heading {
+    /* background-color: var(--btn-bg); */
+    /* color: var(--btn-text); */
+    background-color: var(--text);
+    color: var(--bg-200);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    height: 30px;
+    /* width: 210px; */
+    width: 100%;
+    /* border: 0px solid var(--btn-bg); */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: block;
+    padding: auto;
+    align-content: center;
+    grid-area: 1 / 1 / 1 / 4;
   }
 
   .ability-score-grid-container {
