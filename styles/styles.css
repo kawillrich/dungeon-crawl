@@ -1678,7 +1678,8 @@ span#dragonwarrior {
 
 .html-spell-tooltip {
   position: relative;
-  width: 325px;
+  font-size: 1.5rem;
+  width: 100%;
   margin: 0px;
 }
 
