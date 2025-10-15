@@ -965,7 +965,8 @@ input[name="selected-specialty"] {
     grid-template-rows: auto auto auto;
   }
 
-  input.mage-spells {
+  input.mage-spells,
+  input.cleric-spells {
     height: 1.75rem;
     width: 30px;
     margin-top: 5px;
