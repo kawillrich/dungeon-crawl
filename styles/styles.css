@@ -811,6 +811,7 @@ button {
   justify-content: center;
   justify-self: center;
   align-self: end;
+  grid-area: 5 / 1 / 5 / 1;
     }
 
     input[type="submit"]:hover,
@@ -885,7 +886,7 @@ button {
     width: 100%;
     background-color: rgb(0, 5, 50);
     z-index: 1;
-    padding: 10%;
+    padding: 5%;
   }
 
   .show-cleric-spells {
@@ -912,6 +913,15 @@ button {
     display: none;
   }
 
+  .html-spell-tooltip {
+    position: relative;
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 0px;
+    height: 2.25rem;
+    margin: auto;
+  }
+
   #spells-level-1,
   #spells-level-2,
   #spells-level-3 {
@@ -920,8 +930,9 @@ button {
   }
 
   input.mage-spells {
-    height: 20px;
+    height: 1.75rem;
     width: 30px;
+    margin-top: 5px;
   }
 
   .inventory-input-container {
@@ -1676,12 +1687,7 @@ span#dragonwarrior {
   display: block;
 }
 
-.html-spell-tooltip {
-  position: relative;
-  font-size: 1.5rem;
-  width: 100%;
-  margin: 0px;
-}
+
 
 .armor-tooltiptext,
 .weapon-tooltiptext,
