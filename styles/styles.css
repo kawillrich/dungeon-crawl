@@ -979,6 +979,13 @@ button {
   .spell-button-tooltip::after {
   }
 
+  #monster-info {
+    display: flex;
+    flex-direction: row;
+    height: 225px;
+    grid-area: 4 / 1 / 4 / 4;
+  }
+
   ul.dropdown-spell-list-ul {
     position: absolute;
     list-style: none;
@@ -1526,11 +1533,7 @@ fieldset {
   background-color: rgb(255, 105, 105);
 }
 
-#monster-info {
-  display: flex;
-  flex-direction: row;
-  height: 225px;
-}
+
 
 .minimized {
   display: none;
