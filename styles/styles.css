@@ -172,7 +172,15 @@ button {
     grid-column: 2 / span 1;
     margin: auto;
   }
-
+input[type="text"] {
+  font-size: 2rem;
+  text-align: center;
+  height: 68px;
+  width: 210px;
+  border-radius: 10px;
+  background-color: rgb(205, 210, 245);
+  border: 0px solid var(--btn-bg);
+}
   #submit-name-div {
     /* grid-area: footer1; */
     grid-area: 5 / 2 / 5 / 2;
@@ -180,12 +188,13 @@ button {
   }
 
   #submit-name {
-    grid-area: footer1;
-
-    margin: auto; 
-
+    display: block;
+    margin: auto;
   }
-  
+  #character-name {
+  display: block;
+  margin: auto;
+}
   #dialogue {
     padding: 10px 0px 0px 0px;
     margin: auto;
@@ -205,6 +214,14 @@ button {
     height: 100%;
     width: 100%;
     margin: auto;
+  }
+  #confirm-start {
+    display: none;
+  }
+
+  #welcome-title {
+    font-size: 3rem;
+    text-align: center;
   }
 
   #welcome-message {
@@ -309,6 +326,7 @@ button {
   #inner-dialogue-div {
     /* grid-area: dialogue / dialogue1 / dialogue / dialogue1; */
     grid-area: 4 / 2 / 4 / 2;
+    text-align: justify;
 
   }
   
@@ -878,6 +896,18 @@ input[name="selected-specialty"] {
     grid-area: 5 / 1 / 5 / 1;
   }
 
+#normal-equipment-link,
+#magical-equipment-link,
+#spells-link,
+#treasure-link {
+  border-image-source: url(../images/gui/gui-buttons-player-attack.png);
+  border-image-slice: 20 20;
+  text-align: center;
+  background-color: rgb(205, 210, 245);
+  font-size: 2rem;
+  cursor: url("../images/gui/cursor-hover.png"), auto;
+}
+
   input[type="submit"]:hover,
   #submit-all-mage-spells:hover,
   #submit-all-cleric-spells:hover,
@@ -1203,99 +1233,41 @@ input[name="selected-specialty"] {
     padding: 10% 30% 30%;
   }
 
+
+  #player-sheet {
+    margin: 0px;
+    height: 500px;
+  }
+
+  .char-inventory-sheet {
+    height: 450px;
+  }
+
+  #normal-equipment,
+  #magical-equipment,
+  #spells,
+  #treasure {
+    height: 370px;
+  }
+
+  #map {
+    margin: 0px;
+    height: 500px;
+  }
 }
 
 /********************************************* SMALL DEVICE & SMALL TABLET************************************/
 
 /* @media only screen and (min-width: 600px) {
-  #container {
-    background-color: blue;
-    width: 600px;
-    min-width: 600px;
-  }
-  #character-info {
-    margin: auto;
-    background-image: url("../images/black-dragon2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    width: 89%;
-    height: 100%;
-    grid-auto-columns: 50%;
-    gap: 5px 10px;
-    border-radius: 10px;
-  }
+
 } */
 
 /******************************************* DESKTOP & LARGE TABLETS *********************************************/
 
-@media only screen and (min-width: 768px) {
-  #container {
-    background-color: green;
-    width: 920px;
-    min-width: 920px;
-  }
+/* @media only screen and (min-width: 768px) {
   
-  #character-canvas {
-    grid-area: 1/1 / span 1 / span 1;
-  }
 
-  #character-hitpoints {
-    grid-area: 1/ 2 / span 1 / span 4;
-    
-  }
-
-  #character-menu {
-    grid-area: 1/6 / span 1 / span 1;
-  }
-
-  #character-stats {
-    grid-area: 2 / 1 / span 1 / span 2;
-  }
-
-  #character-attributes {
-    grid-area: 2 / 3 / span 2 / span 2;
-  }
-
-  #character-statuses {
-    grid-area: 3 / 1 / span 1 / span 2;
-  }
-
-  #character-saving-throws {
-    grid-area: 2 / 5 / span 1 / span 2;
-  }
-
-  #character-afflictions {
-    grid-area: 3 / 5 / span 1 / span 2;
-  }
-
-
-
-  #container {
-    padding: 0px 0px 0px 0px;
-    border: 30px solid transparent;
-    border-image-source: url(../images/gui/gui-entire-border2.png);
-    border-image-slice: 75 75;
-    margin: 0px 0px 0px 0px;
-    background-color: var(--background);
-    display: grid;  
-    grid-template-rows: 5% 40% 20% 30% 5%;
- 
-  }
-
-  #container-2 {
-    display: none;
-    margin: 0px auto auto auto;  
-    padding: 0px 0px 0px 0px;
-    border: 30px solid transparent;
-    height: 100%;
-    border-image-source: url(../images/gui/gui-entire-border2.png);
-    border-image-slice: 75 75;
-  }
-
-
-}
+} */
 
 @media screen and (orientation: landscape) {
   #lock-screen {
@@ -1311,101 +1283,6 @@ input[name="selected-specialty"] {
     height: 9000px;
     width: 9000px;
   }
-}
-
-#confirm-start {
-  display: none;
-}
-
-#dialogue {
-
-  padding: 10px 0px 0px 0px;
-  margin: auto;
-  font-size: 1.75rem;
-  display: block;
-  justify-content: space-evenly;
-  text-align: justify;
-}
-
-#inner-dialogue-div {
-  text-align: justify;
-}
-
-#welcome-title {
-  font-size: 3rem;
-  text-align: center;
-}
-
-#intro-continue-button {
-  margin: auto;
-  width: 100px;
-  grid-area: middle;
-}
-
-#intro-button-container {
-  grid-area: footer;
-  
-  display: grid;
-  grid-template-areas: "left middleLeft middle middleRight right";
-  grid-template-columns: space-evenly;
-
-}
-
-#character-name {
-  display: block;
-  margin: auto;
-}
-
-#submit-name {
-  display: block;
-  margin: auto;
-}
-
-#normal-equipment-link,
-#magical-equipment-link,
-#spells-link,
-#treasure-link {
-  border-image-source: url(../images/gui/gui-buttons-player-attack.png);
-  border-image-slice: 20 20;
-  text-align: center;
-  background-color: rgb(205, 210, 245);
-  font-size: 2rem;
-  cursor: url("../images/gui/cursor-hover.png"), auto;
-}
-
-input[type="text"] {
-  font-size: 2rem;
-  text-align: center;
-  height: 68px;
-  width: 210px;
-  border-radius: 10px;
-  background-color: rgb(205, 210, 245);
-  border: 0px solid var(--btn-bg);
-}
-
-button {
-  font-size: 22px;
-}
-
-#player-sheet {
-  margin: 0px;
-  height: 500px;
-}
-
-.char-inventory-sheet {
-  height: 450px;
-}
-
-#normal-equipment,
-#magical-equipment,
-#spells,
-#treasure {
-  height: 370px;
-}
-
-#map {
-  margin: 0px;
-  height: 500px;
 }
 
 legend {
