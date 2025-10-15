@@ -218,7 +218,7 @@ button {
   }
 
   #welcome-message > p {
-    text-align: center;
+    text-align: justify;
   }
 
   #dialogue-paragraph {
@@ -342,6 +342,45 @@ button {
   margin: auto 0px auto 0px;
   height: 100%;
   }
+
+
+input[name="alignment"],
+input[name="selected-specialty"] {
+  display: none;
+  position: relative;
+}
+
+.alignment-label,
+.class-label {
+  display: inline-block;
+}
+
+.alignment-label::before,
+.class-label::before {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  content: "";
+  border: 10px solid transparent;
+  left: 15px;
+  top: -5px;
+  border-image-source: url(../images/gui/gui-buttons-player-attack.png);
+  border-image-slice: 10 10;
+  background-color: rgb(205, 210, 245);
+  cursor: url("../images/gui/cursor.png"), auto;
+}
+
+.alignment-label:hover::before,
+.class-label:hover::before {
+  background-color: var(--btn-hover);
+  cursor: url("../images/gui/cursor-hover.png"), auto;
+}
+
+.alignment-radio:checked + .alignment-label::before,
+.class-radio:checked + .class-label::before {
+  background-color: var(--primary-300);
+}
 
   #class-container{
     padding-top: 15px;
@@ -1232,44 +1271,6 @@ button {
     height: 9000px;
     width: 9000px;
   }
-}
-
-input[name="alignment"],
-input[name="selected-specialty"] {
-  display: none;
-  position: relative;
-}
-
-.alignment-label,
-.class-label {
-  display: inline-block;
-}
-
-.alignment-label::before,
-.class-label::before {
-  display: block;
-  position: relative;
-  width: 20px;
-  height: 20px;
-  content: "";
-  border: 10px solid transparent;
-  left: 15px;
-  top: -5px;
-  border-image-source: url(../images/gui/gui-buttons-player-attack.png);
-  border-image-slice: 10 10;
-  background-color: rgb(205, 210, 245);
-  cursor: url("../images/gui/cursor.png"), auto;
-}
-
-.alignment-label:hover::before,
-.class-label:hover::before {
-  background-color: var(--btn-hover);
-  cursor: url("../images/gui/cursor-hover.png"), auto;
-}
-
-.alignment-radio:checked + .alignment-label::before,
-.class-radio:checked + .class-label::before {
-  background-color: var(--primary-300);
 }
 
 #confirm-start {
