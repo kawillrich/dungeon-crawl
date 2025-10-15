@@ -760,10 +760,10 @@ button {
   }
 
   div.mage-spell-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+
     height: 100%;
+    grid-template-rows: 10% 10% 10% 70%;
   }
 
   #mage-first-level-spell-list,
@@ -809,7 +809,7 @@ button {
   border: 0px solid var(--btn-bg);  
   align-items: center;
   justify-content: center;
-  align-self: flex-end; 
+  justify-self: center;
     }
 
     input[type="submit"]:hover,
