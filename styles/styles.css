@@ -1254,6 +1254,18 @@ input[name="selected-specialty"] {
     margin: 0px;
     height: 500px;
   }
+  legend {
+  float: clear;
+  border-radius: 5px;
+  margin: auto;
+  background-color: var(--accent-green-200);
+  color: var(--primary);
+  position: relative;
+  top: 15px;
+  width: 97%;
+  text-align: center;
+  font-size: 1.5rem;
+}
 }
 
 /********************************************* SMALL DEVICE & SMALL TABLET************************************/
@@ -1285,18 +1297,7 @@ input[name="selected-specialty"] {
   }
 }
 
-legend {
-  float: clear;
-  border-radius: 5px;
-  margin: auto;
-  background-color: var(--accent-green-200);
-  color: var(--primary);
-  position: relative;
-  top: 15px;
-  width: 97%;
-  text-align: center;
-  font-size: 1.5rem;
-}
+
 
 legend.statuses-dashboard,
 legend.afflictions-dashboard {
