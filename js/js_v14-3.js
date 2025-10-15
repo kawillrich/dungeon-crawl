@@ -1831,7 +1831,9 @@ function showInventory() {
     //add newly created class to the <li> node list
     getNewLI[i].classList.add(`item-${apostropheRemoved}`);
     getNewLI[i].classList.add("inventory-list-item");
-    getNewLI[i].classList.add("item-tooltip"); //adding class to start lining up tooltips
+    getNewLI[i].classList.add("item-tooltip"); 
+    
+    //adding class to start lining up tooltips
     getNewLI[i].setAttribute("data-value", totalItems[i].dataName);
 
     let updateNewLI = document.querySelectorAll(".inventory-list li");
