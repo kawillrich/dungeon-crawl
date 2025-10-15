@@ -217,10 +217,13 @@ button {
     text-align: justify;
   }
 
-  #welcome-message > p {
+  #welcome-message > p:first-child {
     text-align: justify;
   }
 
+  #welcome-message > p {
+    text-align: center;
+  }
   #dialogue-paragraph {
     text-align: center;
   }
