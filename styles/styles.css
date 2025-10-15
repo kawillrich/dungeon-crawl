@@ -936,13 +936,10 @@ input[name="selected-specialty"] {
     width: 100%;
     background-color: rgb(0, 5, 50);
     z-index: 1;
-<<<<<<< HEAD
     padding: 5%;
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: 20% auto 10%;
-=======
     padding: 1% 30% 30%;
->>>>>>> parent of 03b6eb8 (style:)
   }
 
   .show-mage-spells,
@@ -996,7 +993,6 @@ input[name="selected-specialty"] {
 
   .inventory-input-container {
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: 15% 1fr;
     align-content: start;
     height: 100%;
@@ -1019,7 +1015,6 @@ input[name="selected-specialty"] {
   .quantity-change {
     font-size: 1.5em;
     height: 1.5em;
-=======
     grid-template-columns: 100px 500px;
   }
 
@@ -1038,7 +1033,6 @@ input[name="selected-specialty"] {
   .quantity-increase {
     width: 2em;
     height: 1.2em;
->>>>>>> parent of 03b6eb8 (style:)
     text-align: center;
     width: 1.5rem;
   }
@@ -1059,13 +1053,10 @@ input[name="selected-specialty"] {
     width: 2em;
   }
 
-<<<<<<< HEAD
-=======
   .input-list {
     list-style-type: none;
   }
 
->>>>>>> parent of 03b6eb8 (style:)
   .char-treasure {
     display: inline-block;
     width: 75px;
