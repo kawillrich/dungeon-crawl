@@ -368,10 +368,11 @@ input[name="selected-specialty"] {
   border: 10px solid transparent;
   left: 15px;
   top: -5px;
-  border-image-source: url(../images/gui/gui-buttons-player-attack.png);
-  border-image-slice: 10 10;
+  /* border-image-source: url(../images/gui/gui-buttons-player-attack.png); */
+  /* border-image-slice: 10 10; */
   background-color: rgb(205, 210, 245);
   cursor: url("../images/gui/cursor.png"), auto;
+  border: 0.5rem outset var(--primary-200);
 }
 
 .alignment-label:hover::before,
@@ -388,7 +389,7 @@ input[name="selected-specialty"] {
   #class-container{
     padding-top: 15px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
   }
@@ -801,7 +802,8 @@ input[name="selected-specialty"] {
     grid-template-columns: 1fr / 1fr / 1fr;
   }
 
-  div.mage-spell-container {
+  div.mage-spell-container,
+  div.cleric-spell-container {
     display: grid;
     align-content: start;
     height: 100%;
@@ -810,11 +812,15 @@ input[name="selected-specialty"] {
 
   #mage-first-level-spell-list,
   #mage-second-level-spell-list,
-  #mage-third-level-spell-list {
+  #mage-third-level-spell-list,
+  #cleric-first-level-spell-list,
+  #cleric-second-level-spell-list,
+  #cleric-third-level-spell-list {
     padding: 10px 0px 10px 0px;
   }
 
-  .mage-spell-summary {
+  .mage-spell-summary,
+  .cleric-spell-summary {
     font-size: 1.75rem;
   }
 
@@ -822,7 +828,6 @@ input[name="selected-specialty"] {
 
   #buy-items,
   #beginAdventure,
-  #submit-all-cleric-spells,
   #intro-continue-button,
   #enter-game,
   #new-continue-button,
@@ -840,7 +845,8 @@ input[name="selected-specialty"] {
     grid-area: 5 / 2 / 5 / 2;  
   }
 
-  #submit-all-mage-spells {
+  #submit-all-mage-spells,
+  #submit-all-cleric-spells {
   background-color: var(--btn-bg);
   color: var(--btn-text);
   border-radius: 10px;
@@ -856,7 +862,7 @@ input[name="selected-specialty"] {
   grid-area: 5 / 1 / 5 / 1;
     }
 
-    input[type="submit"]:hover,
+  input[type="submit"]:hover,
   #submit-all-mage-spells:hover,
   #submit-all-cleric-spells:hover,
   #buy-items:hover,
@@ -917,7 +923,8 @@ input[name="selected-specialty"] {
     padding: 1% 30% 30%;
   }
 
-  .show-mage-spells {
+  .show-mage-spells,
+  .show-cleric-spells {
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -931,19 +938,6 @@ input[name="selected-specialty"] {
     padding: 5%;
   }
 
-  .show-cleric-spells {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    display: block;
-    height: 2000px;
-    width: 2000px;
-    background-color: rgb(0, 5, 50);
-    z-index: 1;
-    padding: 10% 30% 30%;
-  }
 
   .grey-out {
     color: darkGrey;
@@ -1486,12 +1480,6 @@ fieldset {
 
 .saving-throws {
   padding: 0px 0px 0px 10px;
-}
-
-#mage-first-level-spell-list,
-#mage-second-level-spell-list,
-#mage-third-level-spell-list {
-
 }
 
 .canvas-info-module-monster {
