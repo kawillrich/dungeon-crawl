@@ -270,6 +270,21 @@ window.addEventListener("resize", function() {
   containerElement.style.height = "100dvh";  
 })
 
+function launchFullScreen() {
+  const element = document.documentElement; // or a specific element
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) { // Firefox
+        element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+        element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) { // IE/Edge
+        element.msRequestFullscreen();
+    }
+}
+
+launchFullScreen();
+
 let images;
 
 let adventurerImage = 4;
