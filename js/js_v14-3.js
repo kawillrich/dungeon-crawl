@@ -1780,8 +1780,7 @@ function showInventory() {
   window.scrollTo(0, 0);
 
   let totalItems = [
-    torch,
-    backPack,
+    torch,    
     holySymbol,
     holyWater,
     smallHammer,
@@ -1791,16 +1790,13 @@ function showInventory() {
     lantern,
     mirrorHandSized,
     oil,
-    poleWooden,
-    rationsIron,
-    rationsStandard,
+    poleWooden,    
     rope,
     sackSmall,
     sackLarge,
     stakesAndMallet,
     thievesTools,
     tinderBox,
-    waterskin,
     wine,
     wolfsbane,
   ];
@@ -1838,8 +1834,14 @@ function showInventory() {
 
     let updateNewLI = document.querySelectorAll(".inventory-list li");
     let addNewItemSpan = document.createElement('span');
+    addNewItemSpan.classList.add('inventory-item-tooltip');
+
     addNewItemSpan.innerHTML = `${totalItems[i].name} (${totalItems[i].cost} gp)`;
+
+    let addNewTooltipText = document.createElement('span');
+    addNewTooltipText.innerHTML = `<span class="inventory-item-tooltiptext">Desc: ${totalItems[i].description}<br>`;
     updateNewLI[i].appendChild(addNewItemSpan);
+    addNewItemSpan.appendChild(addNewTooltipText);
   }
 
   let updateNewLIInput = document.querySelectorAll(".inventory-list li");

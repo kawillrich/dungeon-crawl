@@ -114,7 +114,7 @@ let lantern = new Inventory(
   0
 );
 let mirrorHandSized = new Inventory(
-  "Mirror (hand-sized, steel)",
+  "Mirror (hand-sized)",
   "Hand-sized mirror made of steel",
   0,
   5,
@@ -150,7 +150,14 @@ let rationsStandard = new Inventory(
   "rationsStandard",
   0
 );
-let rope = new Inventory("Rope (50ft length)", "", 0, 50, 1, "rope", 0);
+let rope = new Inventory(
+  "Rope (50ft)", 
+  "Lenght of rope 50 feet", 
+  0, 
+  50, 
+  1, 
+  "rope",
+  0);
 let sackSmall = new Inventory(
   "Sack, small",
   "Small sack",
@@ -197,7 +204,7 @@ let tinderBox = new Inventory(
   0
 );
 let waterskin = new Inventory(
-  "Waterskin (1 quart)",
+  "Waterskin (1 qt)",
   "Used for storing water",
   0,
   5,
@@ -206,7 +213,7 @@ let waterskin = new Inventory(
   0
 );
 let wine = new Inventory(
-  "Wine (1 quart)",
+  "Wine (1 qt)",
   "One quart of wine",
   0,
   30,

@@ -1588,7 +1588,8 @@ span#dragonwarrior {
   position: relative;
 }
 
-.supply-item-tooltip {
+.supply-item-tooltip
+ {
   margin: 0px;
   position: relative;
   height: 20px;
@@ -1612,6 +1613,20 @@ span#dragonwarrior {
   z-index: 1;
   top: -5px;
   left: 120%;
+}
+
+.inventory-item-tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 57%;
 }
 
 .supply-item-tooltiptext {
@@ -1673,6 +1688,17 @@ span#dragonwarrior {
   border-color: transparent black transparent transparent;
 }
 
+.inventory-item-tooltip .inventory-item-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
 .supply-item-tooltip .supply-item-tooltiptext::after {
   content: "";
   position: absolute;
@@ -1699,7 +1725,8 @@ span#dragonwarrior {
 .weapon-tooltip:hover,
 .spell-tooltip:hover,
 .item-tooltip:hover,
-.supply-item-tooltip:hover {
+.supply-item-tooltip:hover,
+.inventory-item-tooltip:hover {
   color: white;
   cursor: url("../images/gui/cursor-hover.png"), auto;
 }
@@ -1708,7 +1735,8 @@ span#dragonwarrior {
 .weapon-tooltip:hover .weapon-tooltiptext,
 .spell-tooltip:hover .spell-tooltiptext,
 .item-tooltip:hover .item-tooltiptext,
-.supply-item-tooltip:hover .supply-item-tooltiptext {
+.supply-item-tooltip:hover .supply-item-tooltiptext,
+.inventory-item-tooltip:hover .inventory-item-tooltiptext {
   visibility: visible;
 }
 
