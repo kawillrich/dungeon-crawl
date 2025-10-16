@@ -517,6 +517,8 @@ input[name="selected-specialty"] {
     display: flex;
     grid-template-areas: "center";
     justify-content: space-evenly;
+    transform: translateY(15px);
+
   }
   
   
@@ -553,20 +555,19 @@ input[name="selected-specialty"] {
     align-self: center;
     display: inline;
     position: absolute;
-    transform: translateY(15px);
 
   }
 
 
   .hitpoint-guage-value-total {
+    
     font-size: 30px;
     color: -var(--text);
     justify-self: center;
     align-self: flex-end;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     display: inline;
     position: absolute;
-    transform: translateY(15px);
   }
 
   .circle-hitpoints {
@@ -650,7 +651,6 @@ input[name="selected-specialty"] {
   .hitpoints-guage > svg {
    transform: scale(.9);
    margin-top: 5px;
-   transform: translateY(25px);
    
   }
 
