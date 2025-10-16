@@ -507,24 +507,10 @@ input[name="selected-specialty"] {
     justify-content: space-evenly;
     padding-top: 10px;
     transform: translateY(15px);
-
-  }
-  
-  .hitpoints-guage {
-    width: 100%;
-    grid-row:2 / 2;
-    grid-column: 2 / 3;
-    display: flex;
-    grid-template-areas: "center";
-    justify-content: space-evenly;
-    transform: translateY(15px);
-
-  }
-  
+  } 
   
   .xp-guage {
     width: 100%;
-
     grid-row:2 / 2;
     grid-column: 3 / 4;
     display: flex;
@@ -533,7 +519,6 @@ input[name="selected-specialty"] {
     justify-content: space-evenly;
     padding-top: 10px;
     transform: translateY(15px);
-
   }
 
   .xp-guage-value-current,
@@ -545,60 +530,7 @@ input[name="selected-specialty"] {
     text-align: center;
     align-self: center;
     position: absolute;
-  }
-  
-  .hitpoint-guage-value-current {
-    width: auto;
-    font-size: 2.25rem;
-    color: white;
-    text-align: center;
-    align-self: center;
-    display: inline;
-    position: absolute;
-
-  }
-
-
-  .hitpoint-guage-value-total {
-    
-    font-size: 30px;
-    color: -var(--text);
-    justify-self: center;
-    align-self: flex-end;
-    padding-bottom: 20px;
-    display: inline;
-    position: absolute;
-  }
-
-  .circle-hitpoints {
-    cx: 50%;
-    cy: 50%;
-    r: 50px;
-    fill: none;
-    stroke: #feeb78;
-    stroke-linecap: round;
-    stroke-width: 15px;
-    position: relative;
-    stroke-dasharray: 240;
-    stroke-dashoffset: 0;
-    transform: rotate(130deg);
-    transform-origin: center;
-  }
-
-  .circle-hitpoints-background {
-    cx: 50%;
-    cy: 50%;
-    r: 50px;
-    fill: none;
-    stroke-linecap: round;
-    stroke: #bf8200;
-    stroke-width: 15px;
-    position: relative;
-    stroke-dasharray: 240;
-    stroke-dashoffset: 0;
-    transform: rotate(130deg);
-    transform-origin: center;
-  }
+  }    
 
   .ac-guage-text,
   .xp-guage-value-total {
@@ -643,15 +575,79 @@ input[name="selected-specialty"] {
   }
   .ac-guage > svg,
   .xp-guage > svg {
-   transform: scale(.8);
+   transform: scale(.5) translateX(-15px) translateY(-5px);
    margin-top: 5px;
+   left: 5px;
+   overflow: unset;
    
   }
 
+  .hitpoints-guage {
+    width: 100%;
+    grid-row:2 / 2;
+    grid-column: 2 / 3;
+    display: flex;
+    grid-template-areas: "center";
+    justify-content: space-evenly;
+    transform: translateY(15px);
+  }
+
+  .hitpoint-guage-value-current {
+    width: auto;
+    font-size: 2.25rem;
+    color: white;
+    text-align: center;
+    align-self: center;
+    display: inline;
+    position: absolute;
+
+  }
+
+  .hitpoint-guage-value-total {    
+    font-size: 30px;
+    color: -var(--text);
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 20px;
+    display: inline;
+    position: absolute;
+  }
+
   .hitpoints-guage > svg {
-   transform: scale(.9);
-   margin-top: 5px;
-   
+    transform: scale(.5) translateX(-40px) translateY(-5px);
+    margin-top: 10px;   
+   overflow: unset;
+
+  }
+
+  .circle-hitpoints {
+    cx: 50%;
+    cy: 50%;
+    r: 50px;
+    fill: none;
+    stroke: #feeb78;
+    stroke-linecap: round;
+    stroke-width: 15px;
+    position: relative;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 0;
+    transform: rotate(130deg);
+    transform-origin: center;
+  }
+
+  .circle-hitpoints-background {
+    cx: 50%;
+    cy: 50%;
+    r: 50px;
+    fill: none;
+    stroke-linecap: round;
+    stroke: #bf8200;
+    stroke-width: 15px;
+    position: relative;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 0;
+    transform: rotate(130deg);
+    transform-origin: center;
   }
 
   #char-strength,
