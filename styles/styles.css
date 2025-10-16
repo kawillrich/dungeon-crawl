@@ -1050,12 +1050,12 @@ input[name="selected-specialty"] {
   }
 
   .quantity-change {
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     text-align: center;
     grid-template-columns: 100px 500px;
     border-radius: 50%;
- 
+    font-size: large;
   } 
 
   li.inventory-list-item {
