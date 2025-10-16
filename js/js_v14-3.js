@@ -276,27 +276,20 @@ let adventurerImage = 4;
 let charAchievements = {};
 let attributes = [];
 let supplies = [
-  torch,
-  backPack,
   holySymbol,
   holyWater,
   smallHammer,
   ironSpikes,
   garlic,
   grapplingHook,
-  lantern,
   mirrorHandSized,
   oil,
   poleWooden,
-  rationsIron,
-  rationsStandard,
   rope,
   sackSmall,
   sackLarge,
   stakesAndMallet,
   thievesTools,
-  tinderBox,
-  waterskin,
   wine,
   wolfsbane,
 ];
