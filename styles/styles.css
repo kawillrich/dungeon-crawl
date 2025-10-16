@@ -603,7 +603,7 @@ input[name="selected-specialty"] {
   .xp-guage-value-total {
     grid-column: 1 / 1;
     grid-row: 1 / 3;
-    font-size: 30px;
+    font-size: 1.5em;
     color: -var(--text);
     justify-self: center;
     align-self: flex-end;
