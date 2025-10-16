@@ -1054,21 +1054,16 @@ input[name="selected-specialty"] {
     height: 3em;
     text-align: center;
     grid-template-columns: 100px 500px;
+    border-radius: 50%;
  
   } 
-
-  .inventory-list-item {
-    display: block;
-    height: 1em;
-    margin: 10px 0px 0px 0px;
-  }
-
 
   li.inventory-list-item {
     font-size: 1.5em;
     display: block;
     height: 1.5em;
     width: 100%;
+    margin: 5px 0px;
   }
 
   li.current-item-qty {
@@ -1077,6 +1072,9 @@ input[name="selected-specialty"] {
     display: block;
     height: 1.5em;
     width: 1.5em;
+    text-align: center;
+    align-content: center;
+    margin: 5px 0px;
   }
 
   .input-list {
@@ -1598,7 +1596,9 @@ span#dragonwarrior {
   display: block;
 }
 
-
+  .inventory-item-tooltip {
+    padding-left: 5px;
+  }
 
 .armor-tooltiptext,
 .weapon-tooltiptext,

@@ -1780,14 +1780,12 @@ function showInventory() {
   window.scrollTo(0, 0);
 
   let totalItems = [
-    torch,    
     holySymbol,
     holyWater,
     smallHammer,
     ironSpikes,
     garlic,
     grapplingHook,
-    lantern,
     mirrorHandSized,
     oil,
     poleWooden,    
@@ -1796,7 +1794,6 @@ function showInventory() {
     sackLarge,
     stakesAndMallet,
     thievesTools,
-    tinderBox,
     wine,
     wolfsbane,
   ];
