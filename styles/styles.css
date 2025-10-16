@@ -891,9 +891,10 @@ input[name="selected-specialty"] {
     border: 0px solid var(--btn-bg);  
     align-items: center;
     justify-content: center;
-    justify-self: center;
+    justify-self: start;
     align-self: end;
-    grid-area: 5 / 1 / 5 / 1;
+    grid-area: 3 / 2 / 3 / 2;
+    margin-left: 15px;
   }
 
 #normal-equipment-link,
