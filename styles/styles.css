@@ -430,13 +430,13 @@ input[name="selected-specialty"] {
 
   .circle-xp-svg,
   .circle-ac-svg {
-    height: 125px;
-    width: 125px;
+    height:100%;
+    width: 100%;
   }
   
   .circle-hp-svg {
-    height: 125px;
-    width: 150px;
+    height: 100%;
+    width: 100%;
   }
 
   .char-info-module {
@@ -448,7 +448,6 @@ input[name="selected-specialty"] {
     
     column-gap: 10px;
     place-content: end space-between;
-    padding-bottom: 5px;
     
     
   }
@@ -575,10 +574,11 @@ input[name="selected-specialty"] {
   }
   .ac-guage > svg,
   .xp-guage > svg {
-   transform: scale(.5) translateX(-15px) translateY(-5px);
-   margin-top: 5px;
-   left: 5px;
-   overflow: unset;
+   /* transform: scale(.5) translateX(-15px) translateY(-5px); */
+    transform: scale(.5);
+    margin-top: 5px;
+    left: 5px;
+   /* overflow: unset; */
    
   }
 
@@ -614,9 +614,10 @@ input[name="selected-specialty"] {
   }
 
   .hitpoints-guage > svg {
-    transform: scale(.5) translateX(-40px) translateY(-5px);
+    /* transform: scale(.5) translateX(-40px) translateY(-5px); */
+    transform: scale(.5);
     margin-top: 10px;   
-   overflow: unset;
+    /* overflow: unset; */
 
   }
 
@@ -1320,10 +1321,10 @@ fieldset {
 
 
 
-.char-info-module {
+/* .char-info-module {
   padding-top: 0px;
   margin: 0px 0px 0px 0px;
-}
+} */
 
 .char-info-label {
   font-size: 1.25rem;
