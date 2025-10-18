@@ -560,6 +560,8 @@ input[name="selected-specialty"] {
     justify-self: center;
     align-self: flex-end;
     position: absolute;
+    transform: translateY(-12px);
+    
   }
 
   .circle-ac {
@@ -630,6 +632,8 @@ input[name="selected-specialty"] {
     align-self: flex-end;
     display: inline;
     position: absolute;
+    transform: translateY(-12px);
+
   }
 
   .hitpoints-guage > svg {
