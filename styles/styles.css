@@ -439,7 +439,7 @@ input[name="selected-specialty"] {
     width: 100%;
   }
 
-  .char-info-module {
+  fieldset.char-info-module {
     width: 100%;
     display: grid;
     grid-template-areas:  "emptySpace emptySpace"    
@@ -449,6 +449,10 @@ input[name="selected-specialty"] {
     column-gap: 10px;
     place-content: end space-between;
     height: 100%;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f1842;
     
   }
 
@@ -488,11 +492,15 @@ input[name="selected-specialty"] {
   }
 
 
-  .hitpoints-info-module-player {
+  fieldset.hitpoints-info-module-player {
     grid-row: 1 / 3;
     grid-column: 1 / 4;
     display: grid;
     margin: 0px 0px 0px 0px;
+    height: 70%;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f1842;
   }
 
   .ac-guage {
@@ -805,7 +813,16 @@ input[name="selected-specialty"] {
 
   fieldset.status-info-module-player {
     height: 100%;
-    
+    border: none;
+    border-radius: 5px;
+    background-color: #0f1842;
+    padding: auto;
+    display: grid;
+    grid-template-columns: 33px 33px 33px;
+    grid-template-rows: 34px 34px 34px 34px;
+    gap: 1px;
+    align-content: center;
+    margin: 0px 0px 0px 0px;
   }
 
   #character-saving-throws {
@@ -821,7 +838,11 @@ input[name="selected-specialty"] {
   
   fieldset.afflictions-info-module-player {
     height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f1842;
   }
+
   #hp-prog-bar {
     width: 70px;
   }
@@ -1315,29 +1336,11 @@ legend.afflictions-dashboard {
   background-color: var(--accent-green-200);
 }
 
-fieldset {
-  
-  padding: 0px 0px 0px 0px;
-  height: 75%;
-  border: none;
-  border-radius: 5px;
-  background-color: #0f1842;
-}
-
-
-
 #canvas2 {
   display: block;
   margin: 15% auto auto 10%;
  
 }
-
-
-
-/* .char-info-module {
-  padding-top: 0px;
-  margin: 0px 0px 0px 0px;
-} */
 
 .char-info-label {
   font-size: 1.25rem;
@@ -1379,17 +1382,6 @@ fieldset {
 
 #char-charisma {
   grid-area: 3 / 2 / span 1 / span 1;
-}
-
-.status-info-module-player {
-
-  padding: auto;
-  display: grid;
-  grid-template-columns: 33px 33px 33px;
-  grid-template-rows: 34px 34px 34px 34px;
-  gap: 1px;
-  align-content: center;
-  margin: 0px 0px 0px 0px;
 }
 
 .container-item {
