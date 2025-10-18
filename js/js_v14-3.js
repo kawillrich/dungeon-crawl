@@ -1143,7 +1143,7 @@ function startGame() {
   newStartGameDialogue.innerHTML = `
         <div id='character-stats'>
           <fieldset class='char-info-module'>
-            <legend class='player-dashboard'>Player Data</legend>
+            <legend class='player-dashboard'><i class="fa-solid fa-plus"></i>Player Data</legend>
             <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
 
             <h4 id='char-specialty' class='char-info-label'>Specialty: <span class="character-display-info">${
@@ -1180,7 +1180,7 @@ function startGame() {
 
         <div id='character-attributes'>
           <fieldset class='char-info-module-attributes'>
-              <legend class='player-dashboard'>Attributes</legend>
+              <legend class='player-dashboard'><i class="fa-solid fa-plus"></i>Attributes</legend>
               <h4 id='char-strength' class='char-info-label'>
                 <span class='character-display-attributes-str'>${finalCharacter.attributes[0].name.slice(
                   0,
@@ -1298,13 +1298,13 @@ function startGame() {
             <img class="container-item protection-from-missiles-status hide-status"></img>
             <img class="container-item hide-status"></img>
             <img class="container-item hide-status"></img>
-            <legend class="statuses-dashboard">Statuses</legend>              
+            <legend class="statuses-dashboard"><i class="fa-solid fa-plus">Statuses</legend>              
           </fieldset>
         </div>
 
         <div id="character-saving-throws">
           <fieldset class = "saves-info-module-player">
-            <legend class="saves-dashboard">Saves</legend>
+            <legend class="saves-dashboard"><i class="fa-solid fa-plus"></i>Saves</legend>
               <h4  id= "saving-throw-poison" class="saving-throws">Poison or Death Ray: <span class="saving-throw-score">${
                 finalCharacter.specialty.characterLevel.level.savingThrows[
                   "Poison or Death Ray"
@@ -1337,7 +1337,7 @@ function startGame() {
       
        <div id="character-afflictions">
           <fieldset class = "afflictions-info-module-player">
-            <legend class="afflictions-dashboard">Afflictions</legend>
+            <legend class="afflictions-dashboard"><i class="fa-solid fa-plus"></i>Afflictions</legend>
             
             </fieldset>
         </div>
