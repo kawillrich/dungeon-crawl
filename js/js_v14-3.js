@@ -1141,14 +1141,16 @@ function startGame() {
   newStartGameDialogue.style.backgroundImage = "none";
 
   newStartGameDialogue.innerHTML = `
-        <div id='character-stats'>
-          <fieldset class='char-info-module'>
-            <legend class='player-dashboard'><i class="fa-solid fa-plus"></i>Player Data</legend>
+        <details id='character-stats'>
+          <summary class="character-stats-summary"><i class="fa-solid fa-plus"></i>Player Data</summary>
+          <div class='char-info-module'>            
+            
             <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
-
+            
             <h4 id='char-specialty' class='char-info-label'>Specialty: <span class="character-display-info">${
               finalCharacter.specialty.name
             }</span></h4>
+            
             <h4 id='char-level' class='char-info-label'>Level: <span class="character-display-info">${
               finalCharacter.specialty.characterLevel.level.level
             }</span></h4>             
@@ -1174,9 +1176,8 @@ function startGame() {
                 }</span>
               </span>
             </h4>                
-              
-          </fieldset>
-        </div>
+          </div>
+        </details>
 
         <div id='character-attributes'>
           <fieldset class='char-info-module-attributes'>

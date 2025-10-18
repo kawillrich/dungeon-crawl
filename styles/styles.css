@@ -439,7 +439,7 @@ input[name="selected-specialty"] {
     width: 100%;
   }
 
-  fieldset.char-info-module {
+  div.char-info-module {
     width: 100%;
     display: grid;
     grid-template-areas:  "emptySpace emptySpace"    
@@ -452,7 +452,7 @@ input[name="selected-specialty"] {
     padding-bottom: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #0f1842;
+    background-color: var(--bg-200);
             top: -5px;
         position: relative;
     
@@ -798,7 +798,45 @@ input[name="selected-specialty"] {
     grid-area: 2 / 1 / 3 / 4;
   }
 
-  
+  #character-stats {
+    /* background-color: var(--bg-200); */
+  }
+
+ summary.character-stats-summary {
+    height: 25%;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    position: relative;
+    background-color: var(--accent-green-200);
+    color: var(--primary);
+    text-align: center;
+  }
+
+  /* summary.character-stats-summary > span {
+    height: 100%;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    top: -5px;
+    position: relative;
+    background-color: var(--accent-green-200);
+
+  } */
+
+summary.character-stats-summary::marker {
+  content: "";
+}
+
+  /* summary.character-stats-summary > span > i {
+     height: 100%;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    position: relative;
+    background-color: var(--accent-green-200);
+    
+
+  } */
 
   #character-canvas {
     display: none;
@@ -857,8 +895,8 @@ input[name="selected-specialty"] {
     border: none;
     border-radius: 5px;
     background-color: #0f1842;
-            top: -5px;
-        position: relative;
+    top: -5px;
+    position: relative;
   }
 
   #hp-prog-bar {
