@@ -453,6 +453,8 @@ input[name="selected-specialty"] {
     border: none;
     border-radius: 5px;
     background-color: #0f1842;
+            top: -5px;
+        position: relative;
     
   }
 
@@ -501,6 +503,8 @@ input[name="selected-specialty"] {
     border: none;
     border-radius: 5px;
     background-color: #0f1842;
+            top: -5px;
+        position: relative;
   }
 
   .ac-guage {
@@ -549,7 +553,6 @@ input[name="selected-specialty"] {
     color: -var(--text);
     justify-self: center;
     align-self: flex-end;
-    padding-bottom: 20px;
     position: absolute;
   }
 
@@ -619,7 +622,6 @@ input[name="selected-specialty"] {
     color: -var(--text);
     justify-self: center;
     align-self: flex-end;
-    padding-bottom: 20px;
     display: inline;
     position: absolute;
   }
@@ -823,6 +825,8 @@ input[name="selected-specialty"] {
     gap: 1px;
     align-content: center;
     margin: 0px 0px 0px 0px;
+            top: -5px;
+        position: relative;
   }
 
   #character-saving-throws {
@@ -841,6 +845,8 @@ input[name="selected-specialty"] {
     border: none;
     border-radius: 5px;
     background-color: #0f1842;
+            top: -5px;
+        position: relative;
   }
 
   #hp-prog-bar {
