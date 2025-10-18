@@ -442,7 +442,7 @@ input[name="selected-specialty"] {
   .char-info-module {
     width: 100%;
     display: grid;
-    grid-template-areas:  "empty empty"    
+    grid-template-areas:  "emptySpace emptySpace"    
                           "level specialty"
                           "weapon armor";
     
@@ -453,8 +453,8 @@ input[name="selected-specialty"] {
   }
 
   #char-name {
-    display: none;
-    grid-area: empty;
+    visibility: hidden;
+    grid-area: emptySpace;
   }
 
   #char-armor {
@@ -1341,6 +1341,8 @@ fieldset {
 
 .char-info-label {
   font-size: 1.25rem;
+  height: 100%;
+  
 }
 
 .char-info-module-attributes {

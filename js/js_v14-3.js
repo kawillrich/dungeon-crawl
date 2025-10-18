@@ -1144,7 +1144,6 @@ function startGame() {
         <div id='character-stats'>
           <fieldset class='char-info-module'>
             <legend class='player-dashboard'>Player Data</legend>
-            <br class='char-info-label'>
             <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
 
             <h4 id='char-specialty' class='char-info-label'>Specialty: <span class="character-display-info">${
