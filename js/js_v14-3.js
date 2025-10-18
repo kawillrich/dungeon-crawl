@@ -1350,7 +1350,7 @@ function startGame() {
         </div>
 
         <div id="character-hitpoints">
-          <fieldset class = "hitpoints-info-module-player hp-grid-container">
+          <fieldset class = "hitpoints-info-module-player">
             <legend class="hitpoints-dashboard">Hitpoints</legend>
               </fieldset>
             <div class="ac-guage">
