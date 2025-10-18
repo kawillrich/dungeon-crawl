@@ -948,7 +948,7 @@ function confirmingAttributes() {
   confirmAttributes.remove();
   submitNameButton.remove();
 
-  let chapterHeading = document.createElement("p");
+  let chapterHeading = document.createElement("div");
   chapterHeading.setAttribute('id', 'chapter-heading');
   chapterHeading.textContent = "Obsidian Dragon | Chapter 1";
   let containerHeader = document.getElementById("container");
