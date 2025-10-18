@@ -505,10 +505,13 @@ input[name="selected-specialty"] {
         position: relative;
   }
 
-  legend.hitpionts-dashboard::before {
-    content: "";
+  .fa-solid.fa-plus {
+    color: var(--bg-300);
+    position: relative;
+    float: left;
     
   }
+
 
   .ac-guage {
     width: 100%;
