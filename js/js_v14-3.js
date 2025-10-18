@@ -1298,7 +1298,7 @@ function startGame() {
             <img class="container-item protection-from-missiles-status hide-status"></img>
             <img class="container-item hide-status"></img>
             <img class="container-item hide-status"></img>
-            <legend class="statuses-dashboard"><i class="fa-solid fa-plus">Statuses</legend>              
+            <legend class="statuses-dashboard"><i class="fa-solid fa-plus"></i>Statuses</legend>              
           </fieldset>
         </div>
 
