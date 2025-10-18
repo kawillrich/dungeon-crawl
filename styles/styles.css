@@ -549,6 +549,8 @@ input[name="selected-specialty"] {
     text-align: center;
     align-self: center;
     position: absolute;
+    transform: translateY(3px); 
+
   }    
 
   .ac-guage-text,
@@ -622,7 +624,7 @@ input[name="selected-specialty"] {
     align-self: center;
     display: inline;
     position: absolute;
-
+    transform: translateY(7px); 
   }
 
   .hitpoint-guage-value-total {    
