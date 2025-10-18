@@ -488,7 +488,6 @@ input[name="selected-specialty"] {
 
   #character-hitpoints {
     display: grid;
-    grid-template-areas: "ac hp xp";
     grid-column: 1 / 3;
     grid-row: 1 / 1;
   }
