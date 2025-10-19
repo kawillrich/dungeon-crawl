@@ -644,17 +644,17 @@ input[name="selected-specialty"] {
   .hitpoint-guage-value-total {    
     width: auto;
     height: auto;
-    font-size: 2.25em;
+    font-size: 1.5em;
     color: -var(--text);
     display: inline;
     position: absolute;
     justify-self: anchor-center;
-    transform: translateY(45px);
+    transform: translateY(50px);
 
   }
 
   .hitpoints-guage > svg {
-    transform: scale(.5) translateY(-60px);
+    transform: scale(.65) translateY(-42px);
     margin-top: 10px;   
     height: 185%;
 
@@ -686,7 +686,7 @@ input[name="selected-specialty"] {
     position: relative;
     stroke-dasharray: 240;
     stroke-dashoffset: 0;
-    transform: rotate(130deg);
+    transform: rotate(133deg);
     transform-origin: center;
   }
 
