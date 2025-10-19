@@ -556,9 +556,9 @@ input[name="selected-specialty"] {
     grid-template-columns: 1 / 2;
     grid-template-rows: 1 / 1;
     justify-content: space-evenly;
-    padding-top: 10px;
-    transform: translateY(-40px);
-    height: 210%;
+    /* padding-top: 10px; */
+    /* transform: translateY(-40px); */
+    height: auto;
   } 
   
   .xp-guage {
@@ -569,9 +569,9 @@ input[name="selected-specialty"] {
     grid-template-columns: 3 / 4;
     grid-template-rows: 1 / 1;
     justify-content: space-evenly;
-    padding-top: 10px;
-    transform: translateY(-40px);
-    height: 210%;
+    /* padding-top: 10px; */
+    /* transform: translateY(-40px); */
+    height: auto;
   }
 
   .xp-guage-value-current,
@@ -632,10 +632,10 @@ input[name="selected-specialty"] {
   .ac-guage > svg,
   .xp-guage > svg {
    /* transform: scale(.5) translateX(-15px) translateY(-5px); */
-    transform: scale(.5);
+    transform: scale(.5) translateY(-50px);
     margin-top: 5px;
     left: 5px;
-    
+    height: 185%;
    /* overflow: unset; */
    
   }
@@ -647,8 +647,8 @@ input[name="selected-specialty"] {
     display: flex;
     grid-template-areas: "center";
     justify-content: space-evenly;
-    transform: translateY(-40px);
-    height: 210%;
+    /* transform: translateY(-40px); */
+    height: auto;
   }
 
   .hitpoint-guage-value-current {
@@ -675,8 +675,9 @@ input[name="selected-specialty"] {
 
   .hitpoints-guage > svg {
     /* transform: scale(.5) translateX(-40px) translateY(-5px); */
-    transform: scale(.5);
+    transform: scale(.5) translateY(-60px);
     margin-top: 10px;   
+    height: 185%;
     /* overflow: unset; */
 
   }
@@ -884,6 +885,7 @@ input[name="selected-specialty"] {
   }  
 
   details[open] {
+    height: 6em;
     summary.character-statuses-summary,
     summary.character-stats-summary,
     summary.character-afflictions-summary,
