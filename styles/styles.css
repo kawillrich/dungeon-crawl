@@ -483,15 +483,17 @@ input[name="selected-specialty"] {
 
     div.char-guage-module {
     width: 100%;
-    display: grid;   
-    column-gap: 10px;
+    display: flex;   
     place-content: end space-between;
-    height: 100%;
+    height: 70px;
     padding-bottom: 5px;
     border: none;
     border-radius: 5px;
     background-color: var(--bg-200);
-    position: relative;    
+    position: relative; 
+    grid-auto-rows: minmax(100px, 100px);
+    grid-template-rows: 70px;
+    
   }
   
   #char-name {
@@ -555,8 +557,8 @@ input[name="selected-specialty"] {
     grid-template-rows: 1 / 1;
     justify-content: space-evenly;
     padding-top: 10px;
-    /* transform: translateY(15px); */
-    height: 75%;
+    transform: translateY(-40px);
+    height: 210%;
   } 
   
   .xp-guage {
@@ -568,8 +570,8 @@ input[name="selected-specialty"] {
     grid-template-rows: 1 / 1;
     justify-content: space-evenly;
     padding-top: 10px;
-    /* transform: translateY(15px); */
-    height: 75%;
+    transform: translateY(-40px);
+    height: 210%;
   }
 
   .xp-guage-value-current,
@@ -633,6 +635,7 @@ input[name="selected-specialty"] {
     transform: scale(.5);
     margin-top: 5px;
     left: 5px;
+    
    /* overflow: unset; */
    
   }
@@ -644,8 +647,8 @@ input[name="selected-specialty"] {
     display: flex;
     grid-template-areas: "center";
     justify-content: space-evenly;
-    /* transform: translateY(15px); */
-    height: 75%;
+    transform: translateY(-40px);
+    height: 210%;
   }
 
   .hitpoint-guage-value-current {
