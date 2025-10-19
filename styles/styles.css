@@ -539,7 +539,7 @@ input[name="selected-specialty"] {
     position: relative;
     grid-template-columns: 1 / 2;
     grid-template-rows: 1 / 1;
-    justify-content: space-evenly;
+    justify-content: center;
     height: auto;
   } 
   
@@ -574,10 +574,15 @@ input[name="selected-specialty"] {
     height: auto;
     font-size: 1.5em;
     color: -var(--text);   
-    position: absolute;   
-    transform: translateX(58px) translateY(2px);
+    position: relative;   
+    transform: translateY(60px) translateX(5px);
+
+
+
     justify-self: center;
     align-self: center;
+    margin: auto;
+    /* display: inline; */
   }
 
   .circle-ac {
@@ -626,12 +631,12 @@ input[name="selected-specialty"] {
   }
   .ac-guage > svg,
   .xp-guage > svg {
-    transform: scale(.5) translateY(-63px);
+    transform: scale(.5) translateY(-93px);
     margin-top: 5px;
     left: 5px;
     height: 185%;
     width: 106%;
-   
+    
   }
 
   .hitpoints-guage {
