@@ -926,6 +926,15 @@ input[name="selected-specialty"] {
     list-style: none;
   }
 
+  summary.character-stats-summary::webkit-details-marker,
+  summary.character-statuses-summary::webkit-details-marker,
+  summary.character-afflictions-summary::webkit-details-marker,
+  summary.character-hitpoints-summary::webkit-details-marker {
+    content: "";
+    display: none;
+    list-style: none;
+  }
+
   #character-hitpoints {
     grid-area: 1 / 1 / 1 / 3;
   }
