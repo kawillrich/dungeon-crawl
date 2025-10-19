@@ -637,7 +637,7 @@ input[name="selected-specialty"] {
     display: inline;
     position: absolute;
     justify-self: anchor-center;
-    transform: translateY(17px);
+    transform: translateY(20px);
     
   }
 
