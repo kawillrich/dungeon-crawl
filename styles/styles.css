@@ -564,7 +564,7 @@ input[name="selected-specialty"] {
     text-align: center;
     align-self: center;
     position: absolute;
-    transform: translateX(50px) translateY(-25px); 
+    transform: translateX(50px) translateY(-30px); 
 
   }    
 
@@ -575,7 +575,7 @@ input[name="selected-specialty"] {
     font-size: 1.5em;
     color: -var(--text);   
     position: absolute;   
-    transform: translateX(58px);
+    transform: translateX(58px) translateY(2px);
     justify-self: center;
     align-self: center;
   }
@@ -611,7 +611,7 @@ input[name="selected-specialty"] {
   }
   .ac-guage > svg,
   .xp-guage > svg {
-    transform: scale(.5) translateY(-50px);
+    transform: scale(.5) translateY(-63px);
     margin-top: 5px;
     left: 5px;
     height: 185%;
