@@ -595,6 +595,21 @@ input[name="selected-specialty"] {
     transform-origin: center;
   }
 
+  .circle-xp {
+    cx: 50%;
+    cy: 50%;
+    r: 50px;
+    fill: none;
+    stroke: #ceafed;
+    stroke-linecap: round;
+    stroke-width: 15px;
+    position: relative;
+    stroke-dasharray: 165;
+    stroke-dashoffset: 0;
+    transform: rotate(var(--imageRotate));
+    transform-origin: center;
+  }
+
   .circle-xp-background {
     cx: 50%;
     cy: 50%;
