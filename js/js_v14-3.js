@@ -1142,7 +1142,7 @@ function startGame() {
 
   newStartGameDialogue.innerHTML = `
         <details id='character-stats' name="character-detail-sets">
-          <summary class="character-stats-summary"><i class="fa-solid fa-plus"></i>Player Data</summary>
+          <summary class="character-stats-summary"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i><span>Player Data</span></summary>
           <div class='char-stats-module'>            
             
             <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
@@ -1336,7 +1336,7 @@ function startGame() {
         </details>
       
         <details id="character-afflictions" name="character-detail-sets">
-          <summary class="character-afflictions-summary"><i class="fa-solid fa-plus"></i>Afflictions</summary>
+          <summary class="character-afflictions-summary"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i><span>Afflictions</span></summary>
           <div class = "char-afflictions-module">  
           </div>
         </details>
@@ -1349,7 +1349,7 @@ function startGame() {
         </div>
 
         <details id="character-hitpoints" name="character-detail-sets">
-          <summary class="character-hitpoints-summary"><i class="fa-solid fa-plus"></i>Player Stats</summary>
+          <summary class="character-hitpoints-summary"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i><span>PLayer Stats</span></summary>
             <div class='char-guage-module'>
               <div class="ac-guage">
                 <div class="ac-guage-value">${
