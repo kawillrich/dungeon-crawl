@@ -439,13 +439,12 @@ input[name="selected-specialty"] {
     width: 100%;
   }
 
-  div.char-info-module {
+  div.char-stats-module {
     width: 100%;
     display: grid;
     grid-template-areas:  "emptySpace emptySpace"    
                           "level specialty"
-                          "weapon armor";
-    
+                          "weapon armor";    
     column-gap: 10px;
     place-content: end space-between;
     height: 100%;
@@ -453,11 +452,48 @@ input[name="selected-specialty"] {
     border: none;
     border-radius: 5px;
     background-color: var(--bg-200);
-            top: -5px;
-        position: relative;
-    
+    position: relative;    
   }
 
+    div.char-statuses-module {
+    width: 100%;
+    display: grid;    
+    column-gap: 10px;
+    place-content: end space-between;
+    height: 100%;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    position: relative;    
+  }
+
+    div.char-afflictions-module {
+    width: 100%;
+    display: grid; 
+    column-gap: 10px;
+    place-content: end space-between;
+    height: 100%;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    position: relative;    
+  }
+
+    div.char-guage-module {
+    width: 100%;
+    display: grid;   
+    column-gap: 10px;
+    place-content: end space-between;
+    height: 100%;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    position: relative;    
+  }
+  
   #char-name {
     visibility: hidden;
     grid-area: emptySpace;
@@ -486,13 +522,10 @@ input[name="selected-specialty"] {
 
   }
 
-  #character-hitpoints {
-    display: grid;
-    grid-column: 1 / 3;
-  }
 
 
-  fieldset.hitpoints-info-module-player {
+
+  /* fieldset.hitpoints-info-module-player {
     grid-row: 1 / 3;
     grid-column: 1 / 4;
     display: grid;
@@ -503,7 +536,7 @@ input[name="selected-specialty"] {
     background-color: #0f1842;
             top: -5px;
         position: relative;
-  }
+  } */
 
   .fa-solid.fa-plus {
     color: var(--bg-300);
@@ -802,7 +835,10 @@ input[name="selected-specialty"] {
     /* background-color: var(--bg-200); */
   }
 
- summary.character-stats-summary {
+ details[open] > summary.character-stats-summary,
+ details[open] > summary.character-statuses-summary,
+ details[open] > summary.character-afflictions-summary,
+ details[open] > summary.character-hitpoints-summary {
     height: 25%;
     border: none;
     border-radius: 0px 5px 5px 0px;
@@ -814,29 +850,45 @@ input[name="selected-specialty"] {
     text-align: center;
   }
 
-  /* summary.character-stats-summary > span {
-    height: 100%;
+  summary.character-stats-summary,
+  summary.character-statuses-summary,
+  summary.character-afflictions-summary,
+  summary.character-hitpoints-summary {
+    height: 25%;
     border: none;
     border-radius: 0px 5px 5px 0px;
-    top: -5px;
+    border-radius: 5px;
+    font-size: 1.5em;
     position: relative;
     background-color: var(--accent-green-200);
+    color: var(--primary);
+    text-align: center;
+  }
 
-  } */
+  summary.character-stats-summary::marker,
+  summary.character-statuses-summary::marker,
+  summary.character-afflictions-summary::marker,
+  summary.character-hitpoints-summary::marker {
+    content: "";
+  }
 
-summary.character-stats-summary::marker {
-  content: "";
-}
+  #character-hitpoints {
+    grid-area: 1 / 1 / 1 / 3;
+  }
 
-  /* summary.character-stats-summary > span > i {
-     height: 100%;
-    border: none;
-    border-radius: 5px 0px 0px 5px;
-    position: relative;
-    background-color: var(--accent-green-200);
-    
+  #character-stats {
+    grid-area: 2 / 1 / 2 / 3;
+  }
 
-  } */
+  #character-statuses {
+    grid-area: 3 / 1 / 3 / 2;
+  }
+
+  #character-afflictions {
+    grid-area: 3 / 2 / 3 / 3;
+  }
+
+  
 
   #character-canvas {
     display: none;
@@ -863,7 +915,7 @@ summary.character-stats-summary::marker {
     height: 100%;
   }
 
-  fieldset.status-info-module-player {
+  /* fieldset.status-info-module-player {
     height: 100%;
     border: none;
     border-radius: 5px;
@@ -877,7 +929,7 @@ summary.character-stats-summary::marker {
     margin: 0px 0px 0px 0px;
             top: -5px;
         position: relative;
-  }
+  } */
 
   #character-saving-throws {
     display: none;
@@ -890,14 +942,14 @@ summary.character-stats-summary::marker {
     height: 100%;
   }
   
-  fieldset.afflictions-info-module-player {
+  /* fieldset.afflictions-info-module-player {
     height: 100%;
     border: none;
     border-radius: 5px;
     background-color: #0f1842;
     top: -5px;
     position: relative;
-  }
+  } */
 
   #hp-prog-bar {
     width: 70px;

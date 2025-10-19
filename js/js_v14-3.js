@@ -1141,9 +1141,9 @@ function startGame() {
   newStartGameDialogue.style.backgroundImage = "none";
 
   newStartGameDialogue.innerHTML = `
-        <details id='character-stats'>
+        <details id='character-stats' name="character-detail-sets">
           <summary class="character-stats-summary"><i class="fa-solid fa-plus"></i>Player Data</summary>
-          <div class='char-info-module'>            
+          <div class='char-stats-module'>            
             
             <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
             
@@ -1181,7 +1181,7 @@ function startGame() {
 
         <div id='character-attributes'>
           <fieldset class='char-info-module-attributes'>
-              <legend class='player-dashboard'><i class="fa-solid fa-plus"></i>Attributes</legend>
+            <div class="char-attribute-module">
               <h4 id='char-strength' class='char-info-label'>
                 <span class='character-display-attributes-str'>${finalCharacter.attributes[0].name.slice(
                   0,
@@ -1275,6 +1275,7 @@ function startGame() {
                 
                 </svg>
               </h4>
+            </div>
           </fieldset>
         </div>        
         
@@ -1285,8 +1286,9 @@ function startGame() {
           </fieldset>
         </div>
 
-        <div id="character-statuses">
-          <fieldset class = "status-info-module-player">
+        <details id="character-statuses" name="character-detail-sets">
+          <summary class="character-statuses-summary"><i class="fa-solid fa-plus"></i>Statuses</summary>
+          <div class = "char-statuses-module">
             <img class="container-item protection-from-evil-status hide-status"></img>
             <img class="container-item shield-status hide-status"></img>
             <img class="container-item invisibility-status hide-status"></img>
@@ -1299,13 +1301,12 @@ function startGame() {
             <img class="container-item protection-from-missiles-status hide-status"></img>
             <img class="container-item hide-status"></img>
             <img class="container-item hide-status"></img>
-            <legend class="statuses-dashboard"><i class="fa-solid fa-plus"></i>Statuses</legend>              
-          </fieldset>
-        </div>
+          </div>
+        </details>
 
-        <div id="character-saving-throws">
-          <fieldset class = "saves-info-module-player">
-            <legend class="saves-dashboard"><i class="fa-solid fa-plus"></i>Saves</legend>
+        <details id="character-saving-throws" name="character-detail-sets">
+          <summary class="character-saves-summary"><i class="fa-solid fa-plus"></i>Statuses</summary>
+            <div class = "char-saves-module">
               <h4  id= "saving-throw-poison" class="saving-throws">Poison or Death Ray: <span class="saving-throw-score">${
                 finalCharacter.specialty.characterLevel.level.savingThrows[
                   "Poison or Death Ray"
@@ -1331,17 +1332,14 @@ function startGame() {
                   "Spells or Magic Staff"
                 ]
               }</span></h4>
-          </fieldset>
-        </div>
-
-      </div>        
+            </div>
+        </details>
       
-       <div id="character-afflictions">
-          <fieldset class = "afflictions-info-module-player">
-            <legend class="afflictions-dashboard"><i class="fa-solid fa-plus"></i>Afflictions</legend>
-            
-            </fieldset>
-        </div>
+        <details id="character-afflictions" name="character-detail-sets">
+          <summary class="character-afflictions-summary"><i class="fa-solid fa-plus"></i>Afflictions</summary>
+          <div class = "char-afflictions-module">  
+          </div>
+        </details>
 
         <div id="character-menu">
           <fieldset class = "menu-info-module-player">
@@ -1350,70 +1348,68 @@ function startGame() {
             </fieldset>
         </div>
 
-        <div id="character-hitpoints">
-          <fieldset class = "hitpoints-info-module-player">
-            <legend class="hitpoints-dashboard"><i class="fa-solid fa-plus"></i>Player Stats</legend>
-            
-              </fieldset>
-            <div class="ac-guage">
-              <div class="ac-guage-value">${
-                finalCharacter.armorClass -
-                finalCharacter.attributes[3].adjustment
-              } 
-              </div>  
+        <details id="character-hitpoints" name="character-detail-sets">
+          <summary class="character-hitpoints-summary"><i class="fa-solid fa-plus"></i>Player Stats</summary>
+            <div class='char-guage-module'>
+              <div class="ac-guage">
+                <div class="ac-guage-value">${
+                  finalCharacter.armorClass -
+                  finalCharacter.attributes[3].adjustment
+                } 
+                </div>  
+                
+                <div class="ac-guage-text">AC
+                </div>
               
-              <div class="ac-guage-text">AC
+                <svg class="circle-ac-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
+                  <circle class="circle-ac-background"/>
+                  <circle class="circle-ac"/>
+                </svg>
               </div>
-            
-              <svg class="circle-ac-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
-                <circle class="circle-ac-background"/>
-                <circle class="circle-ac"/>
-              </svg>
-            </div>
 
-            <div class="hitpoints-guage">
-              <div class="hitpoint-guage-value-current">
-                ${
+              <div class="hitpoints-guage">
+                <div class="hitpoint-guage-value-current">
+                  ${
+                    finalCharacter.specialty.healthPoints +
+                      finalCharacter.attributes[4].adjustment <=
+                    0
+                      ? 0
+                      : finalCharacter.specialty.healthPoints +
+                        finalCharacter.attributes[4].adjustment
+                  }
+                
+
+                </div>  
+                <div class="hitpoint-guage-value-total">${
                   finalCharacter.specialty.healthPoints +
                     finalCharacter.attributes[4].adjustment <=
                   0
                     ? 0
                     : finalCharacter.specialty.healthPoints +
                       finalCharacter.attributes[4].adjustment
-                }
-              
+                }</div>                            
 
-              </div>  
-              <div class="hitpoint-guage-value-total">${
-                finalCharacter.specialty.healthPoints +
-                  finalCharacter.attributes[4].adjustment <=
-                0
-                  ? 0
-                  : finalCharacter.specialty.healthPoints +
-                    finalCharacter.attributes[4].adjustment
-              }</div>                            
-
-              
-              <svg  class="circle-hp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
-                <circle class="circle-hitpoints-background"/>
-                <circle class="circle-hitpoints"/>
-              </svg>
-            </div>
-
-            <div class="xp-guage">
-              <div class="xp-guage-value-current">${
-                finalCharacter.specialty.characterExperience
-              }</div>  
-                <div class="xp-guage-value-total">${
-                  finalCharacter.specialty.characterLevel.level.maxXP
-                }</div>
-                <svg class="circle-xp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
-                  <circle class="circle-xp-background"/>
-                  <circle class="circle-xp"/>
+                
+                <svg  class="circle-hp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
+                  <circle class="circle-hitpoints-background"/>
+                  <circle class="circle-hitpoints"/>
                 </svg>
-            </div>            
-          
-        </div>
+              </div>
+
+              <div class="xp-guage">
+                <div class="xp-guage-value-current">${
+                  finalCharacter.specialty.characterExperience
+                }</div>  
+                  <div class="xp-guage-value-total">${
+                    finalCharacter.specialty.characterLevel.level.maxXP
+                  }</div>
+                  <svg class="circle-xp-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">                  
+                    <circle class="circle-xp-background"/>
+                    <circle class="circle-xp"/>
+                  </svg>
+              </div>            
+            </div>
+        </details>
         `;
   console.log(finalCharacter);
   
