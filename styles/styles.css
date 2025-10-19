@@ -922,6 +922,7 @@ input[name="selected-specialty"] {
   summary.character-afflictions-summary::marker,
   summary.character-hitpoints-summary::marker {
     content: "";
+    display: none;
   }
 
   #character-hitpoints {
