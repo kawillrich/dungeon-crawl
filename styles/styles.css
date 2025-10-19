@@ -575,7 +575,7 @@ input[name="selected-specialty"] {
     font-size: 1.5em;
     color: -var(--text);   
     position: relative;   
-    transform: translateY(60px) translateX(5px);
+    transform: translateY(52px) translateX(5px);
 
 
 
@@ -631,7 +631,7 @@ input[name="selected-specialty"] {
   }
   .ac-guage > svg,
   .xp-guage > svg {
-    transform: scale(.5) translateY(-93px);
+    transform: scale(.5) translateY(-107px);
     margin-top: 5px;
     left: 5px;
     height: 185%;
