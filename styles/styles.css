@@ -863,10 +863,6 @@ input[name="selected-specialty"] {
     list-style: none;
   }
 
-   details > summary {
-    display: none;
-  }
-
   details[open] > summary.character-stats-summary,
   details[open] > summary.character-statuses-summary,
   details[open] > summary.character-afflictions-summary,
