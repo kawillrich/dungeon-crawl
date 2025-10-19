@@ -859,6 +859,14 @@ input[name="selected-specialty"] {
     text-align: center;
   }
 
+  details > summary {
+    list-style: none;
+  }
+
+   details > summary {
+    display: none;
+  }
+
   details[open] > summary.character-stats-summary,
   details[open] > summary.character-statuses-summary,
   details[open] > summary.character-afflictions-summary,
