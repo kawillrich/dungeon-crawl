@@ -1348,8 +1348,8 @@ function startGame() {
             </fieldset>
         </div>
 
-        <details id="character-hitpoints" name="character-detail-sets">
-          <summary class="character-hitpoints-summary"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i><span>PLayer Stats</span></summary>
+        <div id="character-hitpoints" name="character-detail-sets">
+          <div class="character-hitpoints-summary"><span>Player Stats</span></div>
             <div class='char-guage-module'>
               <div class="ac-guage">
                 <div class="ac-guage-value">${
@@ -1409,7 +1409,7 @@ function startGame() {
                   </svg>
               </div>            
             </div>
-        </details>
+        </div>
         `;
   console.log(finalCharacter);
   
