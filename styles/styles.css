@@ -923,6 +923,7 @@ input[name="selected-specialty"] {
   summary.character-hitpoints-summary::marker {
     content: "";
     display: none;
+    list-style: none;
   }
 
   #character-hitpoints {
