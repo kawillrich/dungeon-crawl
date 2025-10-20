@@ -583,11 +583,11 @@ input[name="selected-specialty"] {
     height: auto;
     font-size: 2.25rem;
     color: white;
+    position: relative;
+    transform: translateY(22px); 
     text-align: center;
     align-self: center;
-    position: relative;
     margin: auto;
-    transform: translateY(22px); 
   }    
 
   .xp-guage-value-total,
@@ -598,7 +598,7 @@ input[name="selected-specialty"] {
     color: -var(--text);   
     position: relative;   
     transform: translateY(22px);
-    justify-self: center;
+    text-align: center;
     align-self: center;
     margin: auto;
     /* display: inline; */
