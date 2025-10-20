@@ -853,15 +853,14 @@ input[name="selected-specialty"] {
   }
 
   #character-info {
+    /* check startGame() for styling using jQuery*/
     margin: 0px auto 0px auto;
     display: grid;
     width: 98%;
     grid-auto-columns: 50%;
     gap: 8px 0px;
     grid-template-rows: 1fr 1fr 1fr;
-    /* grid-area: playerData1; */
     grid-area: 2 / 1 / 3 / 4;
-    /* left: -2px; */
     position: relative;
   }
 
