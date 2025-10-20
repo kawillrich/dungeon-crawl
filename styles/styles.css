@@ -563,9 +563,9 @@ input[name="selected-specialty"] {
     color: white;
     text-align: center;
     align-self: center;
-    position: absolute;
-    transform: translateX(50px) translateY(-30px); 
-
+    position: relative;
+    margin: auto;
+    transform: translateY(15px); 
   }    
 
   .xp-guage-value-total,
@@ -575,7 +575,7 @@ input[name="selected-specialty"] {
     font-size: 1.5em;
     color: -var(--text);   
     position: relative;   
-    transform: translateY(52px) translateX(5px);
+    transform: translateY(17px);
 
 
 
@@ -631,11 +631,15 @@ input[name="selected-specialty"] {
   }
   .ac-guage > svg,
   .xp-guage > svg {
-    transform: scale(.5) translateY(-107px);
-    margin-top: 5px;
-    left: 5px;
+    position: relative;
+    transform: scale(.5) translateY(-170px);
+    justify-self: center;
+    align-self: center;
+    /* margin: auto; */
+    /* margin-top: 5px; */
+    /* left: 5px; */
     height: 185%;
-    width: 106%;
+    width: 100%;
     
   }
 

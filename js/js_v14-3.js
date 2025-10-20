@@ -1142,7 +1142,7 @@ function startGame() {
 
   newStartGameDialogue.innerHTML = `
         <details id='character-stats' name="character-detail-sets">
-          <summary class="character-stats-summary"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i><span>Player Data</span></summary>
+          <summary class="character-stats-summary">Player Data<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
           <div class='char-stats-module'>            
             
             <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
@@ -1287,7 +1287,7 @@ function startGame() {
         </div>
 
         <details id="character-statuses" name="character-detail-sets">
-          <summary class="character-statuses-summary"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i><span>Statuses</span></summary>
+          <summary class="character-statuses-summary">Statuses<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
           <div class = "char-statuses-module">
             <img class="container-item protection-from-evil-status hide-status"></img>
             <img class="container-item shield-status hide-status"></img>
@@ -1305,7 +1305,7 @@ function startGame() {
         </details>
 
         <details id="character-saving-throws" name="character-detail-sets">
-          <summary class="character-saves-summary"><i class="fa-solid fa-plus"></i>Saves</summary>
+          <summary class="character-saves-summary">Saves<i class="fa-solid fa-plus"></i></summary>
             <div class = "char-saves-module">
               <h4  id= "saving-throw-poison" class="saving-throws">Poison or Death Ray: <span class="saving-throw-score">${
                 finalCharacter.specialty.characterLevel.level.savingThrows[
@@ -1336,7 +1336,7 @@ function startGame() {
         </details>
       
         <details id="character-afflictions" name="character-detail-sets">
-          <summary class="character-afflictions-summary"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i><span>Afflictions</span></summary>
+          <summary class="character-afflictions-summary">Afflictions<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
           <div class = "char-afflictions-module">  
           </div>
         </details>
