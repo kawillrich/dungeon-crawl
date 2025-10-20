@@ -392,8 +392,6 @@ input[name="selected-specialty"] {
   border: 10px solid transparent;
   left: 15px;
   top: -5px;
-  /* border-image-source: url(../images/gui/gui-buttons-player-attack.png); */
-  /* border-image-slice: 10 10; */
   background-color: rgb(205, 210, 245);
   cursor: url("../images/gui/cursor.png"), auto;
   border: 0.5rem outset var(--primary-200);
@@ -409,8 +407,6 @@ input[name="selected-specialty"] {
   border: 10px solid transparent;
   left: 15px;
   top: -5px;
-  /* border-image-source: url(../images/gui/gui-buttons-player-attack.png); */
-  /* border-image-slice: 10 10; */
   background-color: rgb(205, 210, 245);
   cursor: url("../images/gui/cursor.png"), auto;
   border: 0.5rem outset var(--primary-200);
