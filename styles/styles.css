@@ -690,7 +690,7 @@ input[name="selected-specialty"] {
     font-size: 1.5em;
     color: -var(--text);
     position: relative;
-    transform: translateY(57px);
+    transform: translateY(22px);
     text-align: center;
     align-self: center;
     margin: auto;
@@ -698,9 +698,16 @@ input[name="selected-specialty"] {
   }
 
   .hitpoints-guage > svg {
-    transform: scale(.65) translateY(-42px);
+    transform: scale(.65) translateY(-142px);
     margin-top: 10px;   
     height: 185%;
+
+   position: relative;
+    justify-self: center;
+    align-self: center;
+    /* margin: auto; */
+    /* margin-top: 5px; */
+    /* left: 5px; */
 
   }
 
