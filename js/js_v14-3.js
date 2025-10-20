@@ -1503,7 +1503,7 @@ function startGame() {
           <label for=  "fighter" class="class-label">Fighter</label>             
           
           <input type = "radio" class="class-radio" name="selected-specialty" value="mage" id="mage"/> 
-          <label for=  "mage" class="class-label">Magic-User</label>
+          <label for=  "mage" class="class-label">Mage</label>
           
           <input type = "radio" class="class-radio" name="selected-specialty" value="thief" id="thief"/> 
           <label for=  "thief" class="class-label">Thief</label>

@@ -371,13 +371,36 @@ input[name="selected-specialty"] {
   position: relative;
 }
 
-.alignment-label,
-.class-label {
+.alignment-label {
   display: inline-block;
 }
 
-.alignment-label::before,
+
+.class-label {
+  display: inline-block;
+  font-size: 1.5rem;
+  justify-self: center;
+  text-align: center;
+}
+
 .class-label::before {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  content: "";
+  border: 10px solid transparent;
+  left: 15px;
+  top: -5px;
+  /* border-image-source: url(../images/gui/gui-buttons-player-attack.png); */
+  /* border-image-slice: 10 10; */
+  background-color: rgb(205, 210, 245);
+  cursor: url("../images/gui/cursor.png"), auto;
+  border: 0.5rem outset var(--primary-200);
+  justify-self: center;
+}
+
+.alignment-label::before {
   display: block;
   position: relative;
   width: 20px;
