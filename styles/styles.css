@@ -862,6 +862,7 @@ input[name="selected-specialty"] {
     grid-template-rows: 1fr 1fr 1fr;
     grid-area: 2 / 1 / 3 / 4;
     position: relative;
+    z-index: 900;
   }
 
   #character-stats {
@@ -898,6 +899,8 @@ input[name="selected-specialty"] {
 
   details > summary {
     list-style: none;
+      z-index: 1000;
+
   }
 
   details[open] > summary.character-stats-summary,
