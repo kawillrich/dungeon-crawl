@@ -679,7 +679,9 @@ input[name="selected-specialty"] {
     text-align: center;
     display: inline;
     position: absolute;
-    justify-self: anchor-center;
+     text-align: center;
+    align-self: center;
+    margin: auto;
     transform: translateY(25px);
     
   }
@@ -691,7 +693,9 @@ input[name="selected-specialty"] {
     color: -var(--text);
     display: inline;
     position: absolute;
-    justify-self: anchor-center;
+     text-align: center;
+    align-self: center;
+    margin: auto;
     transform: translateY(57px);
 
   }
