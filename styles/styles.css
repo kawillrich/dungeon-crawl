@@ -497,7 +497,10 @@ input[name="selected-specialty"] {
   }
   
   #char-name {
-    visibility: hidden;
+    /* visibility: hidden; */
+    padding-right: 5px;
+    padding-left: 5px;
+    
     grid-area: emptySpace;
   }
 
@@ -576,9 +579,6 @@ input[name="selected-specialty"] {
     color: -var(--text);   
     position: relative;   
     transform: translateY(17px);
-
-
-
     justify-self: center;
     align-self: center;
     margin: auto;
