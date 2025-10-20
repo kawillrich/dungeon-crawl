@@ -743,8 +743,7 @@ function rollAttributes() {
   containerDiv.appendChild(welcomeMessage);
    
   welcomeMessage.innerHTML = `
-    <p>Welcome, ${submittedCharName}, please roll your Attribute Scores. The maximum score is 18 and the lowest score is 7.</p><br>    
-    <p>Select 'Confirm' when done.</p>`;
+    <p>Welcome, ${submittedCharName}, please roll your Attribute Scores. The maximum score is 18 and the lowest score is 7.</p>`;
 
   getCharName.innerHTML += `
         <div class="ability-score-grid-container">            
