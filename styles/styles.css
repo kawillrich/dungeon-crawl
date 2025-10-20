@@ -847,7 +847,7 @@ input[name="selected-specialty"] {
   #character-info {
     margin: 0px auto 0px auto;
     display: grid;
-    width: 89%;
+    width: 98%;
     grid-auto-columns: 50%;
     gap: 8px 0px;
     grid-template-rows: 1fr 1fr 1fr;
