@@ -504,7 +504,7 @@ input[name="selected-specialty"] {
     width: 100%;
     display: flex;   
     place-content: end space-between;
-    height: 4.5em;
+    height: 5em;
     padding-bottom: 10px;
     border: none;
     border-radius: 5px;
@@ -587,7 +587,7 @@ input[name="selected-specialty"] {
     align-self: center;
     position: relative;
     margin: auto;
-    transform: translateY(15px); 
+    transform: translateY(22px); 
   }    
 
   .xp-guage-value-total,
@@ -597,7 +597,7 @@ input[name="selected-specialty"] {
     font-size: 1.5em;
     color: -var(--text);   
     position: relative;   
-    transform: translateY(17px);
+    transform: translateY(22px);
     justify-self: center;
     align-self: center;
     margin: auto;
@@ -680,7 +680,7 @@ input[name="selected-specialty"] {
     display: inline;
     position: absolute;
     justify-self: anchor-center;
-    transform: translateY(20px);
+    transform: translateY(25px);
     
   }
 
@@ -692,7 +692,7 @@ input[name="selected-specialty"] {
     display: inline;
     position: absolute;
     justify-self: anchor-center;
-    transform: translateY(50px);
+    transform: translateY(57px);
 
   }
 
