@@ -131,7 +131,7 @@ button {
   #container {
     border-image: none;
     border: 0px solid transparent;   
-    margin: 0px 0px 0px 0px;
+    margin: auto;
     background-color: var(--background);
     display: grid; 
     grid-template-rows: 5% 17% 17% 56% 5%;
@@ -255,7 +255,7 @@ input[type="text"] {
     text-align: center;
     height: 30px;
     /* width: 210px; */
-    width: 100%;
+    width: 98%;
     /* border: 0px solid var(--btn-bg); */
     align-items: center;
     justify-content: center;
@@ -849,10 +849,12 @@ input[name="selected-specialty"] {
     display: grid;
     width: 89%;
     grid-auto-columns: 50%;
-    gap: 3px 8px;
+    gap: 8px 0px;
     grid-template-rows: 1fr 1fr 1fr;
     /* grid-area: playerData1; */
     grid-area: 2 / 1 / 3 / 4;
+    /* left: -2px; */
+    position: relative;
   }
 
   #character-stats {
