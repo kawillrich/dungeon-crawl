@@ -1349,9 +1349,9 @@ function startGame() {
         </details>
 
         <details id="character-statuses" name="character-detail-sets">
-          <summary class="character-statuses-summary">Statuses<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
+          <summary class="character-statuses-summary"><span class="status-summary-span">Statuses</span><span class="affliction-summary-span">Afflictions</span><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
           <div class="character-statuses-and-afflictions">
-            <div class = "char-statuses-module">Statuses
+            <div class = "char-statuses-module"
               <img class="container-item protection-from-evil-status hide-status"></img>
               <img class="container-item shield-status hide-status"></img>
               <img class="container-item invisibility-status hide-status"></img>
@@ -1365,7 +1365,7 @@ function startGame() {
               <img class="container-item hide-status"></img>
               <img class="container-item hide-status"></img>
             </div>          
-            <div class = "char-afflictions-module">Afflictions
+            <div class = "char-afflictions-module">
               <img class="container-item protection-from-evil-status hide-status"></img>
               <img class="container-item shield-status hide-status"></img>
               <img class="container-item invisibility-status hide-status"></img>

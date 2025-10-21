@@ -836,6 +836,16 @@ summary.character-statuses-summary {
     grid-area: summary;
   }
 
+  span.status-summary-span {
+    padding: 0px 10%;
+  }
+
+   span.affliction-summary-span {
+    padding: 0px 10%;
+    margin: 0px auto;
+    justify-self: center;
+  }
+
    div.character-hitpoints-summary {
     height: 1em;
     border: none;
@@ -949,6 +959,8 @@ summary.character-statuses-summary {
     
   }
 
+
+
   /* #character-afflictions {
     grid-area: 3 / 2 / 3 / 3;
   } */
@@ -958,6 +970,8 @@ summary.character-statuses-summary {
     grid-template-areas:  "statuses afflictions";  
     grid-template-columns: 1fr 1fr;
   }
+
+
 
   #character-canvas {
     display: none;
@@ -1024,28 +1038,32 @@ summary.character-statuses-summary {
   }
 
     div.char-statuses-module {
-    /* width: 100%;
+    width: 100%;
     display: grid;    
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
-    height: 100%;
+    /* height: 100%; */
     padding-bottom: 5px;
     border: none;
     border-radius: 5px;
     background-color: var(--bg-200);
-    position: relative;     */
+    position: relative;    
     grid-area: statuses;
   }
 
     div.char-afflictions-module {
-    /* width: 100%;
+    width: 100%;
     display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
     height: 100%;
     padding-bottom: 5px;
     border: none;
     border-radius: 5px;
     background-color: var(--bg-200);
-    position: relative;     */
+    position: relative;    
     grid-area: afflictions;
 
   }
