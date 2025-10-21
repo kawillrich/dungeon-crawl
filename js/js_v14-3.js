@@ -1140,212 +1140,6 @@ function startGame() {
   newStartGameDialogue.style.backgroundImage = "none";
 
   newStartGameDialogue.innerHTML = `
-        <details id='character-stats' name="character-detail-sets">
-          <summary class="character-stats-summary">Player Data<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
-          <div class='char-stats-module'>            
-            
-            <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
-            
-            <h4 id='char-specialty' class='char-info-label'>Specialty: <span class="character-display-info">${
-              finalCharacter.specialty.name
-            }</span></h4>
-            
-            <h4 id='char-level' class='char-info-label'>Level: <span class="character-display-info">${
-              finalCharacter.specialty.characterLevel.level.level
-            }</span></h4>             
-                
-            <h4 id='char-armor' class='char-info-label'>Armor: 
-              <span class="armor-tooltip">
-                <span class="character-display-info">${
-                  finalCharacter.armor.name
-                }</span>
-                <span class="armor-tooltiptext">Armor Class: ${
-                  finalCharacter.armor.armorClass
-                }</span>
-              </span>
-            </h4> 
-
-            <h4 id='char-weapon' class='char-info-label'>Weapon: 
-              <span class="weapon-tooltip">
-                <span class="character-display-info">${
-                  finalCharacter.weapon.name
-                }</span>
-                <span class="weapon-tooltiptext">Damage: ${
-                  finalCharacter.weapon.damage
-                }</span>
-              </span>
-            </h4>                
-          </div>
-        </details>
-
-        <div id='character-attributes'>
-          <fieldset class='char-info-module-attributes'>
-            <div class="char-attribute-module">
-              <h4 id='char-strength' class='char-info-label'>
-                <span class='character-display-attributes-str'>${finalCharacter.attributes[0].name.slice(
-                  0,
-                  3
-                )}</span>
-                <span class='character-display-attributes-scores-str'>${
-                  finalCharacter.attributes[0].score
-                }</span>
-                <span class='character-display-attributes-scores-adj-str'>${strengthPlusAdjustment}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
-                  <circle class="circle-str-background" cx="50" cy="50" r="30"/>
-                  <circle class="circle-str" cx="50" cy="50" r="30" stroke-dashoffset="${strength.dashArrayAdj()}"/>
-                  
-                  </svg>
-
-              </h4>
-                <h4 id='char-intelligence' class='char-info-label'>
-                <span class='character-display-attributes-int'>${finalCharacter.attributes[1].name.slice(
-                  0,
-                  3
-                )}</span>
-                <span class='character-display-attributes-scores-int'>${
-                  finalCharacter.attributes[1].score
-                }</span>
-                <span class='character-display-attributes-scores-adj-int'>${intelligencePlusAdjustment}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
-                  <circle class="circle-int-background" cx="50" cy="50" r="30"/>
-                  <circle class="circle-int" cx="50" cy="50" r="30" stroke-dashoffset="${intelligence.dashArrayAdj()}"/>
-                  
-                </svg>
-              </h4>
-              <h4 id='char-wisdom' class='char-info-label'>
-                <span class='character-display-attributes-wis'>${finalCharacter.attributes[2].name.slice(
-                  0,
-                  3
-                )}</span>
-                <span class='character-display-attributes-scores-wis'>${
-                  finalCharacter.attributes[2].score
-                }</span>
-                <span class='character-display-attributes-scores-adj-wis'>${wisdomPlusAdjustment}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
-                <circle class="circle-wis-background" cx="50" cy="50" r="30"/>
-                <circle class="circle-wis" cx="50" cy="50" r="30" stroke-dashoffset="${wisdom.dashArrayAdj()}"/>
-                
-                </svg>
-              </h4>
-              <h4 id='char-dexterity' class='char-info-label'>
-                <span class='character-display-attributes-dex'>${finalCharacter.attributes[3].name.slice(
-                  0,
-                  3
-                )}</span>
-                <span class='character-display-attributes-scores-dex'>${
-                  finalCharacter.attributes[3].score
-                }</span>
-                <span class='character-display-attributes-scores-adj-dex'>${dexterityPlusAdjustment}</span>
-                
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">                  
-                  <circle class="circle-dex-background" cx="50" cy="50" r="30"/>
-                  <circle class="circle-dex" cx="50" cy="50" r="30" stroke-dashoffset="${dexterity.dashArrayAdj()}"/>
-                </svg>                
-
-              </h4>
-              <h4 id='char-constitution' class='char-info-label'>
-                <span class='character-display-attributes-con'>${finalCharacter.attributes[4].name.slice(
-                  0,
-                  3
-                )}</span>
-                <span class='character-display-attributes-scores-con'>${
-                  finalCharacter.attributes[4].score
-                }</span>
-                <span class='character-display-attributes-scores-adj-con'>${constitutionPlusAdjustment}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">                
-                <circle class="circle-con-background" cx="50" cy="50" r="30"/>
-                <circle class="circle-con" cx="50" cy="50" r="30" stroke-dashoffset="${constitution.dashArrayAdj()}"/>
-              </svg>
-              </h4>
-              <h4 id='char-charisma' class='char-info-label'>
-                <span class='character-display-attributes-cha'>${finalCharacter.attributes[5].name.slice(
-                  0,
-                  3
-                )}</span>
-                <span class='character-display-attributes-scores-cha'>${
-                  finalCharacter.attributes[5].score
-                }</span>
-                <span class='character-display-attributes-scores-adj-cha'>${charismaPlusAdjustment}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
-                
-                               
-                <circle class="circle-cha-background" cx="50" cy="50" r="30"/>
-                <circle class="circle-cha" cx="50" cy="50" r="30" stroke-dashoffset="${charisma.dashArrayAdj()}"/>
-                
-                </svg>
-              </h4>
-            </div>
-          </fieldset>
-        </div>        
-        
-        <div id="character-canvas">
-          <fieldset class= 'canvas-info-module-player'>
-            <legend class='canvas-dashboard'>Player</legend>
-            <canvas id="canvas2" height="100" width="100"></canvas>
-          </fieldset>
-        </div>
-
-        <details id="character-statuses" name="character-detail-sets">
-          <summary class="character-statuses-summary">Statuses<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
-          <div class = "char-statuses-module">
-            <img class="container-item protection-from-evil-status hide-status"></img>
-            <img class="container-item shield-status hide-status"></img>
-            <img class="container-item invisibility-status hide-status"></img>
-            <img class="container-item mirror-image-status hide-status"></img>
-            <img class="container-item detect-invisibility-status hide-status"></img>
-            <img class="container-item fly-status hide-status"></img>
-            <img class="container-item haste-status hide-status"></img>
-            <img class="container-item invisibility-10-status hide-status"></img>
-            <img class="container-item protection-from-evil-10-status hide-status"></img>
-            <img class="container-item protection-from-missiles-status hide-status"></img>
-            <img class="container-item hide-status"></img>
-            <img class="container-item hide-status"></img>
-          </div>
-        </details>
-
-        <details id="character-saving-throws" name="character-detail-sets">
-          <summary class="character-saves-summary">Saves<i class="fa-solid fa-plus"></i></summary>
-            <div class = "char-saves-module">
-              <h4  id= "saving-throw-poison" class="saving-throws">Poison or Death Ray: <span class="saving-throw-score">${
-                finalCharacter.specialty.characterLevel.level.savingThrows[
-                  "Poison or Death Ray"
-                ]
-              }</span></h4>
-              <h4  id= "saving-throw-wand" class="saving-throws">Magic Wand: <span class="saving-throw-score">${
-                finalCharacter.specialty.characterLevel.level.savingThrows[
-                  "Magic Wand"
-                ]
-              }</span></h4>
-              <h4 id= "saving-throw-paralysis" class="saving-throws">Stone or Paralysis: <span class="saving-throw-score">${
-                finalCharacter.specialty.characterLevel.level.savingThrows[
-                  "Turn to Stone or Paralysis"
-                ]
-              }</span></h4>
-              <h4 id= "saving-throw-dragon-breath" class="saving-throws">Dragon Breath: <span class="saving-throw-score">${
-                finalCharacter.specialty.characterLevel.level.savingThrows[
-                  "Dragon Breath"
-                ]
-              }</span></h4>
-              <h4 id= "saving-throw-staff" class="saving-throws">Spells or Magic Staff: <span class="saving-throw-score">${
-                finalCharacter.specialty.characterLevel.level.savingThrows[
-                  "Spells or Magic Staff"
-                ]
-              }</span></h4>
-            </div>
-        </details>
-      
-        <details id="character-afflictions" name="character-detail-sets">
-          <summary class="character-afflictions-summary">Afflictions<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
-          <div class = "char-afflictions-module">  
-          </div>
-        </details>
-
-        <div id="character-menu">
-          <fieldset class = "menu-info-module-player">
-            <legend class="menu-dashboard">Menu</legend>
-            
-            </fieldset>
-        </div>
 
         <div id="character-hitpoints" name="character-detail-sets">
           <div class="character-hitpoints-summary"><span>Player Stats</span></div>
@@ -1409,6 +1203,212 @@ function startGame() {
               </div>            
             </div>
         </div>
+
+        <details id='character-stats' name="character-detail-sets">
+          <summary class="character-stats-summary">Player Data<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
+          <div class='char-stats-module'>            
+            
+            <h4 id='char-name' class='char-info-label'>Name: <span class="character-display-info">${submittedCharName}</span></h4>
+            
+            <h4 id='char-specialty' class='char-info-label'>Specialty: <span class="character-display-info">${
+              finalCharacter.specialty.name
+            }</span></h4>
+            
+            <h4 id='char-level' class='char-info-label'>Level: <span class="character-display-info">${
+              finalCharacter.specialty.characterLevel.level.level
+            }</span></h4>             
+                
+            <h4 id='char-armor' class='char-info-label'>Armor: 
+              <span class="armor-tooltip">
+                <span class="character-display-info">${
+                  finalCharacter.armor.name
+                }</span>
+                <span class="armor-tooltiptext">Armor Class: ${
+                  finalCharacter.armor.armorClass
+                }</span>
+              </span>
+            </h4> 
+
+            <h4 id='char-weapon' class='char-info-label'>Weapon: 
+              <span class="weapon-tooltip">
+                <span class="character-display-info">${
+                  finalCharacter.weapon.name
+                }</span>
+                <span class="weapon-tooltiptext">Damage: ${
+                  finalCharacter.weapon.damage
+                }</span>
+              </span>
+            </h4>                
+          </div>
+        </details>
+
+        <details id='character-attributes' name="character-detail-sets">
+          <summary class="character-attributes-summary">Player Data<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
+          <div class="char-attribute-module">
+            <h4 id='char-strength' class='char-info-label'>
+              <span class='character-display-attributes-str'>${finalCharacter.attributes[0].name.slice(
+                0,
+                3
+              )}</span>
+              <span class='character-display-attributes-scores-str'>${
+                finalCharacter.attributes[0].score
+              }</span>
+              <span class='character-display-attributes-scores-adj-str'>${strengthPlusAdjustment}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
+                <circle class="circle-str-background" cx="50" cy="50" r="30"/>
+                <circle class="circle-str" cx="50" cy="50" r="30" stroke-dashoffset="${strength.dashArrayAdj()}"/>
+                
+                </svg>
+
+            </h4>
+              <h4 id='char-intelligence' class='char-info-label'>
+              <span class='character-display-attributes-int'>${finalCharacter.attributes[1].name.slice(
+                0,
+                3
+              )}</span>
+              <span class='character-display-attributes-scores-int'>${
+                finalCharacter.attributes[1].score
+              }</span>
+              <span class='character-display-attributes-scores-adj-int'>${intelligencePlusAdjustment}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
+                <circle class="circle-int-background" cx="50" cy="50" r="30"/>
+                <circle class="circle-int" cx="50" cy="50" r="30" stroke-dashoffset="${intelligence.dashArrayAdj()}"/>
+                
+              </svg>
+            </h4>
+            <h4 id='char-wisdom' class='char-info-label'>
+              <span class='character-display-attributes-wis'>${finalCharacter.attributes[2].name.slice(
+                0,
+                3
+              )}</span>
+              <span class='character-display-attributes-scores-wis'>${
+                finalCharacter.attributes[2].score
+              }</span>
+              <span class='character-display-attributes-scores-adj-wis'>${wisdomPlusAdjustment}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
+              <circle class="circle-wis-background" cx="50" cy="50" r="30"/>
+              <circle class="circle-wis" cx="50" cy="50" r="30" stroke-dashoffset="${wisdom.dashArrayAdj()}"/>
+              
+              </svg>
+            </h4>
+            <h4 id='char-dexterity' class='char-info-label'>
+              <span class='character-display-attributes-dex'>${finalCharacter.attributes[3].name.slice(
+                0,
+                3
+              )}</span>
+              <span class='character-display-attributes-scores-dex'>${
+                finalCharacter.attributes[3].score
+              }</span>
+              <span class='character-display-attributes-scores-adj-dex'>${dexterityPlusAdjustment}</span>
+              
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">                  
+                <circle class="circle-dex-background" cx="50" cy="50" r="30"/>
+                <circle class="circle-dex" cx="50" cy="50" r="30" stroke-dashoffset="${dexterity.dashArrayAdj()}"/>
+              </svg>                
+
+            </h4>
+            <h4 id='char-constitution' class='char-info-label'>
+              <span class='character-display-attributes-con'>${finalCharacter.attributes[4].name.slice(
+                0,
+                3
+              )}</span>
+              <span class='character-display-attributes-scores-con'>${
+                finalCharacter.attributes[4].score
+              }</span>
+              <span class='character-display-attributes-scores-adj-con'>${constitutionPlusAdjustment}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">                
+              <circle class="circle-con-background" cx="50" cy="50" r="30"/>
+              <circle class="circle-con" cx="50" cy="50" r="30" stroke-dashoffset="${constitution.dashArrayAdj()}"/>
+            </svg>
+            </h4>
+            <h4 id='char-charisma' class='char-info-label'>
+              <span class='character-display-attributes-cha'>${finalCharacter.attributes[5].name.slice(
+                0,
+                3
+              )}</span>
+              <span class='character-display-attributes-scores-cha'>${
+                finalCharacter.attributes[5].score
+              }</span>
+              <span class='character-display-attributes-scores-adj-cha'>${charismaPlusAdjustment}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
+              
+                              
+              <circle class="circle-cha-background" cx="50" cy="50" r="30"/>
+              <circle class="circle-cha" cx="50" cy="50" r="30" stroke-dashoffset="${charisma.dashArrayAdj()}"/>
+              
+              </svg>
+            </h4>
+          </div>
+        </details>        
+        
+        <details id="character-canvas">
+          <summary class="character-canvas-summary">Canvas<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
+          <div class = "char-canvas-module">
+            <canvas id="canvas2" height="100" width="100"></canvas>
+          </div>
+        </details>
+
+        <details id="character-statuses" name="character-detail-sets">
+          <summary class="character-statuses-summary">Statuses<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
+          <div class = "char-statuses-module">
+            <img class="container-item protection-from-evil-status hide-status"></img>
+            <img class="container-item shield-status hide-status"></img>
+            <img class="container-item invisibility-status hide-status"></img>
+            <img class="container-item mirror-image-status hide-status"></img>
+            <img class="container-item detect-invisibility-status hide-status"></img>
+            <img class="container-item fly-status hide-status"></img>
+            <img class="container-item haste-status hide-status"></img>
+            <img class="container-item invisibility-10-status hide-status"></img>
+            <img class="container-item protection-from-evil-10-status hide-status"></img>
+            <img class="container-item protection-from-missiles-status hide-status"></img>
+            <img class="container-item hide-status"></img>
+            <img class="container-item hide-status"></img>
+          </div>          
+          <div class = "char-afflictions-module">  
+          </div>
+        </details>
+
+        <details id="character-saving-throws" name="character-detail-sets">
+          <summary class="character-saves-summary">Saves<i class="fa-solid fa-plus"></i></summary>
+            <div class = "char-saves-module">
+              <h4  id= "saving-throw-poison" class="saving-throws">Poison or Death Ray: <span class="saving-throw-score">${
+                finalCharacter.specialty.characterLevel.level.savingThrows[
+                  "Poison or Death Ray"
+                ]
+              }</span></h4>
+              <h4  id= "saving-throw-wand" class="saving-throws">Magic Wand: <span class="saving-throw-score">${
+                finalCharacter.specialty.characterLevel.level.savingThrows[
+                  "Magic Wand"
+                ]
+              }</span></h4>
+              <h4 id= "saving-throw-paralysis" class="saving-throws">Stone or Paralysis: <span class="saving-throw-score">${
+                finalCharacter.specialty.characterLevel.level.savingThrows[
+                  "Turn to Stone or Paralysis"
+                ]
+              }</span></h4>
+              <h4 id= "saving-throw-dragon-breath" class="saving-throws">Dragon Breath: <span class="saving-throw-score">${
+                finalCharacter.specialty.characterLevel.level.savingThrows[
+                  "Dragon Breath"
+                ]
+              }</span></h4>
+              <h4 id= "saving-throw-staff" class="saving-throws">Spells or Magic Staff: <span class="saving-throw-score">${
+                finalCharacter.specialty.characterLevel.level.savingThrows[
+                  "Spells or Magic Staff"
+                ]
+              }</span></h4>
+            </div>
+        </details>
+      
+        
+
+        <div id="character-menu">
+          <fieldset class = "menu-info-module-player">
+            <legend class="menu-dashboard">Menu</legend>
+            
+            </fieldset>
+        </div>
+
+        
         `;
   console.log(finalCharacter);
   
