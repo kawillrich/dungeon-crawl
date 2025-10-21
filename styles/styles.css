@@ -196,7 +196,7 @@ input[type="text"] {
   margin: auto;
 }
   #dialogue {
-    padding: 10px 0px 0px 0px;
+    padding: 15px 0px 0px 0px;
     margin: auto;
     font-size: 1.75rem;
     display: block;
@@ -390,8 +390,7 @@ input[name="selected-specialty"] {
   height: 20px;
   content: "";
   border: 10px solid transparent;
-  left: 15px;
-  top: -5px;
+  
   background-color: rgb(205, 210, 245);
   cursor: url("../images/gui/cursor.png"), auto;
   border: 0.5rem outset var(--primary-200);
@@ -604,6 +603,11 @@ input[name="selected-specialty"] {
     width: 100%;
     
   }
+
+/* .circle-xp:hover {
+   stroke: white;
+    
+  } */
 
   .hitpoints-guage {
     width: 106%;
@@ -897,7 +901,7 @@ summary.character-statuses-summary {
   }  
 
   details[open] {
-    height: 6em;
+    /* height: 6em; */
     summary.character-statuses-summary,
     summary.character-stats-summary,
     summary.character-afflictions-summary,
