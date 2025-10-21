@@ -458,63 +458,6 @@ input[name="selected-specialty"] {
     width: 100%;
   }
 
-  div.char-stats-module {
-    width: 100%;
-    display: grid;
-    grid-template-areas:  "emptySpace emptySpace"    
-                          "level specialty"
-                          "weapon armor";    
-    column-gap: 10px;
-    place-content: end space-between;
-    height: 100%;
-    padding-bottom: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--bg-200);
-    position: relative;    
-  }
-
-    div.char-statuses-module {
-    width: 100%;
-    display: grid;    
-    column-gap: 10px;
-    place-content: end space-between;
-    height: 100%;
-    padding-bottom: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--bg-200);
-    position: relative;    
-  }
-
-    div.char-afflictions-module {
-    width: 100%;
-    display: grid; 
-    column-gap: 10px;
-    place-content: end space-between;
-    height: 100%;
-    padding-bottom: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--bg-200);
-    position: relative;    
-  }
-
-    div.char-guage-module {
-    width: 100%;
-    display: flex;   
-    place-content: end space-between;
-    height: 5em;
-    padding-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--bg-200);
-    position: relative; 
-    grid-auto-rows: minmax(100px, 100px);
-    grid-template-rows: 70px;
-    
-  }
-  
   #char-name {
     /* visibility: hidden; */
     padding-right: 5px;
@@ -865,15 +808,10 @@ input[name="selected-specialty"] {
     z-index: 900;
   }
 
-  #character-stats {
-    /* background-color: var(--bg-200); */
-  }
 
 
 
-  summary.character-stats-summary,
-  summary.character-statuses-summary,
-  summary.character-afflictions-summary {
+  summary.character-stats-summary {
     height: 1em;
     border: none;
     border-radius: 0px 5px 5px 0px;
@@ -885,7 +823,18 @@ input[name="selected-specialty"] {
     text-align: center;
   }
  
-
+summary.character-statuses-summary {
+    height: 1em;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    position: relative;
+    background-color: var(--accent-green-200);
+    color: var(--primary);
+    text-align: center;
+    grid-area: summary;
+  }
 
    div.character-hitpoints-summary {
     height: 1em;
@@ -899,7 +848,10 @@ input[name="selected-specialty"] {
     text-align: center;
   }
 
-  details > summary {
+  details > summary.character-statuses-summary,
+  details > summary.character-stats-summary,
+  details > summary.character-hitpoints-summary,
+  details > summary.character-afflictions-summary {
     list-style: none;
       z-index: 1000;
 
@@ -981,20 +933,22 @@ input[name="selected-specialty"] {
     list-style: none;
   }
 
+
+
   #character-hitpoints {
     grid-area: 1 / 1 / 1 / 3;
   }
 
   #character-stats {
     grid-area: 2 / 1 / 2 / 3;
-    display: grid;
-    grid-template-areas:  'summary summary'
-                          'statuses afflictions';  
+    
   }
 
   #character-statuses {
     grid-area: 3 / 1 / 3 / 3;
-    
+    display: grid;
+    grid-template-areas:  "summary summary"
+                          "statuses afflictions";  
   }
 
   /* #character-afflictions {
@@ -1011,11 +965,6 @@ input[name="selected-specialty"] {
     display: none;  
   }
 
-  #character-stats {
-    grid-row: 2 / 2;
-    grid-column: 1 / 3;
-    
-  }
 
   #character-attributes {
     display: none;
@@ -1055,6 +1004,66 @@ input[name="selected-specialty"] {
     height: 100%;
   }
   
+
+  div.char-stats-module {
+    width: 100%;
+    display: grid;
+    grid-template-areas:  "emptySpace emptySpace"    
+                          "level specialty"
+                          "weapon armor";    
+    column-gap: 10px;
+    place-content: end space-between;
+    height: 100%;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    position: relative;    
+  }
+
+    div.char-statuses-module {
+    /* width: 100%;
+    display: grid;    
+    column-gap: 10px;
+    height: 100%;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    position: relative;     */
+    grid-area: statuses;
+  }
+
+    div.char-afflictions-module {
+    /* width: 100%;
+    display: grid; 
+    column-gap: 10px;
+    height: 100%;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    position: relative;     */
+    grid-area: afflictions;
+
+  }
+
+    div.char-guage-module {
+    width: 100%;
+    display: flex;   
+    place-content: end space-between;
+    height: 5em;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    position: relative; 
+    grid-auto-rows: minmax(100px, 100px);
+    grid-template-rows: 70px;
+    
+  }
+  
+
   /* fieldset.afflictions-info-module-player {
     height: 100%;
     border: none;
