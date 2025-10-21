@@ -221,7 +221,7 @@ export default class Character {
 
     //speciality
     let charSpecialty = document.querySelector('#char-specialty > .character-display-info');
-    charSpecialty = finalCharacter.specialty.name;
+    charSpecialty.innerHTML = finalCharacter.specialty.name;
 
     //level
     let charLevel = document.querySelector('#char-level > .character-display-info');
