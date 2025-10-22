@@ -1743,6 +1743,9 @@ function beginJourney() {
 //CHAPTER TWO
 
 function beginChapterTwo() {
+  let removeReadyButton = document.querySelector('#ready');
+  removeReadyButton.remove();
+  
   if (
     finalCharacter.specialty.name === "High Mage" ||
     finalCharacter.specialty.name === "Elf"
