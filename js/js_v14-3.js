@@ -1744,7 +1744,20 @@ function beginJourney() {
 
 //CHAPTER TWO
 
+// let chapterTwoZeroText = `
+//     <p>As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your 
+//     hand along it.   
+//     `;
+
 function beginChapterTwo() {
+
+    
+  // console.log("2-0");
+  // chapterConfig.thisChapterNumber = "2-0",
+  // chapterConfig.thisChapterDialogue = chapterTwoZeroText,
+  // chapterConfig.nextChapterFunction = beginChapterOneFive;
+  // Utilities.continueTextAnimation(chapterConfig);  
+
   let removeReadyButton = document.querySelector('#ready');
   removeReadyButton.remove();
 
@@ -1782,6 +1795,7 @@ function beginChapterTwo() {
 
   // let castingSpell = document.querySelector('#cast-spell');
   // castingSpell.addEventListener('click', finalCharacter.specialty.characterLevel.specialtySkills.mageFirstLevelSpells.magicMissile.castingEffect, false);
+
 
   var talkToRaynardYes = document.querySelector("#talk-raynard-yes");
   talkToRaynardYes.addEventListener("click", talkToRaynard, false);
