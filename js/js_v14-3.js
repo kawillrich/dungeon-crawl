@@ -2870,8 +2870,7 @@ function beginChapterTwoFive() {
 }
 
 let chapterTwoSixText = `
-  As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?</p> 
-      
+  As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?      
   `;
 
 function beginChapterTwoSix() {
@@ -2883,8 +2882,23 @@ function beginChapterTwoSix() {
   //chapterConfig.nextChapterFunction = beginChapterTwoSix;
   Utilities.continueTextAnimation(chapterConfig);
   //add talk to raynard buttons
+
+  let yesTalkToRayard = document.createElement('input');
+  yesTalkToRayard.setAttribute('type', 'submit');
+  yesTalkToRayard.setAttribute('id', 'talk-raynard-yes');
+  yesTalkToRayard.setAttribute('value', 'Yes');
+  yesTalkToRayard.addEventListener("click", talkToRaynard, false);
+
+  let noTalkToRayard = document.createElement('input');
+  noTalkToRayard.setAttribute('type', 'submit');
+  noTalkToRayard.setAttribute('id', 'talk-raynard-no');
+  noTalkToRayard.setAttribute('value', 'No');
+  noTalkToRayard.addEventListener("click", startChapterThreeOne, false);
+
   //<input type="submit" id="talk-raynard-yes" value="Yes"><input type="submit" id="talk-raynard-no" value="No"><br></br>
-  //dialogueDiv.appendChild
+  let containerDiv = document.querySelector('#container');
+  containerDiv.appendChild(yesTalkToRayard);
+  containerDiv.appendChild(noTalkToRayard);
 }
 
 function talkToRaynard() {
