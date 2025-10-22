@@ -2760,8 +2760,9 @@ function submitAllClericSpells() {
 // chapterConfig.dialogueDiv = document.querySelector('#dialogue');
 // chapterConfig.nextChapterFunction = beginChapterOneFive;
 // Utilities.continueTextAnimation(chapterConfig);  
+
 let chapterTwoZeroText = `
-    <p>As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your 
+    As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your 
     hand along it.   
     `;
 
@@ -2800,12 +2801,56 @@ Utilities.continueTextAnimation(chapterConfig);
   */
 }
 
+let chapterTwoOneText = `
+    As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your hand along it.   
+    `;
+
 function beginChapterTwoOne() {
   console.log('2-1');
+  chapterConfig.thisChapterNumber = "2-1";
+chapterConfig.thisChapterDialogue = chapterTwoOneText;
+chapterConfig.buttonText = "Continue";
+chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+chapterConfig.nextChapterFunction = beginChapterTwoTwo;
+Utilities.continueTextAnimation(chapterConfig);  
 }
 
+let chapterTwoTwoText = `
+    You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike.   
+    `;
 
+function beginChapterTwoTwo() {
+  console.log('2-2');
+  chapterConfig.thisChapterNumber = "2-2";
+chapterConfig.thisChapterDialogue = chapterTwoTwoText;
+chapterConfig.buttonText = "Continue";
+chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+chapterConfig.nextChapterFunction = beginChapterTwoThree;
+Utilities.continueTextAnimation(chapterConfig);  
+}
 
+let chapterTwoThreeText = `
+  You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike.
+`;
+
+function beginChapterTwoThree() {
+  console.log('2-3');
+  chapterConfig.thisChapterNumber = "2-3";
+chapterConfig.thisChapterDialogue = chapterTwoThreeText;
+chapterConfig.buttonText = "Continue";
+chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+chapterConfig.nextChapterFunction = beginChapterTwoFour;
+Utilities.continueTextAnimation(chapterConfig);  
+}
+
+let chapterTwoFourText = `
+    These familiar memories make you feel at home and bring a reassurance to your mind about what you are about to do. Others have left on the same journey, and none have returned. Are you better than them? Will you make it? Or will you share their fate?   
+    `;
+
+function beginChapterTwoFour() {
+  console.log('2-4');
+  //add talk to raynard buttons
+}
 
 function talkToRaynard() {
   window.scrollTo(0, 0);
