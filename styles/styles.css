@@ -1284,6 +1284,7 @@ summary.character-statuses-summary {
  
   .show-inventory-container {
     /* position: absolute; */
+    font-size: .85em;
     top: 0px;
     bottom: 0px;
     left: 0px;
@@ -1372,7 +1373,8 @@ summary.character-statuses-summary {
     justify-self: center;
     align-self: end;
     grid-area: 5 / 2 / 5 / 2;
-    /* margin-left: 15px; */
+    /* margin-left: 15px;
+     */
   }
 
   .char-treasure {
