@@ -632,16 +632,6 @@ function beginChapterOneFive() {
 }
 
 
-// let chapterConfig = {
-//   thisChapterNumber: "1-0",
-//   thisChapterDialogue: chapterOneZeroText,
-//   buttonText: "Continue",
-//   setTimeoutArray: [],
-//   dialogueIterator: 0,
-//   typingSpeed: 3,
-//   dialogueDiv: document.querySelector('#dialogue'),
-//   nextChapterFunction: beginChapterOneOne
-// }
 
 let chapterOneSixText = `But did they prepare you for this?.... What's your name?`
 
@@ -1736,7 +1726,7 @@ function beginJourney() {
     createReadyButton.id = "ready";
     readyBeginJourney.appendChild(createReadyButton);
     var beginningGame = document.querySelector("#ready");
-    beginningGame.addEventListener("click", beginChapterTwo, false);
+    beginningGame.addEventListener("click", setSpellsAndInventory, false);
   } else {
     return;
   }
@@ -1749,12 +1739,26 @@ function beginJourney() {
 //     hand along it.   
 //     `;
 
-function beginChapterTwo() {
+
+// let chapterConfig = {
+//   thisChapterNumber: "1-0",
+//   thisChapterDialogue: chapterOneZeroText,
+//   buttonText: "Continue",
+//   setTimeoutArray: [],
+//   dialogueIterator: 0,
+//   typingSpeed: 3,
+//   dialogueDiv: document.querySelector('#dialogue'),
+//   nextChapterFunction: beginChapterOneOne
+// }
+
+function setSpellsAndInventory() {
 
     
   // console.log("2-0");
-  // chapterConfig.thisChapterNumber = "2-0",
-  // chapterConfig.thisChapterDialogue = chapterTwoZeroText,
+  // chapterConfig.thisChapterNumber = "2-0";
+  // chapterConfig.thisChapterDialogue = chapterTwoZeroText;
+  // chapterConfig.buttonText = "Continue";
+  // chapterConfig.dialogueDiv = document.querySelector('#dialogue');
   // chapterConfig.nextChapterFunction = beginChapterOneFive;
   // Utilities.continueTextAnimation(chapterConfig);  
 
@@ -1779,6 +1783,11 @@ function beginChapterTwo() {
   finalCharacter.specialty.maxHealthPoints =
     finalCharacter.specialty.maxHealthPoints +
     finalCharacter.attributes[4].adjustment;
+
+  beginChapterTwoZero();
+}
+
+function beginChapterTwoZero() {
 
   let chapterTwo = document.querySelector("#dialogue");
   chapterTwo.innerHTML = `
