@@ -299,13 +299,9 @@ let supplies = [
   grapplingHook,
   mirrorHandSized,
   oil,
-  poleWooden,
   rope,
   sackSmall,
-  sackLarge,
-  stakesAndMallet,
   thievesTools,
-  wine,
   wolfsbane,
 ];
 
@@ -1204,7 +1200,7 @@ function startGame() {
             </div>
         </div>
 
-        <details id='character-stats' name="character-detail-sets">
+        <details id='character-stats' name="character-detail-sets" open>
           <summary class="character-stats-summary">Player Data<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></summary>
           <div class='char-stats-module'>            
             
@@ -1806,13 +1802,9 @@ function showInventory() {
     grapplingHook,
     mirrorHandSized,
     oil,
-    poleWooden,    
     rope,
     sackSmall,
-    sackLarge,
-    stakesAndMallet,
     thievesTools,
-    wine,
     wolfsbane,
   ];
 
