@@ -557,6 +557,7 @@ function beginChapterOneZero () {
     fontSize: "0px"}, 300).next().animate({
     width: "0px",
     height: "0px"}, 300).slideUp(300).next().dequeue(); 
+  
   Utilities.continueTextAnimation(chapterConfig);  
 }
 
@@ -565,6 +566,7 @@ let chapterOneOneText =
    `;
 
 function beginChapterOneOne() {
+  $("#header").html("");
   console.log("chapter one one");
   
   chapterConfig.thisChapterNumber = "1-1",
@@ -1745,7 +1747,7 @@ function beginJourney() {
 function beginChapterTwo() {
   let removeReadyButton = document.querySelector('#ready');
   removeReadyButton.remove();
-  
+
   if (
     finalCharacter.specialty.name === "High Mage" ||
     finalCharacter.specialty.name === "Elf"
