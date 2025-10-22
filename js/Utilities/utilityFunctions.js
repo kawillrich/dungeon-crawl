@@ -18,21 +18,24 @@ export function continueTextAnimation(chapterConfig) {
 
 export function createContinueButton(
   chapterConfig) {
-    let containerDiv = document.querySelector('#container');
-    let newButton = document.createElement("button");
-    newButton.id = `button-${chapterConfig.thisChapterNumber}`;
-    newButton.type = "button";
-    newButton.textContent = `${chapterConfig.buttonText}`;  
-    newButton.classList.add("new-continue-button"); 
-    newButton.addEventListener(
-      "click",
-      function () {
-        newButton.remove();
-        createNextDialogue(chapterConfig);      
-      },
-      false
-    );
-    containerDiv.appendChild(newButton); 
+    if (chapterConfig.buttonText !== "") {
+      let containerDiv = document.querySelector('#container');
+      let newButton = document.createElement("button");
+      newButton.id = `button-${chapterConfig.thisChapterNumber}`;
+      newButton.type = "button";
+      newButton.textContent = `${chapterConfig.buttonText}`;  
+      newButton.classList.add("new-continue-button"); 
+      newButton.addEventListener(
+        "click",
+        function () {
+          newButton.remove();
+          createNextDialogue(chapterConfig);      
+        },
+        false
+      );
+      containerDiv.appendChild(newButton); 
+    }
+    
 };
 
 export function createNextDialogue(chapterConfig) {    
