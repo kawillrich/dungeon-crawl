@@ -2768,13 +2768,13 @@ let chapterTwoZeroText = `
 
 function beginChapterTwoZero() {
 
-console.log("2-0");
-chapterConfig.thisChapterNumber = "2-0";
-chapterConfig.thisChapterDialogue = chapterTwoZeroText;
-chapterConfig.buttonText = "Continue";
-chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-chapterConfig.nextChapterFunction = beginChapterTwoOne;
-Utilities.continueTextAnimation(chapterConfig);  
+  console.log("2-0");
+  chapterConfig.thisChapterNumber = "2-0";
+  chapterConfig.thisChapterDialogue = chapterTwoZeroText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoOne;
+  Utilities.continueTextAnimation(chapterConfig);  
 
   // let chapterTwo = document.querySelector("#dialogue");
   // chapterTwo.innerHTML = `
@@ -2788,9 +2788,6 @@ Utilities.continueTextAnimation(chapterConfig);
   //   one night of sleep, would you like to speak with Raynard on your way out?</p> 
   //   <input type="submit" id="talk-raynard-yes" value="Yes"><input type="submit" id="talk-raynard-no" value="No"><br>    
   //   `;
-
-  // let castingSpell = document.querySelector('#cast-spell');
-  // castingSpell.addEventListener('click', finalCharacter.specialty.characterLevel.specialtySkills.mageFirstLevelSpells.magicMissile.castingEffect, false);
 
 /*
   var talkToRaynardYes = document.querySelector("#talk-raynard-yes");
@@ -2808,11 +2805,11 @@ let chapterTwoOneText = `
 function beginChapterTwoOne() {
   console.log('2-1');
   chapterConfig.thisChapterNumber = "2-1";
-chapterConfig.thisChapterDialogue = chapterTwoOneText;
-chapterConfig.buttonText = "Continue";
-chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-chapterConfig.nextChapterFunction = beginChapterTwoTwo;
-Utilities.continueTextAnimation(chapterConfig);  
+  chapterConfig.thisChapterDialogue = chapterTwoOneText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoTwo;
+  Utilities.continueTextAnimation(chapterConfig);  
 }
 
 let chapterTwoTwoText = `
@@ -2822,11 +2819,11 @@ let chapterTwoTwoText = `
 function beginChapterTwoTwo() {
   console.log('2-2');
   chapterConfig.thisChapterNumber = "2-2";
-chapterConfig.thisChapterDialogue = chapterTwoTwoText;
-chapterConfig.buttonText = "Continue";
-chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-chapterConfig.nextChapterFunction = beginChapterTwoThree;
-Utilities.continueTextAnimation(chapterConfig);  
+  chapterConfig.thisChapterDialogue = chapterTwoTwoText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoThree;
+  Utilities.continueTextAnimation(chapterConfig);  
 }
 
 let chapterTwoThreeText = `
@@ -2836,11 +2833,11 @@ let chapterTwoThreeText = `
 function beginChapterTwoThree() {
   console.log('2-3');
   chapterConfig.thisChapterNumber = "2-3";
-chapterConfig.thisChapterDialogue = chapterTwoThreeText;
-chapterConfig.buttonText = "Continue";
-chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-chapterConfig.nextChapterFunction = beginChapterTwoFour;
-Utilities.continueTextAnimation(chapterConfig);  
+  chapterConfig.thisChapterDialogue = chapterTwoThreeText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoFour;
+  Utilities.continueTextAnimation(chapterConfig);  
 }
 
 let chapterTwoFourText = `
@@ -2849,7 +2846,45 @@ let chapterTwoFourText = `
 
 function beginChapterTwoFour() {
   console.log('2-4');
+  chapterConfig.thisChapterNumber = "2-4";
+  chapterConfig.thisChapterDialogue = chapterTwoFourText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoFive;
+  Utilities.continueTextAnimation(chapterConfig);
+}
+
+let chapterTwoFiveText = `
+  As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. 
+`;
+
+function beginChapterTwoFive() {
+  console.log('2-5');
+  chapterConfig.thisChapterNumber = "2-5";
+  chapterConfig.thisChapterDialogue = chapterTwoFiveText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoSix;
+  Utilities.continueTextAnimation(chapterConfig);
   //add talk to raynard buttons
+}
+
+let chapterTwoSixText = `
+  As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?</p> 
+      
+  `;
+
+function beginChapterTwoSix() {
+  console.log('2-6');
+  chapterConfig.thisChapterNumber = "2-6";
+  chapterConfig.thisChapterDialogue = chapterTwoSixText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  //chapterConfig.nextChapterFunction = beginChapterTwoSix;
+  Utilities.continueTextAnimation(chapterConfig);
+  //add talk to raynard buttons
+  //<input type="submit" id="talk-raynard-yes" value="Yes"><input type="submit" id="talk-raynard-no" value="No"><br></br>
+  //dialogueDiv.appendChild
 }
 
 function talkToRaynard() {
