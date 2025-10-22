@@ -1762,76 +1762,6 @@ function setSpellsAndInventory() {
   beginChapterTwoZero();
 }
 
-//CHAPTER TWO
-
-
-
-
-// let chapterConfig = {
-//   thisChapterNumber: "1-0",
-//   thisChapterDialogue: chapterOneZeroText,
-//   buttonText: "Continue",
-//   setTimeoutArray: [],
-//   dialogueIterator: 0,
-//   typingSpeed: 3,
-//   dialogueDiv: document.querySelector('#dialogue'),
-//   nextChapterFunction: beginChapterOneOne
-// }
-
-
-    
-// console.log("2-0");
-// chapterConfig.thisChapterNumber = "2-0";
-// chapterConfig.thisChapterDialogue = chapterTwoZeroText;
-// chapterConfig.buttonText = "Continue";
-// chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-// chapterConfig.nextChapterFunction = beginChapterOneFive;
-// Utilities.continueTextAnimation(chapterConfig);  
-let chapterTwoZeroText = `
-    <p>As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your 
-    hand along it.   
-    `;
-
-function beginChapterTwoZero() {
-
-console.log("2-0");
-chapterConfig.thisChapterNumber = "2-0";
-chapterConfig.thisChapterDialogue = chapterTwoZeroText;
-chapterConfig.buttonText = "Continue";
-chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-chapterConfig.nextChapterFunction = beginChapterTwoOne;
-Utilities.continueTextAnimation(chapterConfig);  
-
-  // let chapterTwo = document.querySelector("#dialogue");
-  // chapterTwo.innerHTML = `
-  //   <p>As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your 
-  //   hand along it. You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and 
-  //   and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike. These familiar
-  //   memories make you feel at home and bring a reassurance to your mind about what you are about to do. Others have left on the same journey, and none have returned.  
-  //   Are you better than them? Will you make it? Or will you share their fate? As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared 
-  //   for breakfast, knowing you must have a good breakfast for the long walk ahead of you.</p>
-  //   <p>After finishing the last of your breakfast, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. You've already paid for 
-  //   one night of sleep, would you like to speak with Raynard on your way out?</p> 
-  //   <input type="submit" id="talk-raynard-yes" value="Yes"><input type="submit" id="talk-raynard-no" value="No"><br>    
-  //   `;
-
-  // let castingSpell = document.querySelector('#cast-spell');
-  // castingSpell.addEventListener('click', finalCharacter.specialty.characterLevel.specialtySkills.mageFirstLevelSpells.magicMissile.castingEffect, false);
-
-/*
-  var talkToRaynardYes = document.querySelector("#talk-raynard-yes");
-  talkToRaynardYes.addEventListener("click", talkToRaynard, false);
-
-  var talkToRaynardNo = document.querySelector("#talk-raynard-no");
-  talkToRaynardNo.addEventListener("click", startChapterThreeOne, false);
-  */
-}
-
-function beginChapterTwoOne() {
-  console.log('2-1');
-}
-
-
 
 //populating inventory
 
@@ -2805,6 +2735,77 @@ function submitAllClericSpells() {
   window.scrollTo(0, 0);
   showInventory();
 }
+//CHAPTER TWO
+
+
+
+
+// let chapterConfig = {
+//   thisChapterNumber: "1-0",
+//   thisChapterDialogue: chapterOneZeroText,
+//   buttonText: "Continue",
+//   setTimeoutArray: [],
+//   dialogueIterator: 0,
+//   typingSpeed: 3,
+//   dialogueDiv: document.querySelector('#dialogue'),
+//   nextChapterFunction: beginChapterOneOne
+// }
+
+
+    
+// console.log("2-0");
+// chapterConfig.thisChapterNumber = "2-0";
+// chapterConfig.thisChapterDialogue = chapterTwoZeroText;
+// chapterConfig.buttonText = "Continue";
+// chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+// chapterConfig.nextChapterFunction = beginChapterOneFive;
+// Utilities.continueTextAnimation(chapterConfig);  
+let chapterTwoZeroText = `
+    <p>As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your 
+    hand along it.   
+    `;
+
+function beginChapterTwoZero() {
+
+console.log("2-0");
+chapterConfig.thisChapterNumber = "2-0";
+chapterConfig.thisChapterDialogue = chapterTwoZeroText;
+chapterConfig.buttonText = "Continue";
+chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+chapterConfig.nextChapterFunction = beginChapterTwoOne;
+Utilities.continueTextAnimation(chapterConfig);  
+
+  // let chapterTwo = document.querySelector("#dialogue");
+  // chapterTwo.innerHTML = `
+  //   <p>As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your 
+  //   hand along it. You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and 
+  //   and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike. These familiar
+  //   memories make you feel at home and bring a reassurance to your mind about what you are about to do. Others have left on the same journey, and none have returned.  
+  //   Are you better than them? Will you make it? Or will you share their fate? As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared 
+  //   for breakfast, knowing you must have a good breakfast for the long walk ahead of you.</p>
+  //   <p>After finishing the last of your breakfast, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. You've already paid for 
+  //   one night of sleep, would you like to speak with Raynard on your way out?</p> 
+  //   <input type="submit" id="talk-raynard-yes" value="Yes"><input type="submit" id="talk-raynard-no" value="No"><br>    
+  //   `;
+
+  // let castingSpell = document.querySelector('#cast-spell');
+  // castingSpell.addEventListener('click', finalCharacter.specialty.characterLevel.specialtySkills.mageFirstLevelSpells.magicMissile.castingEffect, false);
+
+/*
+  var talkToRaynardYes = document.querySelector("#talk-raynard-yes");
+  talkToRaynardYes.addEventListener("click", talkToRaynard, false);
+
+  var talkToRaynardNo = document.querySelector("#talk-raynard-no");
+  talkToRaynardNo.addEventListener("click", startChapterThreeOne, false);
+  */
+}
+
+function beginChapterTwoOne() {
+  console.log('2-1');
+}
+
+
+
 
 function talkToRaynard() {
   window.scrollTo(0, 0);
