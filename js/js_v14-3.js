@@ -1766,7 +1766,27 @@ function setSpellsAndInventory() {
 //populating inventory
 
 function showInventory() {
-  alert("Purchase your inventory");
+  // alert("Purchase your inventory");
+
+  let inventoryModal = document.createElement('dialog');
+  inventoryModal.setAttribute('id', 'inventory-modal');
+  let inventoryModalCloseButton = document.createElement('button');
+  inventoryModalCloseButton.setAttribute('id', 'close-inventory-modal');
+  inventoryModalCloseButton.addEventListener('click', () => {
+    inventoryModal.close();
+  })
+  inventoryModalCloseButton.textContent = "Close";
+  let inventoryModalText = '<p>Purchase your inventory</p>';
+
+  let gameBody = document.getElementsByTagName('body')[0];
+
+  inventoryModal.innerHTML = inventoryModalText;
+  inventoryModal.appendChild(inventoryModalCloseButton);
+  gameBody.appendChild(inventoryModal);
+
+  inventoryModal.showModal();
+
+
   let hideContainer = document.querySelector('#container');
   hideContainer.style.display = "none";
   window.scrollTo(0, 0);
@@ -2860,6 +2880,12 @@ function beginChapterTwoSix() {
 }
 
 function talkToRaynard() {
+  let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
+  removeTalkToRaynardButton.remove();
+
+  let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
+  removeNoTalktoRaynardButton.remove();
+
   window.scrollTo(0, 0);
 
   let talkingToRaynard = document.querySelector("#dialogue");
@@ -2928,6 +2954,13 @@ function talkToRaynard() {
 //CHAPTER THREE ONE
 
 function startChapterThreeOne() {
+
+  let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
+  removeTalkToRaynardButton.remove();
+
+  let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
+  removeNoTalktoRaynardButton.remove();
+
   window.scrollTo(0, 0);
 
   let chapterThreeOne = document.querySelector("#dialogue");
