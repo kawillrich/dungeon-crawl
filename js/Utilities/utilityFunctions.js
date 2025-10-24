@@ -1,3 +1,4 @@
+
 export function continueTextAnimation(chapterConfig) {
   if (chapterConfig.dialogueIterator < chapterConfig.thisChapterDialogue.length) {
     chapterConfig.dialogueDiv.textContent += chapterConfig.thisChapterDialogue.charAt(chapterConfig.dialogueIterator);

@@ -2831,29 +2831,30 @@ let chapterTwoZeroText = `
     `;
 
 function beginChapterTwoZero() {
-
+  let previousChapterDialogue = document.querySelector('#dialogue');
+  previousChapterDialogue.innerHTML = "";
   console.log("2-0");
   chapterConfig.thisChapterNumber = "2-0";
   chapterConfig.thisChapterDialogue = chapterTwoZeroText;
   chapterConfig.buttonText = "Continue";
   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-  chapterConfig.nextChapterFunction = beginChapterTwoOne;
-  Utilities.continueTextAnimation(chapterConfig);  
-}
-
-let chapterTwoOneText = `
-    As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your hand along it.   
-    `;
-
-function beginChapterTwoOne() {
-  console.log('2-1');
-  chapterConfig.thisChapterNumber = "2-1";
-  chapterConfig.thisChapterDialogue = chapterTwoOneText;
-  chapterConfig.buttonText = "Continue";
-  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
   chapterConfig.nextChapterFunction = beginChapterTwoTwo;
   Utilities.continueTextAnimation(chapterConfig);  
 }
+
+// let chapterTwoOneText = `
+//     As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your hand along it.   
+//     `;
+
+// function beginChapterTwoOne() {
+//   console.log('2-1');
+//   chapterConfig.thisChapterNumber = "2-1";
+//   chapterConfig.thisChapterDialogue = chapterTwoOneText;
+//   chapterConfig.buttonText = "Continue";
+//   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+//   chapterConfig.nextChapterFunction = beginChapterTwoTwo;
+//   Utilities.continueTextAnimation(chapterConfig);  
+// }
 
 let chapterTwoTwoText = `
     You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike.   
@@ -2865,23 +2866,23 @@ function beginChapterTwoTwo() {
   chapterConfig.thisChapterDialogue = chapterTwoTwoText;
   chapterConfig.buttonText = "Continue";
   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-  chapterConfig.nextChapterFunction = beginChapterTwoThree;
-  Utilities.continueTextAnimation(chapterConfig);  
-}
-
-let chapterTwoThreeText = `
-  You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike.
-`;
-
-function beginChapterTwoThree() {
-  console.log('2-3');
-  chapterConfig.thisChapterNumber = "2-3";
-  chapterConfig.thisChapterDialogue = chapterTwoThreeText;
-  chapterConfig.buttonText = "Continue";
-  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
   chapterConfig.nextChapterFunction = beginChapterTwoFour;
   Utilities.continueTextAnimation(chapterConfig);  
 }
+
+// let chapterTwoThreeText = `
+//   You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike.
+// `;
+
+// function beginChapterTwoThree() {
+//   console.log('2-3');
+//   chapterConfig.thisChapterNumber = "2-3";
+//   chapterConfig.thisChapterDialogue = chapterTwoThreeText;
+//   chapterConfig.buttonText = "Continue";
+//   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+//   chapterConfig.nextChapterFunction = beginChapterTwoFour;
+//   Utilities.continueTextAnimation(chapterConfig);  
+// }
 
 let chapterTwoFourText = `
     These familiar memories make you feel at home and bring a reassurance to your mind about what you are about to do. Others have left on the same journey, and none have returned. Are you better than them? Will you make it? Or will you share their fate?   
@@ -2893,24 +2894,24 @@ function beginChapterTwoFour() {
   chapterConfig.thisChapterDialogue = chapterTwoFourText;
   chapterConfig.buttonText = "Continue";
   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-  chapterConfig.nextChapterFunction = beginChapterTwoFive;
-  Utilities.continueTextAnimation(chapterConfig);
-}
-
-let chapterTwoFiveText = `
-  As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. 
-`;
-
-function beginChapterTwoFive() {
-  console.log('2-5');
-  chapterConfig.thisChapterNumber = "2-5";
-  chapterConfig.thisChapterDialogue = chapterTwoFiveText;
-  chapterConfig.buttonText = "Continue";
-  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
   chapterConfig.nextChapterFunction = beginChapterTwoSix;
   Utilities.continueTextAnimation(chapterConfig);
-  //add talk to raynard buttons
 }
+
+// let chapterTwoFiveText = `
+//   As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. 
+// `;
+
+// function beginChapterTwoFive() {
+//   console.log('2-5');
+//   chapterConfig.thisChapterNumber = "2-5";
+//   chapterConfig.thisChapterDialogue = chapterTwoFiveText;
+//   chapterConfig.buttonText = "Continue";
+//   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+//   chapterConfig.nextChapterFunction = beginChapterTwoSix;
+//   Utilities.continueTextAnimation(chapterConfig);
+//   //add talk to raynard buttons
+// }
 
 let chapterTwoSixText = `
   As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?      
@@ -2946,13 +2947,17 @@ function beginChapterTwoSix() {
   containerDiv.appendChild(noTalkToRayard);
 }
 
+  let finalCharacterName = finalCharacter.name;
+
+
 let chapterTwoSevenText = `
-  Good Morning, ${finalCharacter.name}. I hope you slept well. You know, I remember stories of the dragon Soul Stealer. My father's father's grandfather told me of the 
+  Good Morning, ${finalCharacterName}. I hope you slept well. You know, I remember stories of the dragon Soul Stealer. My father's father's grandfather told me of the 
     dragon arriving to the ruins and hoarding a treasure so valuable that many travellers lost their lives looking for it. Did you know that I have also wandered to those ruins
     in my younger years?      
   `;
 
 function beginChapterTwoSeven() {
+
 
   let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
   removeTalkToRaynardButton.remove();
@@ -3010,6 +3015,9 @@ let chapterTwoTenText = `
 `;
 
 function beginChapterTwoTen() {
+  console.log(finalCharacter);
+  console.log(finalCharacter.name);
+
   console.log('2-10');
   chapterConfig.thisChapterNumber = "2-10";
   chapterConfig.thisChapterDialogue = chapterTwoTenText;
