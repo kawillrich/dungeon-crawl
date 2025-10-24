@@ -1281,7 +1281,8 @@ summary.character-statuses-summary {
 --accent-200: #822d00 
 */
 
-  #inventory-modal {
+  #inventory-modal,
+  #pick-mage-spells-modal {
     /* styling */
     color: var(--btn-bg);
     border: 4px solid var(--btn-bg);
@@ -1299,18 +1300,21 @@ summary.character-statuses-summary {
     text-align: center;
   }
 
-  #inventory-modal::backdrop {
+  #inventory-modal::backdrop,
+  #pick-mage-spells-modal::backdrop {
     backdrop-filter: blur(3px);
   }
 
-  #inventory-modal > p {
+  #inventory-modal > p,
+  #pick-mage-spells-modal > p {
     height: 50%;
     width: 50%;
     margin: 15% 25% 0% 25%;
     /* margin: 50%; */
   }
 
-  #close-inventory-modal {
+  #close-inventory-modal,
+  #close-mage-spells-modal {
     /* Styling */
 
     background-color: var(--bg-200);

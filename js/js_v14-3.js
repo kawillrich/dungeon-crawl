@@ -285,6 +285,8 @@ function launchFullScreen() {
 
 launchFullScreen();
 
+let modalConfig = {};
+
 let images;
 
 let adventurerImage = 4;
@@ -2143,7 +2145,17 @@ function pickMageSpells() {
   hideContainer.style.display = "none";
   window.scrollTo(0, 0);
 
-  alert("Pick Mage Spells");
+  //alert("Pick Mage Spells");
+
+  modalConfig = {
+    id: "pick-mage-spells-modal",
+    buttonID: "close-mage-spells-modal",
+    buttonText: "Close",
+    modalText: "Pick Mage Spells"
+  };
+
+  Utilities.createModal(modalConfig)
+
   let showMageSpellsList = document.querySelector(".hide-mage-container");
   showMageSpellsList.classList.add("show-mage-spells");
   selectLevelOneMageSpells();
