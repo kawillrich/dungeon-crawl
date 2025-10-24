@@ -2963,6 +2963,8 @@ function beginChapterTwoSix() {
   noTalkToRayard.setAttribute('value', 'No');
   noTalkToRayard.addEventListener("click", function() {
     this.remove();
+    let yesTalkButton = document.querySelector('#talk-raynard-yes');
+    yesTalkButton.remove();
     beginChapterThreeOne()
   }, false);
 
@@ -2981,11 +2983,11 @@ function beginChapterTwoSeven() {
     dragon arriving to the ruins and hoarding a treasure so valuable that many travellers lost their lives looking for it. Did you know that I have also wandered to those ruins
     in my younger years?      
   `;
-  let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
-  removeTalkToRaynardButton.remove();
+  // let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
+  // removeTalkToRaynardButton.remove();
 
-  let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
-  removeNoTalktoRaynardButton.remove();
+  // let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
+  // removeNoTalktoRaynardButton.remove();
 
   window.scrollTo(0, 0);
 
