@@ -72,20 +72,38 @@ export function continueTextAnimationWelcomeTitle(chapterConfig) {
 
 export function createModal(modalConfig) {
   // modalConfig object:
-  //   modalConfig {
+  //   modalConfig = {
   //     id: "",
+  //     class: "",
   //     buttonID: "",
+  //     buttonClass: "",
   //     buttonText: "",
   //     modalText: ""
   //   }
   let newModal = document.createElement('dialog');
-  newModal.setAttribute('id', modalConfig.id);
+  if (modalConfig.id !== "") {
+    newModal.setAttribute('id', modalConfig.id);
+  }
+  if (modalConfig.class !== "") {
+    newModal.setAttribute('class', modalConfig.class);
+
+  }
+  
   let newModalCloseButton = document.createElement('button');
   newModalCloseButton.setAttribute('type', 'submit');
-  newModalCloseButton.setAttribute('id', modalConfig.buttonID);
+
+  if (modalConfig.buttonID !== "") {
+    newModalCloseButton.setAttribute('id', modalConfig.buttonID);
+  }
+
+  if (modalConfig.buttonClass !== "") {
+    newModalCloseButton.setAttribute('class', modalConfig.buttonClass);
+  }
+
   newModalCloseButton.addEventListener('click', () => {
     newModal.close();
   });
+  
   newModalCloseButton.textContent = modalConfig.buttonText;
   let newModalText = `<p>${modalConfig.modalText}</p>`;
 

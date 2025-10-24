@@ -2191,7 +2191,16 @@ function selectLevelOneMageSpells() {
           );
           updatedCheckedSpells2.textContent = `You have selected ${checkedcount} spell(s)     
             `;
-          alert("You can select maximum of " + limit + " spell(s).");
+
+          modalConfig = {
+            class: "maximum-spells-selected-modal",
+            buttonClass: "close-maximum-spells-selected-modal",
+            buttonText: "Close",
+            modalText: `You can select maximum of ${limit} spell(s)`
+          }
+
+          Utilities.createModal(modalConfig)
+
           this.checked = false;
         }
       };
@@ -2237,7 +2246,15 @@ function selectLevelTwoMageSpells() {
           );
           updatedCheckedSpells2.textContent = `You have selected ${checkedcount} spell(s)     
             `;
-          alert("You can select maximum of " + limit + " spell(s).");
+
+          modalConfig = {
+            class: "maximum-spells-selected-modal",
+            buttonClass: "close-maximum-spells-selected-modal",
+            buttonText: "Close",
+            modalText: `You can select maximum of ${limit} spell(s)`
+          }
+
+          Utilities.createModal(modalConfig)
           this.checked = false;
         }
       };
@@ -2286,7 +2303,15 @@ function selectLevelThreeMageSpells() {
           );
           updatedCheckedSpells2.textContent = `You have selected ${checkedcount} spell(s)     
             `;
-          alert("You can select maximum of " + limit + " spell(s).");
+ 
+          modalConfig = {
+            class: "maximum-spells-selected-modal",
+            buttonClass: "close-maximum-spells-selected-modal",
+            buttonText: "Close",
+            modalText: `You can select maximum of ${limit} spell(s)`
+          }
+
+          Utilities.createModal(modalConfig)
           this.checked = false;
         }
       };
@@ -2509,7 +2534,15 @@ function selectLevelOneClericSpells() {
           );
           updatedCheckedSpells2.textContent = `You have selected ${checkedcount} spell(s)     
             `;
-          alert("You can select maximum of " + limit + " spell(s).");
+
+          modalConfig = {
+            class: "maximum-spells-selected-modal",
+            buttonClass: "close-maximum-spells-selected-modal",
+            buttonText: "Close",
+            modalText: `You can select maximum of ${limit} spell(s)`
+          }
+
+          Utilities.createModal(modalConfig)
           this.checked = false;
         }
       };
@@ -2554,7 +2587,15 @@ function selectLevelTwoClericSpells() {
           );
           updatedCheckedSpells2.textContent = `You have selected ${checkedcount} spell(s)     
             `;
-          alert("You can select maximum of " + limit + " spell(s).");
+
+          modalConfig = {
+            class: "maximum-spells-selected-modal",
+            buttonClass: "close-maximum-spells-selected-modal",
+            buttonText: "Close",
+            modalText: `You can select maximum of ${limit} spell(s)`
+          }
+
+          Utilities.createModal(modalConfig)
           this.checked = false;
         }
       };
@@ -2603,7 +2644,15 @@ function selectLevelThreeClericSpells() {
           );
           updatedCheckedSpells2.textContent = `You have selected ${checkedcount} spell(s)     
             `;
-          alert("You can select maximum of " + limit + " spell(s).");
+
+          modalConfig = {
+            class: "maximum-spells-selected-modal",
+            buttonClass: "close-maximum-spells-selected-modal",
+            buttonText: "Close",
+            modalText: `You can select maximum of ${limit} spell(s)`
+          }
+
+          Utilities.createModal(modalConfig)
           this.checked = false;
         }
       };
@@ -3444,9 +3493,19 @@ function castSpellFromList(e, m1, m2, nextChap) {
     for (let i = 0; i < firstLevel.length; i++) {
       if (firstLevel[i].name === parentNodeInnerText) {
         if (finalCharacter.status.includes("Invisible")) {
-          alert(
-            `You were invisible but the spell was broken after you cast the spell`
-          );
+
+          modalConfig = {
+            class: "invisibility-removed-modal",
+            buttonClass: "close-invisibility-removed-modal",
+            buttonText: "Close",
+            modalText: `You were invisible but the spell was broken after you cast the spell`
+          }
+
+          Utilities.createModal(modalConfig)
+
+          // alert(
+          //   `You were invisible but the spell was broken after you cast the spell`
+          // );
           finalCharacter.status.splice(
             finalCharacter.status.indexOf("Invisible"),
             1
@@ -3470,9 +3529,20 @@ function castSpellFromList(e, m1, m2, nextChap) {
     for (let i = 0; i < secondLevel.length; i++) {
       if (secondLevel[i].name === parentNodeInnerText) {
         if (finalCharacter.status.includes("Invisible")) {
-          alert(
-            `You were invisible but the spell was broken after you cast the spell`
-          );
+
+
+          modalConfig = {
+            class: "invisibility-removed-modal",
+            buttonClass: "close-invisibility-removed-modal",
+            buttonText: "Close",
+            modalText: `You were invisible but the spell was broken after you cast the spell`
+          }
+
+          Utilities.createModal(modalConfig)
+
+          // alert(
+          //   `You were invisible but the spell was broken after you cast the spell`
+          // );
           finalCharacter.status.splice(
             finalCharacter.status.indexOf("Invisible"),
             1
@@ -3494,9 +3564,19 @@ function castSpellFromList(e, m1, m2, nextChap) {
     for (let i = 0; i < thirdLevel.length; i++) {
       if (thirdLevel[i].name === parentNodeInnerText) {
         if (finalCharacter.status.includes("Invisible")) {
-          alert(
-            `You were invisible but the spell was broken after you cast the spell`
-          );
+
+          modalConfig = {
+            class: "invisibility-removed-modal",
+            buttonClass: "close-invisibility-removed-modal",
+            buttonText: "Close",
+            modalText: `You were invisible but the spell was broken after you cast the spell`
+          }
+
+          Utilities.createModal(modalConfig)
+
+          // alert(
+          //   `You were invisible but the spell was broken after you cast the spell`
+          // );
           finalCharacter.status.splice(
             finalCharacter.status.indexOf("Invisible"),
             1
@@ -3980,8 +4060,6 @@ function continueChapterFourTwoOne() {
   window.scrollTo(0, 0);
 
   let giveAwayRaynardsCoin = finalCharacter.inventory.indexOf(raynardsCoin);
-
-  // alert(`You gave away ${finalCharacter.inventory[giveAwayRaynardsCoin].name}`);
 
     modalConfig = {
       id: "give-raynards-coin-modal",

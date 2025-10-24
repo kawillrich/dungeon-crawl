@@ -1280,7 +1280,9 @@ summary.character-statuses-summary {
   #receive-raynards-coin-modal,
   #give-raynards-coin-modal,
   #receive-glandar-weapon-modal,
-  #not-enough-gold-modal  {
+  #not-enough-gold-modal,
+  .maximum-spells-selected-modal,
+  .invisibility-removed-modal  {
     color: var(--btn-bg);
     border: 4px solid var(--btn-bg);
     background-color: #2a2446;
@@ -1297,7 +1299,9 @@ summary.character-statuses-summary {
   #receive-raynards-coin-modal::backdrop,
   #give-raynards-coin-modal::backdrop,
   #receive-glandar-weapon-modal::backdrop,
-  #not-enough-gold-modal::backdrop {
+  #not-enough-gold-modal::backdrop,
+  .maximum-spells-selected-modal::backdrop,
+  .invisibility-removed-modal::backdrop {
     backdrop-filter: blur(3px);
   }
 
@@ -1307,7 +1311,9 @@ summary.character-statuses-summary {
   #receive-raynards-coin-modal > p,
   #give-raynards-coin-modal > p,
   #receive-glandar-weapon-modal > p,
-  #not-enough-gold-modal > p {
+  #not-enough-gold-modal > p,
+  .maximum-spells-selected-modal > p,
+  .invisibility-removed-modal > p {
     height: 50%;
     width: 50%;
     margin: 15% 25% 0% 25%;
@@ -1319,7 +1325,9 @@ summary.character-statuses-summary {
   #close-receive-raynards-coin-modal,
   #close-give-raynards-coin-modal,
   #close-receive-glandar-weapon-modal,
-  #close-not-enough-gold-modal {
+  #close-not-enough-gold-modal,
+  .close-maximum-spells-selected-modal,
+  .close-invisibility-removed-modal {
     background-color: var(--accent-orange);
     border: 3px solid  var(--accent-200);
     color: var(--accent-200);
