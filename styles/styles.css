@@ -1282,7 +1282,8 @@ summary.character-statuses-summary {
 */
 
   #inventory-modal,
-  #pick-mage-spells-modal {
+  #pick-mage-spells-modal,
+  #pick-cleric-spells-modal {
     /* styling */
     color: var(--btn-bg);
     border: 4px solid var(--btn-bg);
@@ -1301,12 +1302,14 @@ summary.character-statuses-summary {
   }
 
   #inventory-modal::backdrop,
-  #pick-mage-spells-modal::backdrop {
+  #pick-mage-spells-modal::backdrop,
+  #pick-cleric-spells-modal::backdrop {
     backdrop-filter: blur(3px);
   }
 
   #inventory-modal > p,
-  #pick-mage-spells-modal > p {
+  #pick-mage-spells-modal > p,
+  #pick-cleric-spells-modal > p {
     height: 50%;
     width: 50%;
     margin: 15% 25% 0% 25%;
@@ -1314,7 +1317,8 @@ summary.character-statuses-summary {
   }
 
   #close-inventory-modal,
-  #close-mage-spells-modal {
+  #close-mage-spells-modal,
+  #close-cleric-spells-modal {
     /* Styling */
 
     background-color: var(--bg-200);

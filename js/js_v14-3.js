@@ -1767,8 +1767,7 @@ function setSpellsAndInventory() {
 
 //populating inventory
 
-function showInventory() {
-  // alert("Purchase your inventory");
+function showInventory() { 
 
   let inventoryModal = document.createElement('dialog');
   inventoryModal.setAttribute('id', 'inventory-modal');
@@ -2145,8 +2144,6 @@ function pickMageSpells() {
   hideContainer.style.display = "none";
   window.scrollTo(0, 0);
 
-  //alert("Pick Mage Spells");
-
   modalConfig = {
     id: "pick-mage-spells-modal",
     buttonID: "close-mage-spells-modal",
@@ -2462,7 +2459,16 @@ function submitAllMageSpells() {
 }
 
 function pickClericSpells() {
-  alert("Pick Cleric Spells");
+  // alert("Pick Cleric Spells");
+
+    modalConfig = {
+    id: "pick-cleric-spells-modal",
+    buttonID: "close-cleric-spells-modal",
+    buttonText: "Close",
+    modalText: "Pick Cleric Spells"
+  };
+
+  Utilities.createModal(modalConfig)
   let hideContainer = document.querySelector('#container');
   hideContainer.style.display = "none";
   let showClericSpellsList = document.querySelector(".hide-cleric-container");
