@@ -2924,7 +2924,7 @@ function beginChapterTwoSix() {
   chapterConfig.thisChapterDialogue = chapterTwoSixText;
   chapterConfig.buttonText = "";
   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-  //chapterConfig.nextChapterFunction = beginChapterTwoSix;
+  // chapterConfig.nextChapterFunction = beginChapterTwoSeven;
   Utilities.continueTextAnimation(chapterConfig);
   //add talk to raynard buttons
 
@@ -2932,7 +2932,7 @@ function beginChapterTwoSix() {
   yesTalkToRayard.setAttribute('type', 'submit');
   yesTalkToRayard.setAttribute('id', 'talk-raynard-yes');
   yesTalkToRayard.setAttribute('value', 'Yes');
-  yesTalkToRayard.addEventListener("click", talkToRaynard, false);
+  yesTalkToRayard.addEventListener("click", beginChapterTwoSeven, false);
 
   let noTalkToRayard = document.createElement('input');
   noTalkToRayard.setAttribute('type', 'submit');
@@ -2944,6 +2944,85 @@ function beginChapterTwoSix() {
   let containerDiv = document.querySelector('#container');
   containerDiv.appendChild(yesTalkToRayard);
   containerDiv.appendChild(noTalkToRayard);
+}
+
+let chapterTwoSevenText = `
+  Good Morning, ${finalCharacter.name}. I hope you slept well. You know, I remember stories of the dragon Soul Stealer. My father's father's grandfather told me of the 
+    dragon arriving to the ruins and hoarding a treasure so valuable that many travellers lost their lives looking for it. Did you know that I have also wandered to those ruins
+    in my younger years?      
+  `;
+
+function beginChapterTwoSeven() {
+
+  let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
+  removeTalkToRaynardButton.remove();
+
+  let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
+  removeNoTalktoRaynardButton.remove();
+
+  window.scrollTo(0, 0);
+
+  console.log('2-7');
+  chapterConfig.thisChapterNumber = "2-7";
+  chapterConfig.thisChapterDialogue = chapterTwoSevenText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoEight;
+  chapterConfig.dialogueDiv.innerHTML = "";
+  Utilities.continueTextAnimation(chapterConfig);
+  //add talk to raynard buttons
+}
+
+let chapterTwoEightText = `
+  Did you know that I have also wandered to those ruins
+    in my younger years? I remember there being two paths towards the ruins - one path that was easily seen along the north of a forest, but there is another that was less 
+    travelled. I learned of this path from a young woman mage who used to live in the forest many moons (years) ago.      
+`;
+
+function beginChapterTwoEight() {
+  console.log('2-8');
+  chapterConfig.thisChapterNumber = "2-8";
+  chapterConfig.thisChapterDialogue = chapterTwoEightText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoNine;
+  Utilities.continueTextAnimation(chapterConfig);
+  //add talk to raynard buttons
+}
+
+let chapterTwoNineText = `
+  I, unfortunately ended up not making it all the way to the ruins where Soul Stealer lives. I reached some old desert ruins just before his lair, where I removed my armor and was preparing for the battle, but I rushed to the aid of a young woman who was gravely injured by the hands of a pack of orcs. I tended her wounds, and we fled the orcs.      
+`;
+
+function beginChapterTwoNine() {
+  console.log('2-9');
+  chapterConfig.thisChapterNumber = "2-9";
+  chapterConfig.thisChapterDialogue = chapterTwoNineText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoTen;
+  Utilities.continueTextAnimation(chapterConfig);
+  //add talk to raynard buttons
+}
+
+let chapterTwoTenText = `
+  I returned here, where I took care of her and ended up marrying her and my adventures behind. From one adventurer to another, if you see Glandar, the owner of the Black Horse Farm, give him this: it's a silver coin. He'll know it's from me. Good luck, ${finalCharacter.name} - I wish you well.  
+`;
+
+function beginChapterTwoTen() {
+  console.log('2-10');
+  chapterConfig.thisChapterNumber = "2-10";
+  chapterConfig.thisChapterDialogue = chapterTwoTenText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterTwoEleven;
+  Utilities.continueTextAnimation(chapterConfig);
+  //add talk to raynard buttons
+}
+  // talkToRaynard();
+
+function beginChapterTwoEleven() {
+  console.log("2-11");
 }
 
 function talkToRaynard() {

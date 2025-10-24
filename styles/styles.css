@@ -18,7 +18,7 @@
   --accent-200: #822d00;
   --btn-hover: azure;
   --btn-bg: #72ff7c;
-  --btn-text: #0d6e6e;
+
 
   /*obsidian dragon header*/
   --header-yellow: rgb(255, 229, 72);
@@ -31,6 +31,10 @@
   --strokeDashOffset: 90;
   --strokeDashOffsetBackground: 0;
   --imageRotate: 132deg;
+
+  /*text*/
+  --hover-text: rgb(163, 205, 163);
+  --btn-text: #0d6e6e;
 }
 
 * {
@@ -1927,7 +1931,7 @@ span#dragonwarrior {
   position: relative;
   display: inline;
   float: right;
-  color:rgb(163, 205, 163);
+  color: var(--hover-text);
   font-weight: boldest;
 }
 
@@ -1938,14 +1942,14 @@ span#dragonwarrior {
 
 .html-spell-tooltip {
   position: relative;
-   color:rgb(163, 205, 163);
+   color:var(--hover-text);
   font-weight: boldest;
 }
 
 .item-tooltip {
   margin: 0px;
   position: relative;
-   color:rgb(163, 205, 163);
+   color:var(--hover-text);
   font-weight: boldest;
 }
 
@@ -1956,7 +1960,7 @@ span#dragonwarrior {
   height: 20px;
   width: 250px;
   display: block;
-   color:rgb(163, 205, 163);
+   color:var(--hover-text);
   font-weight: boldest;
 }
 
