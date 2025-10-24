@@ -1998,7 +1998,15 @@ function addingTotalInventoryCost(e) {
       e.target.classList.contains("quantity-increase") &&
       updatedAvailableGold.textContent < 0
     ) {
+
       alert("You don't have enough gold.");
+    modalConfig = {
+      id: "not-enough-gold-modal",
+      buttonID: "close-not-enough-gold-modal",
+      buttonText: "Close",
+      modalText: "You don't have enough gold"
+    }
+      Utilities.createModal(modalConfig);
       updatedAvailableGold.textContent =
         parseInt(updatedAvailableGold.textContent) + parsedTargetCost;
       getSiblingQty.setAttribute("data-qty", parsedRetrievedLink);

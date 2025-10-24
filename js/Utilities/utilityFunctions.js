@@ -96,6 +96,7 @@ export function createModal(modalConfig) {
   gameBody.appendChild(newModal);
 
   newModal.showModal();
+  modalConfig = {};
 }
 
 export * as Utilities from "./utilityFunctions.js";
