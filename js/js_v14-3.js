@@ -2956,7 +2956,7 @@ function beginChapterTwoSix() {
   noTalkToRayard.setAttribute('type', 'submit');
   noTalkToRayard.setAttribute('id', 'talk-raynard-no');
   noTalkToRayard.setAttribute('value', 'No');
-  noTalkToRayard.addEventListener("click", startChapterThreeOne, false);
+  noTalkToRayard.addEventListener("click", beginChapterThreeOne, false);
 
   //<input type="submit" id="talk-raynard-yes" value="Yes"><input type="submit" id="talk-raynard-no" value="No"><br></br>
   let containerDiv = document.querySelector('#container');
@@ -3031,53 +3031,17 @@ let chapterTwoTenText;
 function beginChapterTwoTen() {
   console.log(finalCharacter);
   console.log(finalCharacter.name);
-chapterTwoTenText = `
-  I returned here, where I took care of her and ended up marrying her and my adventures behind. From one adventurer to another, if you see Glandar, the owner of the Black Horse Farm, give him this: it's a silver coin. He'll know it's from me. Good luck, ${finalCharacter.name} - I wish you well.  
-`;
+  chapterTwoTenText = `
+    I returned here, where I took care of her and ended up marrying her and my adventures behind. From one adventurer to another, if you see Glandar, the owner of the Black Horse Farm, give him this: it's a silver coin. He'll know it's from me. Good luck, ${finalCharacter.name} - I wish you well.  
+  `;
   console.log('2-10');
   chapterConfig.thisChapterNumber = "2-10";
   chapterConfig.thisChapterDialogue = chapterTwoTenText;
   chapterConfig.buttonText = "Continue";
   chapterConfig.dialogueDiv = document.querySelector('#dialogue');
-  chapterConfig.nextChapterFunction = beginChapterTwoEleven;
+  chapterConfig.nextChapterFunction = beginChapterThreeZero;
   Utilities.continueTextAnimation(chapterConfig);
   //add talk to raynard buttons
-}
-  // talkToRaynard();
-
-function beginChapterTwoEleven() {
-  console.log("2-11");
-}
-
-function talkToRaynard() {
-  let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
-  removeTalkToRaynardButton.remove();
-
-  let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
-  removeNoTalktoRaynardButton.remove();
-
-  window.scrollTo(0, 0);
-
-  let talkingToRaynard = document.querySelector("#dialogue");
-  talkingToRaynard.innerHTML = `
-    <p>"Good Morning, ${finalCharacter.name}. I hope you slept well. You know, I remember stories of the dragon Soul Stealer. My father's father's grandfather told me of the 
-    dragon arriving to the ruins and hoarding a treasure so valuable that many travellers lost their lives looking for it. Did you know that I have also wandered to those ruins
-    in my younger years? I remember there being two paths towards the ruins - one path that was easily seen along the north of a forest, but there is another that was less 
-    travelled. I learned of this path from a young woman mage who used to live in the forest many moons (years) ago. That was a long time ago, but I believe it would still 
-    be possible to find that path if you look hard enough. Beyond the farm, travel East. The path is marked by a large boulder with a strange circular carving in it. That 
-    is the entrance."</p>  
-
-    <p>Raynard continued, "I, unfortunately ended up not making it all the way to the ruins where Soul Stealer lives, however, because on my way, I reached some old desert ruins just before his lair.  
-    In those ruins, I removed my armor and was preparing for the battle, but I rushed to the aid of a young woman who was gravely injured by the hands of a pack of orcs. I 
-    ended up tending her wounds, and we fled the orcs. I returned here, where I took care of her and ended up marrying her. I left my adventures behind, but if you find your 
-    way along the hidden path, to the misty forest, and through the underground caves to the desert ruins, you may indeed find my old armor there. Before I forget - if you see 
-    Glandar, the owner of the Black Horse Farm, give him this: it's a silver coin. He'll know it's from me. If you give this to him, he will provide you with a place to rest 
-    and some extra food for the journey. Talk to him about the forest, he will have information for you. Good luck, ${finalCharacter.name} - I wish you well."</p>
-
-    <p>You thank Raynard for his help, shake his hand, and leave the inn.</p>
-    
-    <input type="submit" id="start-chapter-three" value="Continue">`;
-
   finalCharacter.achievements.spokeToRaynard = {
     name: "Spoke to Raynard",
     desc: "Spoke to Raynard and received his coin.",
@@ -3085,67 +3049,135 @@ function talkToRaynard() {
 
   finalCharacter.inventory.push(raynardsCoin);
 
-  var continueChapterThreeOne = document.querySelector("#start-chapter-three");
-
-  continueChapterThreeOne.addEventListener("click", function () {
-    let raynardsCoinIndex = finalCharacter.inventory.indexOf(raynardsCoin);
+  let raynardsCoinIndex = finalCharacter.inventory.indexOf(raynardsCoin);
 
 
-    modalConfig = {
-      id: "receive-raynards-coin-modal",
-      buttonID: "close-receive-raynards-coin-modal",
-      buttonText: "Close",
-      modalText: `You received ${finalCharacter.inventory[raynardsCoinIndex].name}`
-    };
+  modalConfig = {
+    id: "receive-raynards-coin-modal",
+    buttonID: "close-receive-raynards-coin-modal",
+    buttonText: "Close",
+    modalText: `You received ${finalCharacter.inventory[raynardsCoinIndex].name}`
+  };
 
-    Utilities.createModal(modalConfig);    
-    
-    document.querySelector("#normal-equipment-list").innerHTML = ``;
+  Utilities.createModal(modalConfig);    
+  
+  document.querySelector("#normal-equipment-list").innerHTML = ``;
 
-    for (let i = 0; i < finalCharacter.inventory.length; i++) {
-      let addedItemSpan = document.createElement("span");
-      addedItemSpan.innerHTML = `<span class="supply-item-tooltiptext">Desc: ${finalCharacter.inventory[i].description}<br>
-            Qty: ${finalCharacter.inventory[i].qty}<br>
-            </span>
-            `;
+  for (let i = 0; i < finalCharacter.inventory.length; i++) {
+    let addedItemSpan = document.createElement("span");
+    addedItemSpan.innerHTML = `<span class="supply-item-tooltiptext">Desc: ${finalCharacter.inventory[i].description}<br>
+          Qty: ${finalCharacter.inventory[i].qty}<br>
+          </span>
+          `;
 
-      let newID = finalCharacter.inventory[i].dataName;
-      addedItemSpan.setAttribute("id", newID);
-      addedItemSpan.classList.add("supply-item-tooltip");
-      let itemSpanBreak = document.createElement("br");
-      addedItemSpan.appendChild(itemSpanBreak);
-      let newTextName = finalCharacter.inventory[i].name;
-      let addedItemTextNode = document.createTextNode(newTextName);
-      addedItemSpan.prepend(addedItemTextNode);
+    let newID = finalCharacter.inventory[i].dataName;
+    addedItemSpan.setAttribute("id", newID);
+    addedItemSpan.classList.add("supply-item-tooltip");
+    let itemSpanBreak = document.createElement("br");
+    addedItemSpan.appendChild(itemSpanBreak);
+    let newTextName = finalCharacter.inventory[i].name;
+    let addedItemTextNode = document.createTextNode(newTextName);
+    addedItemSpan.prepend(addedItemTextNode);
 
-      let itemList = document.querySelector("#normal-equipment-list");
+    let itemList = document.querySelector("#normal-equipment-list");
 
-      itemList.appendChild(addedItemSpan);
-    }
-    //end adding tooltip
-  });
-  continueChapterThreeOne.addEventListener(
-    "click",
-    startChapterThreeOne,
-    false
-  );
+    itemList.appendChild(addedItemSpan);
+  }
+  //end adding tooltip
+
 }
+  // talkToRaynard();
+
+// function beginChapterTwoEleven() {
+//   console.log("2-11");
+// }
+
+// function talkToRaynard() {
+//   let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
+//   removeTalkToRaynardButton.remove();
+
+//   let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
+//   removeNoTalktoRaynardButton.remove();
+
+//   window.scrollTo(0, 0);
+
+//   let talkingToRaynard = document.querySelector("#dialogue");
+//   talkingToRaynard.innerHTML = `
+//     <p>"Good Morning, ${finalCharacter.name}. I hope you slept well. You know, I remember stories of the dragon Soul Stealer. My father's father's grandfather told me of the 
+//     dragon arriving to the ruins and hoarding a treasure so valuable that many travellers lost their lives looking for it. Did you know that I have also wandered to those ruins
+//     in my younger years? I remember there being two paths towards the ruins - one path that was easily seen along the north of a forest, but there is another that was less 
+//     travelled. I learned of this path from a young woman mage who used to live in the forest many moons (years) ago. That was a long time ago, but I believe it would still 
+//     be possible to find that path if you look hard enough. Beyond the farm, travel East. The path is marked by a large boulder with a strange circular carving in it. That 
+//     is the entrance."</p>  
+
+//     <p>Raynard continued, "I, unfortunately ended up not making it all the way to the ruins where Soul Stealer lives, however, because on my way, I reached some old desert ruins just before his lair.  
+//     In those ruins, I removed my armor and was preparing for the battle, but I rushed to the aid of a young woman who was gravely injured by the hands of a pack of orcs. I 
+//     ended up tending her wounds, and we fled the orcs. I returned here, where I took care of her and ended up marrying her. I left my adventures behind, but if you find your 
+//     way along the hidden path, to the misty forest, and through the underground caves to the desert ruins, you may indeed find my old armor there. Before I forget - if you see 
+//     Glandar, the owner of the Black Horse Farm, give him this: it's a silver coin. He'll know it's from me. If you give this to him, he will provide you with a place to rest 
+//     and some extra food for the journey. Talk to him about the forest, he will have information for you. Good luck, ${finalCharacter.name} - I wish you well."</p>
+
+//     <p>You thank Raynard for his help, shake his hand, and leave the inn.</p>
+    
+//     <input type="submit" id="start-chapter-three" value="Continue">`;
+
+//   finalCharacter.achievements.spokeToRaynard = {
+//     name: "Spoke to Raynard",
+//     desc: "Spoke to Raynard and received his coin.",
+//   };
+
+//   finalCharacter.inventory.push(raynardsCoin);
+
+//   var continueChapterThreeOne = document.querySelector("#start-chapter-three");
+
+//   continueChapterThreeOne.addEventListener("click", function () {
+//     let raynardsCoinIndex = finalCharacter.inventory.indexOf(raynardsCoin);
+
+
+//     modalConfig = {
+//       id: "receive-raynards-coin-modal",
+//       buttonID: "close-receive-raynards-coin-modal",
+//       buttonText: "Close",
+//       modalText: `You received ${finalCharacter.inventory[raynardsCoinIndex].name}`
+//     };
+
+//     Utilities.createModal(modalConfig);    
+    
+//     document.querySelector("#normal-equipment-list").innerHTML = ``;
+
+//     for (let i = 0; i < finalCharacter.inventory.length; i++) {
+//       let addedItemSpan = document.createElement("span");
+//       addedItemSpan.innerHTML = `<span class="supply-item-tooltiptext">Desc: ${finalCharacter.inventory[i].description}<br>
+//             Qty: ${finalCharacter.inventory[i].qty}<br>
+//             </span>
+//             `;
+
+//       let newID = finalCharacter.inventory[i].dataName;
+//       addedItemSpan.setAttribute("id", newID);
+//       addedItemSpan.classList.add("supply-item-tooltip");
+//       let itemSpanBreak = document.createElement("br");
+//       addedItemSpan.appendChild(itemSpanBreak);
+//       let newTextName = finalCharacter.inventory[i].name;
+//       let addedItemTextNode = document.createTextNode(newTextName);
+//       addedItemSpan.prepend(addedItemTextNode);
+
+//       let itemList = document.querySelector("#normal-equipment-list");
+
+//       itemList.appendChild(addedItemSpan);
+//     }
+//     //end adding tooltip
+//   });
+//   continueChapterThreeOne.addEventListener(
+//     "click",
+//     beginChapterThreeOne,
+//     false
+//   );
+// }
 
 //CHAPTER THREE ONE
 
-function startChapterThreeOne() {
-
-  let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
-  removeTalkToRaynardButton.remove();
-
-  let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
-  removeNoTalktoRaynardButton.remove();
-
-  window.scrollTo(0, 0);
-
-  let chapterThreeOne = document.querySelector("#dialogue");
-  chapterThreeOne.innerHTML = `
-    <p>As you depart the Blue Blade Inn, you feel confident in what you are about the journey you are about to embark on (begin). You've heard stories from others about the 
+/*
+<p>As you depart the Blue Blade Inn, you feel confident in what you are about the journey you are about to embark on (begin). You've heard stories from others about the 
     road that leads to a small farm town outside Gryphon's Keep. This road is a mere cart and horse path with two ruts in the dirt where the wagon wheels have worn small 
     ditches in the road over time. The small farm, called the Black Horse Farm, is the last settlement along a large set of woods that span quite a distance to the east.  
     This farm provides some food, animals, and goods to the people of Gryphon's Keep, so the family that owns the Black Horse Farm is known to many here. 
@@ -3158,14 +3190,34 @@ function startChapterThreeOne() {
     forest and the the settled areas. It's almost like there is a mutual undestanding that nothing from the forest goes beyond the woods, and no human from the villages go 
     into the forest. The path you've heard about from other adventurers takes you around the northern part of the forest.  
     </p>
-    
-    <input type="submit" id="start-chapter-three-two" value="Continue">`;
-  var startChapterThreeTwo = document.querySelector("#start-chapter-three-two");
-  startChapterThreeTwo.addEventListener(
-    "click",
-    continueChapterThreeTwo,
-    false
-  );
+*/
+
+let chapterThreeZeroText;
+
+function beginChapterThreeZero() {
+  console.log('3-1');
+  chapterThreeZeroText = `
+    As you depart the Blue Blade Inn, you feel confident in what you are about the journey you are about to embark on (begin). You've heard stories from others about the 
+    road that leads to a small farm town outside Gryphon's Keep.  
+  `;
+
+  chapterConfig.thisChapterNumber = "3-0";
+  chapterConfig.thisChapterDialogue = chapterThreeZeroText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterThreeOne;
+  // chapterConfig.dialogueDiv.innerHTML = "";
+  Utilities.continueTextAnimation(chapterConfig);
+
+}
+
+let chapterThreeOneText;
+
+function beginChapterThreeOne() {
+  console.log('3-1');
+  chapterThreeOneText = `
+    This road is a mere cart and horse path with two ruts in the dirt where the wagon wheels have worn small ditches in the road over time. The small farm, called the Black Horse Farm, is the last settlement along a large set of woods that span quite a distance to the east.
+  `;
 }
 
 //CHAPTER THREE TWO
