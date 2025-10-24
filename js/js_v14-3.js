@@ -2950,13 +2950,21 @@ function beginChapterTwoSix() {
   yesTalkToRayard.setAttribute('type', 'submit');
   yesTalkToRayard.setAttribute('id', 'talk-raynard-yes');
   yesTalkToRayard.setAttribute('value', 'Yes');
-  yesTalkToRayard.addEventListener("click", beginChapterTwoSeven, false);
+  yesTalkToRayard.addEventListener("click", function() {
+    this.remove();
+    let noTalkButton = document.querySelector('#talk-raynard-no');
+    noTalkButton.remove();
+    beginChapterTwoSeven()
+  }, false);
 
   let noTalkToRayard = document.createElement('input');
   noTalkToRayard.setAttribute('type', 'submit');
   noTalkToRayard.setAttribute('id', 'talk-raynard-no');
   noTalkToRayard.setAttribute('value', 'No');
-  noTalkToRayard.addEventListener("click", beginChapterThreeOne, false);
+  noTalkToRayard.addEventListener("click", function() {
+    this.remove();
+    beginChapterThreeOne()
+  }, false);
 
   //<input type="submit" id="talk-raynard-yes" value="Yes"><input type="submit" id="talk-raynard-no" value="No"><br></br>
   let containerDiv = document.querySelector('#container');
@@ -3195,7 +3203,7 @@ function beginChapterTwoTen() {
 let chapterThreeZeroText;
 
 function beginChapterThreeZero() {
-  console.log('3-1');
+  console.log('3-0');
   chapterThreeZeroText = `
     As you depart the Blue Blade Inn, you feel confident in what you are about the journey you are about to embark on (begin). You've heard stories from others about the 
     road that leads to a small farm town outside Gryphon's Keep.  
@@ -3215,9 +3223,43 @@ let chapterThreeOneText;
 
 function beginChapterThreeOne() {
   console.log('3-1');
+  let chapterDialogue = document.querySelector('#dialogue');
+  chapterDialogue.innerHTML = '';
   chapterThreeOneText = `
     This road is a mere cart and horse path with two ruts in the dirt where the wagon wheels have worn small ditches in the road over time. The small farm, called the Black Horse Farm, is the last settlement along a large set of woods that span quite a distance to the east.
   `;
+
+  
+  chapterConfig.thisChapterNumber = "3-1";
+  chapterConfig.thisChapterDialogue = chapterThreeOneText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterThreeTwo;
+  // chapterConfig.dialogueDiv.innerHTML = "";
+  Utilities.continueTextAnimation(chapterConfig);
+}
+
+let chapterThreeTwoText;
+
+function beginChapterThreeTwo() {
+  console.log('3-2');
+
+  chapterThreeTwoText = `You walk along the path and Gryphon's Keep gets farther in the distance and the noise of the   village disappears. Part of you likes the quiet, you've always been one to enjoy time to yourself - and in some cases - you prefer it. 
+  `;
+
+  chapterConfig.thisChapterNumber = "3-2";
+  chapterConfig.thisChapterDialogue = chapterThreeTwoText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterThreeThree;
+  // chapterConfig.dialogueDiv.innerHTML = "";
+  Utilities.continueTextAnimation(chapterConfig);
+
+}
+
+
+function beginChapterThreeThree() {
+  console.log('3-3')
 }
 
 //CHAPTER THREE TWO
