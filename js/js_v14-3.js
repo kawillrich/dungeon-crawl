@@ -2459,9 +2459,8 @@ function submitAllMageSpells() {
 }
 
 function pickClericSpells() {
-  // alert("Pick Cleric Spells");
 
-    modalConfig = {
+  modalConfig = {
     id: "pick-cleric-spells-modal",
     buttonID: "close-cleric-spells-modal",
     buttonText: "Close",
@@ -2469,6 +2468,7 @@ function pickClericSpells() {
   };
 
   Utilities.createModal(modalConfig)
+
   let hideContainer = document.querySelector('#container');
   hideContainer.style.display = "none";
   let showClericSpellsList = document.querySelector(".hide-cleric-container");
@@ -2938,7 +2938,19 @@ function talkToRaynard() {
 
   continueChapterThreeOne.addEventListener("click", function () {
     let raynardsCoinIndex = finalCharacter.inventory.indexOf(raynardsCoin);
-    alert(`You received ${finalCharacter.inventory[raynardsCoinIndex].name}`);
+
+
+    modalConfig = {
+      id: "receive-raynards-coin-modal",
+      buttonID: "close-receive-raynards-coin-modal",
+      buttonText: "Close",
+      modalText: `You received ${finalCharacter.inventory[raynardsCoinIndex].name}`
+    };
+
+  Utilities.createModal(modalConfig)
+    
+    
+    
     document.querySelector("#normal-equipment-list").innerHTML = ``;
 
     for (let i = 0; i < finalCharacter.inventory.length; i++) {
