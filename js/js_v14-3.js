@@ -1705,10 +1705,13 @@ function logCharSpecialty() {
     finalCharacter.enchantedItem = noItem;
     finalCharacter.characterImage = 7;
     finalCharacter.armorClass =
-      finalCharacter.armor.armorClass - finalCharacter.attributes[3].adjustment;
+    finalCharacter.armor.armorClass - finalCharacter.attributes[3].adjustment;
+
+    console.log(finalCharacter);
 
     finalCharacter.characterUpdate();
   } else {
+    console.log("SKIPPING Character update");
   }
   beginJourney();
 }
@@ -1762,6 +1765,7 @@ function setSpellsAndInventory() {
     finalCharacter.attributes[4].adjustment;
 
   beginChapterTwoZero();
+  console.log(finalCharacter);
 }
 
 
@@ -2825,12 +2829,22 @@ function submitAllClericSpells() {
 
 //CHAPTER TWO
 
-let chapterTwoZeroText = `
+
+
+
+
+    
+let chapterTwoZeroText;
+
+function beginChapterTwoZero() {
+
+   chapterTwoZeroText = `
     As you pack up your belongings, you know your ${finalCharacter.specialty.name} training will serve you well. You pick up your ${finalCharacter.weapon.name} and slide your 
     hand along it.   
     `;
 
-function beginChapterTwoZero() {
+  console.log(finalCharacter);
+  
   let previousChapterDialogue = document.querySelector('#dialogue');
   previousChapterDialogue.innerHTML = "";
   console.log("2-0");
@@ -2856,11 +2870,12 @@ function beginChapterTwoZero() {
 //   Utilities.continueTextAnimation(chapterConfig);  
 // }
 
-let chapterTwoTwoText = `
-    You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike.   
-    `;
+let chapterTwoTwoText;
 
 function beginChapterTwoTwo() {
+  chapterTwoTwoText = `
+    You remember how much time and effort you put into practicing to become proficient (skilled) with it. You don (put on) your ${finalCharacter.armor.name} and the smell brings you back to your training, remembering what it feels like when you get hit, and how it feels on your body when you strike.   
+    `;
   console.log('2-2');
   chapterConfig.thisChapterNumber = "2-2";
   chapterConfig.thisChapterDialogue = chapterTwoTwoText;
@@ -2884,12 +2899,13 @@ function beginChapterTwoTwo() {
 //   Utilities.continueTextAnimation(chapterConfig);  
 // }
 
-let chapterTwoFourText = `
-    These familiar memories make you feel at home and bring a reassurance to your mind about what you are about to do. Others have left on the same journey, and none have returned. Are you better than them? Will you make it? Or will you share their fate?   
-    `;
+let chapterTwoFourText;
 
 function beginChapterTwoFour() {
   console.log('2-4');
+  chapterTwoFourText = `
+    These familiar memories make you feel at home and bring a reassurance to your mind about what you are about to do. Others have left on the same journey, and none have returned. Are you better than them? Will you make it? Or will you share their fate?   
+    `;
   chapterConfig.thisChapterNumber = "2-4";
   chapterConfig.thisChapterDialogue = chapterTwoFourText;
   chapterConfig.buttonText = "Continue";
@@ -2913,13 +2929,14 @@ function beginChapterTwoFour() {
 //   //add talk to raynard buttons
 // }
 
-let chapterTwoSixText = `
-  As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?      
-  `;
+let chapterTwoSixText;
 
 function beginChapterTwoSix() {
   // let removeChapterTwoFiveButton = document.querySelector('#button-2-5');
   // removeChapterTwoFiveButton.remove();
+  chapterTwoSixText = `
+  As you complete preparing, you finish a small bit of tea and some bread with cheese you prepared for breakfast. Afterwards, you head down to the main floor of the inn. You see the innkeeper, Raynard, sitting at the counter. Would you like to speak with Raynard on your way out?      
+  `;
   console.log('2-6');
   chapterConfig.thisChapterNumber = "2-6";
   chapterConfig.thisChapterDialogue = chapterTwoSixText;
@@ -2947,18 +2964,15 @@ function beginChapterTwoSix() {
   containerDiv.appendChild(noTalkToRayard);
 }
 
-  let finalCharacterName = finalCharacter.name;
-
-
-let chapterTwoSevenText = `
-  Good Morning, ${finalCharacterName}. I hope you slept well. You know, I remember stories of the dragon Soul Stealer. My father's father's grandfather told me of the 
-    dragon arriving to the ruins and hoarding a treasure so valuable that many travellers lost their lives looking for it. Did you know that I have also wandered to those ruins
-    in my younger years?      
-  `;
+let chapterTwoSevenText;
 
 function beginChapterTwoSeven() {
 
-
+  chapterTwoSevenText = `
+  Good Morning, ${finalCharacter.name}. I hope you slept well. You know, I remember stories of the dragon Soul Stealer. My father's father's grandfather told me of the 
+    dragon arriving to the ruins and hoarding a treasure so valuable that many travellers lost their lives looking for it. Did you know that I have also wandered to those ruins
+    in my younger years?      
+  `;
   let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
   removeTalkToRaynardButton.remove();
 
@@ -2978,14 +2992,15 @@ function beginChapterTwoSeven() {
   //add talk to raynard buttons
 }
 
-let chapterTwoEightText = `
+let chapterTwoEightText;
+
+function beginChapterTwoEight() {
+  console.log('2-8');
+  chapterTwoEightText = `
   Did you know that I have also wandered to those ruins
     in my younger years? I remember there being two paths towards the ruins - one path that was easily seen along the north of a forest, but there is another that was less 
     travelled. I learned of this path from a young woman mage who used to live in the forest many moons (years) ago.      
 `;
-
-function beginChapterTwoEight() {
-  console.log('2-8');
   chapterConfig.thisChapterNumber = "2-8";
   chapterConfig.thisChapterDialogue = chapterTwoEightText;
   chapterConfig.buttonText = "Continue";
@@ -2995,11 +3010,12 @@ function beginChapterTwoEight() {
   //add talk to raynard buttons
 }
 
-let chapterTwoNineText = `
-  I, unfortunately ended up not making it all the way to the ruins where Soul Stealer lives. I reached some old desert ruins just before his lair, where I removed my armor and was preparing for the battle, but I rushed to the aid of a young woman who was gravely injured by the hands of a pack of orcs. I tended her wounds, and we fled the orcs.      
-`;
+let chapterTwoNineText;
 
 function beginChapterTwoNine() {
+  chapterTwoNineText = `
+  I, unfortunately ended up not making it all the way to the ruins where Soul Stealer lives. I reached some old desert ruins just before his lair, where I removed my armor and was preparing for the battle, but I rushed to the aid of a young woman who was gravely injured by the hands of a pack of orcs. I tended her wounds, and we fled the orcs.      
+`;
   console.log('2-9');
   chapterConfig.thisChapterNumber = "2-9";
   chapterConfig.thisChapterDialogue = chapterTwoNineText;
@@ -3010,14 +3026,14 @@ function beginChapterTwoNine() {
   //add talk to raynard buttons
 }
 
-let chapterTwoTenText = `
-  I returned here, where I took care of her and ended up marrying her and my adventures behind. From one adventurer to another, if you see Glandar, the owner of the Black Horse Farm, give him this: it's a silver coin. He'll know it's from me. Good luck, ${finalCharacter.name} - I wish you well.  
-`;
+let chapterTwoTenText;
 
 function beginChapterTwoTen() {
   console.log(finalCharacter);
   console.log(finalCharacter.name);
-
+chapterTwoTenText = `
+  I returned here, where I took care of her and ended up marrying her and my adventures behind. From one adventurer to another, if you see Glandar, the owner of the Black Horse Farm, give him this: it's a silver coin. He'll know it's from me. Good luck, ${finalCharacter.name} - I wish you well.  
+`;
   console.log('2-10');
   chapterConfig.thisChapterNumber = "2-10";
   chapterConfig.thisChapterDialogue = chapterTwoTenText;
