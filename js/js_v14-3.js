@@ -1771,6 +1771,7 @@ function showInventory() {
   let inventoryModal = document.createElement('dialog');
   inventoryModal.setAttribute('id', 'inventory-modal');
   let inventoryModalCloseButton = document.createElement('button');
+  inventoryModalCloseButton.setAttribute('type', 'submit');
   inventoryModalCloseButton.setAttribute('id', 'close-inventory-modal');
   inventoryModalCloseButton.addEventListener('click', () => {
     inventoryModal.close();
