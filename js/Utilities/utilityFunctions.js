@@ -71,6 +71,7 @@ export function continueTextAnimationWelcomeTitle(chapterConfig) {
 }
 
 export function createModal(modalConfig) {
+  console.log(modalConfig);
   // modalConfig object:
   //   modalConfig = {
   //     id: "",
@@ -100,18 +101,24 @@ export function createModal(modalConfig) {
     newModalCloseButton.setAttribute('class', modalConfig.buttonClass);
   }
 
-  newModalCloseButton.addEventListener('click', () => {
+  newModalCloseButton.addEventListener('click', function () {
+    // let dialog = document.querySelector("dialog");
+    console.log("test");
+
     newModal.close();
+    newModal.remove();
+
   });
-  
+
   newModalCloseButton.textContent = modalConfig.buttonText;
   let newModalText = `<p>${modalConfig.modalText}</p>`;
 
   let gameBody = document.getElementsByTagName('body')[0];
 
   newModal.innerHTML = newModalText;
-  newModal.appendChild(newModalCloseButton);
   gameBody.appendChild(newModal);
+
+  newModal.appendChild(newModalCloseButton);
 
   newModal.showModal();
   modalConfig = {};

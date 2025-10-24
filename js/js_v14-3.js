@@ -1769,25 +1769,17 @@ function setSpellsAndInventory() {
 
 function showInventory() { 
 
-  let inventoryModal = document.createElement('dialog');
-  inventoryModal.setAttribute('id', 'inventory-modal');
-  let inventoryModalCloseButton = document.createElement('button');
-  inventoryModalCloseButton.setAttribute('type', 'submit');
-  inventoryModalCloseButton.setAttribute('id', 'close-inventory-modal');
-  inventoryModalCloseButton.addEventListener('click', () => {
-    inventoryModal.close();
-  })
-  inventoryModalCloseButton.textContent = "Close";
-  let inventoryModalText = '<p>Purchase your inventory</p>';
 
-  let gameBody = document.getElementsByTagName('body')[0];
+  modalConfig = {
+    id: "inventory-modal",
+    class: "",
+    buttonID: "close-inventory-modal",
+    buttonClass: "",
+    buttonText: "Close",
+    modalText: "Purchase your inventory"
+  }
 
-  inventoryModal.innerHTML = inventoryModalText;
-  inventoryModal.appendChild(inventoryModalCloseButton);
-  gameBody.appendChild(inventoryModal);
-
-  inventoryModal.showModal();
-
+  Utilities.createModal(modalConfig)
 
   let hideContainer = document.querySelector('#container');
   hideContainer.style.display = "none";
