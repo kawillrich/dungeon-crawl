@@ -70,4 +70,32 @@ export function continueTextAnimationWelcomeTitle(chapterConfig) {
   }  
 }
 
+export function createModal(modalConfig) {
+  // modalConfig object:
+  //   modalConfig {
+  //     id: "",
+  //     buttonID: "",
+  //     buttonText: "",
+  //     modalText: ""
+  //   }
+  let newModal = document.createElement('dialog');
+  newModal.setAttribute('id', modalConfig.id);
+  let newModalCloseButton = document.createElement('button');
+  newModalCloseButton.setAttribute('type', 'submit');
+  newModalCloseButton.setAttribute('id', modalConfig.buttonID);
+  newModalCloseButton.addEventListener('click', () => {
+    newModal.close();
+  });
+  newModalCloseButton.textContent = modalConfig.buttonText;
+  let newModalText = `<p>${modalConfig.modalText}</p>`;
+
+  let gameBody = document.getElementsByTagName('body')[0];
+
+  newModal.innerHTML = newModalText;
+  newModal.appendChild(newModalCloseButton);
+  gameBody.appendChild(newModal);
+
+  newModal.showModal();
+}
+
 export * as Utilities from "./utilityFunctions.js";
