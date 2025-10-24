@@ -1284,7 +1284,8 @@ summary.character-statuses-summary {
   #inventory-modal,
   #pick-mage-spells-modal,
   #pick-cleric-spells-modal,
-  #receive-raynards-coin-modal {
+  #receive-raynards-coin-modal,
+  #give-raynards-coin-modal  {
     /* styling */
     color: var(--btn-bg);
     border: 4px solid var(--btn-bg);
@@ -1305,14 +1306,16 @@ summary.character-statuses-summary {
   #inventory-modal::backdrop,
   #pick-mage-spells-modal::backdrop,
   #pick-cleric-spells-modal::backdrop,
-  #receive-raynards-coin-modal::backdrop {
+  #receive-raynards-coin-modal::backdrop,
+  #give-raynards-coin-modal::backdrop {
     backdrop-filter: blur(3px);
   }
 
   #inventory-modal > p,
   #pick-mage-spells-modal > p,
   #pick-cleric-spells-modal > p,
-  #receive-raynards-coin-modal > p {
+  #receive-raynards-coin-modal > p,
+  #give-raynards-coin-modal > p {
     height: 50%;
     width: 50%;
     margin: 15% 25% 0% 25%;
@@ -1322,7 +1325,8 @@ summary.character-statuses-summary {
   #close-inventory-modal,
   #close-mage-spells-modal,
   #close-cleric-spells-modal,
-  #close-receive-raynards-coin-modal {
+  #close-receive-raynards-coin-modal,
+  #close-give-raynards-coin-modal {
     /* Styling */
 
     background-color: var(--bg-200);

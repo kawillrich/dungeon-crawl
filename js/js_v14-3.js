@@ -2947,9 +2947,7 @@ function talkToRaynard() {
       modalText: `You received ${finalCharacter.inventory[raynardsCoinIndex].name}`
     };
 
-  Utilities.createModal(modalConfig)
-    
-    
+    Utilities.createModal(modalConfig);    
     
     document.querySelector("#normal-equipment-list").innerHTML = ``;
 
@@ -3975,7 +3973,18 @@ function continueChapterFourTwoOne() {
   window.scrollTo(0, 0);
 
   let giveAwayRaynardsCoin = finalCharacter.inventory.indexOf(raynardsCoin);
-  alert(`You gave away ${finalCharacter.inventory[giveAwayRaynardsCoin].name}`);
+
+  // alert(`You gave away ${finalCharacter.inventory[giveAwayRaynardsCoin].name}`);
+
+    modalConfig = {
+      id: "give-raynards-coin-modal",
+      buttonID: "close-give-raynards-coin-modal",
+      buttonText: "Close",
+      modalText: `You gave away ${finalCharacter.inventory[raynardsCoinIndex].name}`
+    };
+
+    Utilities.createModal(modalConfig);
+
 
   let findRaynardsCoin = finalCharacter.inventory.indexOf(raynardsCoin);
   finalCharacter.inventory.splice(findRaynardsCoin, 1);
@@ -4046,8 +4055,16 @@ function continueChapterFourTwoOne() {
 
   let beginChapterFive = document.querySelector("#start-chapt-five");
   beginChapterFive.addEventListener("click", continueChapterFive, false);
-  beginChapterFive.addEventListener("click", () =>
-    alert(`You received ${finalCharacter.weapon.name}`)
+  beginChapterFive.addEventListener("click", function() {
+      modalConfig = {
+        id: "receive-glandar-weapon-modal",
+        buttonID: "close-receive-glandar-weapon-modal",
+        buttonText: "Close",
+        modalText: `You received ${finalCharacter.weapon.name}`
+      }
+    
+      Utilities.createModal(modalConfig);
+    }    
   );
 }
 
