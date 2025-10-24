@@ -278,12 +278,17 @@ input[type="text"] {
     text-align: center;
     /* border: 1px solid black; */
     width:100%;
+  
   }
 
   .ability-score-grid-item {
     text-align: center;
   }
 
+  .ability-score-number-grid-item,
+  .ability-score-adjustment-grid-item {
+    color: white;
+  }
 
   #generate-attributes {
     /* grid-area: footer2; */
@@ -373,6 +378,7 @@ input[name="selected-specialty"] {
 
 .alignment-label {
   display: inline-block;
+  color: white;
 }
 
 
@@ -381,6 +387,7 @@ input[name="selected-specialty"] {
   font-size: 1.5rem;
   justify-self: center;
   text-align: center;
+  color: white;
 }
 
 .class-label::before {
@@ -2073,7 +2080,7 @@ span#dragonwarrior {
 
 .armor-tooltip:hover,
 .weapon-tooltip:hover,
-.spell-tooltip:hover,
+.html-spell-tooltip:hover,
 .item-tooltip:hover,
 .supply-item-tooltip:hover,
 .inventory-item-tooltip:hover {
