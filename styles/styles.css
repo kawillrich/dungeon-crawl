@@ -1927,6 +1927,8 @@ span#dragonwarrior {
   position: relative;
   display: inline;
   float: right;
+  color:rgb(163, 205, 163);
+  font-weight: boldest;
 }
 
 .armor-tooltip > .character-display-info,
@@ -1934,13 +1936,17 @@ span#dragonwarrior {
   cursor: url("../images/gui/cursor-hover.png"), auto;
 }
 
-.spell-tooltip {
+.html-spell-tooltip {
   position: relative;
+   color:rgb(163, 205, 163);
+  font-weight: boldest;
 }
 
 .item-tooltip {
   margin: 0px;
   position: relative;
+   color:rgb(163, 205, 163);
+  font-weight: boldest;
 }
 
 .supply-item-tooltip
@@ -1950,6 +1956,8 @@ span#dragonwarrior {
   height: 20px;
   width: 250px;
   display: block;
+   color:rgb(163, 205, 163);
+  font-weight: boldest;
 }
 
   .inventory-item-tooltip {
