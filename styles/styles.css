@@ -1274,28 +1274,16 @@ summary.character-statuses-summary {
     margin-top: 5px;
   }
 
-/* 
---tertiary-200: #ff9983
---accent-orange: #f18701
---accent-orange-200: #822d00
---accent-200: #822d00 
-*/
-
   #inventory-modal,
   #pick-mage-spells-modal,
   #pick-cleric-spells-modal,
   #receive-raynards-coin-modal,
-  #give-raynards-coin-modal  {
-    /* styling */
+  #give-raynards-coin-modal,
+  #receive-glandar-weapon-modal,
+  #not-enough-gold-modal  {
     color: var(--btn-bg);
     border: 4px solid var(--btn-bg);
     background-color: #2a2446;
-
-
-    color: var(--btn-bg);
-    border: 4px solid var(--btn-bg);
-    background-color: #2a2446;
-
     border-radius: 15px;
     height: 20%;
     width: 40%;
@@ -1307,7 +1295,9 @@ summary.character-statuses-summary {
   #pick-mage-spells-modal::backdrop,
   #pick-cleric-spells-modal::backdrop,
   #receive-raynards-coin-modal::backdrop,
-  #give-raynards-coin-modal::backdrop {
+  #give-raynards-coin-modal::backdrop,
+  #receive-glandar-weapon-modal::backdrop,
+  #not-enough-gold-modal::backdrop {
     backdrop-filter: blur(3px);
   }
 
@@ -1315,28 +1305,24 @@ summary.character-statuses-summary {
   #pick-mage-spells-modal > p,
   #pick-cleric-spells-modal > p,
   #receive-raynards-coin-modal > p,
-  #give-raynards-coin-modal > p {
+  #give-raynards-coin-modal > p,
+  #receive-glandar-weapon-modal > p,
+  #not-enough-gold-modal > p {
     height: 50%;
     width: 50%;
     margin: 15% 25% 0% 25%;
-    /* margin: 50%; */
   }
 
   #close-inventory-modal,
   #close-mage-spells-modal,
   #close-cleric-spells-modal,
   #close-receive-raynards-coin-modal,
-  #close-give-raynards-coin-modal {
-    /* Styling */
-
-    background-color: var(--bg-200);
-    border: 3px solid  var(--btn-bg);
-    color: var(--btn-bg);
-
+  #close-give-raynards-coin-modal,
+  #close-receive-glandar-weapon-modal,
+  #close-not-enough-gold-modal {
     background-color: var(--accent-orange);
     border: 3px solid  var(--accent-200);
     color: var(--accent-200);
-
     height: 2em;
     width: 5em;
     font-size: 1.1em;

@@ -1999,7 +1999,6 @@ function addingTotalInventoryCost(e) {
       updatedAvailableGold.textContent < 0
     ) {
 
-      alert("You don't have enough gold.");
     modalConfig = {
       id: "not-enough-gold-modal",
       buttonID: "close-not-enough-gold-modal",
