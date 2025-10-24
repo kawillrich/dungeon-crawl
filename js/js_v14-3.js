@@ -459,64 +459,64 @@ let gameFrame = 0;
 const staggerFrames = 8;
 let reqAnim;
 
-// export function render() {
-//   frameY = finalCharacter.characterImage;
-//   canvas = document.getElementById("canvas2");
-//   ctx = canvas.getContext("2d");
-//   CANVAS_HEIGHT = 100;
-//   CANVAS_WIDTH = 100;
-//   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-//   ctx.drawImage(
-//     playerImage,
-//     frameX * spriteWidth,
-//     frameY * spriteHeight,
-//     spriteWidth,
-//     spriteHeight,
-//     0,
-//     0,
-//     spriteWidth * 2,
-//     spriteHeight * 2
-//   );
-//   requestAnimationFrame(render);
-// }
+export function render() {
+  frameY = finalCharacter.characterImage;
+  canvas = document.getElementById("canvas2");
+  ctx = canvas.getContext("2d");
+  CANVAS_HEIGHT = 100;
+  CANVAS_WIDTH = 100;
+  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx.drawImage(
+    playerImage,
+    frameX * spriteWidth,
+    frameY * spriteHeight,
+    spriteWidth,
+    spriteHeight,
+    0,
+    0,
+    spriteWidth * 2,
+    spriteHeight * 2
+  );
+  requestAnimationFrame(render);
+}
 
-// export function animate() {
-//   frameY = finalCharacter.characterImage;
-//   if (document.querySelector(".attack-monster-one")) {
-//     document.querySelector(".attack-monster-one").disabled = true;
-//   }
-//   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-//   //ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
-//   ctx.drawImage(
-//     playerImage,
-//     frameX * spriteWidth,
-//     frameY * spriteHeight,
-//     spriteWidth,
-//     spriteHeight,
-//     0,
-//     0,
-//     spriteWidth * 1.5,
-//     spriteHeight * 1.5
-//   );
+export function animate() {
+  frameY = finalCharacter.characterImage;
+  if (document.querySelector(".attack-monster-one")) {
+    document.querySelector(".attack-monster-one").disabled = true;
+  }
+  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  //ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
+  ctx.drawImage(
+    playerImage,
+    frameX * spriteWidth,
+    frameY * spriteHeight,
+    spriteWidth,
+    spriteHeight,
+    0,
+    0,
+    spriteWidth * 1.5,
+    spriteHeight * 1.5
+  );
 
-//   if (gameFrame % staggerFrames == 0) {
-//     if (frameX < 6) {
-//       frameX++;
-//     } else if (frameX >= 6) {
-//       frameX = 0;
-//       if (document.querySelector(".attack-monster-one")) {
-//         document.querySelector(".attack-monster-one").disabled = false;
-//       }
-//       return;
-//     }
-//   }
-//   gameFrame++;
-//   reqAnim = requestAnimationFrame(animate);
-// }
+  if (gameFrame % staggerFrames == 0) {
+    if (frameX < 6) {
+      frameX++;
+    } else if (frameX >= 6) {
+      frameX = 0;
+      if (document.querySelector(".attack-monster-one")) {
+        document.querySelector(".attack-monster-one").disabled = false;
+      }
+      return;
+    }
+  }
+  gameFrame++;
+  reqAnim = requestAnimationFrame(animate);
+}
 
-// export function stopAnimate() {
-//   window.cancelAnimationFrame(reqAnim);
-// }
+export function stopAnimate() {
+  window.cancelAnimationFrame(reqAnim);
+}
 
 //initialized and clears selectedSpecialty
 let selectedSpecialty = "";
@@ -1475,7 +1475,7 @@ function startGame() {
   `;
 
   showInventory();
-  // render();
+  render();
 
   let chapterOne = document.querySelector("#dialogue");
   
@@ -3096,111 +3096,6 @@ function beginChapterTwoTen() {
   //end adding tooltip
 
 }
-  // talkToRaynard();
-
-// function beginChapterTwoEleven() {
-//   console.log("2-11");
-// }
-
-// function talkToRaynard() {
-//   let removeTalkToRaynardButton = document.querySelector('#talk-raynard-yes');
-//   removeTalkToRaynardButton.remove();
-
-//   let removeNoTalktoRaynardButton = document.querySelector('#talk-raynard-no');
-//   removeNoTalktoRaynardButton.remove();
-
-//   window.scrollTo(0, 0);
-
-//   let talkingToRaynard = document.querySelector("#dialogue");
-//   talkingToRaynard.innerHTML = `
-//     <p>"Good Morning, ${finalCharacter.name}. I hope you slept well. You know, I remember stories of the dragon Soul Stealer. My father's father's grandfather told me of the 
-//     dragon arriving to the ruins and hoarding a treasure so valuable that many travellers lost their lives looking for it. Did you know that I have also wandered to those ruins
-//     in my younger years? I remember there being two paths towards the ruins - one path that was easily seen along the north of a forest, but there is another that was less 
-//     travelled. I learned of this path from a young woman mage who used to live in the forest many moons (years) ago. That was a long time ago, but I believe it would still 
-//     be possible to find that path if you look hard enough. Beyond the farm, travel East. The path is marked by a large boulder with a strange circular carving in it. That 
-//     is the entrance."</p>  
-
-//     <p>Raynard continued, "I, unfortunately ended up not making it all the way to the ruins where Soul Stealer lives, however, because on my way, I reached some old desert ruins just before his lair.  
-//     In those ruins, I removed my armor and was preparing for the battle, but I rushed to the aid of a young woman who was gravely injured by the hands of a pack of orcs. I 
-//     ended up tending her wounds, and we fled the orcs. I returned here, where I took care of her and ended up marrying her. I left my adventures behind, but if you find your 
-//     way along the hidden path, to the misty forest, and through the underground caves to the desert ruins, you may indeed find my old armor there. Before I forget - if you see 
-//     Glandar, the owner of the Black Horse Farm, give him this: it's a silver coin. He'll know it's from me. If you give this to him, he will provide you with a place to rest 
-//     and some extra food for the journey. Talk to him about the forest, he will have information for you. Good luck, ${finalCharacter.name} - I wish you well."</p>
-
-//     <p>You thank Raynard for his help, shake his hand, and leave the inn.</p>
-    
-//     <input type="submit" id="start-chapter-three" value="Continue">`;
-
-//   finalCharacter.achievements.spokeToRaynard = {
-//     name: "Spoke to Raynard",
-//     desc: "Spoke to Raynard and received his coin.",
-//   };
-
-//   finalCharacter.inventory.push(raynardsCoin);
-
-//   var continueChapterThreeOne = document.querySelector("#start-chapter-three");
-
-//   continueChapterThreeOne.addEventListener("click", function () {
-//     let raynardsCoinIndex = finalCharacter.inventory.indexOf(raynardsCoin);
-
-
-//     modalConfig = {
-//       id: "receive-raynards-coin-modal",
-//       buttonID: "close-receive-raynards-coin-modal",
-//       buttonText: "Close",
-//       modalText: `You received ${finalCharacter.inventory[raynardsCoinIndex].name}`
-//     };
-
-//     Utilities.createModal(modalConfig);    
-    
-//     document.querySelector("#normal-equipment-list").innerHTML = ``;
-
-//     for (let i = 0; i < finalCharacter.inventory.length; i++) {
-//       let addedItemSpan = document.createElement("span");
-//       addedItemSpan.innerHTML = `<span class="supply-item-tooltiptext">Desc: ${finalCharacter.inventory[i].description}<br>
-//             Qty: ${finalCharacter.inventory[i].qty}<br>
-//             </span>
-//             `;
-
-//       let newID = finalCharacter.inventory[i].dataName;
-//       addedItemSpan.setAttribute("id", newID);
-//       addedItemSpan.classList.add("supply-item-tooltip");
-//       let itemSpanBreak = document.createElement("br");
-//       addedItemSpan.appendChild(itemSpanBreak);
-//       let newTextName = finalCharacter.inventory[i].name;
-//       let addedItemTextNode = document.createTextNode(newTextName);
-//       addedItemSpan.prepend(addedItemTextNode);
-
-//       let itemList = document.querySelector("#normal-equipment-list");
-
-//       itemList.appendChild(addedItemSpan);
-//     }
-//     //end adding tooltip
-//   });
-//   continueChapterThreeOne.addEventListener(
-//     "click",
-//     beginChapterThreeOne,
-//     false
-//   );
-// }
-
-//CHAPTER THREE ONE
-
-/*
-<p>As you depart the Blue Blade Inn, you feel confident in what you are about the journey you are about to embark on (begin). You've heard stories from others about the 
-    road that leads to a small farm town outside Gryphon's Keep. This road is a mere cart and horse path with two ruts in the dirt where the wagon wheels have worn small 
-    ditches in the road over time. The small farm, called the Black Horse Farm, is the last settlement along a large set of woods that span quite a distance to the east.  
-    This farm provides some food, animals, and goods to the people of Gryphon's Keep, so the family that owns the Black Horse Farm is known to many here. 
-    </p>
-    <p>The woods adjacent to the farm are known as the Forgotten Woods. The woods consist mostly of coniferous (pine) trees over flat land sprinkled with some boulders.  
-    The woods house many animals such as deer, coyotes, beavers, rabbits, various birds, and other woodland creatures. From what you've heard, there are several brooks 
-    throughout the woods, an occasional pond, and some swampy areas. However, it isn't these woods that concern you - it's the forest on the other side of the woods that does.  
-    It is rumored that the forest is home to various creatures that don't come out in open fields or the woods. Some of these creatures are said to be mystical, forgotten 
-    beings who stay lurking in the shadows since the Golden Age. One thing is for certain - no one goes into the forest. The Forgotten Woods is much like a 'buffer' between the 
-    forest and the the settled areas. It's almost like there is a mutual undestanding that nothing from the forest goes beyond the woods, and no human from the villages go 
-    into the forest. The path you've heard about from other adventurers takes you around the northern part of the forest.  
-    </p>
-*/
 
 let chapterThreeZeroText;
 
@@ -3262,6 +3157,7 @@ function beginChapterThreeTwo() {
 
 function beginChapterThreeThree() {
   console.log('3-3')
+  continueChapterThreeThree();
 }
 
 //CHAPTER THREE TWO
