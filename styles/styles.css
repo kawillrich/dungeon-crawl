@@ -1516,6 +1516,8 @@ summary.character-statuses-summary {
 
   #fight-module {
     grid-area: 5 / 1 / 5 / 4;
+    width: 100%;
+    height: 100%;
   }
 
   #monster-info {
