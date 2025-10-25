@@ -2946,32 +2946,42 @@ function beginChapterTwoSix() {
   Utilities.continueTextAnimation(chapterConfig);
   //add talk to raynard buttons
 
-  let yesTalkToRayard = document.createElement('input');
-  yesTalkToRayard.setAttribute('type', 'submit');
-  yesTalkToRayard.setAttribute('id', 'talk-raynard-yes');
-  yesTalkToRayard.setAttribute('value', 'Yes');
-  yesTalkToRayard.addEventListener("click", function() {
-    this.remove();
-    let noTalkButton = document.querySelector('#talk-raynard-no');
-    noTalkButton.remove();
-    beginChapterTwoSeven()
-  }, false);
+  setTimeout(() => {
+    populateRaynardButtons();
+  }, 2500);
 
-  let noTalkToRayard = document.createElement('input');
-  noTalkToRayard.setAttribute('type', 'submit');
-  noTalkToRayard.setAttribute('id', 'talk-raynard-no');
-  noTalkToRayard.setAttribute('value', 'No');
-  noTalkToRayard.addEventListener("click", function() {
-    this.remove();
-    let yesTalkButton = document.querySelector('#talk-raynard-yes');
-    yesTalkButton.remove();
-    beginChapterThreeOne()
-  }, false);
+  let populateRaynardButtons = function() {
+
+    let yesTalkToRayard = document.createElement('input');
+    yesTalkToRayard.setAttribute('type', 'submit');
+    yesTalkToRayard.setAttribute('id', 'talk-raynard-yes');
+    yesTalkToRayard.setAttribute('value', 'Yes');
+    yesTalkToRayard.addEventListener("click", function() {
+      this.remove();
+      let noTalkButton = document.querySelector('#talk-raynard-no');
+      noTalkButton.remove();
+      beginChapterTwoSeven()
+    }, false);
+
+    let noTalkToRayard = document.createElement('input');
+    noTalkToRayard.setAttribute('type', 'submit');
+    noTalkToRayard.setAttribute('id', 'talk-raynard-no');
+    noTalkToRayard.setAttribute('value', 'No');
+    noTalkToRayard.addEventListener("click", function() {
+      this.remove();
+      let yesTalkButton = document.querySelector('#talk-raynard-yes');
+      yesTalkButton.remove();
+      beginChapterThreeOne()
+    }, false);
+     let containerDiv = document.querySelector('#container');
+     containerDiv.appendChild(yesTalkToRayard);
+     containerDiv.appendChild(noTalkToRayard);
+  }
+
+  
 
   //<input type="submit" id="talk-raynard-yes" value="Yes"><input type="submit" id="talk-raynard-no" value="No"><br></br>
-  let containerDiv = document.querySelector('#container');
-  containerDiv.appendChild(yesTalkToRayard);
-  containerDiv.appendChild(noTalkToRayard);
+ 
 }
 
 let chapterTwoSevenText;
@@ -3193,8 +3203,10 @@ let chapterThreeFiveText;
 function beginChapterThreeFive() {
 console.log('3-5');
 
-  chapterThreeFiveText = `You quicken your pace. Ahead, you see two dark figures hovering over a shape on the ground. As you come closer, you can make out a wolf picking at a sheep, dead on the road. Not only is this odd because of the time of day, but wolves haven't been a problem in this country side for quite some time. You can tell this wolf has no intention of leaving the sheep, and wolves are dangerous for the farm, so you have to make a decision. What do you do?
+  chapterThreeFiveText = `You quicken your pace. Ahead, you see two dark figures hovering over a shape on the ground. As you come closer, you can make out a wolf picking at a sheep, dead on the road. Not only is this odd because of the time of day. This wolf has no intention of leaving the sheep, and wolves are dangerous. What do you do?
   `;
+
+  
 
   chapterConfig.thisChapterNumber = "3-5";
   chapterConfig.thisChapterDialogue = chapterThreeFiveText;
@@ -3204,22 +3216,43 @@ console.log('3-5');
   chapterConfig.dialogueDiv.innerHTML = "";
   Utilities.continueTextAnimation(chapterConfig);
 
-  var attackWolvesYes = document.querySelector("#attack-wolves");
-  attackWolvesYes.addEventListener(
-    "click",
-    () => {
-      addingFightModule(smallWolf, noMonster, continueChapterThreeFour);
-      declareAttack();
-    },
-    false
-  );
+  
 
-  var attackWolvesNo = document.querySelector("#dont-attack-wolves");
-  attackWolvesNo.addEventListener(
-    "click",
-    goAroundMonsters(continueChapterThreeFive),
-    false
-  );
+
+  setTimeout(() => {
+    populateAttackWolfButtons();
+  }, 2500);
+
+  let populateAttackWolfButtons = function() {
+    let attackWolvesButton = document.createElement('input');
+    attackWolvesButton.setAttribute('type', 'submit');
+    attackWolvesButton.setAttribute('id', 'attack-wolves');
+    attackWolvesButton.setAttribute('value', 'Attack');
+    attackWolvesButton.addEventListener(
+      "click",
+      () => {
+        addingFightModule(smallWolf, noMonster, continueChapterThreeFour);
+        declareAttack();
+      },
+      false
+    );
+
+    let goAroundButton = document.createElement('input');
+    goAroundButton.setAttribute('type', 'submit');
+    goAroundButton.setAttribute('id', 'dont-attack-wolves');
+    goAroundButton.setAttribute('value', 'Go Around');
+    goAroundButton.addEventListener(
+      "click",
+      goAroundMonsters(continueChapterThreeFive),
+      false
+    );
+
+    let containerDiv = document.querySelector('#container');
+     containerDiv.appendChild(attackWolvesButton);
+     containerDiv.appendChild(goAroundButton);  
+  }
+  
+
 }
 
 let chapterThreeSixText;
@@ -3227,9 +3260,9 @@ let chapterThreeSixText;
 function beginChapterThreeSix() {
   console.log("3-6");
   chapterThreeSixText = `
-    You quicken your pace. Ahead, you see two dark figures hovering over a shape on the ground. As you come closer, you can make out a wolf picking at a sheep, dead on the road. Not only is this odd because of the time of day, but wolves haven't been a problem in this country side for quite some time. You can tell this wolf has no intention of leaving the sheep, and wolves are dangerous for the farm, so you have to make a decision. What do you do?
-    
-     <input type="submit" id="attack-wolves" value="Attack"><input type="submit" id="dont-attack-wolves" value="Go Around">
+    chapter three-six
+
+     
   `;
   
   chapterConfig.thisChapterNumber = "3-6";

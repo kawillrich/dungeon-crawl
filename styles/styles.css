@@ -1482,6 +1482,24 @@ summary.character-statuses-summary {
     width: 150px;
   }
 
+  #attack-wolves {
+ margin: auto;
+    align-items: center;
+    grid-area: 5 / 3 / 5 / 4;
+
+    height: 30px;
+    width: 150px;
+  }
+
+  #dont-attack-wolves {
+ margin: auto;
+    align-items: center;
+    grid-area: 5 / 1 / 5 / 2;
+
+    height: 30px;
+    width: 150px;
+  }
+
   #monster-info {
     display: flex;
     flex-direction: row;
