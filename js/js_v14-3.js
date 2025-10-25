@@ -3229,8 +3229,10 @@ console.log('3-5');
     attackWolvesButton.setAttribute('id', 'attack-wolves');
     attackWolvesButton.setAttribute('value', 'Attack');
     attackWolvesButton.addEventListener(
-      "click",
-      () => {
+      "click", function() {
+        this.remove();
+        let removeGoAroundButton = document.querySelector('#dont-attack-wolves');
+        removeGoAroundButton.remove();
         addingFightModule(smallWolf, noMonster, continueChapterThreeFour);
         declareAttack();
       },
@@ -3242,8 +3244,12 @@ console.log('3-5');
     goAroundButton.setAttribute('id', 'dont-attack-wolves');
     goAroundButton.setAttribute('value', 'Go Around');
     goAroundButton.addEventListener(
-      "click",
-      goAroundMonsters(continueChapterThreeFive),
+      "click", function() {
+        this.remove();
+        let removeAttackWolfButton = document.querySelector('#attack-wolves');
+        removeAttackWolfButton.remove();
+        goAroundMonsters(continueChapterThreeFive)
+      },    
       false
     );
 
@@ -3281,87 +3287,87 @@ function beginChapterThreeSeven() {
   console.log('3-7');
 }
 
-function continueChapterThreeTwo() {
-  window.scrollTo(0, 0);
+// function continueChapterThreeTwo() {
+//   window.scrollTo(0, 0);
 
   
-  let chapterThreeTwo = document.querySelector("#dialogue");
-  chapterThreeTwo.innerHTML = `
-    <p>You find the main road in town and head South until you find the horse cart path running East. You take one look back, breathe in...hold...and exhale. You follow the 
-    horse cart path.  
-    </p>
+//   let chapterThreeTwo = document.querySelector("#dialogue");
+//   chapterThreeTwo.innerHTML = `
+//     <p>You find the main road in town and head South until you find the horse cart path running East. You take one look back, breathe in...hold...and exhale. You follow the 
+//     horse cart path.  
+//     </p>
 
-    <p>You walk along the path and Gryphon's Keep gets farther in the distance and the noise of the village disappears. Part of you likes the quiet, you've always been one 
-    to enjoy time to yourself - and in some cases - you prefer it. The confident feeling of being on your own, relying on yourself, and accomplishing hard tasks alone 
-    has contributed to your self-confidence. You wouldn't be considered arrogant, just confident. Some of your friends and family would mention how you were calm and 
-    composed under pressure, but also, how you never bragged about your accomplishments.</p>  
+//     <p>You walk along the path and Gryphon's Keep gets farther in the distance and the noise of the village disappears. Part of you likes the quiet, you've always been one 
+//     to enjoy time to yourself - and in some cases - you prefer it. The confident feeling of being on your own, relying on yourself, and accomplishing hard tasks alone 
+//     has contributed to your self-confidence. You wouldn't be considered arrogant, just confident. Some of your friends and family would mention how you were calm and 
+//     composed under pressure, but also, how you never bragged about your accomplishments.</p>  
     
-    <p>While you think about your past, you also look around you. The horse cart road is dirt where the cart wheels travel, but grassy everywhere else. The road is not 
-    well-travelled, but it's also not overgrown. There are some smaller, overgrown paths that lead to the left and right of the road, most likely from people travelling 
-    to outlying farms and orchards. The land around you is open fields, dotted with some maple trees, white birch trees, and an occasional apple orchard. It's autumn now, 
-    prime season for picking apples. The air is cool, but not too cold. It's perfect weather to be outside. You feel a light breeze on your face, and the sky has streaks 
-    of clouds, some passing between you and the sun, ocassionally casting shade over the land.  
-    </p>
+//     <p>While you think about your past, you also look around you. The horse cart road is dirt where the cart wheels travel, but grassy everywhere else. The road is not 
+//     well-travelled, but it's also not overgrown. There are some smaller, overgrown paths that lead to the left and right of the road, most likely from people travelling 
+//     to outlying farms and orchards. The land around you is open fields, dotted with some maple trees, white birch trees, and an occasional apple orchard. It's autumn now, 
+//     prime season for picking apples. The air is cool, but not too cold. It's perfect weather to be outside. You feel a light breeze on your face, and the sky has streaks 
+//     of clouds, some passing between you and the sun, ocassionally casting shade over the land.  
+//     </p>
 
-    <p>In front of you, you notice a small dark shape and light dust kicking up along the road. You aren't alarmed, and you think, "It's probably just an old wagon coming to 
-    town." As it gets closer, you can see one horse in front, pulling along an open wagon. You can make out the shape of two men in the cart, but as it gets closre you notice 
-    that they seems to be in a hurry and that one horse is missing pulling the wagon. It comes closer and you notice the horse is in a full out trot. You can clearly tell the 
-    men are slightly alarmed, and one of them waves at you to move out of the way. Finally, the older man gets close enough to you and yells, "Go back! There's trouble ahead 
-    - wolf!" As he passes by, you notice an injured sheep in the back of the cart - blood is everywhere, and you can clearly see a large gash in the animal. The 
-    wagon-riders don't stop and continue in speed, leaving a dust trail behind them as they quickly move out of sight. "Strange, for around here...", you think. "What 
-    is a wolf doing out here during daylight and in the middle of the fields?". "Did it attack that sheep?" 
-    </p>
+//     <p>In front of you, you notice a small dark shape and light dust kicking up along the road. You aren't alarmed, and you think, "It's probably just an old wagon coming to 
+//     town." As it gets closer, you can see one horse in front, pulling along an open wagon. You can make out the shape of two men in the cart, but as it gets closre you notice 
+//     that they seems to be in a hurry and that one horse is missing pulling the wagon. It comes closer and you notice the horse is in a full out trot. You can clearly tell the 
+//     men are slightly alarmed, and one of them waves at you to move out of the way. Finally, the older man gets close enough to you and yells, "Go back! There's trouble ahead 
+//     - wolf!" As he passes by, you notice an injured sheep in the back of the cart - blood is everywhere, and you can clearly see a large gash in the animal. The 
+//     wagon-riders don't stop and continue in speed, leaving a dust trail behind them as they quickly move out of sight. "Strange, for around here...", you think. "What 
+//     is a wolf doing out here during daylight and in the middle of the fields?". "Did it attack that sheep?" 
+//     </p>
 
-    <input type="submit" id="start-chapter-three-three" value="Continue">`;
-  var startChapterThreeThree = document.querySelector(
-    "#start-chapter-three-three"
-  );
-  startChapterThreeThree.addEventListener(
-    "click",
-    continueChapterThreeThree,
-    false
-  );
-}
+//     <input type="submit" id="start-chapter-three-three" value="Continue">`;
+//   var startChapterThreeThree = document.querySelector(
+//     "#start-chapter-three-three"
+//   );
+//   startChapterThreeThree.addEventListener(
+//     "click",
+//     continueChapterThreeThree,
+//     false
+//   );
+// }
 
-//CHAPTER THREE THREE
+// //CHAPTER THREE THREE
 
-function continueChapterThreeThree() {
-  window.scrollTo(0, 0);
+// function continueChapterThreeThree() {
+//   window.scrollTo(0, 0);
 
-  let chapterThreeThree = document.querySelector("#dialogue");
-  chapterThreeThree.innerHTML = `
-    <p>You hasten (quicken) your pace, enough to move more quickly, but not in a jog - you have a long journey ahead of you and know you can't tire yourself out too soon.  
-    Ahead, you see two dark figures hovering over a shape on the ground. You quicken your pace still, and as you come closer, you can make out a wolf picking at a 
-    sheep, dead on the road. Not only is this odd because of the time of day, but wolves haven't been a problem in this country side for quite some time. You have heard 
-    of some stories of attacks from foxes on chickens, or coyotes on deer, but a sighting of wolves is a rare thing.  Regardless, as you approach, you see the wolf look up 
-    at you, while still chewing on the sheep. It lifts its head up slowly, eyes lowered and it bares its teeth in a small growl. "Well," you think, "I wasn't planning 
-    on needing to use my training this soon, but now is as good of a time as any..."</p>
+//   let chapterThreeThree = document.querySelector("#dialogue");
+//   chapterThreeThree.innerHTML = `
+//     <p>You hasten (quicken) your pace, enough to move more quickly, but not in a jog - you have a long journey ahead of you and know you can't tire yourself out too soon.  
+//     Ahead, you see two dark figures hovering over a shape on the ground. You quicken your pace still, and as you come closer, you can make out a wolf picking at a 
+//     sheep, dead on the road. Not only is this odd because of the time of day, but wolves haven't been a problem in this country side for quite some time. You have heard 
+//     of some stories of attacks from foxes on chickens, or coyotes on deer, but a sighting of wolves is a rare thing.  Regardless, as you approach, you see the wolf look up 
+//     at you, while still chewing on the sheep. It lifts its head up slowly, eyes lowered and it bares its teeth in a small growl. "Well," you think, "I wasn't planning 
+//     on needing to use my training this soon, but now is as good of a time as any..."</p>
 
-    <p>At first you try to scare the wolf away. You aren't a person to invite violence or to willfully harm others, but you also don't back down from a fight either.  
-    You can tell this wolf has no intention of leaving the sheep, and wolves are dangerous for the farm, so you have to make a decision. You slow down 
-    as you get closer to the animals. One wolf isn't too challenging you think...  Breathe in...hold...exhale. Hand on your weapon and your mind focused, what do you do?</p>
-    <p>  
+//     <p>At first you try to scare the wolf away. You aren't a person to invite violence or to willfully harm others, but you also don't back down from a fight either.  
+//     You can tell this wolf has no intention of leaving the sheep, and wolves are dangerous for the farm, so you have to make a decision. You slow down 
+//     as you get closer to the animals. One wolf isn't too challenging you think...  Breathe in...hold...exhale. Hand on your weapon and your mind focused, what do you do?</p>
+//     <p>  
     
-    </p>
-    <input type="submit" id="attack-wolves" value="Attack"><input type="submit" id="dont-attack-wolves" value="Go Around">`;
+//     </p>
+//     <input type="submit" id="attack-wolves" value="Attack"><input type="submit" id="dont-attack-wolves" value="Go Around">`;
 
-  var attackWolvesYes = document.querySelector("#attack-wolves");
-  attackWolvesYes.addEventListener(
-    "click",
-    () => {
-      addingFightModule(smallWolf, noMonster, continueChapterThreeFour);
-      declareAttack();
-    },
-    false
-  );
+//   var attackWolvesYes = document.querySelector("#attack-wolves");
+//   attackWolvesYes.addEventListener(
+//     "click",
+//     () => {
+//       addingFightModule(smallWolf, noMonster, continueChapterThreeFour);
+//       declareAttack();
+//     },
+//     false
+//   );
 
-  var attackWolvesNo = document.querySelector("#dont-attack-wolves");
-  attackWolvesNo.addEventListener(
-    "click",
-    goAroundMonsters(continueChapterThreeFive),
-    false
-  );
-}
+//   var attackWolvesNo = document.querySelector("#dont-attack-wolves");
+//   attackWolvesNo.addEventListener(
+//     "click",
+//     goAroundMonsters(continueChapterThreeFive),
+//     false
+//   );
+// }
 
 function declareAttack() {
   window.scrollTo(0, 0);
