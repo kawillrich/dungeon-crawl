@@ -444,7 +444,7 @@ export default class Character {
     //----------------------------------------------------------------------------------------------------------
     let monsterInfo = document.querySelector("#monster-info");
     monsterInfo.innerHTML = `
-        <div class="monster-info-heading"> ${monsterOne.name}</div>
+        <div class="monster-one-info-heading"> ${monsterOne.name}</div>
         <div class="monster" id="monster-one">
             <div class='monster-info-module'>
                 <h4 id="monster-one-type">Monster Type: ${monsterOne.name}</h4>
@@ -454,6 +454,7 @@ export default class Character {
                 <h4 id="monster-one-status">Status: ${monsterOne.status}</h4>     
             </div>  
         </div>
+        <div class="monster-two-info-heading"> ${monsterTwo.name}</div>
         <div class="monster" id="monster-two">
             <div class='monster-info-module'>
                 <h4 id="monster-two-type">Monster Type: ${monsterTwo.name}</h4>
