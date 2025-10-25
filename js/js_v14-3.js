@@ -3372,30 +3372,32 @@ function beginChapterThreeSeven() {
 function declareAttack() {
   window.scrollTo(0, 0);
 
-  let declareAttackDialogue = document.querySelector("#dialogue");
+  let declareAttackDialogue = document.querySelector("#fight-module-dialogue");
   declareAttackDialogue.innerHTML = `<p>You Attack!</p>`;
 }
 
 function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   monsterOne.createHitPoints();
   monsterTwo.createHitPoints();
-
+  let dialogueDiv = document.querySelector('#dialogue');
+  let fightModuleContainer = document.querySelector('#fight-module-container');
   let headerFightModule = document.querySelector("#fight-module");
+  // fightModuleContainer.appendChild(headerFightModule);
+  dialogueDiv.appendChild(fightModuleContainer);
   headerFightModule.innerHTML = `
-        <div class="attack-buttons">
-            <span class='button-border'><input type="submit" class="attack attack-monster-one fight-module-button" value="Attack Enemy 1"></span>
-            <span class='button-border'><input type="submit" class="attack attack-monster-two fight-module-button" value="Attack Enemy 2"></span><br>
-            <span class='button-border'><input type="submit" class="attack item-enchantment fight-module-button" value="Use Item"></span> 
-            <span class='button-border'>
-              <input type="submit" class="attack-spell spell2-monster-one fight-module-button" value="Use Spell" id="use-spells">
-                <ul class='dropdown-spell-list-ul hide-spell-list-dropdown'>
-                </ul>
-            </span>
-            
-            <span class='button-border hidden-border'><input type="submit" id="monster-attack" class="fight-module-button hidden" value="Monster(s) Turn"></span><br>
-        </div>
-        `;
-
+    <div class="attack-buttons">
+        <span class='button-border'><input type="submit" class="attack attack-monster-one fight-module-button" value="Attack Enemy 1"></span>
+        <span class='button-border'><input type="submit" class="attack attack-monster-two fight-module-button" value="Attack Enemy 2"></span><br>
+        <span class='button-border'><input type="submit" class="attack item-enchantment fight-module-button" value="Use Item"></span> 
+        <span class='button-border'>
+          <input type="submit" class="attack-spell spell2-monster-one fight-module-button" value="Use Spell" id="use-spells">
+            <ul class='dropdown-spell-list-ul hide-spell-list-dropdown'>
+            </ul>
+        </span>
+        
+        <span class='button-border hidden-border'><input type="submit" id="monster-attack" class="fight-module-button hidden" value="Monster(s) Turn"></span><br>
+    </div>
+  `;
   let attackMonsterOne = document.querySelector(".attack-monster-one");
   attackMonsterOne.addEventListener(
     "click",

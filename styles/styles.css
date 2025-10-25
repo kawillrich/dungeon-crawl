@@ -1500,12 +1500,55 @@ summary.character-statuses-summary {
     width: 150px;
   }
 
+  #fight-module-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% auto;
+  }
+
+  #fight-module-dialogue {
+    grid-area: 1 / 1 / 2 / 1;
+  }
+
+  #fight-module {
+    grid-area: 5 / 1 / 5 / 4;
+  }
+
   #monster-info {
     display: flex;
     flex-direction: row;
     height: 225px;
     grid-area: 4 / 1 / 4 / 4;
   }
+
+.button-border {
+  width: auto;
+  display: inline-block;
+  margin: 5px 2px 5px 2px;
+  border: 1px solid transparent;
+  padding: 2px 2px 2px 2px;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+  .button-border > .fight-module-button {
+    width: 50px;
+  }
+
+#monster-attack {
+  width: 50px;
+  border-radius: 5px;
+  background-color: rgb(224, 193, 193);
+}
+
+#monster-attack:hover {
+  background-color: rgb(248, 162, 162);
+}
+
+#monster-attack:active {
+  background-color: rgb(255, 105, 105);
+}
 
   ul.dropdown-spell-list-ul {
     position: absolute;
@@ -1817,19 +1860,7 @@ legend.afflictions-dashboard {
   background-color: rgb(193, 224, 193);
 }
 
-#monster-attack {
-  width: 200px;
-  border-radius: 5px;
-  background-color: rgb(224, 193, 193);
-}
 
-#monster-attack:hover {
-  background-color: rgb(248, 162, 162);
-}
-
-#monster-attack:active {
-  background-color: rgb(255, 105, 105);
-}
 
 
 
@@ -1885,15 +1916,7 @@ span#dragonwarrior {
   color: white;
 }
 
-.button-border {
-  width: 198px;
-  display: inline-block;
-  margin: 5px 2px 5px 2px;
-  border: 1px solid transparent;
-  padding: 2px 2px 2px 2px;
-  border-radius: 3px;
-  background-color: transparent;
-}
+
 
 .hidden {
   visibility: hidden;
