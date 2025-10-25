@@ -3228,6 +3228,8 @@ function beginChapterThreeSix() {
   console.log("3-6");
   chapterThreeSixText = `
     You quicken your pace. Ahead, you see two dark figures hovering over a shape on the ground. As you come closer, you can make out a wolf picking at a sheep, dead on the road. Not only is this odd because of the time of day, but wolves haven't been a problem in this country side for quite some time. You can tell this wolf has no intention of leaving the sheep, and wolves are dangerous for the farm, so you have to make a decision. What do you do?
+    
+     <input type="submit" id="attack-wolves" value="Attack"><input type="submit" id="dont-attack-wolves" value="Go Around">
   `;
   
   chapterConfig.thisChapterNumber = "3-6";
