@@ -1515,6 +1515,7 @@ summary.character-statuses-summary {
   }
 
   #fight-module {
+    display:none;
     grid-area: 5 / 1 / 5 / 4;
     width: 100%;
     height: 100%;
