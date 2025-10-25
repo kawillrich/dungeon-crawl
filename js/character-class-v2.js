@@ -444,25 +444,24 @@ export default class Character {
     //----------------------------------------------------------------------------------------------------------
     let monsterInfo = document.querySelector("#monster-info");
     monsterInfo.innerHTML = `
+        <div class="monster-info-heading"> ${monsterOne.name}</div>
         <div class="monster" id="monster-one">
-            <fieldset class='monster-info-module'>
-                <legend class='monster-dashboard'>Monster 1</legend>
+            <div class='monster-info-module'>
                 <h4 id="monster-one-type">Monster Type: ${monsterOne.name}</h4>
                 <h4 id="monster-one-hp">Hit Points: ${monsterOne.healthPoints}<progress class='monster-hp-prog-bar' max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress></h4> 
                 <h4 id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</h4>
                 <h4 id="monster-one-damage">Damage: ${monsterOne.damage}</h4>
                 <h4 id="monster-one-status">Status: ${monsterOne.status}</h4>     
-            </fieldset>  
+            </div>  
         </div>
         <div class="monster" id="monster-two">
-            <fieldset class='monster-info-module'>
-                <legend class='monster-dashboard'>Monster 2</legend>
+            <div class='monster-info-module'>
                 <h4 id="monster-two-type">Monster Type: ${monsterTwo.name}</h4>
                 <h4 id="monster-two-hp">Hit Points: ${monsterTwo.healthPoints}<progress class='monster-hp-prog-bar' max="${monsterTwo.startingHealthPoints}" value="${monsterTwo.healthPoints}"></progress></h4> 
                 <h4 id="monster-two-ap">Armor Class: ${monsterTwo.armorClass}</h4>
                 <h4 id="monster-two-damage">Damage: ${monsterTwo.damage}</h4> 
                 <h4 id="monster-two-status">Status: ${monsterTwo.status}</h4>    
-            </fieldset>        
+            </div>        
         </div>
 
         </div id="canvas-area-monster">
