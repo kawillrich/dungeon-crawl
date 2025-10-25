@@ -168,13 +168,13 @@ export default class Monster {
   }
 
   webSpellReaction(thisMonster, otherMonster, monsterOne, monsterTwo) {
-    $("#dialogue").text(`${thisMonster.name} is stuck in the web and cannot attack.`);
+    $("#fight-module-dialogue").text(`${thisMonster.name} is stuck in the web and cannot attack.`);
     this.revertToAttackButtons();
     confirmAttackMonsters(monsterOne, monsterTwo);
   }
 
   sleepSpellReaction(thisMonster, otherMonster, monsterOne, monsterTwo) {
-    $("#dialogue").text(`${thisMonster.name} is asleep and cannot attack.`);
+    $("#fight-module-dialogue").text(`${thisMonster.name} is asleep and cannot attack.`);
     this.revertToAttackButtons();
     confirmAttackMonsters(monsterOne, monsterTwo);
   }
@@ -182,24 +182,24 @@ export default class Monster {
   charmSpellReaction(thisMonster, otherMonster, monsterOne, monsterTwo) {
     if (otherMonster.healthPoints <= 0) {
       alert(`${thisMonster.name} is charmed and does not attack you.`)
-      $("#dialogue").text(`${thisMonster.name} is charmed and does not attack you.`);
+      $("#fight-module-dialogue").text(`${thisMonster.name} is charmed and does not attack you.`);
       this.revertToAttackButtons();
       confirmAttackMonsters(monsterOne, monsterTwo);
     } else if (otherMonster.healthPoints > 0) {
       alert(`${thisMonster.name} is charmed and attacks the ${otherMonster.name}!`)
-      $("#dialogue").text(`${thisMonster.name} is charmed and attacks the ${otherMonster.name}!`);
+      $("#fight-module-dialogue").text(`${thisMonster.name} is charmed and attacks the ${otherMonster.name}!`);
       this.attackOtherMonster(thisMonster, otherMonster, monsterOne, monsterTwo)
     }
   }
 
   lightSpellReaction(thisMonster, otherMonster, monsterOne, monsterTwo) {
-    $("#dialogue").text(`${thisMonster.name} is blinded and cannot attack.`);
+    $("#fight-module-dialogue").text(`${thisMonster.name} is blinded and cannot attack.`);
     this.revertToAttackButtons();
     confirmAttackMonsters(monsterOne, monsterTwo);
   }
 
   invisibilitySpellReaction(thisMonster, otherMonster, monsterOne, monsterTwo) {
-    $("#dialogue").text(`${thisMonster.name} cannot see you and does not attack.`);
+    $("#fight-module-dialogue").text(`${thisMonster.name} cannot see you and does not attack.`);
     this.revertToAttackButtons();
     confirmAttackMonsters(monsterOne, monsterTwo);
   }
@@ -286,7 +286,7 @@ export default class Monster {
 
           console.log(characterHPGuageDashoffset)
 
-          let clearDialogue = document.querySelector("#dialogue");
+          let clearDialogue = document.querySelector("#fight-module-dialogue");
           clearDialogue.textContent = ``;
 
           this.revertToAttackButtons();
@@ -321,7 +321,7 @@ export default class Monster {
             updatedMonsterHP2.innerHTML = `
               <h4 id="monster-two-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar' max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
               `;
-            let clearDialogue = document.querySelector("#dialogue");
+            let clearDialogue = document.querySelector("#fight-module-dialogue");
             clearDialogue.textContent = ``;
 
             this.revertToAttackButtons();
@@ -332,7 +332,7 @@ export default class Monster {
             updatedMonsterHP1.innerHTML = `
               <h4 id="monster-one-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar' max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
               `;
-            let clearDialogue = document.querySelector("#dialogue");
+            let clearDialogue = document.querySelector("#fight-module-dialogue");
             clearDialogue.textContent = ``;
 
             this.revertToAttackButtons();
@@ -350,7 +350,7 @@ export default class Monster {
       updatedMonsterHP2.innerHTML = `
         <h4 id="monster-two-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar' max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
         `;
-      let clearDialogue = document.querySelector("#dialogue");
+      let clearDialogue = document.querySelector("#fight-module-dialogue");
       clearDialogue.textContent = ``;
 
       alert(`${monsterOne.name} killed ${monsterTwo.name}!`)
@@ -363,7 +363,7 @@ export default class Monster {
       updatedMonsterHP1.innerHTML = `
         <h4 id="monster-one-hp">Hit Points: ${otherMonster.healthPoints}<progress class='monster-hp-prog-bar' max="${otherMonster.startingHealthPoints}" value="${otherMonster.healthPoints}"></progress></h4> 
         `;
-      let clearDialogue = document.querySelector("#dialogue");
+      let clearDialogue = document.querySelector("#fight-module-dialogue");
       clearDialogue.textContent = ``;
 
       alert(`The ${monsterTwo.name} killed the ${monsterOne.name}!`)

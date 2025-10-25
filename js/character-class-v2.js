@@ -499,7 +499,7 @@ export default class Character {
   ) {
     let self = this;
     let hitRollSucceed = function (enemy1, finalCharacter) {
-      let attackDialogue = document.querySelector("#dialogue");
+      let attackDialogue = document.querySelector("#fight-module-dialogue");
       attackDialogue.innerHTML = `
         <p>You attack the ${monster1.name} with your ${finalCharacter.weapon.name} and cause ${inflictedDamage} points of damage.</p>
       `;
@@ -602,7 +602,7 @@ export default class Character {
         monster1.healthPoints = 0;
 
         let monsterOneStatus = document.querySelector("#monster-one");
-        let defeatMonster1 = document.querySelector("#dialogue");
+        let defeatMonster1 = document.querySelector("#fight-module-dialogue");
         monsterOneStatus.innerHTML = `
               <div class="monster" id="monster-one">
                   <fieldset class='monster-info-module'>
@@ -751,7 +751,7 @@ export default class Character {
     }
 
     let hitRollSucceed = function (enemy2, finalCharacter) {
-      let attackDialogue = document.getElementById("dialogue");
+      let attackDialogue = document.getElementById("fight-module-dialogue");
       attackDialogue.innerHTML = `
           <p>You attack the ${monster2.name} with your ${finalCharacter.weapon.name} and cause ${inflictedDamage} points of damage.</p>`;
 
@@ -840,7 +840,7 @@ export default class Character {
         monster2.healthPoints = 0;
 
         let monsterTwoStatus = document.querySelector("#monster-two");
-        let defeatMonster2 = document.querySelector("#dialogue");
+        let defeatMonster2 = document.querySelector("#fight-module-dialogue");
         monsterTwoStatus.innerHTML = `
                   <div class="monster" id="monster-two">
                       <fieldset class='monster-info-module'>
@@ -1006,14 +1006,14 @@ export default class Character {
       inflictedDamage = 0;
     }
 
-    let attackDialogue = document.querySelector("#dialogue");
+    let attackDialogue = document.querySelector("#fight-module-dialogue");
     attackDialogue.innerHTML = `
         <p>You cast ${spellName} on the ${monster1.name} and cause ${inflictedDamage} points of damage.</p>`;
 
     //CHECKING ATTACK INTERACTION
 
     if (monster1.healthPoints === 0 || monster1.healthPoints === " ") {
-      let attackDialogue = document.querySelector("#dialogue");
+      let attackDialogue = document.querySelector("#fight-module-dialogue");
       attackDialogue.innerHTML = `
       <p>You cast ${spellName}, but it had no effect.</p>`;
       finalCharacter.greyOutAttackButtons(monster1, monster2);
@@ -1044,7 +1044,7 @@ export default class Character {
       monster1.healthPoints = 0;
 
       let monsterOneStatus = document.querySelector("#monster-one");
-      let defeatMonster1 = document.querySelector("#dialogue");
+      let defeatMonster1 = document.querySelector("#fight-module-dialogue");
       monsterOneStatus.innerHTML = `
             <div class="monster" id="monster-one">
                 <fieldset class='monster-info-module'>
@@ -1113,14 +1113,14 @@ export default class Character {
       inflictedDamage = 0;
     }
 
-    let attackDialogue = document.querySelector("#dialogue");
+    let attackDialogue = document.querySelector("#fight-module-dialogue");
 
     attackDialogue.innerHTML = `
     <p>You cast ${spellName} on the ${monster2.name} and cause ${inflictedDamage} points of damage.</p>`;
 
     //CHECKING ATTACK INTERACTION
     if (monster2.healthPoints === 0 || monster2.healthPoints === " ") {
-      let attackDialogue = document.querySelector("#dialogue");
+      let attackDialogue = document.querySelector("#fight-module-dialogue");
       attackDialogue.innerHTML = `
         <p>You cast ${spellName}, but it had no effect.</p>`;
       finalCharacter.greyOutAttackButtons(monster1, monster2);
@@ -1160,7 +1160,7 @@ export default class Character {
       monster2.healthPoints = 0;
 
       let monsterTwoStatus = document.querySelector("#monster-two");
-      let defeatMonster2 = document.querySelector("#dialogue");
+      let defeatMonster2 = document.querySelector("#fight-module-dialogue");
       monsterTwoStatus.innerHTML = `
             <div class="monster" id="monster-two">
                 <fieldset class='monster-info-module'>
@@ -1237,7 +1237,7 @@ export default class Character {
 
   //       `;
 
-  //   let attackDialogue = document.querySelector("#dialogue");
+  //   let attackDialogue = document.querySelector("#fight-module-dialogue");
   //   attackDialogue.innerHTML = `
   //       <p>You cast ${finalCharacter.specialty.spell1.name} and heal ${finalCharacter.specialty.spell1.healing} hit points.</p>`;
 
@@ -1274,16 +1274,16 @@ export default class Character {
       item.healthPoints -= damage;
 
       if (item.name === " ") {
-        let attackDialogue = document.querySelector("#dialogue");
+        let attackDialogue = document.querySelector("#fight-module-dialogue");
 
         attackDialogue.innerHTML += ` `;
       } else if (item.healthPoints <= 0) {
-        let attackDialogue = document.querySelector("#dialogue");
+        let attackDialogue = document.querySelector("#fight-module-dialogue");
 
         attackDialogue.innerHTML += `
             <p>${item.name} is dead.</p>`;
       } else {
-        let attackDialogue = document.querySelector("#dialogue");
+        let attackDialogue = document.querySelector("#fight-module-dialogue");
 
         let isSleepingMonster = item.status.some((x) => x === "Sleep");
 
@@ -1308,7 +1308,7 @@ export default class Character {
     this.monster1 = monster1;
     this.monster2 = monster2;
 
-    let clearDialogue = document.querySelector("#dialogue");
+    let clearDialogue = document.querySelector("#fight-module-dialogue");
     clearDialogue.innerHTML = spellDialogue;
 
     let monstersGroup = [monster1, monster2];
@@ -1368,7 +1368,7 @@ export default class Character {
       updatedMonster2HP.innerHTML = `
           <h4 id="monster-two-hp">Hit Points: ${monster2.healthPoints}<progress class='monster-hp-prog-bar' max="${monster2.startingHealthPoints}" value="${monster2.healthPoints}"></progress></h4> `;
 
-      let defeatedMonsters = document.querySelector("#dialogue");
+      let defeatedMonsters = document.querySelector("#fight-module-dialogue");
       let removeFightModule = document.querySelector("#fight-module");
       finalCharacter.specialty.characterExperience += monster1.experienceValue;
       finalCharacter.specialty.characterExperience += monster2.experienceValue;
@@ -1468,7 +1468,7 @@ export default class Character {
 
   confirmMonsterStatus(monster1, monster2) {
     if (monster1.status.includes("Sleep")) {
-      let sleepDialogue = document.querySelector("#dialogue");
+      let sleepDialogue = document.querySelector("#fight-module-dialogue");
 
       sleepDialogue.innerHTML += `
             <p>Monster 1 is asleep.</p>`;

@@ -547,7 +547,7 @@ let chapterConfig = {
   buttonText: "Continue",
   setTimeoutArray: [],
   dialogueIterator: 0,
-  typingSpeed: 1,
+  typingSpeed: 0,
   dialogueDiv: document.querySelector('#dialogue'),
   nextChapterFunction: beginChapterOneOne
 }
@@ -3403,6 +3403,8 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
         <span class='button-border hidden-border'><input type="submit" id="monster-attack" class="fight-module-button hidden" value="Monster(s) Turn"></span><br>
     </div>
   `;
+  headerFightModule.classList.remove('no-display');
+  fightModuleContainer.classList.remove('no-display');
   let attackMonsterOne = document.querySelector(".attack-monster-one");
   attackMonsterOne.addEventListener(
     "click",
