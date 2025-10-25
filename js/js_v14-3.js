@@ -3233,6 +3233,8 @@ console.log('3-5');
         this.remove();
         let removeGoAroundButton = document.querySelector('#dont-attack-wolves');
         removeGoAroundButton.remove();
+          let dialogueDiv = document.querySelector('#dialogue');
+        dialogueDiv.innerHTML = "";
         addingFightModule(smallWolf, noMonster, continueChapterThreeFour);
         declareAttack();
       },
@@ -3248,6 +3250,8 @@ console.log('3-5');
         this.remove();
         let removeAttackWolfButton = document.querySelector('#attack-wolves');
         removeAttackWolfButton.remove();
+        let dialogueDiv = document.querySelector('#dialogue');
+        dialogueDiv.innerHTML = "";
         goAroundMonsters(continueChapterThreeFive)
       },    
       false
@@ -3371,7 +3375,8 @@ function beginChapterThreeSeven() {
 
 function declareAttack() {
   window.scrollTo(0, 0);
-
+  // let dialogueDiv = document.querySelector('#dialogue');
+  // dialogueDiv.innerHTML = "";
   let declareAttackDialogue = document.querySelector("#fight-module-dialogue");
   declareAttackDialogue.innerHTML = `<p>You Attack!</p>`;
 }
