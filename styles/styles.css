@@ -1526,6 +1526,8 @@ summary.character-statuses-summary {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
+    align-items: center;
   }
 
   #monster-info {
@@ -1534,6 +1536,7 @@ summary.character-statuses-summary {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     grid-area: 2 / 1 / 3 / 2;
+    gap: 8px;
   }
 
   .button-border {
@@ -1575,6 +1578,10 @@ summary.character-statuses-summary {
     width: 200px; */
     width: 100%;
     height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    
   }
 
   .monster-info-module > h4 {
@@ -1586,6 +1593,7 @@ summary.character-statuses-summary {
   #monster-two {
     width: 100%;
     height: 100%;
+    
   }
 
   .monster-dashboard {
