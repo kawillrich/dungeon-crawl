@@ -3113,7 +3113,6 @@ function beginChapterThreeZero() {
   chapterConfig.nextChapterFunction = beginChapterThreeOne;
   // chapterConfig.dialogueDiv.innerHTML = "";
   Utilities.continueTextAnimation(chapterConfig);
-
 }
 
 let chapterThreeOneText;
@@ -3125,7 +3124,6 @@ function beginChapterThreeOne() {
   chapterThreeOneText = `
     This road is a mere cart and horse path with two ruts in the dirt where the wagon wheels have worn small ditches in the road over time. The small farm, called the Black Horse Farm, is the last settlement along a large set of woods that span quite a distance to the east.
   `;
-
   
   chapterConfig.thisChapterNumber = "3-1";
   chapterConfig.thisChapterDialogue = chapterThreeOneText;
@@ -3151,20 +3149,107 @@ function beginChapterThreeTwo() {
   chapterConfig.nextChapterFunction = beginChapterThreeThree;
   // chapterConfig.dialogueDiv.innerHTML = "";
   Utilities.continueTextAnimation(chapterConfig);
-
 }
 
+let chapterThreeThreeText;
 
 function beginChapterThreeThree() {
-  console.log('3-3')
-  // continueChapterThreeThree();
+ console.log('3-3');
+
+  chapterThreeThreeText = `While you think about your past, you also look around you.  It's autumn now, 
+    and the air is cool, but not too cold. It's perfect weather to be outside. You feel a light breeze on your face. In front of you, you notice a small dark shape and light dust kicking up along the road.  
+  `;
+
+  chapterConfig.thisChapterNumber = "3-3";
+  chapterConfig.thisChapterDialogue = chapterThreeThreeText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterThreeFour;
+  // chapterConfig.dialogueDiv.innerHTML = "";
+  Utilities.continueTextAnimation(chapterConfig);
 }
 
+let chapterThreeFourText;
+
+function beginChapterThreeFour() {
+console.log('3-4');
+
+  chapterThreeFourText = `You can make out the shape of two men in the cart. As it gets closer you notice 
+    they are in a hurry and that one horse is missing pulling the wagon. As is comes closer and passes, you see the 
+    men are alarmed. One of them waves at you to move out of the way and yells, "Go back! Wolf!" As he passes by, you notice a large gash on the frantic horse.
+  `;
+
+  chapterConfig.thisChapterNumber = "3-4";
+  chapterConfig.thisChapterDialogue = chapterThreeFourText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterThreeFive;
+  // chapterConfig.dialogueDiv.innerHTML = "";
+  Utilities.continueTextAnimation(chapterConfig);
+}
+
+let chapterThreeFiveText;
+
+function beginChapterThreeFive() {
+console.log('3-5');
+
+  chapterThreeFiveText = `You quicken your pace. Ahead, you see two dark figures hovering over a shape on the ground. As you come closer, you can make out a wolf picking at a sheep, dead on the road. Not only is this odd because of the time of day, but wolves haven't been a problem in this country side for quite some time. You can tell this wolf has no intention of leaving the sheep, and wolves are dangerous for the farm, so you have to make a decision. What do you do?
+  `;
+
+  chapterConfig.thisChapterNumber = "3-5";
+  chapterConfig.thisChapterDialogue = chapterThreeFiveText;
+  chapterConfig.buttonText = "";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterThreeSix;
+  chapterConfig.dialogueDiv.innerHTML = "";
+  Utilities.continueTextAnimation(chapterConfig);
+
+  var attackWolvesYes = document.querySelector("#attack-wolves");
+  attackWolvesYes.addEventListener(
+    "click",
+    () => {
+      addingFightModule(smallWolf, noMonster, continueChapterThreeFour);
+      declareAttack();
+    },
+    false
+  );
+
+  var attackWolvesNo = document.querySelector("#dont-attack-wolves");
+  attackWolvesNo.addEventListener(
+    "click",
+    goAroundMonsters(continueChapterThreeFive),
+    false
+  );
+}
+
+let chapterThreeSixText;
+
+function beginChapterThreeSix() {
+  console.log("3-6");
+  chapterThreeSixText = `
+    You quicken your pace. Ahead, you see two dark figures hovering over a shape on the ground. As you come closer, you can make out a wolf picking at a sheep, dead on the road. Not only is this odd because of the time of day, but wolves haven't been a problem in this country side for quite some time. You can tell this wolf has no intention of leaving the sheep, and wolves are dangerous for the farm, so you have to make a decision. What do you do?
+  `;
+  
+  chapterConfig.thisChapterNumber = "3-6";
+  chapterConfig.thisChapterDialogue = chapterThreeSixText;
+  chapterConfig.buttonText = "Continue";
+  chapterConfig.dialogueDiv = document.querySelector('#dialogue');
+  chapterConfig.nextChapterFunction = beginChapterThreeSeven;
+  // chapterConfig.dialogueDiv.innerHTML = "";
+  Utilities.continueTextAnimation(chapterConfig);
+}
 //CHAPTER THREE TWO
+
+let chapterThreeSevenText;
+
+function beginChapterThreeSeven() {
+  console.log('3-7');
+}
 
 function continueChapterThreeTwo() {
   window.scrollTo(0, 0);
 
+  
   let chapterThreeTwo = document.querySelector("#dialogue");
   chapterThreeTwo.innerHTML = `
     <p>You find the main road in town and head South until you find the horse cart path running East. You take one look back, breathe in...hold...and exhale. You follow the 
