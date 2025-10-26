@@ -306,7 +306,7 @@ input[type="text"] {
     border-radius: 10px;
     font-size: 1.75rem;
     text-align: center;
-    height: 30px;
+    /* height: 30px; */
     width: 150px;
     border: 0px solid var(--btn-bg);  
     align-items: center;
@@ -323,7 +323,7 @@ input[type="text"] {
     border-radius: 10px;
     font-size: 1.75rem;
     text-align: center;
-    height: 30px;
+    /* height: 30px; */
     width: 150px;
     border: 0px solid var(--btn-bg);  
     align-items: center;
