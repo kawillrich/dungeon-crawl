@@ -1067,14 +1067,6 @@ function startGame() {
   let maximizeMonsterInfo = document.querySelector("#monster-info");
   maximizeMonsterInfo.classList.remove("minimized");
 
-  let maximizeCanvasAreaMonster = document.querySelector(
-    "#canvas-area-monster"
-  );
-  maximizeCanvasAreaMonster.classList.remove("minimized");
-
-  let maximizeCanvas3 = document.querySelector("#canvas3");
-  maximizeCanvas3.classList.remove("minimized");
-
   let maximizeContainer2 = document.querySelector("#container-2");
   maximizeContainer2.classList.remove("minimized");
 

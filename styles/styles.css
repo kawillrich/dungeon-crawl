@@ -1637,6 +1637,7 @@ summary.character-statuses-summary {
     border: none;
     border-radius: 5px;
     background-color: var(--bg-200);
+    display: grid;
     
   }
 

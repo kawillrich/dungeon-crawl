@@ -446,29 +446,30 @@ export default class Character {
     monsterInfo.innerHTML = `
         <div class="monster-one-info-heading"> ${monsterOne.name}</div>
         <div class="monster" id="monster-one">
-            <div class='monster-info-module'>
-                <h4 id="monster-one-hp">Hit Points: ${monsterOne.healthPoints}<progress class='monster-hp-prog-bar' max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress></h4> 
-                <h4 id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</h4>
-                <h4 id="monster-one-damage">Damage: ${monsterOne.damage}</h4>
-                <h4 id="monster-one-status">Status: ${monsterOne.status}</h4>     
-            </div>  
+          <div class='monster-info-module'>
+            <h4 id="monster-one-hp">Hit Points: ${monsterOne.healthPoints}<progress class='monster-hp-prog-bar' max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress></h4> 
+            <h4 id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</h4>
+            <h4 id="monster-one-damage">Damage: ${monsterOne.damage}</h4>
+            <h4 id="monster-one-status">Status: ${monsterOne.status}</h4>     
+            
+            <div id="canvas-area-monster-one">                  
+              <canvas id="canvas-monster-one" height="200" width="200"></canvas>
+            </div>
+          </div>  
         </div>
         <div class="monster-two-info-heading"> ${monsterTwo.name}</div>
         <div class="monster" id="monster-two">
-            <div class='monster-info-module'>
-                <h4 id="monster-two-hp">Hit Points: ${monsterTwo.healthPoints}<progress class='monster-hp-prog-bar' max="${monsterTwo.startingHealthPoints}" value="${monsterTwo.healthPoints}"></progress></h4> 
-                <h4 id="monster-two-ap">Armor Class: ${monsterTwo.armorClass}</h4>
-                <h4 id="monster-two-damage">Damage: ${monsterTwo.damage}</h4> 
-                <h4 id="monster-two-status">Status: ${monsterTwo.status}</h4>    
-            </div>        
+          <div class='monster-info-module'>
+            <h4 id="monster-two-hp">Hit Points: ${monsterTwo.healthPoints}<progress class='monster-hp-prog-bar' max="${monsterTwo.startingHealthPoints}" value="${monsterTwo.healthPoints}"></progress></h4> 
+            <h4 id="monster-two-ap">Armor Class: ${monsterTwo.armorClass}</h4>
+            <h4 id="monster-two-damage">Damage: ${monsterTwo.damage}</h4> 
+            <h4 id="monster-two-status">Status: ${monsterTwo.status}</h4>
+            <div id="canvas-area-monster-two">                  
+              <canvas id="canvas-monster-two" height="200" width="200"></canvas>
+            </div>    
+          </div>        
         </div>
 
-        </div id="canvas-area-monster">
-          <fieldset class= 'canvas-info-module-monster'>
-            <legend class='canvas-dashboard'>Arena</legend>
-            <canvas id="canvas3" height="200" width="200"></canvas>
-           </fieldset>
-        </div>
         `;
   }
 
