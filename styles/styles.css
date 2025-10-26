@@ -986,6 +986,7 @@ summary.character-statuses-summary {
     display: grid;
     grid-template-areas:  "statuses afflictions";  
     grid-template-columns: 1fr 1fr;
+    gap: 0px 8px;
   }
 
 
@@ -1054,11 +1055,11 @@ summary.character-statuses-summary {
     position: relative;    
   }
 
-    div.char-statuses-module {
+  div.char-statuses-module {
     width: 100%;
     display: grid;    
      grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     column-gap: 10px;
     /* height: 100%; */
     padding-bottom: 5px;
@@ -1069,7 +1070,12 @@ summary.character-statuses-summary {
     grid-area: statuses;
   }
 
-    div.char-afflictions-module {
+  div.char-statuses-module img {
+    height: 100%;
+    transform: scale(1.5);
+  }
+
+  div.char-afflictions-module {
     width: 100%;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1586,6 +1592,8 @@ summary.character-statuses-summary {
     width: 50px;
     border-radius: 5px;
     background-color: rgb(224, 193, 193);
+    justify-self: center;
+    align-self: center;
   }
 
   #monster-attack:hover {
@@ -1655,6 +1663,9 @@ summary.character-statuses-summary {
     border-radius: 5px;
     padding: 10px 10px 10px 10px;
     margin-top: 5px;
+    top: -10px;
+    left: 5px;
+    z-index: 900;
   }
 
   .hide-spell-list-dropdown {

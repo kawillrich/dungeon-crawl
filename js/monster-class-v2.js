@@ -211,15 +211,15 @@ export default class Monster {
   revertToAttackButtons() {
     let showAttackButtons = document.querySelectorAll(".attack");
     for (let showAttackButton of showAttackButtons) {
-      showAttackButton.classList.remove("hidden");
+      showAttackButton.classList.remove("no-display");
     };
 
     let spellAttackButton = document.querySelector(".attack-spell");
-    spellAttackButton.classList.remove("hidden");
+    spellAttackButton.classList.remove("no-display");
 
     let hideMonsterAttackButton =
       document.querySelector("#monster-attack");
-    hideMonsterAttackButton.classList.add("hidden");
+    hideMonsterAttackButton.classList.add("no-display");
   };
 
   checkMonsterHitRoll(thisMonster, otherMonster, monsterHitRollValue1, charArmorClass1, monsterHitRoll1, monsterOne, monsterTwo, images) {

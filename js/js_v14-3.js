@@ -3400,7 +3400,7 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
             </ul>
         </span>
         
-        <span class='button-border hidden-border'><input type="submit" id="monster-attack" class="fight-module-button hidden" value="Monster(s) Turn"></span><br>
+        <span class='button-border hidden-border'><input type="submit" id="monster-attack" class="fight-module-button no-display" value="Monster(s) Turn"></span><br>
     </div>
   `;
   headerFightModule.classList.remove('no-display');
@@ -3725,9 +3725,6 @@ function castSpellFromList(e, m1, m2, nextChap) {
 
           Utilities.createModal(modalConfig)
 
-          // alert(
-          //   `You were invisible but the spell was broken after you cast the spell`
-          // );
           finalCharacter.status.splice(
             finalCharacter.status.indexOf("Invisible"),
             1
@@ -3738,9 +3735,6 @@ function castSpellFromList(e, m1, m2, nextChap) {
           if (!addInvisibilityStatus.hasClass("hide-status")) {
             addInvisibilityStatus.addClass("hide-status");
             console.log(finalCharacter.activeSpellStatuses);
-
-            //removing active spell statuses so they don't run after being cancelled.
-            // if (finalCharacter.activeSpellStatuses.includes())
           }
         }
 
@@ -3762,9 +3756,6 @@ function castSpellFromList(e, m1, m2, nextChap) {
 
           Utilities.createModal(modalConfig)
 
-          // alert(
-          //   `You were invisible but the spell was broken after you cast the spell`
-          // );
           finalCharacter.status.splice(
             finalCharacter.status.indexOf("Invisible"),
             1
@@ -3796,9 +3787,6 @@ function castSpellFromList(e, m1, m2, nextChap) {
 
           Utilities.createModal(modalConfig)
 
-          // alert(
-          //   `You were invisible but the spell was broken after you cast the spell`
-          // );
           finalCharacter.status.splice(
             finalCharacter.status.indexOf("Invisible"),
             1

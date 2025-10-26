@@ -65,7 +65,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
 {
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#dialogue');
+        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Continual Light, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
 
@@ -80,7 +80,7 @@ continualLight.castSpell = function (monster1, monster2, continueNextChapter, at
         toggleShowSpellList();
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#dialogue');
+        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You cast Contiual Light, which which affects a 60 foot area.</p>`;
 
         let isBlindedM1 = monster1.status.some((x) => x === "Blind");
@@ -168,7 +168,7 @@ invisibility.castSpell = function (monster1, monster2, continueNextChapter, atta
     console.log('Casting Invisibility')
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#dialogue');
+        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Invisibility, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
 
@@ -187,7 +187,7 @@ invisibility.castSpell = function (monster1, monster2, continueNextChapter, atta
         toggleShowSpellList();
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#dialogue');
+        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML += `<p>You cast Invisibility, which makes you invisible.</p>`;
 
         finalCharacter.status.push("Invisible");
@@ -250,7 +250,7 @@ mirrorImage.castSpell = function (monster1, monster2, continueNextChapter, attac
     console.log('Casting Mirror Image');
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#dialogue');
+        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Mirror Image, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
 
@@ -265,7 +265,7 @@ mirrorImage.castSpell = function (monster1, monster2, continueNextChapter, attac
         toggleShowSpellList();
         finalCharacter.mirrorImages = Math.ceil(Math.random(1) * 4);
         finalCharacter.greyOutAttackButtons(monster1, monster2, finalCharacter.mirrorImages);
-        let dialogue = document.querySelector('#dialogue');
+        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You cast Mirror Image, which which created ${finalCharacter.mirrorImages} more image(s) of you.</p>`;
 
 
@@ -320,7 +320,7 @@ phantasmalForce.castSpell = function (monster1, monster2, continueNextChapter, a
     console.log('Casting Phantasmal Force')
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#dialogue');
+        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Phantasmal Force, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
 
@@ -380,7 +380,7 @@ phantasmalForce.castSpell = function (monster1, monster2, continueNextChapter, a
         toggleShowSpellList();
 
         finalCharacter.greyOutAttackButtons(monster1, monster2);
-        let dialogue = document.querySelector('#dialogue');
+        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You cast Phantasmal Force and create a Troll to attack the monsters.</p>`;
     }
 }
@@ -396,7 +396,7 @@ web.castSpell = function (monster1, monster2, continueNextChapter, attackedMonst
 
     if (this.numberOfUses <= 0)
     {
-        let dialogue = document.querySelector('#dialogue');
+        let dialogue = document.querySelector('#fight-module-dialogue');
         dialogue.innerHTML = `<p>You try to cast Web, but the words won't come to your mind.</p>`;
         toggleShowSpellList();
 
