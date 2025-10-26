@@ -458,9 +458,8 @@ input[name="selected-specialty"] {
   }
 
   #ready {
-    /* grid-area: footer1; */
-    grid-area: 5 / 2 / 5 / 3;
-  }
+    margin: auto;
+  } 
 
   .circle-xp-svg,
   .circle-ac-svg {
@@ -1158,6 +1157,7 @@ summary.character-statuses-summary {
   #intro-continue-button,
   #enter-game,
   #new-continue-button,
+  #ready,
   .new-continue-button {
     background-color: var(--btn-bg);
     color: var(--btn-text);
