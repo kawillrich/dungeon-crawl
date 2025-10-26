@@ -1542,12 +1542,13 @@ summary.character-statuses-summary {
   }
 
   .attack-buttons {
-    display: flex;
-    flex-direction: row;
+    display: grid;
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-self: center;
+    justify-self: center;
   }
 
   #monster-info {
@@ -1591,18 +1592,34 @@ summary.character-statuses-summary {
     grid-area: 1 / 2 / 1 / 3;
   }
   .button-border {
-    width: auto;
+    width: 100%;
+    height: 38px;
     display: inline-block;
     margin: 5px 2px 5px 2px;
     border: 1px solid transparent;
     padding: 2px 2px 2px 2px;
     border-radius: 3px;
     background-color: transparent;
+    justify-self: center;
+    align-self: center;
+    
   }
 
   .button-border > .fight-module-button {
     width: 3.2em;
   }
+
+.area-attack,
+.item-enchantment,
+.attack-monster-one,
+.attack-monster-two,
+.spell2-monster-one,
+.spell2-monster-two,
+.spell1-heal {
+  width: 200px;
+  border-radius: 5px;
+  background-color: rgb(193, 224, 193);  
+}
 
   #monster-attack {
     position: relative;
@@ -1690,7 +1707,7 @@ summary.character-statuses-summary {
 
   #canvas-area-monster-one,
   #canvas-area-monster-two {
-    background-color: var(--text);
+    background-color: rgb(203, 203, 203);
     /* display: none; */
     grid-area: 1 / 2 / 1 / 3;
     border-radius: 5px;
@@ -1708,16 +1725,16 @@ summary.character-statuses-summary {
   }
 
   ul.dropdown-spell-list-ul {
-    position: absolute;
+    position: relative;
+    display: inline-block;
     list-style: none;
     width: 200px;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 10px 10px 10px 10px;
     margin-top: 5px;
-    top: -10px;
-    left: 5px;
+    top: -120px;
+    left: -5px;
     z-index: 900;
   }
 
@@ -1728,6 +1745,7 @@ summary.character-statuses-summary {
   li.first-level-dropdown-list,
   li.second-level-dropdown-list,
   li.third-level-dropdown-list {
+    position: relative;
     display: none;
     height: 20px;
   }
@@ -1751,7 +1769,7 @@ summary.character-statuses-summary {
   ul.spell-list {
     display: none;
     position: relative;
-    top: -25px;
+    top: -80px;
     left: 200px;
     background-color: white;
     border: 1px solid black;
@@ -2015,17 +2033,7 @@ legend.afflictions-dashboard {
   background-color: rgb(255, 139, 139);
 }
 
-.area-attack,
-.item-enchantment,
-.attack-monster-one,
-.attack-monster-two,
-.spell2-monster-one,
-.spell2-monster-two,
-.spell1-heal {
-  width: 200px;
-  border-radius: 5px;
-  background-color: rgb(193, 224, 193);
-}
+
 
 
 
