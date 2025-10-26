@@ -1553,12 +1553,13 @@ summary.character-statuses-summary {
   #monster-info {
     display: grid;
     /* height: 225px; */
-    grid-template-rows: 5% 90%;
+    grid-template-rows: 10% 90%;
     grid-template-columns: 1fr 1fr;
     grid-area: 2 / 1 / 3 / 2;
-    gap: 8px;
+    gap: 2px 8px;
     height: 98%;
     padding-top: 5px;
+    padding: 5px 5px 5px 5px;
   }
 
   .monster-one-info-heading {
