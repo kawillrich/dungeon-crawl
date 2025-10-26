@@ -3393,7 +3393,7 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
             </ul>
         </span>
         
-        <span class='button-border hidden-border'><input type="submit" id="monster-attack" class="fight-module-button no-display" value="Monster(s) Turn"></span><br>
+        <span class='button-border hidden-border no-display'><input type="submit" id="monster-attack" class="fight-module-button no-display" value="Monster(s) Turn"></span><br>
     </div>
   `;
   headerFightModule.classList.remove('no-display');

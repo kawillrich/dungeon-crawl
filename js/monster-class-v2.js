@@ -217,6 +217,10 @@ export default class Monster {
     let spellAttackButton = document.querySelector(".attack-spell");
     spellAttackButton.classList.remove("no-display");
 
+    let hideMonsterAttackButtonBorder = document.querySelector(".hidden-border");
+
+    hideMonsterAttackButtonBorder.classList.add("no-display");
+
     let hideMonsterAttackButton =
       document.querySelector("#monster-attack");
     hideMonsterAttackButton.classList.add("no-display");

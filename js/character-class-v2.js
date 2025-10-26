@@ -1202,8 +1202,14 @@ export default class Character {
     let spellAttackButton = document.querySelector(".attack-spell");
     spellAttackButton.classList.add("no-display");
 
+    let monsterAttackButtonBorder = document.querySelector(".hidden-border");
+
+    monsterAttackButtonBorder.classList.remove("no-display");
+
     let showMonsterAttackButton = document.querySelector("#monster-attack");
     showMonsterAttackButton.classList.remove("no-display");
+
+
 
     showMonsterAttackButton.onclick = function () {
       if (monster1.healthPoints <= 0) {

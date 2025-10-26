@@ -1164,7 +1164,7 @@ summary.character-statuses-summary {
     border-radius: 10px;
     font-size: 1.75rem;
     text-align: center;
-    height: 30px;
+    /* height: 30px; */
     width: 210px;
     border: 0px solid var(--btn-bg);  
     align-items: center;
@@ -1318,6 +1318,7 @@ summary.character-statuses-summary {
     width: 50%;
     margin: auto;
     text-align: center;
+    font-size: 1.25em;
   }
 
   #inventory-modal::backdrop,
