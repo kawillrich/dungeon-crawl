@@ -527,7 +527,7 @@ let enterGame = document.querySelector("#enter-game");
 let setTimeoutArray = [];
 let dialogueDiv = document.querySelector("#dialogue");
 let dialogueIterator = 0;
-let typingSpeed = 3;
+let typingSpeed = 0;
       
 enterGame.addEventListener("click", 
   function() { 
