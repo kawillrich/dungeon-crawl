@@ -1673,12 +1673,15 @@ summary.character-statuses-summary {
   #canvas-area-monster-two {
     background-color: rgb(221, 221, 221);
     /* display: none; */
+    grid-area: 1 / 2 / 1 / 3;
+    border-radius: 5px;
   }
 
   #canvas-monster-one,
   #canvas-monster-two {
     height: 100px;
     width: 100px;
+    
   }
 
   .monster-hp-prog-bar {
