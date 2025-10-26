@@ -1429,8 +1429,17 @@ export default class Character {
       finalCharacter.checkLevelUp();
 
       defeatedMonsters.innerHTML = `
-          <p>Congratulations, you won the battle!</p>
-          <input type="submit" id="start-chapter-three-four" value="Continue">`;
+          <p>Congratulations, you won the battle!</p>`;
+
+      let addButtonToContainer = document.querySelector('#container');
+      let createNextChapterButton = document.createElement('input');
+      createNextChapterButton.setAttribute('type', 'submit');
+      createNextChapterButton.setAttribute('value', 'Continue');
+      createNextChapterButton.setAttribute('id', 'start-chapter-three-four');
+      addButtonToContainer.appendChild(createNextChapterButton);
+      
+
+          // <input type="submit" id="start-chapter-three-four" value="Continue">`;
 
       removeFightModule.innerHTML = ` `;
 

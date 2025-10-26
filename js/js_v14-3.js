@@ -3387,6 +3387,7 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   let dialogueDiv = document.querySelector('#dialogue');
   let fightModuleContainer = document.querySelector('#fight-module-container');
   let headerFightModule = document.querySelector("#fight-module");
+  let fightModuleDialogue = document.querySelector('#fight-module-dialogue');
   // fightModuleContainer.appendChild(headerFightModule);
   dialogueDiv.appendChild(fightModuleContainer);
   headerFightModule.innerHTML = `
@@ -3405,6 +3406,7 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   `;
   headerFightModule.classList.remove('no-display');
   fightModuleContainer.classList.remove('no-display');
+  fightModuleDialogue.classList.remove('no-display');
   let attackMonsterOne = document.querySelector(".attack-monster-one");
   attackMonsterOne.addEventListener(
     "click",
