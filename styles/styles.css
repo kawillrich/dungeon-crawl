@@ -1629,6 +1629,12 @@ summary.character-statuses-summary {
     width: 0px;
   }
 
+  #monster-one,
+  #monster-two {
+    width: 100%;
+    height: 100%;    
+  }
+
   .monster-info-module {
     /* height: 200px;
     width: 200px; */
@@ -1643,16 +1649,23 @@ summary.character-statuses-summary {
     
   }
 
-  .monster-info-module > h4 {
-    width: 50%;
+  .monster-info-module > div {
     font-size: .75em;
   }
 
-  #monster-one,
-  #monster-two {
-    width: 100%;
+  #monster-one-hp,
+  #monster-two-hp {
+    grid-area: 1 / 1 / 1 / 2;
+  }
+
+  #monster-one-status,
+  #monster-two-status {
     height: 100%;
-    
+    width: 100%;
+    grid-area: 2 / 1 / 3 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   .monster-dashboard {
