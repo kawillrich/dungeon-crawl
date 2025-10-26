@@ -142,7 +142,7 @@ button {
     background-color: var(--background);
     display: grid; 
     grid-template-rows: 5% 17% 17% 56% 5%;
-    padding: 5px;
+    padding: 10px;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     /* grid-template-areas: "banner banner1 banner2"
@@ -1266,7 +1266,7 @@ summary.character-statuses-summary {
     width: 100%;
     background-color: rgb(0, 5, 50);
     z-index: 1;
-    padding: 5px;
+    padding: 10px;
   }
 
 
@@ -2184,7 +2184,7 @@ span#dragonwarrior {
 .weapon-tooltiptext,
 .item-tooltiptext {
   visibility: hidden;
-  width: 140px;
+
   background-color: black;
   color: #fff;
   text-align: left;
@@ -2194,6 +2194,8 @@ span#dragonwarrior {
   z-index: 1;
   top: -5px;
   left: 120%;
+   width: auto;
+  height: auto;
 }
 
 .inventory-item-tooltiptext {
@@ -2208,6 +2210,8 @@ span#dragonwarrior {
   z-index: 1;
   top: 0px;
   left: 57%;
+   width: auto;
+  height: auto;
 }
 
 .supply-item-tooltiptext {
@@ -2223,6 +2227,8 @@ span#dragonwarrior {
   z-index: 1;
   top: -2.7em;
   left: 50%;
+   width: auto;
+  height: auto;
 }
 
 .spell-tooltiptext {
@@ -2238,12 +2244,14 @@ span#dragonwarrior {
   z-index: 1;
   top: -2.7em;
   left: 50%;
+   width: auto;
+  height: auto;
 }
 
 .html-spell-tooltiptext {
   visibility: hidden;
-  height: 100px;
-  width: 200px;
+  /* height: 100px;
+  width: 200px; */
   background-color: black;
   color: #fff;
   text-align: left;
@@ -2253,6 +2261,8 @@ span#dragonwarrior {
   z-index: 1;
   top: -2.7em;
   left: 50%;
+  width: auto;
+  height: auto;
 }
 
 .armor-tooltip .armor-tooltiptext::after,
