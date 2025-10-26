@@ -1159,6 +1159,8 @@ summary.character-statuses-summary {
   #enter-game,
   #new-continue-button,
   #ready,
+  #attack-wolves,
+  #dont-attack-wolves,
   .new-continue-button {
     background-color: var(--btn-bg);
     color: var(--btn-text);
@@ -1501,11 +1503,9 @@ summary.character-statuses-summary {
   }
 
   #attack-wolves {
- margin: auto;
+    margin: auto;
     align-items: center;
     grid-area: 5 / 3 / 5 / 4;
-
-    height: 30px;
     width: 150px;
   }
 
@@ -1513,8 +1513,6 @@ summary.character-statuses-summary {
     margin: auto;
     align-items: center;
     grid-area: 5 / 1 / 5 / 2;
-
-    height: 30px;
     width: 150px;
   }
 
