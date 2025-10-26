@@ -1738,7 +1738,7 @@ summary.character-statuses-summary {
     z-index: 900;
   }
 
-  .hide-spell-list-dropdown {
+  ul.hide-spell-list-dropdown {
     display: none;
   }
 

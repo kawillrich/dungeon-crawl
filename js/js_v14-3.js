@@ -3384,8 +3384,8 @@ function addingFightModule(monsterOne, monsterTwo, continueNextChapter) {
   dialogueDiv.appendChild(fightModuleContainer);
   headerFightModule.innerHTML = `
     <div class="attack-buttons">
-        <span class='button-border'><input type="submit" class="attack attack-monster-one fight-module-button" value="Attack Enemy 1"></span>
-        <span class='button-border'><input type="submit" class="attack attack-monster-two fight-module-button" value="Attack Enemy 2"></span>
+        <span class='button-border'><input type="submit" class="attack attack-monster-one fight-module-button" value="Attack"></span>
+        <span class='button-border'><input type="submit" class="attack attack-monster-two fight-module-button" value="Attack2"></span>
         <span class='button-border'><input type="submit" class="attack item-enchantment fight-module-button" value="Use Item"></span> 
         <span class='button-border'>
           <input type="submit" class="attack-spell spell2-monster-one fight-module-button" value="Use Spell" id="use-spells">
