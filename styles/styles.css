@@ -1656,6 +1656,7 @@ summary.character-statuses-summary {
   #monster-one-hp,
   #monster-two-hp {
     grid-area: 1 / 1 / 1 / 2;
+    text-align: center;
   }
 
   #monster-one-status,
@@ -1667,6 +1668,8 @@ summary.character-statuses-summary {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
+
+  
 
   .monster-dashboard {
     float: clear;
@@ -1698,7 +1701,7 @@ summary.character-statuses-summary {
   }
 
   .monster-hp-prog-bar {
-    width: 50%;
+    width: 90%;
   }
 
   ul.dropdown-spell-list-ul {

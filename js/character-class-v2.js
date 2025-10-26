@@ -447,7 +447,11 @@ export default class Character {
         <div class="monster-one-info-heading"> ${monsterOne.name}</div>
         <div class="monster" id="monster-one">
           <div class='monster-info-module'>
-            <div id="monster-one-hp">Hit Points: ${monsterOne.healthPoints}<progress class='monster-hp-prog-bar' max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress></div> 
+            <div id="monster-one-hp">
+              <div><strong>Hit Points</strong></div>
+              <progress class='monster-hp-prog-bar' max="${monsterOne.startingHealthPoints}" value="${monsterOne.healthPoints}"></progress>
+              <div>${monsterOne.healthPoints}</div>
+              </div> 
             <div id="monster-one-ap">Armor Class: ${monsterOne.armorClass}</div>
             <div id="monster-one-damage">Damage: ${monsterOne.damage}</div>
             <div id="monster-one-status">Status: ${monsterOne.status}</div>     
