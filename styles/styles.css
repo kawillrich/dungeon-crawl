@@ -1622,14 +1622,19 @@ summary.character-statuses-summary {
   background-color: rgb(193, 224, 193);  
 }
 
+  .button-border:has(>#monster-attack) {
+    grid-area: 1 / 2 / 1 / 4;
+
+  }
+
   #monster-attack {
     position: relative;
-    width: 210px;
+    width: 100%;
     border-radius: 5px;
     background-color: rgb(224, 193, 193);
     justify-self: center;
     align-self: center;
-    left: -20px;
+    /* left: -20px; */
     /* top: 20px; */
   }
 
@@ -1735,7 +1740,7 @@ summary.character-statuses-summary {
     border-radius: 5px;
     margin-top: 5px;
     top: -120px;
-    left: -5px;
+    left: -65px;
     z-index: 900;
   }
 
@@ -1770,8 +1775,8 @@ summary.character-statuses-summary {
   ul.spell-list {
     display: none;
     position: relative;
-    top: -80px;
-    left: 200px;
+    top: -180px;
+    left: 0px;
     background-color: white;
     border: 1px solid black;
     height: 50px;
