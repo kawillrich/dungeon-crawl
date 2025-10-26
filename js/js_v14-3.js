@@ -1004,20 +1004,20 @@ function confirmingAttributes() {
   let containerDiv = document.querySelector('#container');
   containerDiv.appendChild(beginningAdventure);
 
-  $('#beginingAdventure').css({
-    'background-color': 'var(--btn-bg)',
-    'color': 'var(--btn-text)',
-    'border-radius': '10px',
-    'font-size': '1.75rem',
-    'text-align': 'center',
-    'height': '30px',
-    'width': '210px',
-    'border': '0px solid var(--btn-bg)',  
-    'align-items': 'center',
-    'justify-content': 'center',
-    'margin': 'auto',
-    'display': 'block', 
-  })
+  // $('#beginingAdventure').css({
+  //   'background-color': 'var(--btn-bg)',
+  //   'color': 'var(--btn-text)',
+  //   'border-radius': '10px',
+  //   'font-size': '1.75rem',
+  //   'text-align': 'center',
+  //   'height': '30px',
+  //   'width': '210px',
+  //   'border': '0px solid var(--btn-bg)',  
+  //   'align-items': 'center',
+  //   'justify-content': 'center',
+  //   'margin': 'auto',
+  //   'display': 'block', 
+  // })
 
 }
 
