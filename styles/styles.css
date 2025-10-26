@@ -256,7 +256,7 @@ input[type="text"] {
     /* color: var(--btn-text); */
     background-color: var(--text);
     color: var(--bg-200);
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 1.5rem;
     text-align: center;
     height: 30px;
@@ -844,7 +844,7 @@ summary.character-statuses-summary {
     height: 1em;
     border: none;
     border-radius: 0px 5px 5px 0px;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 1.5em;
     position: relative;
     background-color: var(--accent-green-200);
@@ -866,8 +866,7 @@ summary.character-statuses-summary {
    div.character-hitpoints-summary {
     height: 1em;
     border: none;
-    border-radius: 0px 5px 5px 0px;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 1.5em;
     position: relative;
     background-color: var(--accent-green-200);
@@ -923,7 +922,7 @@ summary.character-statuses-summary {
       height: 1em;
       border: none;
       border-radius: 0px 5px 5px 0px;
-      border-radius: 5px;
+      border-radius: 7px;
       font-size: 1.5em;
       position: relative;
       background-color: var(--accent-green-200);
@@ -1564,7 +1563,7 @@ summary.character-statuses-summary {
     height: 1em;
     border: none;
     border-radius: 0px 5px 5px 0px;
-    border-radius: 5px;
+    border-radius: 7px;
     position: relative;
     background-color:  rgb(248, 162, 162);
     color: var(--primary);
@@ -1576,7 +1575,7 @@ summary.character-statuses-summary {
     height: 1em;
     border: none;
     border-radius: 0px 5px 5px 0px;
-    border-radius: 5px;
+    border-radius: 7px;
     position: relative;
     background-color:  rgb(248, 162, 162);
     color: var(--primary);
