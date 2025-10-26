@@ -67,7 +67,7 @@ body {
   background-image: url(../images/not-supported.png);
   position: fixed;
   display: none;
-  z-index: 9 !important;  
+  z-index: 9000 !important;  
   user-select: none;
   cursor: none;
   
@@ -107,9 +107,12 @@ button {
 /******************************************** MODE NOT SUPPORTED *********************************************/
 
 
-@media only screen and (width < 376px) {
+@media only screen and (width < 375px), screen and (max-height: 690px) {
+  body {
+    
+  }
   #container {
-    background-color: salmon;    
+    display: none;  
   }
 
   #lock-screen {
@@ -117,7 +120,7 @@ button {
     inset: 0;
     display: block;    
     background-color: rgb(0, 5, 50);
-    z-index: 9;    
+    z-index: 9000;    
     user-select: none;
     cursor: none;
     text-align: center;
@@ -131,7 +134,7 @@ button {
 /********************************************* MOBILE / PHONES ********************************************/
 
 
-@media only screen and (376px <= width < 599px) {
+@media only screen and (375px < width < 599px) {
   #container {
     border-image: none;
     border: 0px solid transparent;   
