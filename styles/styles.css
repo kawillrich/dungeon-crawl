@@ -971,6 +971,11 @@ summary.character-statuses-summary {
     
   }
 
+  #character-stats[open] {
+    height: 6em;
+
+  }
+
   #character-statuses {
     grid-area: 3 / 1 / 3 / 3;
     
@@ -1551,7 +1556,7 @@ summary.character-statuses-summary {
   }
 
   .monster-one-info-heading {
-    font-size: 1em;
+    font-size: .9em;
     height: 1em;
     border: none;
     border-radius: 0px 5px 5px 0px;
@@ -1563,7 +1568,7 @@ summary.character-statuses-summary {
     grid-area: 1 / 1 / 1 / 2;
   }
   .monster-two-info-heading {
-    font-size: 1em;
+    font-size: .9em;
     height: 1em;
     border: none;
     border-radius: 0px 5px 5px 0px;
