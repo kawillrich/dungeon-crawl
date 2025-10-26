@@ -1999,11 +1999,11 @@ h4 {
   color: darkgray;
 }
 
-.monster1-dead {
+.fight-module-button.monster1-dead {
   background-color: grey;
   color: darkgray;
-  width: 200px;
-  border-radius: 5px;
+  /* width: 200px;
+  border-radius: 5px; */
   cursor: not-allowed;
   pointer-events: none;
 }
