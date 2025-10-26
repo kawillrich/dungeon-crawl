@@ -1638,6 +1638,8 @@ summary.character-statuses-summary {
     border-radius: 5px;
     background-color: var(--bg-200);
     display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
     
   }
 
@@ -1666,10 +1668,19 @@ summary.character-statuses-summary {
     font-size: 1.5rem;
     background-color: rgb(255, 139, 139);
   }
-  .canvas-info-module-monster {
+
+  #canvas-area-monster-one,
+  #canvas-area-monster-two {
     background-color: rgb(221, 221, 221);
-    display: none;
+    /* display: none; */
   }
+
+  #canvas-monster-one,
+  #canvas-monster-two {
+    height: 100px;
+    width: 100px;
+  }
+
   .monster-hp-prog-bar {
     width: 50%;
   }
